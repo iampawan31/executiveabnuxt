@@ -12,12 +12,14 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
+  loading: {
+    color: '#e67b25',
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['swiper/css/swiper.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '@/plugins/swiper.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -28,6 +30,12 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    [
+      '@nuxtjs/fontawesome',
+      {
+        component: 'fa',
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
