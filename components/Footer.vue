@@ -67,15 +67,15 @@
         </div>
       </div>
       <div class="grid sm:grid-cols-2 sm:gap-0 gap-4 mt-10">
-        <div class="flex items-end mx-auto">
+        <div class="flex justify-between items-end">
           <NuxtLink to="/">
             <img
-              class="sm:h-auto sm:w-2/3 w-48"
+              class="h-6"
               src="~/assets/logo_white.png"
               alt="Executive AB Logo"
             />
           </NuxtLink>
-          <span class="ml-4 text-xs">© 2021. All Rights Reserved.</span>
+          <div class="text-xs">© 2021. All Rights Reserved.</div>
         </div>
         <div class="grid grid-rows-1 mx-auto sm:px-4 gap-4 sm:grid-rows-2">
           <div class="hidden sm:block">CONNECT ON SOCIAL</div>

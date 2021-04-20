@@ -14,6 +14,9 @@ export default {
   },
   loading: {
     color: '#e67b25',
+    throttle: 200,
+    failedColor: 'red',
+    height: '10px',
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['swiper/css/swiper.css'],

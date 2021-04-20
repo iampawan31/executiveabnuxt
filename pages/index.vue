@@ -95,60 +95,68 @@
         </div>
       </div>
     </section>
-    <section class="bg-brand-gray-dark-alternate py-16">
-      <div class="container mx-auto">
+    <section class="bg-brand-gray-alternate py-16">
+      <div>
         <tabs>
           <tab
             v-for="(homepageTab, index) in homepageTabSection"
             :key="index"
             :title="homepageTab.tabTitle"
           >
-            <div class="shadow-sm transition-opacity">
-              <div class="grid-cols-4 grid">
-                <div
-                  class="flex flex-wrap flex-column content-center bg-fixed p-5"
-                  :style="{
-                    backgroundImage: `url(${homepageTab.imageURL})`,
-                  }"
-                >
-                  <h1 class="uppercase text-3xl text-white font-semibold mb-5">
-                    {{ homepageTab.title }}
-                  </h1>
-                  <p class="text-brand text-lg">
-                    {{ homepageTab.description }}
-                  </p>
-                </div>
-                <div class="col-span-3 bg-white text-gray-500">
-                  <div class="grid grid-cols-2 p-10 gap-4">
-                    <div>
-                      <ul class="tab-section">
-                        <li
-                          v-for="(singleList, indexOne) in homepageTab.listOne"
-                          :key="indexOne"
-                          class="mb-4"
-                        >
-                          {{ singleList }}
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <ul class="tab-section">
-                        <li
-                          v-for="(singleList, indexTwo) in homepageTab.listTwo"
-                          :key="indexTwo"
-                          class="mb-4"
-                        >
-                          {{ singleList }}
-                        </li>
-                      </ul>
-                      <div class="ml-6">
-                        <a
-                          :href="homepageTab.link.path"
-                          class="text-brand underline"
-                        >
-                          {{ homepageTab.link.name }}
-                          <fa class="ml-1" :icon="faAngleRight" />
-                        </a>
+            <div class="container mx-auto">
+              <div class="shadow-sm transition-opacity">
+                <div class="grid-cols-4 grid">
+                  <div
+                    class="flex flex-wrap flex-column content-center bg-fixed p-5"
+                    :style="{
+                      backgroundImage: `url(${homepageTab.imageURL})`,
+                    }"
+                  >
+                    <h1
+                      class="uppercase text-3xl text-white font-semibold mb-5"
+                    >
+                      {{ homepageTab.title }}
+                    </h1>
+                    <p class="text-brand text-lg">
+                      {{ homepageTab.description }}
+                    </p>
+                  </div>
+                  <div class="col-span-3 bg-white text-gray-500">
+                    <div class="grid grid-cols-2 p-10 gap-4">
+                      <div>
+                        <ul class="tab-section">
+                          <li
+                            v-for="(
+                              singleList, indexOne
+                            ) in homepageTab.listOne"
+                            :key="indexOne"
+                            class="mb-4"
+                          >
+                            {{ singleList }}
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <ul class="tab-section">
+                          <li
+                            v-for="(
+                              singleList, indexTwo
+                            ) in homepageTab.listTwo"
+                            :key="indexTwo"
+                            class="mb-4"
+                          >
+                            {{ singleList }}
+                          </li>
+                        </ul>
+                        <div class="ml-6">
+                          <a
+                            :href="homepageTab.link.path"
+                            class="text-brand underline"
+                          >
+                            {{ homepageTab.link.name }}
+                            <fa class="ml-1" :icon="faAngleRight" />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -231,6 +239,7 @@ import Tab from '~/components/common/Tab'
 import CallToAction from '~/components/CallToAction'
 
 export default {
+  transitions: 'fade',
   components: {
     Slides,
     Tabs,

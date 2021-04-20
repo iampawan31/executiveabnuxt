@@ -3,14 +3,14 @@
     :class="
       isHomeRoute
         ? 'bg-transparent absolute w-full top-0 z-50'
-        : 'bg-black fixed m-60'
+        : 'bg-black relative'
     "
     class="sm:flex sm:justify-between sm:items-center sm:py-3 sm:px-4"
   >
     <div class="flex justify-between items-center py-3 px-4 sm:p-0">
-      <div>
+      <NuxtLink to="/">
         <img class="h-6" src="~/assets/logo_white.png" alt="Executive AB" />
-      </div>
+      </NuxtLink>
       <div class="sm:hidden">
         <button
           type="button"

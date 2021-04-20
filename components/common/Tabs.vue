@@ -1,16 +1,18 @@
 <template lang="html">
   <div class="tabs__dark text-black">
-    <ul class="mx-auto">
-      <li
-        v-for="(tab, index) in tabs"
-        :key="tab.title"
-        class="mx-2 text-white text-sm py-1 m-0 inline-block cursor-pointer"
-        :class="index == selectedIndex ? 'tab__selected' : null"
-        @click="selectTab(index)"
-      >
-        {{ tab.title }}
-      </li>
-    </ul>
+    <div class="bg-brand-gray-medium-dark py-2">
+      <div class="container mx-auto flex justify-between">
+        <div
+          v-for="(tab, index) in tabs"
+          :key="tab.title"
+          class="mx-2 text-white py-1 m-0 cursor-pointer"
+          :class="index == selectedIndex ? 'border-b-2' : null"
+          @click="selectTab(index)"
+        >
+          {{ tab.title }}
+        </div>
+      </div>
+    </div>
     <slot></slot>
   </div>
 </template>
