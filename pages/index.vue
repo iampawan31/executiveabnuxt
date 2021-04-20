@@ -26,18 +26,20 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <section class="bg-brand-gray container mx-auto py-6">
-      <div class="text-center">
-        <div class="text-white text-sm sm:text-lg">
-          <fa class="mr-2" :icon="faInfoCircle" />
-          COVID-19: SAFETY IS OUR TOP PRIORITY.
-          <a href="/" class="ml-2 uppercase underline text-white">
-            READ MORE <fa class="ml-1" :icon="faAngleRight" />
-          </a>
+    <section class="bg-brand-gray-alternate py-6">
+      <div class="container mx-auto">
+        <div class="text-center">
+          <div class="text-white text-sm sm:text-lg">
+            <fa class="mr-2" :icon="faInfoCircle" />
+            COVID-19: SAFETY IS OUR TOP PRIORITY.
+            <a href="/" class="ml-2 uppercase underline text-white">
+              READ MORE <fa class="ml-1" :icon="faAngleRight" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    <section class="bg-brand-grayAlternate py-16">
+    <section class="bg-brand-gray-dark py-16">
       <div class="mx-auto container">
         <div class="grid grid-cols-2 gap-5">
           <div
@@ -75,11 +77,11 @@
     </section>
     <section class="bg-black py-16">
       <div class="grid grid-cols-3 gap-4">
-        <div class="col-span-1 px-4 px-16">
-          <div class="uppercase text-sm text-xl text-brand mb-5">
+        <div class="col-span-1 px-16">
+          <div class="uppercase text-xl text-brand mb-5">
             YOUR PERSONAL CONCIERGE AWAITS
           </div>
-          <div class="uppercase text-xl text-3xl font-semibold mb-5">
+          <div class="uppercase text-3xl font-semibold mb-5">
             HOW OUR NO-COST SERVICE WORKS
           </div>
           <div class="text-lg text-gray-400">
@@ -93,23 +95,23 @@
         </div>
       </div>
     </section>
-    <section class="bg-brand-grayAlternate py-16">
+    <section class="bg-brand-gray-dark-alternate py-16">
       <div class="container mx-auto">
-        <tabs :mode="mode">
+        <tabs>
           <tab
             v-for="(homepageTab, index) in homepageTabSection"
             :key="index"
-            :title="homepageTab.title"
+            :title="homepageTab.tabTitle"
           >
             <div class="shadow-sm transition-opacity">
               <div class="grid-cols-4 grid">
                 <div
                   class="flex flex-wrap flex-column content-center bg-fixed p-5"
                   :style="{
-                    backgroundImage: homepageTab.imageURL,
+                    backgroundImage: `url(${homepageTab.imageURL})`,
                   }"
                 >
-                  <h1 class="uppercase text-3xl font-semibold mb-5">
+                  <h1 class="uppercase text-3xl text-white font-semibold mb-5">
                     {{ homepageTab.title }}
                   </h1>
                   <p class="text-brand text-lg">
@@ -119,7 +121,7 @@
                 <div class="col-span-3 bg-white text-gray-500">
                   <div class="grid grid-cols-2 p-10 gap-4">
                     <div>
-                      <ul>
+                      <ul class="tab-section">
                         <li
                           v-for="(singleList, indexOne) in homepageTab.listOne"
                           :key="indexOne"
@@ -130,7 +132,7 @@
                       </ul>
                     </div>
                     <div>
-                      <ul>
+                      <ul class="tab-section">
                         <li
                           v-for="(singleList, indexTwo) in homepageTab.listTwo"
                           :key="indexTwo"
@@ -204,7 +206,7 @@
         <div>La Habra, California</div>
       </div>
     </section>
-    <section class="bg-brand-gray text-white py-16">
+    <section class="bg-brand-gray-alternate text-white py-16">
       <CallToAction
         title="YOUR SATISFACTION MEANS EVERYTHING TO US"
         subtitle="EXPERIENCE THE EAB DIFFERENCE"
@@ -255,3 +257,17 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+ul.tab-section {
+  list-style: none;
+  list-style-position: outside;
+}
+
+ul.tab-section li:before {
+  content: '✓';
+  color: lightgreen;
+  font-size: 1.1em;
+  margin-right: 0.6em;
+}
+</style>

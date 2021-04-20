@@ -1,14 +1,17 @@
 <template>
-  <div class="bg-brand-gray text-white">
+  <div class="bg-brand-gray-dark text-white">
+    <Header />
     <Nuxt />
     <Footer />
   </div>
 </template>
 
 <script>
+import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 export default {
   components: {
+    Header,
     Footer,
   },
 }

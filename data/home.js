@@ -27,6 +27,7 @@ export const firstSlider = [
 
 export const homepageTabSection = [
   {
+    tabTitle: 'NEW',
     title: 'NEW VEHICLES',
     imageURL: require('assets/images/section_background.jpg'),
     description:
@@ -47,6 +48,7 @@ export const homepageTabSection = [
     },
   },
   {
+    tabTitle: 'PRE-OWNED',
     title: 'PRE-OWNED VEHICLES',
     imageURL: require('assets/images/section_background.jpg'),
     description:
@@ -67,6 +69,7 @@ export const homepageTabSection = [
     },
   },
   {
+    tabTitle: 'CUSTOM BUILDS',
     title: 'CUSTOMIZED VEHICLES',
     imageURL: require('assets/images/section_background.jpg'),
     description: 'Solutions for those planning to modify their vehicle.',
@@ -84,6 +87,7 @@ export const homepageTabSection = [
     },
   },
   {
+    tabTitle: 'POWERSPORTS',
     title: 'POWERSPORTS',
     imageURL: require('assets/images/section_background.jpg'),
     description:
@@ -102,6 +106,7 @@ export const homepageTabSection = [
     },
   },
   {
+    tabTitle: 'SALUTE TO SERVICE',
     title: 'THANK YOU FOR YOUR SERVICE',
     imageURL: require('assets/images/section_background.jpg'),
     description:
@@ -120,6 +125,7 @@ export const homepageTabSection = [
     },
   },
   {
+    tabTitle: 'MAINTENANCE / UPGRADES',
     title: 'MAINTENANCE / UPGRADES',
     imageURL: require('assets/images/section_background.jpg'),
     description:
@@ -138,6 +144,7 @@ export const homepageTabSection = [
     },
   },
   {
+    tabTitle: 'SELL YOUR VEHICLE',
     title: 'SELL YOUR VEHICLE',
     imageURL: require('assets/images/section_background.jpg'),
     description:
@@ -156,6 +163,7 @@ export const homepageTabSection = [
     },
   },
   {
+    tabTitle: 'COMMERCIAL / FLEET',
     title: 'COMMERCIAL / FLEET',
     imageURL: require('assets/images/section_background.jpg'),
     description:

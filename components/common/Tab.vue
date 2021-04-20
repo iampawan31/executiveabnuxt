@@ -1,5 +1,8 @@
 <template>
-  <div v-show="isActive" class="tab">
+  <div
+    v-show="isActive"
+    class="inline-block text-black p-10 min-w-full rounded-md"
+  >
     <slot></slot>
   </div>
 </template>

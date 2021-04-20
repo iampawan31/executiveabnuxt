@@ -1,9 +1,10 @@
 <template lang="html">
-  <div class="tabs__dark">
-    <ul class="tabs__header">
+  <div class="tabs__dark text-black">
+    <ul class="mx-auto">
       <li
         v-for="(tab, index) in tabs"
         :key="tab.title"
+        class="mx-2 text-white text-sm py-1 m-0 inline-block cursor-pointer"
         :class="index == selectedIndex ? 'tab__selected' : null"
         @click="selectTab(index)"
       >
@@ -16,12 +17,6 @@
 
 <script>
 export default {
-  props: {
-    mode: {
-      type: String,
-      default: 'dark',
-    },
-  },
   data() {
     return {
       selectedIndex: 0, // the index of the selected tab,
@@ -48,49 +43,7 @@ export default {
 </script>
 
 <style lang="css">
-ul.tabs__header {
-  display: block;
-  list-style: none;
-  margin: 0 0 0 20px;
-  padding: 0;
-}
-
-ul.tabs__header > li {
-  padding: 15px 30px;
-  border-radius: 10px;
-  margin: 0;
-  display: inline-block;
-  margin-right: 5px;
-  cursor: pointer;
-}
-
 ul.tabs__header > li.tab__selected {
-  font-weight: bold;
-  border-radius: 10px 10px 0 0;
-  border-bottom: 8px solid transparent;
-}
-
-.tab {
-  display: inline-block;
-  color: black;
-  padding: 20px;
-  min-width: 800px;
-  border-radius: 10px;
-  min-height: 400px;
-}
-
-.tabs__dark .tab {
-  background-color: #555;
-  color: #eee;
-}
-
-.tabs__dark li {
-  background-color: #ddd;
-  color: #aaa;
-}
-
-.tabs__dark li.tab__selected {
-  background-color: #555;
-  color: white;
+  border-bottom: 1px solid #fff;
 }
 </style>

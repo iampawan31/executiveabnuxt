@@ -27,9 +27,11 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#e67b25',
-          gray: '#2e3138',
-          grayAlternate: '#191919',
+          DEFAULT: '#e57b25',
+          'gray-light': '#c3c4c6',
+          'gray-medium-dark': '#58585a',
+          'gray-dark': '#444446',
+          'gray-alternate': '#353535',
         },
       },
       fontFamily: {
