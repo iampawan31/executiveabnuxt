@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-brand-gray-dark text-white">
+  <div class="bg-brand-gray-dark text-white font-brandSignature">
     <Header />
     <Nuxt />
     <Footer />

@@ -119,9 +119,9 @@
               financially benefits from our service. Anytime a member of your
               staff purchases a vehicle through our service, you will recieve a
               pay-out from us.
-              <span class="text-brand">
-                { ' That’s right, we are a free benefit for your organization
-                that actually pays you! ' }
+              <span class="text-brand mx-1">
+                That’s right, we are a free benefit for your organization that
+                actually pays you!
               </span>
             </div>
           </div>

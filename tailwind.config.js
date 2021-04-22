@@ -35,12 +35,14 @@ module.exports = {
         },
       },
       fontFamily: {
-        brandSignature: ['Caveat'],
+        brandSignature: ['Montserrat'],
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ['hover', 'focus'],
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 }

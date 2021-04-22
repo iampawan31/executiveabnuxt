@@ -48,28 +48,28 @@
     >
       <NuxtLink
         to="/about-us"
-        class="block text-white hover:bg-brand transition uppercase px-3 py-2 rounded-md text-sm font-medium"
+        class="block text-white hover:border-white transition border-transparent border-b-2 uppercase px-3 py-2 text-sm font-medium"
       >
         About us
       </NuxtLink>
 
       <NuxtLink
         to="/how-it-works"
-        class="block mt-1 text-white uppercase hover:bg-brand transition px-3 py-2 rounded-md text-sm font-medium sm:mt-0 sm:ml-2"
+        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition px-3 py-2 text-sm font-medium sm:mt-0 sm:ml-2"
       >
         How it works
       </NuxtLink>
 
       <NuxtLink
         to="/request-vehicle"
-        class="block mt-1 text-white uppercase hover:bg-brand transition px-3 py-2 rounded-md text-sm font-medium sm:mt-0 sm:ml-2"
+        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition px-3 py-2 text-sm font-medium sm:mt-0 sm:ml-2"
       >
         Request vehicle
       </NuxtLink>
 
       <NuxtLink
         to="/contact-us"
-        class="block mt-1 text-white uppercase hover:bg-brand transition px-3 py-2 rounded-md text-sm font-medium sm:mt-0 sm:ml-2"
+        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition px-3 py-2 text-sm font-medium sm:mt-0 sm:ml-2"
       >
         Contact us
       </NuxtLink>

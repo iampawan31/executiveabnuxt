@@ -11,6 +11,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "swiper": "^5.4.5",
@@ -30,6 +31,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.7.0",
+    "nuxt-webfontloader": "^1.1.0",
     "postcss": "^8.2.8",
     "prettier": "^2.2.1"
   }

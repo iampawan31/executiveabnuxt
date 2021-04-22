@@ -10,7 +10,13 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat:400,600,700',
+      },
+    ],
   },
   loading: {
     color: '#e67b25',
@@ -42,7 +48,12 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['nuxt-webfontloader'],
+  webfontloader: {
+    google: {
+      families: ['Montserrat:400,600,700'], // Loads B612 font with weights 400 and 700
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
