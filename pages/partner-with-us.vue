@@ -2,11 +2,11 @@
   <div>
     <section :style="mainHeaderImage" class="py-24">
       <div class="container mx-auto">
-        <div class="grid sm:grid-cols-7">
+        <div class="grid sm:grid-cols-9 sm:gap-8">
           <div></div>
-          <div class="col-span-3 flex items-center">
+          <div class="col-span-4 flex items-center">
             <div
-              class="bg-black bg-opacity-10 inline-block uppercase text-white px-5 py-3 text-5xl font-bold"
+              class="bg-black bg-opacity-10 inline-block uppercase text-white px-3 py-3 text-5xl font-bold"
             >
               <span>// PARTNER WITH US</span>
             </div>
@@ -83,7 +83,9 @@
       <div class="container mx-auto py-16">
         <div class="grid grid-cols-10 my-10">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faBuilding" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faBuilding" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             TYPES OF ORGANIZATIONS WE PARTNER WITH
@@ -105,7 +107,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faExchangeAlt" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faExchangeAlt" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             HOW WE PARTNER WITH ORGANIZATIONS
@@ -124,7 +128,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faSmile" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faSmile" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             REASONS TO PARTNER WITH US
@@ -142,15 +148,26 @@
         </div>
       </div>
     </section>
+    <svg width="0" height="0">
+      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
+        <stop
+          offset="0%"
+          style="stop-color: rgb(205, 176, 28); stop-opacity: 1"
+        />
+        <stop
+          offset="100%"
+          style="stop-color: rgb(117, 176, 24); stop-opacity: 1"
+        />
+      </linearGradient>
+    </svg>
   </div>
 </template>
 
 <script>
+import { faBuilding, faSmile } from '@fortawesome/free-regular-svg-icons'
 import {
-  faBuilding,
   faChevronRight,
   faExchangeAlt,
-  faSmile,
 } from '@fortawesome/free-solid-svg-icons'
 
 import bgMainHeader from 'assets/images/partner_with_us_header.jpg'
@@ -160,6 +177,9 @@ export default {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
     }
+  },
+  head: {
+    title: 'Executive - Partner With Us',
   },
   computed: {
     faChevronRight() {
@@ -177,3 +197,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.parent-div svg * {
+  fill: url(#lgrad);
+}
+</style>

@@ -42,6 +42,7 @@ module.exports = {
   variants: {
     extend: {
       borderWidth: ['hover', 'focus'],
+      margin: ['hover', 'focus'],
     },
   },
   plugins: [require('@tailwindcss/forms')],

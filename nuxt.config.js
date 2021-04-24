@@ -14,7 +14,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat:400,600,700',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700',
       },
     ],
   },
@@ -28,7 +28,10 @@ export default {
   css: ['swiper/css/swiper.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '@/plugins/swiper.js', mode: 'client' }],
+  plugins: [
+    { src: '@/plugins/swiper.js', mode: 'client' },
+    { src: '@/plugins/vue-instagram', mode: 'client' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -51,7 +54,7 @@ export default {
   modules: ['nuxt-webfontloader'],
   webfontloader: {
     google: {
-      families: ['Montserrat:400,600,700'], // Loads B612 font with weights 400 and 700
+      families: ['Montserrat:400,700'], // Loads B612 font with weights 400 and 700
     },
   },
 

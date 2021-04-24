@@ -66,7 +66,9 @@
       <div class="container mx-auto py-16">
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faBuilding" />
+            <div class="parent-div-one">
+              <fa class="text-8xl text-brand" :icon="faBinoculars" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl uppercase font-semibold">
             ACCESS TO MILLIONS OF VEHICLES
@@ -92,7 +94,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faMobile" />
+            <div class="parent-div-one">
+              <fa class="text-8xl text-brand" :icon="faDollarSign" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             HOW OUR SERVICE IS COST FREE
@@ -117,7 +121,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faHandHoldingUsd" />
+            <div class="parent-div-one">
+              <fa class="text-8xl text-brand" :icon="faTrophy" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             HOW WE GET YOU THE BEST PRICE
@@ -181,7 +187,9 @@
       <div class="container mx-auto py-16">
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faBuilding" />
+            <div class="parent-div-two">
+              <fa class="text-8xl text-brand" :icon="faFile" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl uppercase font-semibold">
             LET US HANDLE THE DETAILS
@@ -203,7 +211,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faMobile" />
+            <div class="parent-div-two">
+              <fa class="text-8xl text-brand" :icon="faMoneyCheckAlt" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             PAY WITH CASH OR FINANCE
@@ -236,7 +246,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faHandHoldingUsd" />
+            <div class="parent-div-two">
+              <fa class="text-8xl text-brand" :icon="faKey" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">HAVE A TRADE-IN?</div>
           <div></div>
@@ -310,18 +322,44 @@
         button-text="FAQS"
       />
     </section>
+    <svg width="0" height="0">
+      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
+        <stop
+          offset="0%"
+          style="stop-color: rgb(9, 223, 232); stop-opacity: 1"
+        />
+        <stop
+          offset="100%"
+          style="stop-color: rgb(27, 176, 126); stop-opacity: 1"
+        />
+      </linearGradient>
+    </svg>
+    <svg width="0" height="0">
+      <linearGradient id="lgradOne" x1="100%" y1="0%" x2="100%" y2="100%">
+        <stop
+          offset="0%"
+          style="stop-color: rgb(113, 236, 10); stop-opacity: 1"
+        />
+        <stop
+          offset="100%"
+          style="stop-color: rgb(141, 172, 24); stop-opacity: 1"
+        />
+      </linearGradient>
+    </svg>
   </div>
 </template>
 
 <script>
 import bgMainHeader from 'assets/images/how_it_works_header.jpg'
 import bgSectionHeader from 'assets/images/how_it_works_section_one.jpg'
+import { faFile } from '@fortawesome/free-regular-svg-icons'
 import {
-  faBuilding,
   faChevronDown,
-  faGraduationCap,
-  faHandHoldingUsd,
-  faMobile,
+  faBinoculars,
+  faDollarSign,
+  faTrophy,
+  faMoneyCheckAlt,
+  faKey,
 } from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
 export default {
@@ -335,22 +373,41 @@ export default {
       sectionHeaderImage: { backgroundImage: `url(${bgSectionHeader})` },
     }
   },
+  head: {
+    title: 'Executive - How It Works',
+  },
   computed: {
-    faBuilding() {
-      return faBuilding
+    faFile() {
+      return faFile
     },
     faChevronDown() {
       return faChevronDown
     },
-    faGraduationCap() {
-      return faGraduationCap
+    faBinoculars() {
+      return faBinoculars
     },
-    faHandHoldingUsd() {
-      return faHandHoldingUsd
+    faDollarSign() {
+      return faDollarSign
     },
-    faMobile() {
-      return faMobile
+    faTrophy() {
+      return faTrophy
+    },
+    faMoneyCheckAlt() {
+      return faMoneyCheckAlt
+    },
+    faKey() {
+      return faKey
     },
   },
 }
 </script>
+
+<style scoped>
+.parent-div-one svg * {
+  fill: url(#lgrad);
+}
+
+.parent-div-two svg * {
+  fill: url(#lgradOne);
+}
+</style>

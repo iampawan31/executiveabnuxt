@@ -69,7 +69,7 @@
               </div>
             </div>
             <button
-              class="bg-brand shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
+              class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
             >
               Send
               <fa class="ml-2 text-white" :icon="faChevronRight" />
@@ -133,13 +133,13 @@
             </div>
             <div class="inline-grid grid-cols-2 gap-24 mt-5">
               <button
-                class="bg-brand inline-block shadow-lg py-2 px-8 rounded uppercase w-auto text-white mb-0.5"
+                class="bg-gradient-to-r from-yellow-700 to-yellow-500 inline-block shadow-lg py-2 px-8 rounded uppercase w-auto text-white mb-0.5"
               >
                 How Page
                 <fa class="ml-2 text-white" :icon="faChevronRight" />
               </button>
               <button
-                class="bg-brand shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
+                class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
               >
                 FAQ Page<fa class="ml-2 text-white" :icon="faChevronRight" />
               </button>
@@ -172,6 +172,9 @@ export default {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
     }
+  },
+  head: {
+    title: 'Executive - Contact Us',
   },
   computed: {
     faChevronDown() {

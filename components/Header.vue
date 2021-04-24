@@ -5,13 +5,13 @@
         ? 'bg-transparent absolute w-full top-0 z-50'
         : 'bg-black relative'
     "
-    class="sm:flex sm:justify-between sm:items-center sm:py-3 sm:px-4"
+    class="md:flex md:justify-between md:items-center sm:py-3 sm:px-4"
   >
     <div class="flex justify-between items-center py-3 px-4 sm:p-0">
       <NuxtLink to="/">
         <img class="h-6" src="~/assets/logo_white.png" alt="Executive AB" />
       </NuxtLink>
-      <div class="sm:hidden">
+      <div class="md:hidden">
         <button
           type="button"
           :class="isHomeRoute ? 'text-white' : 'text-gray-300'"
@@ -44,32 +44,32 @@
     </div>
     <div
       :class="isOpen ? 'block' : 'hidden'"
-      class="px-4 pb-4 bt-2 sm:flex sm:p-0"
+      class="px-4 pb-4 bt-2 md:flex sm:p-0"
     >
       <NuxtLink
         to="/about-us"
-        class="block text-white hover:border-white transition border-transparent border-b-2 uppercase px-3 py-2 text-sm font-medium"
+        class="block text-white hover:border-white transition border-transparent border-b-2 uppercase lg:px-3 md:px-1 py-2 text-sm font-medium"
       >
         About us
       </NuxtLink>
 
       <NuxtLink
         to="/how-it-works"
-        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition px-3 py-2 text-sm font-medium sm:mt-0 sm:ml-2"
+        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition lg:px-3 md:px-1 py-2 text-sm font-medium md:mt-0 md:ml-2"
       >
         How it works
       </NuxtLink>
 
       <NuxtLink
         to="/request-vehicle"
-        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition px-3 py-2 text-sm font-medium sm:mt-0 sm:ml-2"
+        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2"
       >
         Request vehicle
       </NuxtLink>
 
       <NuxtLink
         to="/contact-us"
-        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition px-3 py-2 text-sm font-medium sm:mt-0 sm:ml-2"
+        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2"
       >
         Contact us
       </NuxtLink>
@@ -87,6 +87,13 @@ export default {
   computed: {
     isHomeRoute() {
       return this.$route.path === '/'
+    },
+  },
+  watch: {
+    '$route.path'(oldRoute, newRoute) {
+      if (oldRoute !== newRoute) {
+        this.isOpen = false
+      }
     },
   },
 }

@@ -1,25 +1,29 @@
 <template>
   <client-only>
-    <swiper ref="carousel" class="swiper" :options="swiperOptions">
+    <swiper
+      ref="carousel"
+      class="swiper max-w-md sm:max-w-4xl"
+      :options="swiperOptions"
+    >
       <swiper-slide
         v-for="(slide, index) in firstSlider"
         :key="index"
         class="flex"
       >
         <div class="flex flex-col bg-white text-black rounded-md shadow-md">
-          <div class="px-5 pt-5">
-            <img :src="slide.image" :alt="slide.title" />
+          <div class="px-5 pt-5 justify-center flex">
+            <img :src="slide.image" class="h-36" :alt="slide.title" />
           </div>
           <div
-            class="bg-green-600 text-center h-12 py-3 text-xl text-white font-semibold"
+            class="bg-green-600 text-center h-12 py-3 text-md text-white font-semibold"
           >
             {{ slide.title }}
           </div>
           <div class="flex-1 text-sm p-3">{{ slide.description }}</div>
         </div>
       </swiper-slide>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
     </swiper>
   </client-only>
 </template>
@@ -36,9 +40,27 @@ export default {
         effect: 'slide',
         slidesPerView: 4,
         spaceBetween: 30,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev',
+        // },
+        breakpoints: {
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
         },
       },
     }

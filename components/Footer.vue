@@ -1,7 +1,7 @@
 <template>
   <div class="bg-black">
     <div class="container mx-auto py-10">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
         <div class="grid gap-4 sm:grid-cols-2">
           <div class="grid grid-flow-row">
             <div class="font-bold mb-2">MAIN NAVIGATION</div>
@@ -26,7 +26,9 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="grid sm:grid-cols-3 gap-4">
+        <div
+          class="grid md:grid-rows-2 lg:grid-flow-row lg:grid-cols-3 md:grid-flow-col gap-4"
+        >
           <div>
             <div class="grid grid-flow-row gap-2">
               <div class="sm:mx-4">
@@ -66,24 +68,39 @@
           </div>
         </div>
       </div>
-      <div class="grid sm:grid-cols-2 sm:gap-0 gap-4 mt-10">
-        <div class="flex justify-between items-end">
-          <NuxtLink to="/">
-            <img
-              class="h-6"
-              src="~/assets/logo_white.png"
-              alt="Executive AB Logo"
-            />
-          </NuxtLink>
-          <div class="text-xs">© 2021. All Rights Reserved.</div>
-        </div>
-        <div class="grid grid-rows-1 mx-auto sm:px-4 gap-4 sm:grid-rows-2">
-          <div class="hidden sm:block">CONNECT ON SOCIAL</div>
+      <div class="flex mt-16 w-full space-x-12 content-end flex-wrap">
+        <div class="flex flex-wrap space-x-5 content-end flex-1">
           <div>
-            <fa class="text-brand mr-4 text-4xl" :icon="faInstagram" />
-            <fa class="text-brand mx-4 text-4xl" :icon="faFacebook" />
-            <fa class="text-brand mx-4 text-4xl" :icon="faTwitter" />
-            <fa class="text-brand mx-4 text-4xl" :icon="faLinkedin" />
+            <NuxtLink to="/">
+              <img
+                class="h-6"
+                src="~/assets/logo_white.png"
+                alt="Executive AB Logo"
+              />
+            </NuxtLink>
+          </div>
+          <div class="flex flex-wrap content-end text-xs">
+            <p>© 2021. All Rights Reserved.</p>
+          </div>
+        </div>
+        <div class="flex flex-1 flex-col">
+          <div class="hidden sm:block mb-4">CONNECT ON SOCIAL</div>
+          <div class="flex">
+            <a href="https://www.instagram.com/executiveautob/" target="_blank">
+              <fa class="text-brand mr-4 text-4xl" :icon="faInstagram" />
+            </a>
+            <a href="https://www.facebook.com/executiveautob/" target="_blank">
+              <fa class="text-brand mx-4 text-4xl" :icon="faFacebook" />
+            </a>
+            <a href="https://twitter.com/executiveab" target="_blank">
+              <fa class="text-brand mx-4 text-4xl" :icon="faTwitter" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/executiveautob/"
+              target="_blank"
+            >
+              <fa class="text-brand mx-4 text-4xl" :icon="faLinkedin" />
+            </a>
           </div>
         </div>
       </div>

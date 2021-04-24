@@ -24,7 +24,7 @@ export const mainNavigationLinks = [
     path: '/request-vehicle',
   },
   {
-    name: 'Request maintenance/parts',
+    name: 'Request maintenance / parts',
     path: '/request-maintenance-parts',
   },
   {

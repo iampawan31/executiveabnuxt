@@ -52,7 +52,9 @@
       <div class="container mx-auto py-16">
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-brand text-8xl" :icon="faClock" />
+            <div class="parent-div">
+              <fa class="fa-gradient text-8xl" :icon="faClock" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             SAVE YOUR TIME FOR WHAT MATTERS MOST
@@ -79,7 +81,21 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-brand text-8xl" :icon="faCcVisa" />
+            <div class="parent-div">
+              <fa class="fa-gradient text-8xl" :icon="faCcVisa" />
+            </div>
+            <svg width="0" height="0">
+              <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
+                <stop
+                  offset="0%"
+                  style="stop-color: rgb(255, 0, 0); stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: rgb(0, 0, 255); stop-opacity: 1"
+                />
+              </linearGradient>
+            </svg>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             A THANK YOU FOR YOUR SERVICE
@@ -88,8 +104,8 @@
           <div class="col-span-5">
             <div class="mb-4">
               As an extra thank you for your service we provide you with a
-              <span class="text-yellow-500">$200 Visa gift card</span>{' '} when
-              you allow us to help you purchase your perfect car.
+              <span class="text-yellow-500">$200 Visa gift card</span> when you
+              allow us to help you purchase your perfect car.
             </div>
             <div class="mb-4">
               To qualify please select your line of service when filling out
@@ -101,7 +117,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-brand text-8xl" :icon="faThumbsUp" />
+            <div class="parent-div">
+              <fa class="gradient text-8xl" :icon="faThumbsUp" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             REASONS TO PARTNER WITH US
@@ -131,11 +149,8 @@
 
 <script>
 import bgMainHeader from 'assets/images/military_program_header.jpg'
-import {
-  faChevronDown,
-  faClock,
-  faThumbsUp,
-} from '@fortawesome/free-solid-svg-icons'
+import { faClock, faThumbsUp } from '@fortawesome/free-regular-svg-icons'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faCcVisa } from '@fortawesome/free-brands-svg-icons'
 import CallToAction from '~/components/CallToAction'
 export default {
@@ -143,10 +158,14 @@ export default {
   components: {
     CallToAction,
   },
+  loading: true,
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
     }
+  },
+  head: {
+    title: 'Executive - Military And Community Program',
   },
   computed: {
     faChevronDown() {
@@ -164,3 +183,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.parent-div svg * {
+  fill: url(#lgrad);
+}
+</style>

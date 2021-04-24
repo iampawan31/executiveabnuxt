@@ -57,7 +57,9 @@
       <div class="container mx-auto py-16">
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faBuilding" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faBuilding" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             HOW IT WORKS FOR YOUR ORGANIZATION
@@ -82,7 +84,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faMobile" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faMobileAlt" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             HOW IT WORKS FOR YOUR STAFF
@@ -106,7 +110,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faHandHoldingUsd" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faHandHoldingUsd" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             YOU EARN WHEN WE EARN
@@ -129,7 +135,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faGraduationCap" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faGraduationCap" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             VEHICLE PURCHASING EDUCATION
@@ -160,17 +168,29 @@
         button-text="Get Started"
       />
     </section>
+    <svg width="0" height="0">
+      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
+        <stop
+          offset="0%"
+          style="stop-color: rgb(199, 21, 133); stop-opacity: 1"
+        />
+        <stop
+          offset="100%"
+          style="stop-color: rgb(255, 140, 0); stop-opacity: 1"
+        />
+      </linearGradient>
+    </svg>
   </div>
 </template>
 
 <script>
 import bgMainHeader from 'assets/images/employee_benefits_header.jpg'
+import { faBuilding } from '@fortawesome/free-regular-svg-icons'
 import {
-  faBuilding,
   faChevronDown,
   faGraduationCap,
   faHandHoldingUsd,
-  faMobile,
+  faMobileAlt,
 } from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
 export default {
@@ -182,6 +202,9 @@ export default {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
     }
+  },
+  head: {
+    title: 'Executive - Employee Benefits Program',
   },
   computed: {
     faBuilding() {
@@ -196,9 +219,15 @@ export default {
     faHandHoldingUsd() {
       return faHandHoldingUsd
     },
-    faMobile() {
-      return faMobile
+    faMobileAlt() {
+      return faMobileAlt
     },
   },
 }
 </script>
+
+<style scoped>
+.parent-div svg * {
+  fill: url(#lgrad);
+}
+</style>

@@ -2,16 +2,20 @@
   <div>
     <div class="relative flex items-center h-screen overflow-hidden">
       <section
-        class="w-full grid place-items-end text-white z-30 container mx-auto"
+        class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 container mx-auto"
       >
-        <div class="text-4xl font-bold uppercase mb-5">
+        <div
+          class="sm:text-right text-center text-4xl font-bold uppercase mb-5"
+        >
           PUT THE SALESPERSON IN YOUR REARVIEW
         </div>
-        <div class="text-md mb-5">
+        <div class="text-center text-md mb-5">
           We find the vehicle your looking for and save you time <br />
           and money. All you need to do is sit back & buckle-up.
         </div>
-        <button class="bg-brand py-2 px-4 rounded text-white mt-4 mb-10">
+        <button
+          class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-2 px-4 rounded text-white mt-4 mb-10"
+        >
           GET STARTED
           <fa class="ml-1" :icon="faAngleRight" />
         </button>
@@ -41,7 +45,7 @@
     </section>
     <section class="bg-brand-gray-dark py-16">
       <div class="mx-auto container">
-        <div class="grid grid-cols-2 gap-5">
+        <div class="grid sm:grid-cols-2 gap-5">
           <div
             class="p-14 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage1"
@@ -75,13 +79,16 @@
         </div>
       </div>
     </section>
-    <section class="bg-black py-16">
-      <div class="grid grid-cols-3 gap-4">
-        <div class="col-span-1 px-16">
-          <div class="uppercase text-xl text-brand mb-5">
+    <section class="bg-black bg-blend-darken">
+      <div class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-3 sm:gap-4">
+        <div
+          class="sm:col-span-1 px-4 sm:px-16 py-16"
+          :style="sliderBackground"
+        >
+          <div class="uppercase text-lg sm:text-xl text-brand mb-5">
             YOUR PERSONAL CONCIERGE AWAITS
           </div>
-          <div class="uppercase text-3xl font-semibold mb-5">
+          <div class="uppercase text-2xl sm:text-3xl font-semibold mb-5">
             HOW OUR NO-COST SERVICE WORKS
           </div>
           <div class="text-lg text-gray-400">
@@ -90,7 +97,7 @@
             <span class="text-brand"> no cost to you.</span>
           </div>
         </div>
-        <div class="col-span-2">
+        <div class="sm:col-span-2 py-16">
           <Slides />
         </div>
       </div>
@@ -105,7 +112,7 @@
           >
             <div class="container mx-auto">
               <div class="shadow-sm transition-opacity">
-                <div class="grid-cols-4 grid">
+                <div class="sm:grid-cols-4 grid">
                   <div
                     class="flex flex-wrap flex-column content-center bg-fixed p-5"
                     :style="{
@@ -121,8 +128,8 @@
                       {{ homepageTab.description }}
                     </p>
                   </div>
-                  <div class="col-span-3 bg-white text-gray-500">
-                    <div class="grid grid-cols-2 p-10 gap-4">
+                  <div class="sm:col-span-3 bg-white text-gray-500">
+                    <div class="grid sm:grid-cols-2 p-10 gap-4">
                       <div>
                         <ul class="tab-section">
                           <li
@@ -170,12 +177,26 @@
     <section class="bg-black py-16">
       <div class="container mx-auto">
         <div class="grid sm:grid-cols-3 gap-4">
-          <div class="col-span-2"></div>
-          <div class="col-span-1">
+          <div class="col-span-2">
+            <client-only>
+              <vue-instagram
+                token="aba490cf4e4befd85e8a06e7e6665fc6"
+                :count="5"
+              >
+                <template slot="feeds" slot-scope="props">
+                  <li class="fancy-list">{{ props.feed.link }}</li>
+                </template>
+                <template slot="error" slot-scope="props">
+                  <div class="fancy-alert">{{ props.error.error_message }}</div>
+                </template>
+              </vue-instagram>
+            </client-only>
+          </div>
+          <div class="col-span-1 px-4">
             <div class="uppercase text-xl text-brand mb-5">
               #EXECUTIVE EXPERIENCE
             </div>
-            <div class="uppercase text-3xl font-semibold mb-5">
+            <div class="uppercase text-2xl sm:text-3xl font-semibold mb-5">
               IT’S NOT A SECRET ANYMORE
             </div>
             <div class="text-lg text-gray-400">
@@ -232,6 +253,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import bgImage1 from 'assets/images/homepage_first_section_image_1.jpg'
 import bgImage2 from 'assets/images/homepage_first_section_image_2.jpg'
+import homepageSliderBackground from 'assets/images/homepage_slider_background.jpg'
 import { homepageTabSection } from '../data/home'
 import Slides from '~/components/Slides'
 import Tabs from '~/components/common/Tabs'
@@ -250,8 +272,12 @@ export default {
     return {
       firstSectionBackgroundImage1: { backgroundImage: `url(${bgImage1})` },
       firstSectionBackgroundImage2: { backgroundImage: `url(${bgImage2})` },
+      sliderBackground: { backgroundImage: `url(${homepageSliderBackground})` },
       homepageTabSection,
     }
+  },
+  head: {
+    title: 'Executive - Home',
   },
   computed: {
     faAngleRight() {

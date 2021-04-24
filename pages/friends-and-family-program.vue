@@ -72,7 +72,9 @@
       <div class="container mx-auto py-16">
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faUsers" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faUsers" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             GETTING YOUR FRIENDS & FAMILY CODE
@@ -103,7 +105,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faCcVisa" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faCcVisa" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             YOUR FRIENDS & FAMILY REWARDS
@@ -128,7 +132,9 @@
         <hr />
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
-            <fa class="text-8xl text-brand" :icon="faHandsHelping" />
+            <div class="parent-div">
+              <fa class="text-8xl text-brand" :icon="faHandshake" />
+            </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             WANT TO EARN MORE?
@@ -159,17 +165,29 @@
         button-text="Get Started"
       />
     </section>
+    <svg width="0" height="0">
+      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
+        <stop
+          offset="0%"
+          style="stop-color: rgb(255, 140, 0); stop-opacity: 1"
+        />
+        <stop
+          offset="100%"
+          style="stop-color: rgb(255, 215, 0); stop-opacity: 1"
+        />
+      </linearGradient>
+    </svg>
   </div>
 </template>
 
 <script>
 import bgMainHeader from 'assets/images/friends_and_family_header.jpg'
+import { faHandshake } from '@fortawesome/free-regular-svg-icons'
 import {
   faBullhorn,
   faChevronDown,
   faChevronRight,
   faCommentAlt,
-  faHandsHelping,
   faMoneyBill,
   faUsers,
 } from '@fortawesome/free-solid-svg-icons'
@@ -185,6 +203,9 @@ export default {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
     }
   },
+  head: {
+    title: 'Executive - Friends And Family Program',
+  },
   computed: {
     faBullhorn() {
       return faBullhorn
@@ -198,8 +219,8 @@ export default {
     faCommentAlt() {
       return faCommentAlt
     },
-    faHandsHelping() {
-      return faHandsHelping
+    faHandshake() {
+      return faHandshake
     },
     faMoneyBill() {
       return faMoneyBill
@@ -213,3 +234,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.parent-div svg * {
+  fill: url(#lgrad);
+}
+</style>

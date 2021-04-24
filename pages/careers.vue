@@ -1,17 +1,22 @@
 <template>
   <div>
-    <section :style="mainHeaderImage" class="py-24">
+    <section :style="mainHeaderImage" class="py-16 sm:py-20 md:py-20 lg:py-24">
       <div class="container mx-auto">
-        <div class="grid grid-cols-7">
-          <div></div>
-          <div class="col-span-2 flex items-center">
+        <div
+          class="flex flex-col lg:content-center xl:justify-center lg:space-x-8 lg:flex-row mx-4"
+        >
+          <div
+            class="flex lg:flex-1 xl:flex-none xl:justify-center lg:justify-end items-center"
+          >
             <div
-              class="bg-black bg-opacity-10 inline-block uppercase text-white px-5 py-3 text-5xl font-bold"
+              class="bg-black bg-opacity-10 mb-5 inline-block uppercase text-white px-5 py-3 text-5xl font-bold"
             >
               <span>// CAREERS</span>
             </div>
           </div>
-          <div class="flex items-center col-span-2">
+          <div
+            class="flex items-center xl:flex-1 xl:justify-start content-center lg:max-w-md"
+          >
             Join the EAB team and join us on our mission to help transform the
             way consumers purchase vehicles.
           </div>
@@ -19,12 +24,14 @@
         </div>
       </div>
     </section>
-    <section class="bg-white text-black py-24">
+    <section class="bg-white text-black py-16 sm:py-24">
       <div class="container mx-auto">
         <div
-          class="bg-white shadow-2xl rounded-lg mx-auto max-w-2xl w-full space-y-8 p-12"
+          class="bg-white shadow-2xl rounded-lg mx-auto sm:max-w-2xl w-full p-4 space-y-8 sm:p-12"
         >
-          <div class="text-3xl font-bold">BECOME AN EXECUTIVE CONCIERGE</div>
+          <div class="text-2xl sm:text-3xl font-bold">
+            BECOME AN EXECUTIVE CONCIERGE
+          </div>
           <div class="text-gray-500">
             We are always on the lookout for talent that has a passion for
             putting client experience first. We see a future where the past
@@ -36,7 +43,7 @@
             interested in you. We look forward to receiving your application!
           </div>
           <button
-            class="bg-brand shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
+            class="bg-gradient-to-r from-yellow-700 to-yellow-500 transition duration-500 hover:scale-110 transform-gpu shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
           >
             Application
             <fa class="ml-2 text-white" :icon="faChevronRight" />
@@ -45,16 +52,19 @@
       </div>
     </section>
     <section class="bg-white text-black">
-      <div class="container mx-auto py-16">
-        <div class="grid grid-cols-10 my-10">
-          <div class="col-span-1">
-            <fa class="ml-2 text-8xl text-brand" :icon="faUserTie" />
+      <div class="container mx-auto sm:py-16">
+        <div class="flex flex-col lg:space-x-4 lg:flex-row space-y-2 mx-4">
+          <div
+            class="flex lg:flex-1 lg:flex-col xl:flex-row xl:space-x-8 space-x-4 lg:space-x-0 lg:space-y-2"
+          >
+            <div class="flex parent-div">
+              <fa class="text-6xl sm:text-8xl text-brand" :icon="faUserTie" />
+            </div>
+            <div class="flex text-2xl sm:text-3xl font-semibold">
+              WHAT IS AN EXECUTIVE CONCEIRGE?
+            </div>
           </div>
-          <div class="col-span-2 text-3xl font-semibold">
-            WHAT IS AN EXECUTIVE CONCEIRGE?
-          </div>
-          <div></div>
-          <div class="col-span-6">
+          <div class="flex xl:max-w-3xl flex-col">
             <div class="mb-4">
               As an Executive Concierge you will be responsible for servicing
               clients with their vehicle requests. You will serve as the main
@@ -76,15 +86,20 @@
           </div>
         </div>
         <hr />
-        <div class="grid grid-cols-10 my-10">
-          <div class="col-span-1">
-            <fa class="ml-2 text-8xl text-brand" :icon="faThList" />
+        <div
+          class="flex flex-col lg:space-x-4 lg:flex-row space-y-2 my-10 mx-4"
+        >
+          <div
+            class="flex lg:flex-1 lg:flex-col xl:flex-row xl:space-x-8 space-x-4 lg:space-x-0 lg:space-y-2"
+          >
+            <div class="flex parent-div">
+              <fa class="text-6xl sm:text-8xl text-brand" :icon="faThList" />
+            </div>
+            <div class="flex text-2xl sm:text-3xl font-semibold">
+              APPLICANT REQUIREMENTS
+            </div>
           </div>
-          <div class="col-span-2 text-3xl font-semibold">
-            APPLICANT REQUIREMENTS
-          </div>
-          <div></div>
-          <div class="col-span-6">
+          <div class="flex xl:max-w-3xl flex-col">
             <div class="mb-4">
               Applicants considering becoming an Executive Concierge should have
               a love & passion for helping people paired with strong
@@ -100,15 +115,20 @@
           </div>
         </div>
         <hr />
-        <div class="grid grid-cols-10 my-10">
-          <div class="col-span-1">
-            <fa class="ml-2 text-8xl text-brand" :icon="faSun" />
+        <div
+          class="flex flex-col lg:space-x-4 lg:flex-row space-y-2 mx-4 mt-10 sm:my-10"
+        >
+          <div
+            class="flex lg:flex-1 lg:flex-col xl:flex-row xl:space-x-8 space-x-4 lg:space-x-0 lg:space-y-2"
+          >
+            <div class="flex parent-div">
+              <fa class="text-6xl sm:text-8xl text-brand" :icon="faSun" />
+            </div>
+            <div class="flex text-2xl sm:text-3xl font-semibold">
+              PERKS OF BECOMING AN EXECUTIVE CONCIERGE
+            </div>
           </div>
-          <div class="col-span-2 text-3xl font-semibold">
-            PERKS OF BECOMING AN EXECUTIVE CONCIERGE
-          </div>
-          <div></div>
-          <div class="col-span-6">
+          <div class="flex xl:max-w-3xl flex-col">
             <div class="mb-4">
               As an Executive Concierge you will have the freedom to work
               remotely and create your own schedule. All you need is a laptop,
@@ -124,17 +144,28 @@
         </div>
       </div>
     </section>
+    <svg width="0" height="0">
+      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
+        <stop
+          offset="0%"
+          style="stop-color: rgb(207, 94, 72); stop-opacity: 1"
+        />
+        <stop
+          offset="100%"
+          style="stop-color: rgb(115, 81, 118); stop-opacity: 1"
+        />
+      </linearGradient>
+    </svg>
   </div>
 </template>
 
 <script>
 import {
   faChevronRight,
-  faSun,
   faThList,
   faUserTie,
 } from '@fortawesome/free-solid-svg-icons'
-
+import { faSun } from '@fortawesome/free-regular-svg-icons'
 import bgMainHeader from 'assets/images/careers_header.jpg'
 export default {
   transitions: 'fade',
@@ -142,6 +173,9 @@ export default {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
     }
+  },
+  head: {
+    title: 'Executive - Careers',
   },
   computed: {
     faChevronRight() {
@@ -159,3 +193,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.parent-div svg * {
+  fill: url(#lgrad);
+}
+</style>
