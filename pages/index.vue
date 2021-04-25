@@ -103,8 +103,16 @@
         </div>
       </div>
     </section>
-    <section class="bg-brand-gray-alternate py-16">
-      <div>
+    <section class="bg-brand-gray-alternate py-6 sm:py-16">
+      <div class="flex flex-col md:hidden">
+        <Accordian
+          v-for="(homepageTab, index) in homepageTabSection"
+          :key="index"
+          :open="index === 0 ? true : false"
+          :homepage-tab="homepageTab"
+        />
+      </div>
+      <div class="hidden md:flex">
         <tabs>
           <tab
             v-for="(homepageTab, index) in homepageTabSection"
@@ -295,6 +303,7 @@ import bgImage1 from 'assets/images/homepage_first_section_image_1.jpg'
 import bgImage2 from 'assets/images/homepage_first_section_image_2.jpg'
 import homepageSliderBackground from 'assets/images/homepage_slider_background.jpg'
 import { homepageTabSection } from '../data/home'
+import Accordian from '~/components/common/Accordian'
 import Slides from '~/components/Slides'
 import Tabs from '~/components/common/Tabs'
 import Tab from '~/components/common/Tab'
@@ -304,6 +313,7 @@ import InstagramFeed from '~/components/InstagramFeed'
 export default {
   transitions: 'fade',
   components: {
+    Accordian,
     Slides,
     Tabs,
     Tab,

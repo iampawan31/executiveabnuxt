@@ -5,7 +5,7 @@
         <div
           v-for="(tab, index) in tabs"
           :key="tab.title"
-          class="mx-2 min-w-max text-white py-1 m-0 text-sm cursor-pointer"
+          class="mx-2 min-w-max text-white py-1 m-0 md:text-sm cursor-pointer"
           :class="index == selectedIndex ? 'border-b-2' : null"
           @click="selectTab(index)"
         >

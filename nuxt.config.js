@@ -1,8 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'static',
+  target: process.target === 'static' ? 'static' : 'server',
   router: {
-    base: '/executiveabnuxt/',
+    base: process.target === 'static' ? '/executiveabnuxt/' : '/',
   },
   head: {
     title: 'executiveabnuxt',
