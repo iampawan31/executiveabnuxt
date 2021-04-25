@@ -70,7 +70,7 @@
               </div>
             </div>
             <button
-              class="bg-brand shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
+              class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
             >
               Send
               <fa class="ml-2 text-white" :icon="faChevronRight" />

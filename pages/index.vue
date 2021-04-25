@@ -58,9 +58,10 @@
               works for all brands and models. Nationwide delivery available.
             </p>
             <button
-              class="bg-brand uppercase py-2 px-8 rounded text-white mt-4 mb-10"
+              class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-8 rounded text-white mt-4 mb-10"
             >
               Launch
+              <fa class="ml-1" :icon="faAngleRight" />
             </button>
           </div>
           <div
@@ -178,19 +179,58 @@
       <div class="container mx-auto">
         <div class="grid sm:grid-cols-3 gap-4">
           <div class="col-span-2">
-            <client-only>
-              <vue-instagram
-                token="aba490cf4e4befd85e8a06e7e6665fc6"
-                :count="5"
-              >
-                <template slot="feeds" slot-scope="props">
-                  <li class="fancy-list">{{ props.feed.link }}</li>
-                </template>
-                <template slot="error" slot-scope="props">
-                  <div class="fancy-alert">{{ props.error.error_message }}</div>
-                </template>
-              </vue-instagram>
-            </client-only>
+            <InstagramFeed
+              :token="accessToken"
+              fields="media_url,media_type,caption"
+              :mediatypes="['IMAGE']"
+              :count="10"
+            >
+              <template #loading="props">
+                <h1 v-if="props.loading" class="fancy-loading">
+                  Loading, please wait...
+                </h1>
+              </template>
+
+              <template #feeds="props">
+                <client-only>
+                  <swiper
+                    ref="carousel"
+                    class="swiper max-w-md sm:max-w-4xl"
+                    :options="swiperOptions"
+                  >
+                    <swiper-slide
+                      v-for="(feed, index) in props.feeds"
+                      :key="index"
+                      class="flex"
+                    >
+                      <div
+                        class="flex flex-col bg-white text-black rounded-md shadow-md"
+                      >
+                        <div class="rounded justify-center flex">
+                          <img
+                            :src="feed.media_url"
+                            class="rounded-md"
+                            :text="feed.caption"
+                          />
+                        </div>
+                      </div>
+                    </swiper-slide>
+                    <div
+                      slot="button-prev"
+                      class="bg-brand p-7 rounded-full swiper-button-prev"
+                    ></div>
+                    <div
+                      slot="button-next"
+                      class="bg-brand p-7 rounded-full swiper-button-next"
+                    ></div>
+                  </swiper>
+                </client-only>
+              </template>
+
+              <template #error="props">
+                <div class="fancy-alert">{{ props.error }}</div>
+              </template>
+            </InstagramFeed>
           </div>
           <div class="col-span-1 px-4">
             <div class="uppercase text-xl text-brand mb-5">
@@ -259,6 +299,7 @@ import Slides from '~/components/Slides'
 import Tabs from '~/components/common/Tabs'
 import Tab from '~/components/common/Tab'
 import CallToAction from '~/components/CallToAction'
+import InstagramFeed from '~/components/InstagramFeed'
 
 export default {
   transitions: 'fade',
@@ -267,13 +308,48 @@ export default {
     Tabs,
     Tab,
     CallToAction,
+    InstagramFeed,
   },
   data() {
     return {
+      swiperOptions: {
+        loop: true,
+        height: 80,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        effect: 'slide',
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+        },
+      },
       firstSectionBackgroundImage1: { backgroundImage: `url(${bgImage1})` },
       firstSectionBackgroundImage2: { backgroundImage: `url(${bgImage2})` },
       sliderBackground: { backgroundImage: `url(${homepageSliderBackground})` },
       homepageTabSection,
+      accessToken:
+        'IGQVJYY29oVUpPdktHT1dBOTgzZAU1MNlppN25TSzRnOWZALVlgxOXJELTNENGRmRV9tZAWhiV1FHX2x3c2V6MFZACYkN4ZAUVBVUlWMjNNQXNVT0l0S2xWZAzdYM1lSeXl4NFREdzZA0eGR5ckliQ0FCWjMweAZDZD',
     }
   },
   head: {
@@ -304,5 +380,10 @@ ul.tab-section li:before {
   color: lightgreen;
   font-size: 1.1em;
   margin-right: 0.6em;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: white;
 }
 </style>

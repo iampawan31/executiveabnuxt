@@ -94,7 +94,7 @@
             </div>
             <div class="mb-4">
               <button
-                class="bg-brand shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
+                class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
               >
                 Sign Up
                 <fa class="ml-2 text-white" :icon="faChevronRight" />
