@@ -12,14 +12,15 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
+    "nuxt-webfontloader": "^1.1.0",
     "swiper": "^5.4.5",
     "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
@@ -32,7 +33,6 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.7.0",
-    "nuxt-webfontloader": "^1.1.0",
     "postcss": "^8.2.8",
     "prettier": "^2.2.1",
     "push-dir": "^0.4.1"
