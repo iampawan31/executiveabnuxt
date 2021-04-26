@@ -2,7 +2,7 @@
   <div>
     <div class="relative flex items-center h-screen overflow-hidden">
       <section
-        class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 container mx-auto"
+        class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 md:px-4 container mx-auto"
       >
         <div
           class="sm:text-right text-center text-4xl font-bold uppercase mb-5"
@@ -13,12 +13,14 @@
           We find the vehicle your looking for and save you time <br />
           and money. All you need to do is sit back & buckle-up.
         </div>
-        <button
-          class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-2 px-4 rounded text-white mt-4 mb-10"
-        >
-          GET STARTED
-          <fa class="ml-1" :icon="faAngleRight" />
-        </button>
+        <div class="mx-6 md:mx-0 flex">
+          <button
+            class="bg-gradient-to-r from-yellow-700 to-yellow-500 transition duration-500 hover:scale-110 transform-gpu py-2 px-4 w-full rounded text-white mt-4 mb-10"
+          >
+            GET STARTED
+            <fa class="ml-1" :icon="faAngleRight" />
+          </button>
+        </div>
       </section>
       <video
         autoPlay
@@ -45,33 +47,33 @@
     </section>
     <section class="bg-brand-gray-dark py-16">
       <div class="mx-auto container">
-        <div class="grid sm:grid-cols-2 gap-5">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-5">
           <div
-            class="p-14 shadow bg-local bg-cover bg-center"
+            class="p-14 md:p-8 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage1"
           >
             <h1 class="uppercase font-semibold text-white text-xl sm:text-2xl">
               Ready to experience car buying on auto-pilot?
             </h1>
-            <p class="mt-4 text-brand text-lg sm:text-xl">
+            <p class="mt-4 text-brand text-lg sm:text-xl md:text-lg">
               Tell us what your looking for and let us get started. Our service
               works for all brands and models. Nationwide delivery available.
             </p>
             <button
-              class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-8 rounded text-white mt-4 mb-10"
+              class="bg-gradient-to-r from-yellow-700 to-yellow-500 transition duration-500 hover:scale-110 transform-gpu uppercase py-2 px-8 rounded text-white mt-4 mb-10"
             >
               Launch
               <fa class="ml-1" :icon="faAngleRight" />
             </button>
           </div>
           <div
-            class="p-14 shadow bg-local bg-cover bg-center"
+            class="p-14 md:p-8 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage2"
           >
             <h1 class="uppercase font-semibold text-white text-xl sm:text-2xl">
               Now anyone can buy the way executives do?
             </h1>
-            <p class="mt-4 text-brand text-lg sm:text-xl">
+            <p class="mt-4 text-brand text-lg sm:text-xl md:text-lg">
               Those purchasing high end vehicles have utilized our type of
               service for years. Now, we’re making that level of service a
               reality for all buyers.
@@ -81,9 +83,11 @@
       </div>
     </section>
     <section class="bg-black bg-blend-darken">
-      <div class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-3 sm:gap-4">
+      <div
+        class="grid grid-rows-2 sm:grid-rows-2 md:grid-rows-1 md:grid-cols-3 sm:grid-cols-1 sm:gap-4"
+      >
         <div
-          class="sm:col-span-1 px-4 sm:px-16 py-16"
+          class="sm:col-span-1 md:col-span-2 lg:col-span-1 px-4 sm:px-16 py-16"
           :style="sliderBackground"
         >
           <div class="uppercase text-lg sm:text-xl text-brand mb-5">
@@ -98,7 +102,7 @@
             <span class="text-brand"> no cost to you.</span>
           </div>
         </div>
-        <div class="sm:col-span-2 py-16">
+        <div class="py-16 lg:col-span-2">
           <Slides />
         </div>
       </div>
@@ -225,11 +229,11 @@
                     </swiper-slide>
                     <div
                       slot="button-prev"
-                      class="bg-brand p-7 rounded-full swiper-button-prev"
+                      class="swiper-button-prev hidden md:block"
                     ></div>
                     <div
                       slot="button-next"
-                      class="bg-brand p-7 rounded-full swiper-button-next"
+                      class="swiper-button-next hidden md:block"
                     ></div>
                   </swiper>
                 </client-only>
@@ -269,7 +273,7 @@
         >
           “If I only knew about this sooner...”
         </h1>
-        <div class="w-auto px-4 sm:w-6/12 mb-10">
+        <div class="w-auto px-4 md:w-11/12 lg:w-6/12 mb-10">
           <p>
             First of all...the service was free. I was looking for a specific
             Ford F150 that was not available in the color I wanted at the
@@ -331,25 +335,27 @@ export default {
         },
         effect: 'slide',
         spaceBetween: 30,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
         breakpoints: {
           1024: {
             slidesPerView: 3,
             spaceBetween: 40,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 30,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
           },
           640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
+            navigation: false,
             spaceBetween: 20,
           },
           320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
+            navigation: false,
             spaceBetween: 10,
           },
         },
@@ -359,7 +365,7 @@ export default {
       sliderBackground: { backgroundImage: `url(${homepageSliderBackground})` },
       homepageTabSection,
       accessToken:
-        'IGQVJYY29oVUpPdktHT1dBOTgzZAU1MNlppN25TSzRnOWZALVlgxOXJELTNENGRmRV9tZAWhiV1FHX2x3c2V6MFZACYkN4ZAUVBVUlWMjNNQXNVT0l0S2xWZAzdYM1lSeXl4NFREdzZA0eGR5ckliQ0FCWjMweAZDZD',
+        'QVJYbHNXMWVzdXdIWHU3R2RiRG4zWlZAnQS1TVmE2VUVwT1FiUFhZAV0xoaVB4UnVkajMxaElHWkRmRy1IdDIyRE40VHZAwX25CbDFEN3hLQ0NVdTNkZAVBUTl9RblFIN2Q4d3VsMUtWYjQzOHJxWFlNSgZDZD',
     }
   },
   head: {

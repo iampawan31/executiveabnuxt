@@ -2,7 +2,7 @@
   <client-only>
     <swiper
       ref="carousel"
-      class="swiper max-w-md sm:max-w-4xl"
+      class="swiper max-w-xs sm:max-w-4xl lg:max-w-full"
       :options="swiperOptions"
     >
       <swiper-slide
@@ -22,8 +22,8 @@
           <div class="flex-1 text-sm p-3">{{ slide.description }}</div>
         </div>
       </swiper-slide>
-      <!-- <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div> -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </swiper>
   </client-only>
 </template>
@@ -36,21 +36,24 @@ export default {
     return {
       firstSlider,
       swiperOptions: {
-        loop: false,
+        loop: true,
         effect: 'slide',
-        slidesPerView: 4,
         spaceBetween: 30,
-        // navigation: {
-        //   nextEl: '.swiper-button-next',
-        //   prevEl: '.swiper-button-prev',
-        // },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
         breakpoints: {
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 3,
+            spaceBetween: 10,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 30,
           },
           640: {
@@ -58,7 +61,7 @@ export default {
             spaceBetween: 20,
           },
           320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 10,
           },
         },
@@ -67,3 +70,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: orange;
+}
+</style>

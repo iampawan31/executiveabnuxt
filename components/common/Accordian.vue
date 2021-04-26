@@ -4,7 +4,7 @@
       <a
         href="#"
         :class="active ? 'bg-brand text-white' : 'bg-black text-white'"
-        class="tab__link text-xl p-4 no-underline border-b-2 border-white flex justify-between"
+        class="tab__link text-2xl p-4 no-underline border-b-2 border-white flex justify-between"
         @click.prevent="active = !active"
       >
         <strong>{{ homepageTab ? homepageTab.tabTitle : null }}</strong>
@@ -18,7 +18,7 @@
     </div>
     <div v-show="active" class="transition tab__content p-2">
       <div class="shadow-sm transition-opacity">
-        <div class="sm:grid-cols-4 grid">
+        <div class="md:grid-cols-2 grid">
           <div
             class="flex flex-wrap flex-column content-center bg-fixed p-5"
             :style="{
@@ -34,7 +34,7 @@
               {{ homepageTab ? homepageTab.description : null }}
             </p>
           </div>
-          <div class="sm:col-span-3 bg-white text-gray-500">
+          <div class="bg-white text-gray-500">
             <div class="grid sm:grid-cols-2 p-10 gap-4">
               <div>
                 <div v-if="homepageTab">
