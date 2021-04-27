@@ -1,8 +1,12 @@
 <template>
-  <div class="bg-brand-gray-dark text-white font-brandSignature">
-    <Header />
-    <Nuxt />
-    <Footer />
+  <div class="bg-brand-gray-dark">
+    <div
+      class="bg-brand-gray-dark text-white font-brandSignature 2xl:mx-auto 2xl:container"
+    >
+      <Header />
+      <Nuxt />
+      <Footer />
+    </div>
   </div>
 </template>
 

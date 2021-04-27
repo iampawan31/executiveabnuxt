@@ -1,6 +1,8 @@
 <template lang="html">
-  <div class="tabs__dark text-black">
-    <div class="bg-brand-gray-medium-dark py-2">
+  <div class="tabs__dark">
+    <div
+      class="bg-gradient-to-r from-brand-gray-light to-brand-gray-medium-dark py-2"
+    >
       <div class="container mx-auto overflow-x-auto flex justify-between">
         <div
           v-for="(tab, index) in tabs"

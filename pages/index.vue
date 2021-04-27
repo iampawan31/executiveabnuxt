@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="relative flex items-center h-screen overflow-hidden">
+    <div
+      class="relative flex items-center h-screen 2xl:max-h-96 2xl:py-96 overflow-hidden"
+    >
       <section
         class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 md:px-4 container mx-auto"
       >
@@ -15,7 +17,7 @@
         </div>
         <div class="mx-6 md:mx-0 flex">
           <button
-            class="bg-gradient-to-r from-yellow-700 to-yellow-500 transition duration-500 hover:scale-110 transform-gpu py-2 px-4 w-full rounded text-white mt-4 mb-10"
+            class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-2 px-4 w-full rounded text-white mt-4 mb-10"
           >
             GET STARTED
             <fa class="ml-1" :icon="faAngleRight" />
@@ -24,7 +26,7 @@
       </section>
       <div class="absolute bottom-16 left-16 z-50">
         <button
-          class="text-white rounded-full focus:ring"
+          class="text-white rounded-full focus:outline-none"
           @click="toggleVideoPlayback"
         >
           <fa v-if="videoPlaying" class="text-5xl" :icon="faPauseCircle" />
@@ -43,24 +45,12 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <section class="bg-brand-gray-alternate py-6">
-      <div class="container mx-auto">
-        <div class="text-center">
-          <div class="text-white text-sm sm:text-lg">
-            <fa class="mr-2" :icon="faInfoCircle" />
-            COVID-19: SAFETY IS OUR TOP PRIORITY.
-            <a href="/" class="ml-2 uppercase underline text-white">
-              READ MORE <fa class="ml-1" :icon="faAngleRight" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <CovidMessageSection />
     <section class="bg-brand-gray-dark py-16">
       <div class="mx-auto container">
         <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-5">
           <div
-            class="p-14 md:p-8 shadow bg-local bg-cover bg-center"
+            class="p-14 md:p-8 lg:p-14 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage1"
           >
             <h1 class="uppercase font-semibold text-white text-xl sm:text-2xl">
@@ -71,14 +61,14 @@
               works for all brands and models. Nationwide delivery available.
             </p>
             <button
-              class="bg-gradient-to-r from-yellow-700 to-yellow-500 transition duration-500 hover:scale-110 transform-gpu uppercase py-2 px-8 rounded text-white mt-4 mb-10"
+              class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-8 rounded text-white mt-4 mb-10"
             >
               Launch
               <fa class="ml-1" :icon="faAngleRight" />
             </button>
           </div>
           <div
-            class="p-14 md:p-8 shadow bg-local bg-cover bg-center"
+            class="p-14 md:p-8 lg:p-14 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage2"
           >
             <h1 class="uppercase font-semibold text-white text-xl sm:text-2xl">
@@ -89,6 +79,19 @@
               service for years. Now, we’re making that level of service a
               reality for all buyers.
             </p>
+            <div class="mt-3">
+              <button
+                class="text-white rounded-full focus:outline-none"
+                @click="toggleSectionVideoPlayback"
+              >
+                <fa
+                  v-if="sectionVideoPlaying"
+                  class="text-5xl"
+                  :icon="faPauseCircle"
+                />
+                <fa v-else class="text-5xl" :icon="faPlayCircle" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -118,7 +121,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-brand-gray-alternate py-6 sm:py-16">
+    <section class="bg-brand-gray-dark py-6 sm:py-12">
       <div class="flex flex-col md:hidden">
         <Accordian
           v-for="(homepageTab, index) in homepageTabSection"
@@ -127,7 +130,7 @@
           :homepage-tab="homepageTab"
         />
       </div>
-      <div class="hidden md:flex">
+      <div class="hidden md:block">
         <tabs>
           <tab
             v-for="(homepageTab, index) in homepageTabSection"
@@ -328,6 +331,7 @@ import Tabs from '~/components/common/Tabs'
 import Tab from '~/components/common/Tab'
 import CallToAction from '~/components/CallToAction'
 import InstagramFeed from '~/components/InstagramFeed'
+import CovidMessageSection from '~/components/home/CovidMessageSection'
 
 export default {
   name: 'Home',
@@ -339,10 +343,12 @@ export default {
     Tab,
     CallToAction,
     InstagramFeed,
+    CovidMessageSection,
   },
   data() {
     return {
       videoPlaying: true,
+      sectionVideoPlaying: false,
       swiperOptions: {
         loop: true,
         height: 80,
@@ -414,6 +420,15 @@ export default {
         videoBg.play()
       }
       this.videoPlaying = !this.videoPlaying
+    },
+    toggleSectionVideoPlayback() {
+      // const videoBg = this.$refs.sectionBackgroundVideo
+      // if (this.sectionVideoPlaying) {
+      //   videoBg.pause()
+      // } else {
+      //   videoBg.play()
+      // }
+      // this.sectionVideoPlaying = !this.sectionVideoPlaying
     },
   },
 }

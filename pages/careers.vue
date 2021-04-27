@@ -43,7 +43,7 @@
             interested in you. We look forward to receiving your application!
           </div>
           <button
-            class="bg-gradient-to-r from-yellow-700 to-yellow-500 transition duration-500 hover:scale-110 transform-gpu shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
+            class="shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
           >
             Application
             <fa class="ml-2 text-white" :icon="faChevronRight" />

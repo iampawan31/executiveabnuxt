@@ -27,10 +27,10 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#e57b25',
-          'gray-light': '#c3c4c6',
-          'gray-medium-dark': '#58585a',
-          'gray-dark': '#444446',
+          DEFAULT: '#eaa068',
+          'gray-light': '#2e3137',
+          'gray-medium-dark': '#1e2023',
+          'gray-dark': '#191919',
           'gray-alternate': '#353535',
         },
       },

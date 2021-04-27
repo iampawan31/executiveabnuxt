@@ -10,16 +10,18 @@
         :key="index"
         class="flex"
       >
-        <div class="flex flex-col bg-white text-black rounded-md shadow-md">
-          <div class="px-5 pt-5 justify-center flex">
-            <img :src="slide.image" class="h-36" :alt="slide.title" />
+        <div
+          class="flex flex-col text-black py-10 bg-white rounded-lg shadow-lg"
+        >
+          <div class="flex mx-auto content-center w-40">
+            <img :src="slide.image" :alt="slide.title" />
           </div>
           <div
-            class="bg-green-600 text-center h-12 py-3 text-md text-white font-semibold"
+            class="bg-green-500 py-2 font-semibold justify-center flex text-center"
           >
             {{ slide.title }}
           </div>
-          <div class="flex-1 text-sm p-3">{{ slide.description }}</div>
+          <div class="flex text-md p-5">{{ slide.description }}</div>
         </div>
       </swiper-slide>
       <div class="swiper-button-prev"></div>
@@ -36,13 +38,9 @@ export default {
     return {
       firstSlider,
       swiperOptions: {
-        loop: true,
+        loop: false,
         effect: 'slide',
         spaceBetween: 30,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -76,4 +74,8 @@ export default {
 .swiper-button-next::after {
   color: orange;
 }
+
+/* .swiper-container .swiper-slide {
+  height: 400px;
+} */
 </style>

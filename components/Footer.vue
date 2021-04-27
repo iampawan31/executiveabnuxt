@@ -3,27 +3,27 @@
     <div class="container mx-auto py-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
         <div class="grid gap-4 sm:grid-cols-2">
-          <div class="grid grid-flow-row">
+          <div class="flex flex-col">
             <div class="font-bold mb-2">MAIN NAVIGATION</div>
-            <NuxtLink
-              v-for="(link, index) in mainNavigation"
-              :key="index"
-              :to="link.path"
-              class="text-sm hover:text-brand transition"
-            >
-              {{ link.name }}
-            </NuxtLink>
+            <div v-for="(link, index) in mainNavigation" :key="index">
+              <NuxtLink
+                :to="link.path"
+                class="text-sm mb-2 hover:text-brand transition"
+              >
+                {{ link.name }}
+              </NuxtLink>
+            </div>
           </div>
-          <div class="grid grid-flow-row">
+          <div class="flex flex-col">
             <div class="font-bold mb-2">ADDITIONAL LINKS</div>
-            <NuxtLink
-              v-for="(link, index) in additionalNavigation"
-              :key="index"
-              :to="link.path"
-              class="text-sm hover:text-brand transition"
-            >
-              {{ link.name }}
-            </NuxtLink>
+            <div v-for="(link, index) in additionalNavigation" :key="index">
+              <NuxtLink
+                :to="link.path"
+                class="text-sm mb-2 hover:text-brand transition"
+              >
+                {{ link.name }}
+              </NuxtLink>
+            </div>
           </div>
         </div>
         <div

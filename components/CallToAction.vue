@@ -12,9 +12,7 @@
         {{ subtitle }}
       </div>
       <div class="text-right">
-        <button
-          class="bg-gradient-to-r from-yellow-700 to-yellow-500 transition duration-500 hover:scale-110 transform-gpu py-2 px-8 rounded uppercase text-white mb-0"
-        >
+        <button class="py-2 px-8 rounded uppercase text-white mb-0">
           {{ buttonText }}
           <fa class="ml-2 text-white" :icon="faChevronRight" />
         </button>
