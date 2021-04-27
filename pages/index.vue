@@ -22,10 +22,21 @@
           </button>
         </div>
       </section>
+      <div class="absolute bottom-16 left-16 z-50">
+        <button
+          class="text-white rounded-full focus:ring"
+          @click="toggleVideoPlayback"
+        >
+          <fa v-if="videoPlaying" class="text-5xl" :icon="faPauseCircle" />
+          <fa v-else class="text-5xl" :icon="faPlayCircle" />
+        </button>
+      </div>
       <video
-        autoPlay
+        ref="backgroundVideo"
+        :autoPlay="videoPlaying ? true : false"
         loop
         muted
+        preload="metadata"
         class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
       >
         <source src="~assets/videos/homepage_main_video.mp4" type="video/mp4" />
@@ -303,6 +314,10 @@ import {
   faInfoCircle,
   faStar,
 } from '@fortawesome/free-solid-svg-icons'
+import {
+  faPlayCircle,
+  faPauseCircle,
+} from '@fortawesome/free-regular-svg-icons'
 import bgImage1 from 'assets/images/homepage_first_section_image_1.jpg'
 import bgImage2 from 'assets/images/homepage_first_section_image_2.jpg'
 import homepageSliderBackground from 'assets/images/homepage_slider_background.jpg'
@@ -315,6 +330,7 @@ import CallToAction from '~/components/CallToAction'
 import InstagramFeed from '~/components/InstagramFeed'
 
 export default {
+  name: 'Home',
   transitions: 'fade',
   components: {
     Accordian,
@@ -326,6 +342,7 @@ export default {
   },
   data() {
     return {
+      videoPlaying: true,
       swiperOptions: {
         loop: true,
         height: 80,
@@ -380,6 +397,23 @@ export default {
     },
     faStar() {
       return faStar
+    },
+    faPlayCircle() {
+      return faPlayCircle
+    },
+    faPauseCircle() {
+      return faPauseCircle
+    },
+  },
+  methods: {
+    toggleVideoPlayback() {
+      const videoBg = this.$refs.backgroundVideo
+      if (this.videoPlaying) {
+        videoBg.pause()
+      } else {
+        videoBg.play()
+      }
+      this.videoPlaying = !this.videoPlaying
     },
   },
 }
