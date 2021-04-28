@@ -3,7 +3,16 @@
     <div
       class="bg-gradient-to-r from-brand-gray-light to-brand-gray-medium-dark py-2"
     >
-      <div class="container mx-auto overflow-x-auto flex justify-between">
+      <div
+        ref="tabsSection"
+        class="container sm:max-w-xl mx-auto overflow-x-auto flex content-center justify-between"
+      >
+        <button
+          class="text-md absolute left-2 mt-1 md:hidden flex"
+          @click="prevNav"
+        >
+          <fa class="text-2xl text-white" :icon="faChevronLeft" />
+        </button>
         <div
           v-for="(tab, index) in tabs"
           :key="tab.title"
@@ -13,6 +22,9 @@
         >
           {{ tab.title }}
         </div>
+        <button class="absolute right-2 mt-1 md:hidden flex" @click="nextNav">
+          <fa class="text-white text-2xl" :icon="faChevronRight" />
+        </button>
       </div>
     </div>
     <slot></slot>
@@ -20,12 +32,24 @@
 </template>
 
 <script>
+import {
+  faChevronRight,
+  faChevronLeft,
+} from '@fortawesome/free-solid-svg-icons'
 export default {
   data() {
     return {
       selectedIndex: 0, // the index of the selected tab,
       tabs: [], // all of the tabs
     }
+  },
+  computed: {
+    faChevronRight() {
+      return faChevronRight
+    },
+    faChevronLeft() {
+      return faChevronLeft
+    },
   },
   created() {
     this.tabs = this.$children
@@ -40,6 +64,17 @@ export default {
       // loop over all the tabs
       this.tabs.forEach((tab, index) => {
         tab.isActive = index === i
+      })
+    },
+    nextNav() {
+      // console.log(this.$refs.tabSection, 67)
+      this.$refs.tabsSection.scrollBy({ top: 0, left: 100, behavior: 'smooth' })
+    },
+    prevNav() {
+      this.$refs.tabsSection.scrollBy({
+        top: 0,
+        left: -100,
+        behavior: 'smooth',
       })
     },
   },

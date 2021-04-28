@@ -20,7 +20,7 @@
             class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-2 px-4 w-full rounded text-white mt-4 mb-10"
           >
             GET STARTED
-            <fa class="ml-1" :icon="faAngleRight" />
+            <fa class="ml-1" :icon="faChevronRight" />
           </button>
         </div>
       </section>
@@ -64,7 +64,7 @@
               class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-8 rounded text-white mt-4 mb-10"
             >
               Launch
-              <fa class="ml-1" :icon="faAngleRight" />
+              <fa class="ml-1" :icon="faChevronRight" />
             </button>
           </div>
           <div
@@ -122,15 +122,7 @@
       </div>
     </section>
     <section class="bg-brand-gray-dark py-6 sm:py-12">
-      <div class="flex flex-col md:hidden">
-        <Accordian
-          v-for="(homepageTab, index) in homepageTabSection"
-          :key="index"
-          :open="index === 0 ? true : false"
-          :homepage-tab="homepageTab"
-        />
-      </div>
-      <div class="hidden md:block">
+      <div class="">
         <tabs>
           <tab
             v-for="(homepageTab, index) in homepageTabSection"
@@ -188,7 +180,7 @@
                             class="text-brand underline"
                           >
                             {{ homepageTab.link.name }}
-                            <fa class="ml-1" :icon="faAngleRight" />
+                            <fa class="ml-1" :icon="faChevronRight" />
                           </a>
                         </div>
                       </div>
@@ -313,7 +305,8 @@
 
 <script>
 import {
-  faAngleRight,
+  faChevronRight,
+  faChevronLeft,
   faInfoCircle,
   faStar,
 } from '@fortawesome/free-solid-svg-icons'
@@ -325,7 +318,6 @@ import bgImage1 from 'assets/images/homepage_first_section_image_1.jpg'
 import bgImage2 from 'assets/images/homepage_first_section_image_2.jpg'
 import homepageSliderBackground from 'assets/images/homepage_slider_background.jpg'
 import { homepageTabSection } from '../data/home'
-import Accordian from '~/components/common/Accordian'
 import Slides from '~/components/Slides'
 import Tabs from '~/components/common/Tabs'
 import Tab from '~/components/common/Tab'
@@ -337,7 +329,6 @@ export default {
   name: 'Home',
   transitions: 'fade',
   components: {
-    Accordian,
     Slides,
     Tabs,
     Tab,
@@ -350,12 +341,8 @@ export default {
       videoPlaying: true,
       sectionVideoPlaying: false,
       swiperOptions: {
-        loop: true,
+        loop: false,
         height: 80,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
         effect: 'slide',
         spaceBetween: 30,
         breakpoints: {
@@ -395,9 +382,6 @@ export default {
     title: 'Executive - Home',
   },
   computed: {
-    faAngleRight() {
-      return faAngleRight
-    },
     faInfoCircle() {
       return faInfoCircle
     },
@@ -409,6 +393,12 @@ export default {
     },
     faPauseCircle() {
       return faPauseCircle
+    },
+    faChevronLeft() {
+      return faChevronLeft
+    },
+    faChevronRight() {
+      return faChevronRight
     },
   },
   methods: {
