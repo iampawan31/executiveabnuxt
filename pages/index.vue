@@ -11,7 +11,7 @@
         >
           PUT THE SALESPERSON IN YOUR REARVIEW
         </div>
-        <div class="text-center text-md mb-5">
+        <div class="text-center text-gray-300 text-md mb-5">
           We find the vehicle your looking for and save you time <br />
           and money. All you need to do is sit back & buckle-up.
         </div>
@@ -48,9 +48,11 @@
     <CovidMessageSection />
     <section class="bg-brand-gray-dark py-16">
       <div class="mx-auto container">
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-5">
+        <div
+          class="grid sm:grid-cols-1 md:grid-cols-2 gap-5 lg:gap-20 2xl:gap-10 2xl:mx-10"
+        >
           <div
-            class="p-14 md:p-8 lg:p-14 shadow bg-local bg-cover bg-center"
+            class="p-14 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage1"
           >
             <h1 class="uppercase font-semibold text-white text-xl sm:text-2xl">
@@ -68,7 +70,7 @@
             </button>
           </div>
           <div
-            class="p-14 md:p-8 lg:p-14 shadow bg-local bg-cover bg-center"
+            class="p-14 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage2"
           >
             <h1 class="uppercase font-semibold text-white text-xl sm:text-2xl">
@@ -131,9 +133,9 @@
           >
             <div class="container mx-auto">
               <div class="shadow-sm transition-opacity">
-                <div class="sm:grid-cols-4 grid">
+                <div class="flex 2xl:max-w-full 2xl:mx-5">
                   <div
-                    class="flex flex-wrap flex-column content-center bg-fixed p-5"
+                    class="flex max-w-xl 2xl:max-w-sm flex-wrap flex-column content-center bg-fixed p-5"
                     :style="{
                       backgroundImage: `url(${homepageTab.imageURL})`,
                     }"
@@ -147,29 +149,29 @@
                       {{ homepageTab.description }}
                     </p>
                   </div>
-                  <div class="sm:col-span-3 bg-white text-gray-500">
-                    <div class="grid sm:grid-cols-2 p-10 gap-4">
-                      <div>
+                  <div class="flex flex-1 bg-white text-gray-500">
+                    <div class="flex flex-col 2xl:flex-row p-5">
+                      <div class="flex">
                         <ul class="tab-section">
                           <li
                             v-for="(
                               singleList, indexOne
                             ) in homepageTab.listOne"
                             :key="indexOne"
-                            class="mb-4"
+                            class="mb-4 text-sm"
                           >
                             {{ singleList }}
                           </li>
                         </ul>
                       </div>
-                      <div>
+                      <div class="flex">
                         <ul class="tab-section">
                           <li
                             v-for="(
                               singleList, indexTwo
                             ) in homepageTab.listTwo"
                             :key="indexTwo"
-                            class="mb-4"
+                            class="mb-4 text-sm"
                           >
                             {{ singleList }}
                           </li>
@@ -235,11 +237,11 @@
                     </swiper-slide>
                     <div
                       slot="button-prev"
-                      class="swiper-button-prev hidden md:block"
+                      class="swiper-button-prev z-50 hidden md:block"
                     ></div>
                     <div
                       slot="button-next"
-                      class="swiper-button-next hidden md:block"
+                      class="swiper-button-next z-50 hidden md:block"
                     ></div>
                   </swiper>
                 </client-only>
@@ -340,9 +342,12 @@ export default {
     return {
       videoPlaying: true,
       sectionVideoPlaying: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
       swiperOptions: {
         loop: false,
-        height: 80,
         effect: 'slide',
         spaceBetween: 30,
         breakpoints: {
@@ -353,10 +358,6 @@ export default {
           768: {
             slidesPerView: 1,
             spaceBetween: 30,
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
           },
           640: {
             slidesPerView: 1,

@@ -2,13 +2,11 @@
   <div class="container mx-auto px-4 lg:px-36">
     <div class="border-t-2 border-b-2 border-brand">
       <div
-        class="text-brand text-center text-sm sm:text-xl md:text-2xl sm:ml-10 my-4 uppercase"
+        class="text-brand text-sm sm:text-xl md:text-2xl sm:ml-10 my-4 uppercase"
       >
         {{ title }}
       </div>
-      <div
-        class="text-xl sm:text-4xl lg:text-5xl uppercase mb-4 text-center md:ml-10"
-      >
+      <div class="text-xl sm:text-4xl lg:text-5xl uppercase text md:ml-10">
         {{ subtitle }}
       </div>
       <div class="text-right">

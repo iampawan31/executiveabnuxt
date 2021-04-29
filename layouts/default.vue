@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-brand-gray-dark">
+  <div class="bg-black">
     <div
       class="bg-brand-gray-dark text-white font-brandSignature 2xl:mx-auto 2xl:container"
     >

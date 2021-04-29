@@ -5,10 +5,10 @@
     >
       <div
         ref="tabsSection"
-        class="container sm:max-w-xl mx-auto overflow-x-auto flex content-center justify-between"
+        class="container sm:max-w-xl md:max-w-2xl 2xl:max-w-max mx-auto overflow-x-auto flex content-center justify-between"
       >
         <button
-          class="text-md absolute left-2 mt-1 md:hidden flex"
+          class="text-md absolute left-2 mt-1 lg:hidden flex"
           @click="prevNav"
         >
           <fa class="text-2xl text-white" :icon="faChevronLeft" />
@@ -16,13 +16,13 @@
         <div
           v-for="(tab, index) in tabs"
           :key="tab.title"
-          class="mx-2 min-w-max text-white py-1 m-0 md:text-sm cursor-pointer"
+          class="mx-2 min-w-max 2xl:mx-5 text-white py-1 m-0 md:text-sm cursor-pointer"
           :class="index == selectedIndex ? 'border-b-2' : null"
           @click="selectTab(index)"
         >
           {{ tab.title }}
         </div>
-        <button class="absolute right-2 mt-1 md:hidden flex" @click="nextNav">
+        <button class="absolute right-2 mt-1 lg:hidden flex" @click="nextNav">
           <fa class="text-white text-2xl" :icon="faChevronRight" />
         </button>
       </div>

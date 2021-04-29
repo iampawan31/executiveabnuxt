@@ -2,10 +2,12 @@
   <div>
     <section class="text-white relative">
       <div
-        class="min-h-screen hero-image bg-center bg-cover flex"
+        class="h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center bg-cover flex"
         :style="mainHeaderImage"
       >
-        <div class="relative container mx-auto p-4 flex items-center z-10">
+        <div
+          class="relative container mx-auto p-4 2xl:mx-20 flex items-center z-10"
+        >
           <div class="bg-black sm:bg-transparent bg-opacity-20 rounded">
             <div class="content float-left py-4 px-5 my-5">
               <div
@@ -23,15 +25,15 @@
         </div>
       </div>
     </section>
-    <section class="bg-black py-16">
-      <div class="container mx-auto">
+    <section class="py-16 bg-center" :style="firstSectionBackgroundImage1">
+      <div class="container mx-auto lg:px-20">
         <div class="flex flex-col sm:flex-row sm:space-x-12">
           <div class="flex sm:max-w-sm flex-col px-4 sm:px-0">
             <div class="flex text-brand mb-5">OUR PROMISE TO YOU</div>
-            <div class="flex text-2xl mb-5">
+            <div class="flex text-2xl mb-5 font-semibold">
               EXECUTIVE SERVICE WITH PROVEN RESULTS
             </div>
-            <div class="flex font-light">
+            <div class="flex font-light text-gray-300">
               We aim to make sure you enjoy an exceptional car buying
               experience. By removing the dealership and sales people from the
               equation we are able to ensure our clients recieve the highest
@@ -39,30 +41,36 @@
               will not miss the sales person.
             </div>
           </div>
-          <div class="flex justify-between space-x-5">
-            <div class="flex-row content-center space-x-5 flex mt-5">
-              <div class="text-center sm:mx-auto items-center flex">
+          <div class="flex justify-between flex-1 space-x-2">
+            <div class="flex-row content-center flex-grow space-x-5 flex mt-5">
+              <div class="sm:mx-auto items-center flex flex-grow">
                 <div>
                   <div class="text-2xl sm:text-5xl font-bold mb-3">11,239+</div>
-                  <div class="text-brand text-xs sm:text-lg font-bold">
+                  <div
+                    class="text-brand tracking-tighter text-xs sm:text-lg font-bold"
+                  >
                     VEHICLE PURCHASES
                   </div>
                 </div>
               </div>
-              <div class="text-center sm:mx-auto items-center flex">
+              <div class="text sm:mx-auto items-center flex flex-grow">
                 <div>
                   <div class="text-2xl sm:text-5xl font-bold mb-3">
                     $42.6 MIL+
                   </div>
-                  <div class="text-brand text-xs sm:text-lg font-bold">
+                  <div
+                    class="text-brand tracking-tighter text-xs sm:text-lg font-bold"
+                  >
                     DOLLARS SAVED OFF RETAIL
                   </div>
                 </div>
               </div>
-              <div class="text-center sm:mx-auto items-center flex">
+              <div class="sm:mx-auto items-center flex flex-grow">
                 <div>
                   <div class="text-2xl sm:text-5xl font-bold mb-3">$3750</div>
-                  <div class="text-brand text-xs sm:text-lg font-bold">
+                  <div
+                    class="text-brand tracking-tighter text-xs sm:text-lg font-bold"
+                  >
                     AVERAGE SAVINGS PER VEHICLE
                   </div>
                 </div>
@@ -85,7 +93,7 @@
               :key="index"
               class="mx-2"
             >
-              <img :src="brand" class="h-18 p-5" alt="" />
+              <img :src="brand" class="h-18" alt="" />
             </div>
           </div>
         </div>
@@ -102,7 +110,7 @@
               :key="index"
               class="mx-2"
             >
-              <img :src="brand" class="h-18 p-5" alt="" />
+              <img :src="brand" class="h-18" alt="" />
             </div>
           </div>
         </div>
@@ -119,7 +127,7 @@
               :key="index"
               class="mx-2"
             >
-              <img :src="brand" class="h-18 p-5" alt="" />
+              <img :src="brand" class="h-18" alt="" />
             </div>
           </div>
         </div>
@@ -204,6 +212,7 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
 import bgMainHeader from 'assets/images/about_us_header.jpg'
+import bgFirstSectionBg from 'assets/images/about-us/second_section_bg.png'
 import { luxuryBrands, domesticBrands, popularBrands } from '../data/aboutUs'
 import CallToAction from '~/components/CallToAction'
 export default {
@@ -217,6 +226,9 @@ export default {
       domesticBrands,
       popularBrands,
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
+      firstSectionBackgroundImage1: {
+        backgroundImage: `url(${bgFirstSectionBg})`,
+      },
     }
   },
   head: {
