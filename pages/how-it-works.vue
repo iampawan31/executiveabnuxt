@@ -24,7 +24,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-black">
+    <section class="bg-black transition">
       <div class="container mx-auto">
         <div class="flex">
           <div class="flex-1 max-w-2xl">
@@ -50,18 +50,21 @@
         </div>
         <div class="flex flex-col place-items-center justify-center mx-auto">
           <div class="uppercase text-brand pb-4">Learn more</div>
-          <a
-            href="#aboutEmployeeBenefitsProgram"
-            class="rounded-full h-12 w-12 flex items-center justify-center -mb-5 bg-brand-gray-dark"
+          <button
+            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
+            @click="sectionOneVisible = !sectionOneVisible"
           >
-            <fa class="text-brand text-2xl" :icon="faChevronDown" />
-          </a>
+            <fa
+              class="text-brand text-2xl"
+              :icon="sectionOneVisible ? faChevronUp : faChevronDown"
+            />
+          </button>
         </div>
       </div>
     </section>
     <section
-      id="aboutEmployeeBenefitsProgram"
-      class="bg-white text-black py-16"
+      :class="sectionOneVisible ? 'block' : 'hidden'"
+      class="bg-white text-black py-16 transition"
     >
       <div class="container mx-auto py-16">
         <div class="grid grid-cols-10 my-10 gap-4">
@@ -145,7 +148,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-black">
+    <section class="bg-black py-10">
       <div class="container mx-auto">
         <div class="flex">
           <div
@@ -171,17 +174,20 @@
         </div>
         <div class="flex flex-col place-items-center justify-center mx-auto">
           <div class="uppercase text-brand pb-4">Learn more</div>
-          <a
-            href="#aboutEmployeeBenefitsProgram"
-            class="rounded-full h-12 w-12 flex items-center justify-center -mb-5 bg-brand-gray-dark"
+          <button
+            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
+            @click="sectionTwoVisible = !sectionTwoVisible"
           >
-            <fa class="text-brand text-2xl" :icon="faChevronDown" />
-          </a>
+            <fa
+              class="text-brand text-2xl"
+              :icon="sectionTwoVisible ? faChevronUp : faChevronDown"
+            />
+          </button>
         </div>
       </div>
     </section>
     <section
-      id="aboutEmployeeBenefitsProgram"
+      :class="sectionTwoVisible ? 'block' : 'hidden'"
       class="bg-white text-black py-16"
     >
       <div class="container mx-auto py-16">
@@ -355,6 +361,7 @@ import bgSectionHeader from 'assets/images/how_it_works_section_one.jpg'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
 import {
   faChevronDown,
+  faChevronUp,
   faBinoculars,
   faDollarSign,
   faTrophy,
@@ -371,6 +378,8 @@ export default {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
       sectionHeaderImage: { backgroundImage: `url(${bgSectionHeader})` },
+      sectionOneVisible: false,
+      sectionTwoVisible: false,
     }
   },
   head: {
@@ -379,6 +388,9 @@ export default {
   computed: {
     faFile() {
       return faFile
+    },
+    faChevronUp() {
+      return faChevronUp
     },
     faChevronDown() {
       return faChevronDown

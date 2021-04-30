@@ -5,7 +5,7 @@
     <div class="container mx-auto">
       <div class="text-center">
         <div class="text-white text-sm sm:text-lg">
-          <fa class="mr-2" :icon="faInfoCircle" />
+          <fa class="mr-2" :icon="faExclamationCircle" />
           COVID-19: SAFETY IS OUR TOP PRIORITY.
           <a href="/" class="ml-2 uppercase underline text-brand">
             READ MORE <fa class="ml-1" :icon="faChevronRight" />
@@ -17,11 +17,15 @@
 </template>
 
 <script>
-import { faInfoCircle, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import {
+  faExclamationCircle,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons'
+
 export default {
   computed: {
-    faInfoCircle() {
-      return faInfoCircle
+    faExclamationCircle() {
+      return faExclamationCircle
     },
     faChevronRight() {
       return faChevronRight

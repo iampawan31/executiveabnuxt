@@ -42,11 +42,13 @@
         </div>
       </div>
     </section>
-    <section class="bg-black pt-16">
+    <section class="bg-black pt-16" :style="secondSectionBgImage">
       <div
         class="flex flex-col place-items-center justify-center mx-auto max-w-4xl"
       >
-        <div class="text-brand uppercase text-lg mb-3">LOVE OUR SERVICE?</div>
+        <div class="text-brand uppercase text-lg mb-3 pt-10">
+          LOVE OUR SERVICE?
+        </div>
         <div class="text-white text-3xl font-semibold uppercase mb-5">
           EARN REWARDS FOR SHARING YOUR EXPERIENCE
         </div>
@@ -57,16 +59,19 @@
           Code during their submission and you get rewarded!
         </div>
         <div class="uppercase text-brand mb-4">Learn more</div>
-        <a
-          href="#aboutFriendsAndFamilyProgram"
-          class="rounded-full h-12 w-12 flex items-center justify-center -mb-5 bg-brand-gray-dark"
+        <button
+          class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
+          @click="sectionOneVisible = !sectionOneVisible"
         >
-          <fa class="text-brand text-2xl" :icon="faChevronDown" />
-        </a>
+          <fa
+            class="text-brand text-2xl"
+            :icon="sectionOneVisible ? faChevronUp : faChevronDown"
+          />
+        </button>
       </div>
     </section>
     <section
-      id="aboutFriendsAndFamilyProgram"
+      :class="sectionOneVisible ? 'block' : 'hidden'"
       class="bg-white text-black py-16"
     >
       <div class="container mx-auto py-16">
@@ -182,9 +187,11 @@
 
 <script>
 import bgMainHeader from 'assets/images/friends_and_family_header.jpg'
+import secondSectionBgImage from 'assets/images/friends-and-family-program/second-section-bg-image.jpg'
 import { faHandshake } from '@fortawesome/free-regular-svg-icons'
 import {
   faBullhorn,
+  faChevronUp,
   faChevronDown,
   faChevronRight,
   faCommentAlt,
@@ -201,6 +208,8 @@ export default {
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
+      secondSectionBgImage: { backgroundImage: `url(${secondSectionBgImage})` },
+      sectionOneVisible: false,
     }
   },
   head: {
@@ -209,6 +218,9 @@ export default {
   computed: {
     faBullhorn() {
       return faBullhorn
+    },
+    faChevronUp() {
+      return faChevronUp
     },
     faChevronDown() {
       return faChevronDown

@@ -80,20 +80,25 @@
         </div>
       </div>
     </section>
-    <section class="bg-brand-gray-alternate py-16">
+    <section
+      class="bg-brand-gray-alternate py-16 bg-no-repeat"
+      :style="secondSectionBackgroundImage"
+    >
       <div class="mb-6">
         <div class="mx-auto container">
           LUXURY & PERFORMANCE AUTO BRANDS
           <fa class="ml-2 text-brand" :icon="faChevronDown" />
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
-          <div class="mx-auto container flex flex-nowrap items-center">
-            <div
-              v-for="(brand, index) in luxuryBrands"
-              :key="index"
-              class="mx-2"
-            >
-              <img :src="brand" class="h-18" alt="" />
+          <div class="mx-auto container">
+            <div class="flex flex-nowrap items-center space-x-5">
+              <div
+                v-for="(brand, index) in luxuryBrands"
+                :key="index"
+                class="mx-2"
+              >
+                <img :src="brand" class="h-12 w-auto object-contain" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -104,13 +109,11 @@
           <fa class="ml-2 text-brand" :icon="faChevronDown" />
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
-          <div class="mx-auto container flex flex-nowrap items-center">
-            <div
-              v-for="(brand, index) in domesticBrands"
-              :key="index"
-              class="mx-2"
-            >
-              <img :src="brand" class="h-18" alt="" />
+          <div class="mx-auto container">
+            <div class="flex flex-nowrap items-center space-x-5">
+              <div v-for="(brand, index) in domesticBrands" :key="index">
+                <img :src="brand" class="h-12 w-auto object-contain" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -121,13 +124,11 @@
           <fa class="ml-2 text-brand" :icon="faChevronDown" />
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
-          <div class="mx-auto container flex flex-nowrap items-center">
-            <div
-              v-for="(brand, index) in popularBrands"
-              :key="index"
-              class="mx-2"
-            >
-              <img :src="brand" class="h-18" alt="" />
+          <div class="mx-auto container">
+            <div class="flex flex-nowrap items-center space-x-5">
+              <div v-for="(brand, index) in popularBrands" :key="index">
+                <img :src="brand" class="h-12 w-auto object-contain" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -191,8 +192,13 @@
           from all walks of life experience a way of car buying that lets them
           find their perfect car in a stress-free way.
         </div>
-        <div class="my-6 font-brandSignature text-brand text-4xl sm:text-5xl">
-          # Executive Experience
+        <div
+          class="mt-12 mb-6 font-brandSignature max-w-sm text-brand text-4xl sm:text-5xl"
+        >
+          <img
+            src="~/assets/images/about-us/tagline_text.png"
+            alt="Executive Experience"
+          />
         </div>
       </div>
     </section>
@@ -212,7 +218,8 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
 import bgMainHeader from 'assets/images/about_us_header.jpg'
-import bgFirstSectionBg from 'assets/images/about-us/second_section_bg.png'
+import firstSectionBg from 'assets/images/about-us/second_section_bg.png'
+import secondSectionBg from 'assets/images/about-us/third_section_bg.jpg'
 import { luxuryBrands, domesticBrands, popularBrands } from '../data/aboutUs'
 import CallToAction from '~/components/CallToAction'
 export default {
@@ -227,7 +234,10 @@ export default {
       popularBrands,
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
       firstSectionBackgroundImage1: {
-        backgroundImage: `url(${bgFirstSectionBg})`,
+        backgroundImage: `url(${firstSectionBg})`,
+      },
+      secondSectionBackgroundImage: {
+        backgroundImage: `url(${secondSectionBg})`,
       },
     }
   },
