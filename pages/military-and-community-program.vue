@@ -61,7 +61,7 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="fa-gradient text-8xl" :icon="faClock" />
+              <img src="~/assets/images/icons/clock.png" class="h-16" alt="" />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -90,20 +90,12 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="fa-gradient text-8xl" :icon="faCcVisa" />
+              <img
+                src="~/assets/images/icons/visa-alternate.png"
+                class="h-16"
+                alt=""
+              />
             </div>
-            <svg width="0" height="0">
-              <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
-                <stop
-                  offset="0%"
-                  style="stop-color: rgb(255, 0, 0); stop-opacity: 1"
-                />
-                <stop
-                  offset="100%"
-                  style="stop-color: rgb(0, 0, 255); stop-opacity: 1"
-                />
-              </linearGradient>
-            </svg>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
             A THANK YOU FOR YOUR SERVICE
@@ -126,7 +118,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="gradient text-8xl" :icon="faThumbsUp" />
+              <img
+                src="~/assets/images/icons/thumbs-up.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -158,9 +154,7 @@
 <script>
 import bgMainHeader from 'assets/images/military_program_header.jpeg'
 import secondSectionBgImage from 'assets/images/military-and-community-program/second-section-bg-image.jpeg'
-import { faClock, faThumbsUp } from '@fortawesome/free-regular-svg-icons'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import { faCcVisa } from '@fortawesome/free-brands-svg-icons'
 import CallToAction from '~/components/CallToAction'
 export default {
   transitions: 'fade',
@@ -185,21 +179,6 @@ export default {
     faChevronDown() {
       return faChevronDown
     },
-    faClock() {
-      return faClock
-    },
-    faThumbsUp() {
-      return faThumbsUp
-    },
-    faCcVisa() {
-      return faCcVisa
-    },
   },
 }
 </script>
-
-<style scoped>
-.parent-div svg * {
-  fill: url(#lgrad);
-}
-</style>

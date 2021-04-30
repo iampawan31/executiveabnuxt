@@ -61,7 +61,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faBuilding" />
+              <img
+                src="~/assets/images/icons/building.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -88,7 +92,7 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faMobileAlt" />
+              <img src="~/assets/images/icons/mobile.png" class="h-16" alt="" />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -114,7 +118,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faHandHoldingUsd" />
+              <img
+                src="~/assets/images/icons/save-money.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -139,7 +147,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faGraduationCap" />
+              <img
+                src="~/assets/images/icons/graduation-cap.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -227,18 +239,6 @@
         button-text="Get Started"
       />
     </section>
-    <svg width="0" height="0">
-      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
-        <stop
-          offset="0%"
-          style="stop-color: rgb(199, 21, 133); stop-opacity: 1"
-        />
-        <stop
-          offset="100%"
-          style="stop-color: rgb(255, 140, 0); stop-opacity: 1"
-        />
-      </linearGradient>
-    </svg>
   </div>
 </template>
 
@@ -248,14 +248,7 @@ import secondSectionBgImage from 'assets/images/employee-benefits-program/second
 import benefitOneImage from 'assets/images/employee-benefits-program/increase-employee-retention.jpeg'
 import benefitTwoImage from 'assets/images/employee-benefits-program/increased-productivity-and-engagement.jpeg'
 import benefitThreeImage from 'assets/images/employee-benefits-program/attract-great-talent.jpeg'
-import { faBuilding } from '@fortawesome/free-regular-svg-icons'
-import {
-  faChevronUp,
-  faChevronDown,
-  faGraduationCap,
-  faHandHoldingUsd,
-  faMobileAlt,
-} from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
 export default {
   transitions: 'fade',
@@ -276,30 +269,12 @@ export default {
     title: 'Executive - Employee Benefits Program',
   },
   computed: {
-    faBuilding() {
-      return faBuilding
-    },
     faChevronUp() {
       return faChevronUp
     },
     faChevronDown() {
       return faChevronDown
     },
-    faGraduationCap() {
-      return faGraduationCap
-    },
-    faHandHoldingUsd() {
-      return faHandHoldingUsd
-    },
-    faMobileAlt() {
-      return faMobileAlt
-    },
   },
 }
 </script>
-
-<style scoped>
-.parent-div svg * {
-  fill: url(#lgrad);
-}
-</style>

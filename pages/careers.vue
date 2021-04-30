@@ -43,7 +43,7 @@
             interested in you. We look forward to receiving your application!
           </div>
           <button
-            class="shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
+            class="shadow-lg py-2 px-8 bg-gradient-to-r from-yellow-700 to-yellow-500 rounded uppercase text-white mb-0.5"
           >
             Application
             <fa class="ml-2 text-white" :icon="faChevronRight" />
@@ -58,7 +58,11 @@
             class="flex lg:flex-1 lg:flex-col xl:flex-row xl:space-x-8 space-x-4 lg:space-x-0 lg:space-y-2"
           >
             <div class="flex parent-div">
-              <fa class="text-6xl sm:text-8xl text-brand" :icon="faUserTie" />
+              <img
+                src="~/assets/images/icons/user-tie.png"
+                class="h-16"
+                alt=""
+              />
             </div>
             <div class="flex text-2xl sm:text-3xl font-semibold">
               WHAT IS AN EXECUTIVE CONCEIRGE?
@@ -93,7 +97,7 @@
             class="flex lg:flex-1 lg:flex-col xl:flex-row xl:space-x-8 space-x-4 lg:space-x-0 lg:space-y-2"
           >
             <div class="flex parent-div">
-              <fa class="text-6xl sm:text-8xl text-brand" :icon="faThList" />
+              <img src="~/assets/images/icons/list.png" class="h-16" alt="" />
             </div>
             <div class="flex text-2xl sm:text-3xl font-semibold">
               APPLICANT REQUIREMENTS
@@ -122,7 +126,7 @@
             class="flex lg:flex-1 lg:flex-col xl:flex-row xl:space-x-8 space-x-4 lg:space-x-0 lg:space-y-2"
           >
             <div class="flex parent-div">
-              <fa class="text-6xl sm:text-8xl text-brand" :icon="faSun" />
+              <img src="~/assets/images/icons/sun.png" class="h-16" alt="" />
             </div>
             <div class="flex text-2xl sm:text-3xl font-semibold">
               PERKS OF BECOMING AN EXECUTIVE CONCIERGE
@@ -144,28 +148,11 @@
         </div>
       </div>
     </section>
-    <svg width="0" height="0">
-      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
-        <stop
-          offset="0%"
-          style="stop-color: rgb(207, 94, 72); stop-opacity: 1"
-        />
-        <stop
-          offset="100%"
-          style="stop-color: rgb(115, 81, 118); stop-opacity: 1"
-        />
-      </linearGradient>
-    </svg>
   </div>
 </template>
 
 <script>
-import {
-  faChevronRight,
-  faThList,
-  faUserTie,
-} from '@fortawesome/free-solid-svg-icons'
-import { faSun } from '@fortawesome/free-regular-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import bgMainHeader from 'assets/images/careers_header.jpeg'
 export default {
   transitions: 'fade',
@@ -181,21 +168,6 @@ export default {
     faChevronRight() {
       return faChevronRight
     },
-    faSun() {
-      return faSun
-    },
-    faThList() {
-      return faThList
-    },
-    faUserTie() {
-      return faUserTie
-    },
   },
 }
 </script>
-
-<style scoped>
-.parent-div svg * {
-  fill: url(#lgrad);
-}
-</style>

@@ -70,7 +70,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div-one">
-              <fa class="text-8xl text-brand" :icon="faBinoculars" />
+              <img
+                src="~/assets/images/icons/binoculars.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl uppercase font-semibold">
@@ -98,7 +102,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div-one">
-              <fa class="text-8xl text-brand" :icon="faDollarSign" />
+              <img
+                src="~/assets/images/icons/dollar-sign.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -125,7 +133,7 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div-one">
-              <fa class="text-8xl text-brand" :icon="faTrophy" />
+              <img src="~/assets/images/icons/trophy.png" class="h-16" alt="" />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -194,7 +202,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div-two">
-              <fa class="text-8xl text-brand" :icon="faFile" />
+              <img
+                src="~/assets/images/icons/contract-sign.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl uppercase font-semibold">
@@ -218,7 +230,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div-two">
-              <fa class="text-8xl text-brand" :icon="faMoneyCheckAlt" />
+              <img
+                src="~/assets/images/icons/cash-contract.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -253,7 +269,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div-two">
-              <fa class="text-8xl text-brand" :icon="faKey" />
+              <img
+                src="~/assets/images/icons/trade-in.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">HAVE A TRADE-IN?</div>
@@ -328,46 +348,13 @@
         button-text="FAQS"
       />
     </section>
-    <svg width="0" height="0">
-      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
-        <stop
-          offset="0%"
-          style="stop-color: rgb(9, 223, 232); stop-opacity: 1"
-        />
-        <stop
-          offset="100%"
-          style="stop-color: rgb(27, 176, 126); stop-opacity: 1"
-        />
-      </linearGradient>
-    </svg>
-    <svg width="0" height="0">
-      <linearGradient id="lgradOne" x1="100%" y1="0%" x2="100%" y2="100%">
-        <stop
-          offset="0%"
-          style="stop-color: rgb(113, 236, 10); stop-opacity: 1"
-        />
-        <stop
-          offset="100%"
-          style="stop-color: rgb(141, 172, 24); stop-opacity: 1"
-        />
-      </linearGradient>
-    </svg>
   </div>
 </template>
 
 <script>
 import bgMainHeader from 'assets/images/how_it_works_header.jpeg'
 import bgSectionHeader from 'assets/images/how_it_works_section_one.jpeg'
-import { faFile } from '@fortawesome/free-regular-svg-icons'
-import {
-  faChevronDown,
-  faChevronUp,
-  faBinoculars,
-  faDollarSign,
-  faTrophy,
-  faMoneyCheckAlt,
-  faKey,
-} from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
 export default {
   transitions: 'fade',
@@ -386,40 +373,12 @@ export default {
     title: 'Executive - How It Works',
   },
   computed: {
-    faFile() {
-      return faFile
-    },
     faChevronUp() {
       return faChevronUp
     },
     faChevronDown() {
       return faChevronDown
     },
-    faBinoculars() {
-      return faBinoculars
-    },
-    faDollarSign() {
-      return faDollarSign
-    },
-    faTrophy() {
-      return faTrophy
-    },
-    faMoneyCheckAlt() {
-      return faMoneyCheckAlt
-    },
-    faKey() {
-      return faKey
-    },
   },
 }
 </script>
-
-<style scoped>
-.parent-div-one svg * {
-  fill: url(#lgrad);
-}
-
-.parent-div-two svg * {
-  fill: url(#lgradOne);
-}
-</style>

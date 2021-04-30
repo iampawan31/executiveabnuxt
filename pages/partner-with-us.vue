@@ -84,7 +84,11 @@
         <div class="grid grid-cols-10 my-10">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faBuilding" />
+              <img
+                src="~/assets/images/icons/small-building.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -108,7 +112,11 @@
         <div class="grid grid-cols-10 my-10">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faExchangeAlt" />
+              <img
+                src="~/assets/images/icons/transfer.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -129,7 +137,7 @@
         <div class="grid grid-cols-10 my-10">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faSmile" />
+              <img src="~/assets/images/icons/smile.png" class="h-16" alt="" />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -148,27 +156,11 @@
         </div>
       </div>
     </section>
-    <svg width="0" height="0">
-      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
-        <stop
-          offset="0%"
-          style="stop-color: rgb(205, 176, 28); stop-opacity: 1"
-        />
-        <stop
-          offset="100%"
-          style="stop-color: rgb(117, 176, 24); stop-opacity: 1"
-        />
-      </linearGradient>
-    </svg>
   </div>
 </template>
 
 <script>
-import { faBuilding, faSmile } from '@fortawesome/free-regular-svg-icons'
-import {
-  faChevronRight,
-  faExchangeAlt,
-} from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 import bgMainHeader from 'assets/images/partner_with_us_header.jpeg'
 export default {
@@ -185,21 +177,6 @@ export default {
     faChevronRight() {
       return faChevronRight
     },
-    faBuilding() {
-      return faBuilding
-    },
-    faExchangeAlt() {
-      return faExchangeAlt
-    },
-    faSmile() {
-      return faSmile
-    },
   },
 }
 </script>
-
-<style scoped>
-.parent-div svg * {
-  fill: url(#lgrad);
-}
-</style>

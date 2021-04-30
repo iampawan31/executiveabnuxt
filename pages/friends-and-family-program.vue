@@ -78,7 +78,7 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faUsers" />
+              <img src="~/assets/images/icons/users.png" class="h-16" alt="" />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -111,7 +111,7 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faCcVisa" />
+              <img src="~/assets/images/icons/visa.png" class="h-16" alt="" />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -138,7 +138,11 @@
         <div class="grid grid-cols-10 my-10 gap-4">
           <div class="col-span-1">
             <div class="parent-div">
-              <fa class="text-8xl text-brand" :icon="faHandshake" />
+              <img
+                src="~/assets/images/icons/handshake.png"
+                class="h-16"
+                alt=""
+              />
             </div>
           </div>
           <div class="col-span-3 text-3xl font-semibold">
@@ -170,25 +174,12 @@
         button-text="Get Started"
       />
     </section>
-    <svg width="0" height="0">
-      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
-        <stop
-          offset="0%"
-          style="stop-color: rgb(255, 140, 0); stop-opacity: 1"
-        />
-        <stop
-          offset="100%"
-          style="stop-color: rgb(255, 215, 0); stop-opacity: 1"
-        />
-      </linearGradient>
-    </svg>
   </div>
 </template>
 
 <script>
 import bgMainHeader from 'assets/images/friends_and_family_header.jpeg'
 import secondSectionBgImage from 'assets/images/friends-and-family-program/second-section-bg-image.jpeg'
-import { faHandshake } from '@fortawesome/free-regular-svg-icons'
 import {
   faBullhorn,
   faChevronUp,
@@ -196,9 +187,7 @@ import {
   faChevronRight,
   faCommentAlt,
   faMoneyBill,
-  faUsers,
 } from '@fortawesome/free-solid-svg-icons'
-import { faCcVisa } from '@fortawesome/free-brands-svg-icons'
 import CallToAction from '~/components/CallToAction'
 export default {
   transitions: 'fade',
@@ -231,24 +220,9 @@ export default {
     faCommentAlt() {
       return faCommentAlt
     },
-    faHandshake() {
-      return faHandshake
-    },
     faMoneyBill() {
       return faMoneyBill
-    },
-    faUsers() {
-      return faUsers
-    },
-    faCcVisa() {
-      return faCcVisa
     },
   },
 }
 </script>
-
-<style scoped>
-.parent-div svg * {
-  fill: url(#lgrad);
-}
-</style>
