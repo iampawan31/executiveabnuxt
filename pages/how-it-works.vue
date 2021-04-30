@@ -28,7 +28,7 @@
       <div class="container mx-auto">
         <div class="flex">
           <div class="flex-1 max-w-2xl">
-            <img src="~/assets/images/how_it_works_section_one.jpg" alt="" />
+            <img src="~/assets/images/how_it_works_section_one.jpeg" alt="" />
           </div>
           <div
             class="flex flex-1 flex-col content-center flex-wrap justify-center mx-auto"
@@ -169,7 +169,7 @@
             </div>
           </div>
           <div class="flex-1 max-w-2xl">
-            <img src="~/assets/images/how_it_works_section_two.jpg" alt="" />
+            <img src="~/assets/images/how_it_works_section_two.jpeg" alt="" />
           </div>
         </div>
         <div class="flex flex-col place-items-center justify-center mx-auto">
@@ -300,7 +300,7 @@
             </div>
           </div>
           <div class="flex">
-            <img src="~/assets/images/how_it_works_section_three.jpg" alt="" />
+            <img src="~/assets/images/how_it_works_section_three.jpeg" alt="" />
           </div>
         </div>
       </div>
@@ -356,8 +356,8 @@
 </template>
 
 <script>
-import bgMainHeader from 'assets/images/how_it_works_header.jpg'
-import bgSectionHeader from 'assets/images/how_it_works_section_one.jpg'
+import bgMainHeader from 'assets/images/how_it_works_header.jpeg'
+import bgSectionHeader from 'assets/images/how_it_works_section_one.jpeg'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
 import {
   faChevronDown,

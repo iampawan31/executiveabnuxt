@@ -186,8 +186,8 @@
 </template>
 
 <script>
-import bgMainHeader from 'assets/images/friends_and_family_header.jpg'
-import secondSectionBgImage from 'assets/images/friends-and-family-program/second-section-bg-image.jpg'
+import bgMainHeader from 'assets/images/friends_and_family_header.jpeg'
+import secondSectionBgImage from 'assets/images/friends-and-family-program/second-section-bg-image.jpeg'
 import { faHandshake } from '@fortawesome/free-regular-svg-icons'
 import {
   faBullhorn,

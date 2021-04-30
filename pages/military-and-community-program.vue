@@ -156,8 +156,8 @@
 </template>
 
 <script>
-import bgMainHeader from 'assets/images/military_program_header.jpg'
-import secondSectionBgImage from 'assets/images/military-and-community-program/second-section-bg-image.jpg'
+import bgMainHeader from 'assets/images/military_program_header.jpeg'
+import secondSectionBgImage from 'assets/images/military-and-community-program/second-section-bg-image.jpeg'
 import { faClock, faThumbsUp } from '@fortawesome/free-regular-svg-icons'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faCcVisa } from '@fortawesome/free-brands-svg-icons'

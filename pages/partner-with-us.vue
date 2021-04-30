@@ -170,7 +170,7 @@ import {
   faExchangeAlt,
 } from '@fortawesome/free-solid-svg-icons'
 
-import bgMainHeader from 'assets/images/partner_with_us_header.jpg'
+import bgMainHeader from 'assets/images/partner_with_us_header.jpeg'
 export default {
   transitions: 'fade',
   data() {

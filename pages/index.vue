@@ -316,9 +316,9 @@ import {
   faPlayCircle,
   faPauseCircle,
 } from '@fortawesome/free-regular-svg-icons'
-import bgImage1 from 'assets/images/homepage_first_section_image_1.jpg'
-import bgImage2 from 'assets/images/homepage_first_section_image_2.jpg'
-import homepageSliderBackground from 'assets/images/homepage_slider_background.jpg'
+import bgImage1 from 'assets/images/homepage_first_section_image_1.jpeg'
+import bgImage2 from 'assets/images/homepage_first_section_image_2.jpeg'
+import homepageSliderBackground from 'assets/images/homepage_slider_background.jpeg'
 import { homepageTabSection } from '../data/home'
 import Slides from '~/components/Slides'
 import Tabs from '~/components/common/Tabs'

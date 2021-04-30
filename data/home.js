@@ -29,7 +29,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'NEW',
     title: 'NEW VEHICLES',
-    imageURL: require('assets/images/section_background.jpg'),
+    imageURL: require('assets/images/section_background.jpeg'),
     description:
       'We have exclusive manufactorer relationships to get you the best deal.',
     listOne: [
@@ -50,7 +50,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'PRE-OWNED',
     title: 'PRE-OWNED VEHICLES',
-    imageURL: require('assets/images/section_background.jpg'),
+    imageURL: require('assets/images/section_background.jpeg'),
     description:
       'Get certified pre-owned quality vehicles without the added cost.',
     listOne: [
@@ -71,7 +71,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'CUSTOM BUILDS',
     title: 'CUSTOMIZED VEHICLES',
-    imageURL: require('assets/images/section_background.jpg'),
+    imageURL: require('assets/images/section_background.jpeg'),
     description: 'Solutions for those planning to modify their vehicle.',
     listOne: [
       'Include after-market upgrades into the price of your vehicle instead	of paying out of pocket',
@@ -89,7 +89,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'POWERSPORTS',
     title: 'POWERSPORTS',
-    imageURL: require('assets/images/section_background.jpg'),
+    imageURL: require('assets/images/section_background.jpeg'),
     description:
       'Our same service and savings are available for motorycles, ATVs, snow-mobiles, PWCs, and more!',
     listOne: [
@@ -108,7 +108,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'SALUTE TO SERVICE',
     title: 'THANK YOU FOR YOUR SERVICE',
-    imageURL: require('assets/images/section_background.jpg'),
+    imageURL: require('assets/images/section_background.jpeg'),
     description:
       'Special programs for those that serve our nation and communities.',
     listOne: [
@@ -127,7 +127,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'MAINTENANCE / UPGRADES',
     title: 'MAINTENANCE / UPGRADES',
-    imageURL: require('assets/images/section_background.jpg'),
+    imageURL: require('assets/images/section_background.jpeg'),
     description:
       'Savings on required vehicle maintenance and parts / upgrades.',
     listOne: [
@@ -146,7 +146,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'SELL YOUR VEHICLE',
     title: 'SELL YOUR VEHICLE',
-    imageURL: require('assets/images/section_background.jpg'),
+    imageURL: require('assets/images/section_background.jpeg'),
     description:
       'Gain the most value for your old vehicle through our consignment selling model.',
     listOne: [
@@ -165,7 +165,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'COMMERCIAL / FLEET',
     title: 'COMMERCIAL / FLEET',
-    imageURL: require('assets/images/section_background.jpg'),
+    imageURL: require('assets/images/section_background.jpeg'),
     description:
       'Whether your organization needs commercial vehicles, or a fleet of cars / trucks - we can help.',
     listOne: [

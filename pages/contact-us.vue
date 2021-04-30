@@ -165,7 +165,7 @@ import {
   faTwitter,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
-import bgMainHeader from 'assets/images/contact_us_header.jpg'
+import bgMainHeader from 'assets/images/contact_us_header.jpeg'
 export default {
   transitions: 'fade',
   data() {

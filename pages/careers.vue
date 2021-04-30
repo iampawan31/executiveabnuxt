@@ -166,7 +166,7 @@ import {
   faUserTie,
 } from '@fortawesome/free-solid-svg-icons'
 import { faSun } from '@fortawesome/free-regular-svg-icons'
-import bgMainHeader from 'assets/images/careers_header.jpg'
+import bgMainHeader from 'assets/images/careers_header.jpeg'
 export default {
   transitions: 'fade',
   data() {

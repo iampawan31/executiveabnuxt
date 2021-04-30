@@ -243,11 +243,11 @@
 </template>
 
 <script>
-import bgMainHeader from 'assets/images/employee_benefits_header.jpg'
-import secondSectionBgImage from 'assets/images/employee-benefits-program/second-section-bg-image.jpg'
-import benefitOneImage from 'assets/images/employee-benefits-program/increase-employee-retention.jpg'
-import benefitTwoImage from 'assets/images/employee-benefits-program/increased-productivity-and-engagement.jpg'
-import benefitThreeImage from 'assets/images/employee-benefits-program/attract-great-talent.jpg'
+import bgMainHeader from 'assets/images/employee_benefits_header.jpeg'
+import secondSectionBgImage from 'assets/images/employee-benefits-program/second-section-bg-image.jpeg'
+import benefitOneImage from 'assets/images/employee-benefits-program/increase-employee-retention.jpeg'
+import benefitTwoImage from 'assets/images/employee-benefits-program/increased-productivity-and-engagement.jpeg'
+import benefitThreeImage from 'assets/images/employee-benefits-program/attract-great-talent.jpeg'
 import { faBuilding } from '@fortawesome/free-regular-svg-icons'
 import {
   faChevronUp,

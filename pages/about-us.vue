@@ -217,9 +217,9 @@ import {
   faChevronDown,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
-import bgMainHeader from 'assets/images/about_us_header.jpg'
+import bgMainHeader from 'assets/images/about_us_header.jpeg'
 import firstSectionBg from 'assets/images/about-us/second_section_bg.png'
-import secondSectionBg from 'assets/images/about-us/third_section_bg.jpg'
+import secondSectionBg from 'assets/images/about-us/third_section_bg.jpeg'
 import { luxuryBrands, domesticBrands, popularBrands } from '../data/aboutUs'
 import CallToAction from '~/components/CallToAction'
 export default {
