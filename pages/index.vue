@@ -300,6 +300,7 @@
         title="YOUR SATISFACTION MEANS EVERYTHING TO US"
         subtitle="EXPERIENCE THE EAB DIFFERENCE"
         button-text="Get Started"
+        :has-logo="true"
       />
     </section>
   </div>

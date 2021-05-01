@@ -1,9 +1,11 @@
 <template>
   <div class="bg-black">
-    <div class="container mx-auto py-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
-        <div class="grid gap-4 sm:grid-cols-2">
-          <div class="flex flex-col">
+    <div class="container mx-auto py-10 px-5 2xl:px-32">
+      <div
+        class="flex flex-col md:flex-row md:space-y-0 space-y-10 xl:space-x-16"
+      >
+        <div class="flex md:max-w-lg lg:max-w-none">
+          <div class="flex flex-col w-72">
             <div class="font-bold mb-2">MAIN NAVIGATION</div>
             <div v-for="(link, index) in mainNavigation" :key="index">
               <NuxtLink
@@ -14,7 +16,7 @@
               </NuxtLink>
             </div>
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col w-72">
             <div class="font-bold mb-2">ADDITIONAL LINKS</div>
             <div v-for="(link, index) in additionalNavigation" :key="index">
               <NuxtLink
@@ -27,43 +29,47 @@
           </div>
         </div>
         <div
-          class="grid md:grid-rows-2 lg:grid-flow-row lg:grid-cols-3 md:grid-flow-col gap-4"
+          class="flex flex-wrap space-x-10 md:space-x-0 md:space-y-5 lg:space-y-0 lg:space-x-0 xl:space-x-8 2xl:space-x-16"
         >
-          <div>
-            <div class="grid grid-flow-row gap-2">
-              <div class="sm:mx-4">
-                <div class="font-bold mb-4 sm:text-center">HEADQUARTERS</div>
-                <div class="text-center mb-4 hidden sm:block">
-                  <fa class="text-brand text-4xl" :icon="faMapMarkedAlt" />
-                </div>
-                <div class="text-xs sm:w-auto w-56 mt-4">
-                  8500 Redwood Creek Ln San Diego, CA 92126 Bloomfield, CT 06002
-                </div>
+          <div class="flex xl:flex-1 lg:mr-10 xl:mr-0 flex-col">
+            <div class="font-bold mb-4">HEADQUARTERS</div>
+            <div class="flex">
+              <div class="pr-2">
+                <img
+                  src="~/assets/images/icons/location.png"
+                  class="h-8 w-8"
+                  alt=""
+                />
+              </div>
+              <div class="text-xs w-32">
+                8500 Redwood Creek Ln San Diego, CA 92126
               </div>
             </div>
           </div>
-          <div>
-            <div class="grid grid-flow-row gap-2">
-              <div class="sm:mx-4">
-                <div class="font-bold mb-4 sm:text-center">CALL US</div>
-                <div class="text-center mb-4 hidden sm:block">
-                  <fa class="text-brand text-4xl" :icon="faPhoneSquareAlt" />
-                </div>
-                <div class="sm:text-center text-xs mt-4">(877) 297-0252</div>
+          <div class="flex flex-col">
+            <div class="font-bold mb-4">CALL US</div>
+            <div class="flex">
+              <div class="pr-2">
+                <img
+                  src="~/assets/images/icons/call.png"
+                  class="h-8 w-8"
+                  alt=""
+                />
               </div>
+              <div class="text-xs">(877) 297-0252</div>
             </div>
           </div>
-          <div>
-            <div class="grid grid-flow-row gap-2">
-              <div class="sm:mx-4">
-                <div class="font-bold mb-4 sm:text-center">EMAIL US</div>
-                <div class="text-center mb-4 hidden sm:block">
-                  <fa class="text-brand text-4xl" :icon="faEnvelopeOpenText" />
-                </div>
-                <div class="text-xs sm:text-center mt-4">
-                  info@executiveab.com
-                </div>
+          <div class="flex flex-col">
+            <div class="font-bold mb-4">EMAIL US</div>
+            <div class="flex">
+              <div class="pr-2">
+                <img
+                  src="~/assets/images/icons/mail.png"
+                  class="h-8 w-8"
+                  alt=""
+                />
               </div>
+              <div class="text-xs">info@executiveab.com</div>
             </div>
           </div>
         </div>
@@ -85,7 +91,7 @@
         </div>
         <div class="flex flex-1 flex-col">
           <div class="hidden sm:block mb-4">CONNECT ON SOCIAL</div>
-          <div class="flex">
+          <div class="flex parent-div">
             <a href="https://www.instagram.com/executiveautob/" target="_blank">
               <fa class="text-brand mr-4 text-4xl" :icon="faInstagram" />
             </a>
@@ -105,6 +111,18 @@
         </div>
       </div>
     </div>
+    <svg width="0" height="0">
+      <linearGradient id="lgrad" x1="100%" y1="0%" x2="100%" y2="100%">
+        <stop
+          offset="0%"
+          style="stop-color: rgb(177, 88, 19); stop-opacity: 1"
+        />
+        <stop
+          offset="100%"
+          style="stop-color: rgb(207, 121, 55); stop-opacity: 1"
+        />
+      </linearGradient>
+    </svg>
   </div>
 </template>
 
@@ -154,3 +172,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.parent-div svg * {
+  fill: url(#lgrad);
+}
+</style>

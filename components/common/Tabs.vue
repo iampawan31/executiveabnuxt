@@ -5,7 +5,7 @@
     >
       <div
         ref="tabsSection"
-        class="container sm:max-w-xl md:max-w-2xl 2xl:max-w-max mx-auto overflow-x-auto flex content-center justify-between"
+        class="container sm:max-w-xl md:max-w-6xl 2xl:max-w-max mx-auto overflow-x-auto flex content-center justify-between"
       >
         <button
           class="text-md absolute left-2 mt-1 lg:hidden flex"
