@@ -1,10 +1,12 @@
 <template>
   <div class="bg-black">
-    <div class="container mx-auto py-10 px-5 2xl:px-32">
+    <div class="container mx-auto pt-10 pb-4 sm:py-10 px-5 2xl:px-32">
       <div
         class="flex flex-col md:flex-row md:space-y-0 space-y-10 xl:space-x-16"
       >
-        <div class="flex md:max-w-lg lg:max-w-none">
+        <div
+          class="flex md:max-w-lg lg:max-w-none flex-col space-y-5 sm:flex-row sm:space-y-0"
+        >
           <div class="flex flex-col w-72">
             <div class="font-bold mb-2">MAIN NAVIGATION</div>
             <div v-for="(link, index) in mainNavigation" :key="index">
@@ -29,7 +31,7 @@
           </div>
         </div>
         <div
-          class="flex flex-wrap space-x-10 md:space-x-0 md:space-y-5 lg:space-y-0 lg:space-x-0 xl:space-x-8 2xl:space-x-16"
+          class="flex flex-col space-y-5 sm:flex-row sm:flex-wrap sm:space-x-10 md:space-x-0 md:space-y-5 lg:space-y-0 lg:space-x-0 xl:space-x-8 2xl:space-x-16"
         >
           <div class="flex xl:flex-1 lg:mr-10 xl:mr-0 flex-col">
             <div class="font-bold mb-4">HEADQUARTERS</div>
@@ -41,7 +43,7 @@
                   alt=""
                 />
               </div>
-              <div class="text-xs w-32">
+              <div class="text-xs w-56 sm:w-32">
                 8500 Redwood Creek Ln San Diego, CA 92126
               </div>
             </div>
@@ -74,8 +76,12 @@
           </div>
         </div>
       </div>
-      <div class="flex mt-16 w-full space-x-12 content-end flex-wrap">
-        <div class="flex flex-wrap space-x-5 content-end flex-1">
+      <div
+        class="flex mt-16 w-full flex-col space-y-5 sm:flex-row sm:space-x-12 sm:content-end sm:flex-wrap"
+      >
+        <div
+          class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:flex-wrap sm:space-x-5 sm:content-end flex-1"
+        >
           <div>
             <NuxtLink to="/">
               <img

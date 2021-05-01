@@ -1,11 +1,13 @@
 <template>
   <div>
-    <section :style="mainHeaderImage" class="py-24">
-      <div class="container mx-auto">
-        <div class="flex justify-center content-center space-x-6 max-w-5xl">
-          <div class="col-span-3 flex items-center">
+    <section :style="mainHeaderImage" class="py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-0">
+        <div
+          class="flex flex-col sm:flex-row justify-center content-center sm:space-x-6 max-w-5xl"
+        >
+          <div class="flex items-center mb-4 sm:mb-0">
             <div
-              class="bg-black bg-opacity-10 inline-block uppercase text-white px-5 py-3 md:text-5xl sm:text-3xl font-bold"
+              class="bg-black bg-opacity-10 inline-block uppercase text-white px-5 py-3 md:text-5xl text-3xl font-bold"
             >
               <span>// CONTACT US</span>
             </div>
@@ -17,7 +19,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-white text-black py-24 px-5 2xl:px-0">
+    <section class="bg-white text-black py-12 sm:py-24 px-5 2xl:px-0">
       <div class="container mx-auto 2xl:px-32">
         <div class="flex">
           <div class="">
@@ -34,11 +36,13 @@
           class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-10 xl:space-x-16 mt-10"
         >
           <div
-            class="bg-white flex flex-col flex-grow max-w-4xl shadow-2xl rounded-lg p-14"
+            class="bg-white flex flex-col flex-grow max-w-4xl shadow-2xl rounded-lg p-8 sm:p-14"
           >
             <div class="flex flex-col">
-              <div class="flex flex-grow space-x-4 mb-6">
-                <label class="block flex-grow">
+              <div
+                class="flex flex-grow flex-col sm:flex-row sm:space-x-4 mb-6"
+              >
+                <label class="block flex-grow mb-6 sm:mb-0">
                   <input
                     type="text"
                     class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
@@ -80,7 +84,7 @@
           <div
             class="bg-white xl:w-2xl flex flex-col shadow-2xl rounded-lg pt-14 mb-0 pb-4"
           >
-            <div class="px-12">
+            <div class="px-4 sm:px-12">
               <div class="flex space-x-8 mb-10">
                 <div class="">
                   <img
@@ -131,7 +135,7 @@
       </div>
     </section>
     <section class="bg-white text-black px-5 2xl:px-0">
-      <div class="container mx-auto py-16 2xl:px-32">
+      <div class="container mx-auto py-10 sm:py-16 2xl:px-32">
         <div class="grid grid-cols-2 my-10">
           <div class="lg:col-span-1 col-span-2">
             <div class="font-semibold text-3xl uppercase mb-4">
@@ -145,15 +149,15 @@
               Please read our how it works and FAQ pages for knowledge on our
               most requested information and common questions.
             </div>
-            <div class="inline-grid grid-cols-2 lg:gap-16 gap-24 mt-5">
+            <div class="inline-grid grid-cols-2 lg:gap-16 gap-4 sm:gap-24 mt-5">
               <button
-                class="bg-gradient-to-r from-yellow-700 to-yellow-500 inline-block shadow-lg py-2 px-8 rounded uppercase w-auto text-white mb-0.5"
+                class="bg-gradient-to-r from-yellow-700 to-yellow-500 inline-block shadow-lg py-2 px-4 sm:px-8 rounded uppercase w-auto text-white mb-0.5"
               >
                 How Page
                 <fa class="ml-2 text-white" :icon="faChevronRight" />
               </button>
               <button
-                class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
+                class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-4 sm:px-8 rounded uppercase text-white mb-0.5"
               >
                 FAQ Page<fa class="ml-2 text-white" :icon="faChevronRight" />
               </button>

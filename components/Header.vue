@@ -11,11 +11,11 @@
       <NuxtLink to="/">
         <img class="h-6" src="~/assets/logo_white.png" alt="Executive AB" />
       </NuxtLink>
-      <div class="md:hidden">
+      <div class="md:hidden flex content-center sm:flex-none">
         <button
           type="button"
           :class="isHomeRoute ? 'text-white' : 'text-gray-300'"
-          class="hover:text-white focus:text-white"
+          class="hover:text-white focus:text-white focus:outline-none"
           @click="isOpen = !isOpen"
         >
           <svg
