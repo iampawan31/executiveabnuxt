@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section :style="mainHeaderImage" class="py-16 sm:py-24">
+    <section :style="mainHeaderImage" class="py-16 sm:py-24 xl:px-24 2xl:px-16">
       <div class="container mx-auto px-4 sm:px-0">
         <div
           class="flex flex-col sm:flex-row justify-center content-center sm:space-x-6 max-w-5xl"
@@ -20,8 +20,8 @@
         </div>
       </div>
     </section>
-    <section class="bg-white text-black py-12 sm:py-24 px-5 2xl:px-0">
-      <div class="container mx-auto 2xl:px-32">
+    <section class="bg-white text-black py-12 px-5 2xl:px-0">
+      <div class="container mx-auto xl:px-32">
         <div class="flex flex-col md:flex-row space-y-10 lg:space-y-0 md:mt-10">
           <div class="flex flex-1 flex-col space-y-10 lg:space-y-0 mt-10 pr-4">
             <div class="uppercase text-2xl sm:text-3xl">
@@ -87,25 +87,18 @@
       </div>
     </section>
     <section class="bg-white text-black">
-      <div class="container mx-auto pb-16 lg:py-16 px-4 2xl:px-16">
-        <div
-          class="flex flex-col flex-wrap sm:flex-row lg:flex-nowrap lg:space-x-16 xl:space-x-72 2xl:space-x-96"
-        >
-          <div
-            class="flex sm:flex-row space-x-2 sm:space-x-4 xl:space-x-8 mb-4 lg:mb-0"
-          >
-            <img
+      <Features>
+        <Feature>
+          <template slot="feature-image"
+            ><img
               src="~/assets/images/icons/small-building.png"
               class="h-14 md:h-16"
               alt=""
-            />
-            <div
-              class="flex sm:max-w-md lg:max-w-2xl xl:max-w-xs sm:text-2xl text-lg font-bold"
-            >
-              TYPES OF ORGANIZATIONS WE PARTNER WITH
-            </div>
-          </div>
-          <div class="flex flex-col lg:max-w-lg">
+          /></template>
+          <template slot="feature-title">
+            TYPES OF ORGANIZATIONS WE PARTNER WITH
+          </template>
+          <template slot="feature-description">
             <div class="mb-4">
               We are open to partnering with organizations of all types that
               provide services, products or technology to clients in the
@@ -116,27 +109,20 @@
               detailers, a partnership with EAB and your business could be a
               great fit for both of our organizations.
             </div>
-          </div>
-        </div>
-        <hr />
-        <div
-          class="flex flex-col flex-wrap sm:flex-row lg:flex-nowrap lg:space-x-16 xl:space-x-72 2xl:space-x-96 my-5"
-        >
-          <div
-            class="flex sm:flex-row space-x-2 sm:space-x-4 xl:space-x-8 mb-4 lg:mb-0"
-          >
-            <img
+          </template>
+        </Feature>
+        <hr class="my-16" />
+        <Feature>
+          <template slot="feature-image"
+            ><img
               src="~/assets/images/icons/transfer.png"
               class="h-14 md:h-16"
               alt=""
-            />
-            <div
-              class="flex sm:max-w-md lg:max-w-2xl xl:max-w-xs sm:text-2xl text-lg font-bold"
-            >
-              HOW WE PARTNER WITH ORGANIZATIONS
-            </div>
-          </div>
-          <div class="flex flex-col lg:max-w-lg">
+          /></template>
+          <template slot="feature-title">
+            HOW WE PARTNER WITH ORGANIZATIONS
+          </template>
+          <template slot="feature-description">
             <div class="mb-4">
               Typically we partner with organizations through a refferal fee or
               refferal exchange program. To be approved as a refferal partner we
@@ -144,27 +130,18 @@
               quality service or products, and are an industry leader in client
               satisfaction in your respective industry and geographical area.
             </div>
-          </div>
-        </div>
-        <hr />
-        <div
-          class="flex flex-col flex-wrap sm:flex-row lg:flex-nowrap lg:space-x-16 xl:space-x-72 2xl:space-x-96 my-5"
-        >
-          <div
-            class="flex sm:flex-row space-x-2 sm:space-x-4 xl:space-x-8 mb-4 lg:mb-0"
-          >
-            <img
+          </template>
+        </Feature>
+        <hr class="my-16" />
+        <Feature>
+          <template slot="feature-image"
+            ><img
               src="~/assets/images/icons/smile.png"
               class="h-14 md:h-16"
               alt=""
-            />
-            <div
-              class="flex sm:max-w-md lg:max-w-2xl xl:max-w-xs sm:text-2xl text-lg font-bold"
-            >
-              REASONS TO PARTNER WITH US
-            </div>
-          </div>
-          <div class="flex flex-col lg:max-w-lg">
+          /></template>
+          <template slot="feature-title"> REASONS TO PARTNER WITH US </template>
+          <template slot="feature-description">
             <div class="mb-4">
               Through a partnership with EAB your clients will gain access to
               our cost-free auto concierge service and when we earn, you earn.
@@ -172,19 +149,21 @@
               preferred partner for service or parts within your industry
               segment.
             </div>
-          </div>
-        </div>
-      </div>
+          </template>
+        </Feature>
+      </Features>
     </section>
   </div>
 </template>
 
 <script>
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-
 import bgMainHeader from 'assets/images/partner_with_us_header.jpeg'
+import Feature from '~/components/common/Feature'
+import Features from '~/components/common/Features'
 export default {
   transitions: 'fade',
+  components: { Feature, Features },
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },

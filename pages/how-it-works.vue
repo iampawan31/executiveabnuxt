@@ -2,7 +2,7 @@
   <div>
     <section class="text-white relative">
       <div
-        class="min-h-screen max-h-screen bg-center bg-cover flex"
+        class="2xl:max-h-96 2xl:py-96 h-screen bg-center bg-cover flex"
         :style="mainHeaderImage"
       >
         <div class="relative container mx-auto p-4 flex items-center z-10">
@@ -25,8 +25,10 @@
       </div>
     </section>
     <section class="bg-black transition">
-      <div class="container mx-auto">
-        <div class="flex">
+      <div
+        class="container mx-auto px-6 md:px-4 lg:pt-10 lg:px-10 xl:px-0 xl:py-0"
+      >
+        <div class="flex flex-col lg:flex-row">
           <div class="flex-1 max-w-2xl">
             <img src="~/assets/images/how_it_works_section_one.jpeg" alt="" />
           </div>
@@ -66,22 +68,18 @@
       :class="sectionOneVisible ? 'block' : 'hidden'"
       class="bg-white text-black py-16 transition"
     >
-      <div class="container mx-auto py-16">
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div-one">
-              <img
-                src="~/assets/images/icons/binoculars.png"
-                class="h-16"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl uppercase font-semibold">
+      <Features>
+        <Feature>
+          <template slot="feature-image"
+            ><img
+              src="~/assets/images/icons/binoculars.png"
+              class="h-14 md:h-16"
+              alt=""
+          /></template>
+          <template slot="feature-title">
             ACCESS TO MILLIONS OF VEHICLES
-          </div>
-          <div></div>
-          <div class="col-span-5">
+          </template>
+          <template slot="feature-description">
             <div class="mb-4">
               Our database and account access with the manfucatorers allows us
               to view real time inventory of millions of vehicles available for
@@ -96,24 +94,20 @@
               packages, and everything else you need to decide if it’s the
               perfect car for you.
             </div>
-          </div>
-        </div>
-        <hr />
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div-one">
-              <img
-                src="~/assets/images/icons/dollar-sign.png"
-                class="h-16"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
+          </template>
+        </Feature>
+        <hr class="my-16" />
+        <Feature>
+          <template slot="feature-image"
+            ><img
+              src="~/assets/images/icons/dollar-sign.png"
+              class="h-14 md:h-16"
+              alt=""
+          /></template>
+          <template slot="feature-title">
             HOW OUR SERVICE IS COST FREE
-          </div>
-          <div></div>
-          <div class="col-span-5">
+          </template>
+          <template slot="feature-description">
             <div class="mb-4">
               Since we do not have a traditional buy-sell business model, as
               found in franchise dealerships and online dealerships, this means
@@ -127,20 +121,20 @@
               manufacturer in turn pays us for helping to facilitate the
               transaction.
             </div>
-          </div>
-        </div>
-        <hr />
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div-one">
-              <img src="~/assets/images/icons/trophy.png" class="h-16" alt="" />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
+          </template>
+        </Feature>
+        <hr class="my-16" />
+        <Feature>
+          <template slot="feature-image"
+            ><img
+              src="~/assets/images/icons/trophy.png"
+              class="h-14 md:h-16"
+              alt=""
+          /></template>
+          <template slot="feature-title">
             HOW WE GET YOU THE BEST PRICE
-          </div>
-          <div></div>
-          <div class="col-span-5">
+          </template>
+          <template slot="feature-description">
             <div class="mb-4">
               Since we are not in the business of flipping cars for profit, but
               rather helping people find the vehicle they want, the pricing we
@@ -152,13 +146,13 @@
               MSRP to hopefully land near invoice, we are already getting
               invoice pricing (or in some cases slightly above) for you.
             </div>
-          </div>
-        </div>
-      </div>
+          </template>
+        </Feature>
+      </Features>
     </section>
     <section class="bg-black py-10">
-      <div class="container mx-auto">
-        <div class="flex">
+      <div class="container mx-auto px-6 md:px-4 lg:px-10 xl:px-0">
+        <div class="flex flex-col lg:flex-row">
           <div
             class="flex flex-1 flex-col content-center flex-wrap justify-center mx-auto"
           >
@@ -198,22 +192,16 @@
       :class="sectionTwoVisible ? 'block' : 'hidden'"
       class="bg-white text-black py-16"
     >
-      <div class="container mx-auto py-16">
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div-two">
-              <img
-                src="~/assets/images/icons/contract-sign.png"
-                class="h-16"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl uppercase font-semibold">
-            LET US HANDLE THE DETAILS
-          </div>
-          <div></div>
-          <div class="col-span-5">
+      <Features>
+        <Feature>
+          <template slot="feature-image"
+            ><img
+              src="~/assets/images/icons/contract-sign.png"
+              class="h-14 md:h-16"
+              alt=""
+          /></template>
+          <template slot="feature-title"> LET US HANDLE THE DETAILS </template>
+          <template slot="feature-description">
             <div class="mb-4">
               We take care of all the necessary paperwork to help your purchase
               finalize as soon as possible. This includes all DMV paperwork such
@@ -224,24 +212,18 @@
               extended warranties we are able to help facilitate these
               transactions directly with manufacturors or trusted vendors.
             </div>
-          </div>
-        </div>
-        <hr />
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div-two">
-              <img
-                src="~/assets/images/icons/cash-contract.png"
-                class="h-16"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            PAY WITH CASH OR FINANCE
-          </div>
-          <div></div>
-          <div class="col-span-5">
+          </template>
+        </Feature>
+        <hr class="my-16" />
+        <Feature>
+          <template slot="feature-image"
+            ><img
+              src="~/assets/images/icons/cash-contract.png"
+              class="h-14 md:h-16"
+              alt=""
+          /></template>
+          <template slot="feature-title"> PAY WITH CASH OR FINANCE </template>
+          <template slot="feature-description">
             <div class="mb-4">
               Choose from paying with cash via bank account transfer, or use any
               lender of your choice to complete the sale. If you would like to
@@ -263,22 +245,18 @@
               with that offer competitive rates, however we do not have any
               affiliation with them.
             </div>
-          </div>
-        </div>
-        <hr />
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div-two">
-              <img
-                src="~/assets/images/icons/trade-in.png"
-                class="h-16"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">HAVE A TRADE-IN?</div>
-          <div></div>
-          <div class="col-span-5">
+          </template>
+        </Feature>
+        <hr class="my-16" />
+        <Feature>
+          <template slot="feature-image"
+            ><img
+              src="~/assets/images/icons/trade-in.png"
+              class="h-14 md:h-16"
+              alt=""
+          /></template>
+          <template slot="feature-title"> HAVE A TRADE-IN? </template>
+          <template slot="feature-description">
             <div class="mb-4">
               If you have a vehicle you are looking to trade-in during your
               purchase we will assist in accomodating your trade-in. For certain
@@ -288,19 +266,19 @@
               trade-in, we will make sure all of the best available options are
               presented to you.
             </div>
-          </div>
-        </div>
-      </div>
+          </template>
+        </Feature>
+      </Features>
     </section>
     <section class="bg-black py-16">
-      <div class="container mx-auto">
+      <div class="container mx-auto px-6 md:px-4">
         <div class="flex flex-col justify-center">
           <div class="flex flex-col mx-auto">
-            <div class="text-brand text-center uppercase text-lg mb-3">
+            <div class="text-brand md:text-center uppercase text-lg mb-3">
               EAB SERVICE AS A BENEFIT
             </div>
             <div
-              class="text-white text-center text-3xl font-semibold uppercase mb-5"
+              class="text-white md:text-center text-3xl font-semibold uppercase mb-5"
             >
               EXCLUSIVE AUTO PURCHASING PROGRAM
             </div>
@@ -324,21 +302,27 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-end mx-10 space-x-4">
+      <div
+        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 mt-4 sm:justify-end mx-4 sm:mx-10 sm:space-x-4"
+      >
         <div class="text-xs max-w-xs border-gray-400 border p-1">
           All inspections are performed by licensed professional auto
           technicians.
         </div>
-        <img
-          class="h-10 bg-white p-1 rounded"
-          src="~assets/images/autocheck_from_experian.png"
-          alt="Autocheck from experian"
-        />
-        <img
-          class="h-10"
-          src="~assets/images/carfax_logo.png"
-          alt="Carfac logo"
-        />
+        <div>
+          <img
+            class="h-10 bg-white p-1 rounded"
+            src="~assets/images/autocheck_from_experian.png"
+            alt="Autocheck from experian"
+          />
+        </div>
+        <div>
+          <img
+            class="h-10"
+            src="~assets/images/carfax_logo.png"
+            alt="Carfac logo"
+          />
+        </div>
       </div>
     </section>
     <section class="bg-brand-grayAlternate text-white py-16">
@@ -356,10 +340,14 @@ import bgMainHeader from 'assets/images/how_it_works_header.jpeg'
 import bgSectionHeader from 'assets/images/how_it_works_section_one.jpeg'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
+import Feature from '~/components/common/Feature'
+import Features from '~/components/common/Features'
 export default {
   transitions: 'fade',
   components: {
     CallToAction,
+    Feature,
+    Features,
   },
   data() {
     return {
