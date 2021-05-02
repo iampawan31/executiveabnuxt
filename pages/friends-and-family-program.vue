@@ -2,10 +2,12 @@
   <div>
     <section class="text-white relative">
       <div
-        class="min-h-screen hero-image bg-center bg-cover flex"
+        class="min-h-screen hero-image bg-center bg-cover flex bg-norepeat"
         :style="mainHeaderImage"
       >
-        <div class="relative container mx-48 p-4 flex items-center z-10">
+        <div
+          class="sm:relative container sm:mx-48 sm:p-4 flex items-center z-10"
+        >
           <div>
             <div class="content float-left py-4 px-5 my-5">
               <div
@@ -17,7 +19,9 @@
                 Spread the word so we can help more people experience the EAB
                 difference while finding their perfect vehicle!
               </div>
-              <div class="grid grid-cols-5 text-white mt-4 gap-4 w-max-xl">
+              <div
+                class="flex sm:grid sm:grid-cols-5 text-white mt-4 gap-4 w-max-xl"
+              >
                 <div class="text-center">
                   <fa class="text-6xl mb-4" :icon="faBullhorn" />
                   <h1 class="text-xl font-semibold">SHARE</h1>
@@ -78,7 +82,7 @@
       :class="sectionOneVisible ? 'block' : 'hidden'"
       class="bg-white text-black"
     >
-      <div class="container mx-auto">
+      <div class="container mx-auto pt-16 sm:pt-0">
         <Features>
           <Feature title-space-value="lg:space-x-32">
             <template slot="feature-image"
