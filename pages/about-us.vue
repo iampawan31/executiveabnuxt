@@ -26,11 +26,11 @@
       </div>
     </section>
     <section class="py-16 bg-center" :style="firstSectionBackgroundImage1">
-      <div class="container mx-auto lg:px-20">
-        <div class="flex flex-col sm:flex-row sm:space-x-12">
-          <div class="flex sm:max-w-sm flex-col px-4 sm:px-0">
+      <div class="container mx-auto px-4 lg:px-20">
+        <div class="flex flex-col lg:flex-row lg:space-x-6 xl:space-x-12">
+          <div class="flex lg:max-w-sm flex-col px-4 sm:px-0">
             <div class="flex text-brand mb-5">OUR PROMISE TO YOU</div>
-            <div class="flex text-2xl mb-5 font-semibold">
+            <div class="flex text-xl lg:text-2xl mb-5 font-semibold">
               EXECUTIVE SERVICE WITH PROVEN RESULTS
             </div>
             <div class="flex font-light text-gray-300">
@@ -41,25 +41,33 @@
               will not miss the sales person.
             </div>
           </div>
-          <div class="flex justify-between flex-1 space-x-2">
-            <div class="flex-row content-center flex-grow space-x-5 flex mt-5">
+          <div class="flex justify-between flex-1 space-x-2 px-4 sm:px-0">
+            <div
+              class="flex-col sm:flex-row content-center flex-grow space-y-4 sm:space-y-0 sm:space-x-5 flex mt-5"
+            >
               <div class="sm:mx-auto items-center flex flex-grow">
                 <div>
-                  <div class="text-2xl sm:text-5xl font-bold mb-3">11,239+</div>
                   <div
-                    class="text-brand tracking-tighter text-xs sm:text-lg font-bold"
+                    class="text-4xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-bold mb-3"
+                  >
+                    11,239+
+                  </div>
+                  <div
+                    class="text-brand tracking-tighter text-lg sm:text-sm lg:text-sm xl:text-md 2xl:text-lg font-bold"
                   >
                     VEHICLE PURCHASES
                   </div>
                 </div>
               </div>
-              <div class="text sm:mx-auto items-center flex flex-grow">
+              <div class="sm:mx-auto items-center flex flex-grow">
                 <div>
-                  <div class="text-2xl sm:text-5xl font-bold mb-3">
+                  <div
+                    class="text-4xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-bold mb-3"
+                  >
                     $42.6 MIL+
                   </div>
                   <div
-                    class="text-brand tracking-tighter text-xs sm:text-lg font-bold"
+                    class="text-brand tracking-tighter text-lg sm:text-sm lg:text-sm xl:text-md 2xl:text-lg font-bold"
                   >
                     DOLLARS SAVED OFF RETAIL
                   </div>
@@ -67,9 +75,13 @@
               </div>
               <div class="sm:mx-auto items-center flex flex-grow">
                 <div>
-                  <div class="text-2xl sm:text-5xl font-bold mb-3">$3750</div>
                   <div
-                    class="text-brand tracking-tighter text-xs sm:text-lg font-bold"
+                    class="text-4xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-bold mb-3"
+                  >
+                    $3750
+                  </div>
+                  <div
+                    class="text-brand tracking-tighter text-lg sm:text-sm lg:text-sm xl:text-md 2xl:text-lg font-bold"
                   >
                     AVERAGE SAVINGS PER VEHICLE
                   </div>
@@ -80,68 +92,81 @@
         </div>
       </div>
     </section>
-    <section
-      class="bg-brand-gray-alternate py-16 bg-no-repeat"
-      :style="secondSectionBackgroundImage"
-    >
+    <section class="py-16 bg-no-repeat" :style="secondSectionBackgroundImage">
       <div class="mb-6">
-        <div class="mx-auto container">
+        <div
+          class="mx-auto container px-4 sm:px-8 2xl:px-16 text-sm sm:text-lg"
+        >
           LUXURY & PERFORMANCE AUTO BRANDS
           <fa class="ml-2 text-brand" :icon="faChevronDown" />
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
-          <div class="mx-auto container">
-            <div class="flex flex-nowrap items-center space-x-5">
+          <div class="mx-auto container px-4 sm:px-8 2xl:px-16">
+            <div class="flex flex-wrap xl:flex-nowrap xl:space-x-5">
               <div
                 v-for="(brand, index) in luxuryBrands"
                 :key="index"
-                class="mx-2"
+                class="mx-2 my-2 xl:my-auto"
               >
-                <img :src="brand" class="h-12 w-auto object-contain" alt="" />
+                <img :src="brand" class="w-16 h-16" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="mb-6">
-        <div class="container mx-auto">
+        <div
+          class="mx-auto container px-4 sm:px-8 2xl:px-16 text-sm sm:text-lg"
+        >
           DOMESTIC AUTO BRANDS
           <fa class="ml-2 text-brand" :icon="faChevronDown" />
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
-          <div class="mx-auto container">
-            <div class="flex flex-nowrap items-center space-x-5">
-              <div v-for="(brand, index) in domesticBrands" :key="index">
-                <img :src="brand" class="h-12 w-auto object-contain" alt="" />
+          <div class="mx-auto container px-4 sm:px-8 2xl:px-16">
+            <div class="flex flex-wrap lg:flex-nowrap lg:space-x-5">
+              <div
+                v-for="(brand, index) in domesticBrands"
+                :key="index"
+                class="mx-2 my-2 lg:my-auto"
+              >
+                <img :src="brand" class="w-16 h-16" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <div class="mx-auto container">
+      <div class="mb-6">
+        <div
+          class="mx-auto container px-4 sm:px-8 2xl:px-16 text-sm sm:text-lg"
+        >
           POPULAR AUTO BRANDS
           <fa class="ml-2 text-brand" :icon="faChevronDown" />
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
-          <div class="mx-auto container">
-            <div class="flex flex-nowrap items-center space-x-5">
-              <div v-for="(brand, index) in popularBrands" :key="index">
-                <img :src="brand" class="h-12 w-auto object-contain" alt="" />
+          <div class="mx-auto container px-4 sm:px-8 2xl:px-16">
+            <div class="flex flex-wrap lg:flex-nowrap lg:space-x-5">
+              <div
+                v-for="(brand, index) in popularBrands"
+                :key="index"
+                class="mx-2 my-2 lg:my-auto"
+              >
+                <img :src="brand" class="w-16 h-16" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div>
-        <div class="sm:text-right mt-5 container mx-auto">
+        <div
+          class="sm:text-right mx-auto container px-4 sm:px-8 2xl:px-16 mt-4 sm:mt-0 text-sm sm:text-lg"
+        >
           AND ACCESS TO MANY MORE!
           <fa class="ml-2 text-brand" :icon="faChevronRight" />
         </div>
       </div>
     </section>
     <section class="bg-white text-black text-lg py-10">
-      <div class="container mx-auto px-4 sm:px-36">
+      <div class="container mx-auto px-4 lg:px-36">
         <div class="mb-6 uppercase text-brand">
           WE LOVE CARS, BUT DISLIKE THE TRADITIONAL BUYING PROCESS
         </div>

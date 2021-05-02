@@ -31,7 +31,7 @@
           </div>
         </div>
         <div
-          class="flex flex-col space-y-5 sm:flex-row sm:flex-wrap sm:space-x-10 md:space-x-0 md:space-y-5 lg:space-y-0 lg:space-x-0 xl:space-x-8 2xl:space-x-16"
+          class="flex flex-col space-y-5 sm:space-y-0 sm:flex-row sm:flex-wrap sm:space-x-10 md:space-x-0 md:space-y-5 lg:space-y-0 lg:space-x-0 xl:space-x-8 2xl:space-x-16"
         >
           <div class="flex xl:flex-1 lg:mr-10 xl:mr-0 flex-col">
             <div class="font-bold mb-4">HEADQUARTERS</div>
