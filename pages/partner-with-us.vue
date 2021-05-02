@@ -1,17 +1,18 @@
 <template>
   <div>
-    <section :style="mainHeaderImage" class="py-24">
-      <div class="container mx-auto">
-        <div class="grid sm:grid-cols-9 sm:gap-8">
-          <div></div>
-          <div class="col-span-4 flex items-center">
+    <section :style="mainHeaderImage" class="py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-0">
+        <div
+          class="flex flex-col sm:flex-row justify-center content-center sm:space-x-6 max-w-5xl"
+        >
+          <div class="flex items-center mb-4 sm:mb-0">
             <div
-              class="bg-black bg-opacity-10 inline-block uppercase text-white px-3 py-3 text-5xl font-bold"
+              class="bg-black bg-opacity-10 inline-block uppercase text-white px-5 py-3 md:text-3xl xl:text-5xl text-2xl font-bold"
             >
               <span>// PARTNER WITH US</span>
             </div>
           </div>
-          <div class="flex items-center col-span-2">
+          <div class="flex items-center max-w-xs sm:w-72 md:was-w-xs">
             Join the EAB team and join us on our mission to help transform the
             way consumers purchase vehicles.
           </div>
@@ -19,12 +20,14 @@
         </div>
       </div>
     </section>
-    <section class="bg-white text-black py-24">
-      <div class="container mx-auto">
-        <div class="grid sm:grid-cols-2">
-          <div class="bg-gray-50 p-10">
-            <div class="uppercase text-3xl">EAB PARTNERSHIP PROGRAM</div>
-            <div class="text-gray-400 mt-5">
+    <section class="bg-white text-black py-12 sm:py-24 px-5 2xl:px-0">
+      <div class="container mx-auto 2xl:px-32">
+        <div class="flex flex-col md:flex-row space-y-10 lg:space-y-0 md:mt-10">
+          <div class="flex flex-1 flex-col space-y-10 lg:space-y-0 mt-10 pr-4">
+            <div class="uppercase text-2xl sm:text-3xl">
+              EAB PARTNERSHIP PROGRAM
+            </div>
+            <div class="text-gray-400">
               We are always open to partnering with organizations that share our
               values and are looking for ways to help grow their business while
               elevating their customer experience.
@@ -34,68 +37,75 @@
               in persuing a partnership with our organization.
             </div>
           </div>
-          <div class="bg-white shadow-2xl rounded-lg w-auto h-auto p-12">
-            <div class="grid grid-cols-1 gap-6">
-              <div class="grid grid-rows-3 gap-4">
-                <div class="grid grid-cols-2 gap-4">
-                  <label class="block">
-                    <input
-                      type="text"
-                      class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
-                      placeholder="Name"
-                    />
-                  </label>
-                  <label class="block">
-                    <input
-                      type="email"
-                      class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
-                      placeholder="Email"
-                    />
-                  </label>
-                </div>
-                <label class="block">
+          <div
+            class="flex flex-1 flex-col bg-white shadow-2xl rounded-lg w-auto h-auto p-12"
+          >
+            <div class="flex flex-col">
+              <div
+                class="flex flex-grow flex-col sm:flex-row sm:space-x-4 mb-6"
+              >
+                <label class="block flex-grow mb-6 sm:mb-0">
                   <input
                     type="text"
-                    class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
-                    placeholder="Subject"
+                    class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                    placeholder="Name"
                   />
                 </label>
-                <label class="block">
-                  <textarea
-                    class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
-                    rows="2"
-                    placeholder="Message"
-                  ></textarea>
+                <label class="block flex-grow">
+                  <input
+                    type="email"
+                    class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                    placeholder="E-mail"
+                  />
                 </label>
               </div>
+              <label class="block mb-6">
+                <input
+                  type="text"
+                  class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                  placeholder="Subject"
+                />
+              </label>
+              <label class="block mb-6">
+                <textarea
+                  class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                  rows="3"
+                  placeholder="Message"
+                ></textarea>
+              </label>
             </div>
-            <button
-              class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
-            >
-              Send
-              <fa class="ml-2 text-white" :icon="faChevronRight" />
-            </button>
+            <div class="flex-grow-0">
+              <button
+                class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
+              >
+                Send
+                <fa class="ml-2 text-white" :icon="faChevronRight" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section class="bg-white text-black">
-      <div class="container mx-auto py-16">
-        <div class="grid grid-cols-10 my-10">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img
-                src="~/assets/images/icons/small-building.png"
-                class="h-16"
-                alt=""
-              />
+      <div class="container mx-auto pb-16 lg:py-16 px-4 2xl:px-16">
+        <div
+          class="flex flex-col flex-wrap sm:flex-row lg:flex-nowrap lg:space-x-16 xl:space-x-72 2xl:space-x-96"
+        >
+          <div
+            class="flex sm:flex-row space-x-2 sm:space-x-4 xl:space-x-8 mb-4 lg:mb-0"
+          >
+            <img
+              src="~/assets/images/icons/small-building.png"
+              class="h-14 md:h-16"
+              alt=""
+            />
+            <div
+              class="flex sm:max-w-md lg:max-w-2xl xl:max-w-xs sm:text-2xl text-lg font-bold"
+            >
+              TYPES OF ORGANIZATIONS WE PARTNER WITH
             </div>
           </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            TYPES OF ORGANIZATIONS WE PARTNER WITH
-          </div>
-          <div></div>
-          <div class="col-span-5">
+          <div class="flex flex-col lg:max-w-lg">
             <div class="mb-4">
               We are open to partnering with organizations of all types that
               provide services, products or technology to clients in the
@@ -109,21 +119,24 @@
           </div>
         </div>
         <hr />
-        <div class="grid grid-cols-10 my-10">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img
-                src="~/assets/images/icons/transfer.png"
-                class="h-16"
-                alt=""
-              />
+        <div
+          class="flex flex-col flex-wrap sm:flex-row lg:flex-nowrap lg:space-x-16 xl:space-x-72 2xl:space-x-96 my-5"
+        >
+          <div
+            class="flex sm:flex-row space-x-2 sm:space-x-4 xl:space-x-8 mb-4 lg:mb-0"
+          >
+            <img
+              src="~/assets/images/icons/transfer.png"
+              class="h-14 md:h-16"
+              alt=""
+            />
+            <div
+              class="flex sm:max-w-md lg:max-w-2xl xl:max-w-xs sm:text-2xl text-lg font-bold"
+            >
+              HOW WE PARTNER WITH ORGANIZATIONS
             </div>
           </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            HOW WE PARTNER WITH ORGANIZATIONS
-          </div>
-          <div></div>
-          <div class="col-span-5">
+          <div class="flex flex-col lg:max-w-lg">
             <div class="mb-4">
               Typically we partner with organizations through a refferal fee or
               refferal exchange program. To be approved as a refferal partner we
@@ -134,17 +147,24 @@
           </div>
         </div>
         <hr />
-        <div class="grid grid-cols-10 my-10">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img src="~/assets/images/icons/smile.png" class="h-16" alt="" />
+        <div
+          class="flex flex-col flex-wrap sm:flex-row lg:flex-nowrap lg:space-x-16 xl:space-x-72 2xl:space-x-96 my-5"
+        >
+          <div
+            class="flex sm:flex-row space-x-2 sm:space-x-4 xl:space-x-8 mb-4 lg:mb-0"
+          >
+            <img
+              src="~/assets/images/icons/smile.png"
+              class="h-14 md:h-16"
+              alt=""
+            />
+            <div
+              class="flex sm:max-w-md lg:max-w-2xl xl:max-w-xs sm:text-2xl text-lg font-bold"
+            >
+              REASONS TO PARTNER WITH US
             </div>
           </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            REASONS TO PARTNER WITH US
-          </div>
-          <div></div>
-          <div class="col-span-5">
+          <div class="flex flex-col lg:max-w-lg">
             <div class="mb-4">
               Through a partnership with EAB your clients will gain access to
               our cost-free auto concierge service and when we earn, you earn.
