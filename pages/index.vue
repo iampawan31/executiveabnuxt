@@ -132,26 +132,26 @@
             :title="homepageTab.tabTitle"
           >
             <div class="container mx-auto">
-              <div class="shadow-sm transition-opacity">
-                <div class="flex 2xl:max-w-full 2xl:mx-5">
+              <div class="shadow-sm rounded-sm transition-opacity">
+                <div class="flex flex-col lg:flex-row xl:max-w-6xl xl:mx-auto">
                   <div
-                    class="flex max-w-xl 2xl:max-w-sm flex-wrap flex-column content-center bg-fixed p-5"
+                    class="flex max-w-full lg:max-w-xs lg:w-60 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-10 px-5 lg:p-5"
                     :style="{
                       backgroundImage: `url(${homepageTab.imageURL})`,
                     }"
                   >
                     <h1
-                      class="uppercase text-3xl text-white font-semibold mb-5"
+                      class="uppercase text-xl sm:text-3xl text-white font-semibold mb-5"
                     >
                       {{ homepageTab.title }}
                     </h1>
-                    <p class="text-brand text-lg">
+                    <p class="text-brand text-xs sm:text-lg">
                       {{ homepageTab.description }}
                     </p>
                   </div>
                   <div class="flex flex-1 bg-white text-gray-500">
-                    <div class="flex flex-col 2xl:flex-row p-5">
-                      <div class="flex">
+                    <div class="flex flex-col lg:flex-row 2xl:flex-row p-5">
+                      <div class="flex flex-1">
                         <ul class="tab-section">
                           <li
                             v-for="(
@@ -164,7 +164,7 @@
                           </li>
                         </ul>
                       </div>
-                      <div class="flex">
+                      <div class="flex flex-1 flex-col">
                         <ul class="tab-section">
                           <li
                             v-for="(
@@ -215,7 +215,7 @@
                 <client-only>
                   <swiper
                     ref="carousel"
-                    class="swiper max-w-md sm:max-w-4xl"
+                    class="swiper max-w-xs sm:max-w-4xl"
                     :options="swiperOptions"
                   >
                     <swiper-slide
@@ -235,13 +235,11 @@
                         </div>
                       </div>
                     </swiper-slide>
+                    <div class="swiper-button-prev z-50 hidden xl:block"></div>
+                    <div class="swiper-button-next z-50 hidden xl:block"></div>
                     <div
-                      slot="button-prev"
-                      class="swiper-button-prev z-50 hidden md:block"
-                    ></div>
-                    <div
-                      slot="button-next"
-                      class="swiper-button-next z-50 hidden md:block"
+                      slot="pagination"
+                      class="swiper-pagination xl:hidden"
                     ></div>
                   </swiper>
                 </client-only>
@@ -366,6 +364,9 @@ export default {
             spaceBetween: 20,
           },
           320: {
+            pagination: {
+              el: '.swiper-pagination',
+            },
             slidesPerView: 1,
             navigation: false,
             spaceBetween: 10,

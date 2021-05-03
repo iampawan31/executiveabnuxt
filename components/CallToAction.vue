@@ -1,14 +1,16 @@
 <template>
-  <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-36">
-    <div class="flex content-center space-x-7">
+  <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 xl:px-36">
+    <div
+      class="flex flex-col lg:flex-row space-y-5 content-center sm:space-x-7"
+    >
       <div class="flex flex-col flex-1" :style="callToActionBorder">
         <div
-          class="text-brand text-xs sm:text-lg md:text-xl lg:text-xl xl:text-2xl sm:ml-10 md:ml-10 my-4 uppercase"
+          class="text-brand text-xs sm:text-md lg:text-lg xl:text-xl sm:ml-10 md:ml-10 my-4 uppercase"
         >
           {{ title }}
         </div>
         <div
-          class="text-xl sm:text-4xl lg:text-4xl xl:text-5xl uppercase text sm:ml-10 md:ml-10"
+          class="text-lg sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl uppercase text sm:ml-10 md:ml-10"
         >
           {{ subtitle }}
         </div>
@@ -21,8 +23,8 @@
           </button>
         </div>
       </div>
-      <div v-if="hasLogo">
-        <img class="h-20" src="~/assets/images/bbb-rating.png" alt="" />
+      <div v-if="hasLogo" class="flex lg:items-center">
+        <img class="h-16 sm:h-20" src="~/assets/images/bbb-rating.png" alt="" />
       </div>
     </div>
   </div>
