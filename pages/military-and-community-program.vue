@@ -41,16 +41,18 @@
           health care system, we would like to thank you by offering you our
           specialized service with additional benefits.
         </div>
-        <div class="uppercase text-brand mb-4">Learn more</div>
-        <button
-          class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
-          @click="sectionOneVisible = !sectionOneVisible"
-        >
-          <fa
-            class="text-brand text-2xl"
-            :icon="sectionOneVisible ? faChevronUp : faChevronDown"
-          />
-        </button>
+        <div class="flex flex-col place-items-center justify-center mx-auto">
+          <div class="uppercase text-brand mb-4">Learn more</div>
+          <button
+            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
+            @click="sectionOneVisible = !sectionOneVisible"
+          >
+            <fa
+              class="text-brand text-2xl"
+              :icon="sectionOneVisible ? faChevronUp : faChevronDown"
+            />
+          </button>
+        </div>
       </div>
     </section>
     <section

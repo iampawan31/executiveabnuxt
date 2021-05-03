@@ -41,16 +41,18 @@
           purchasing service, allowing them to find their perfect car while
           saving time and money. It is a win-win!
         </div>
-        <div class="uppercase text-brand mb-4">Learn more</div>
-        <button
-          class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
-          @click="sectionOneVisible = !sectionOneVisible"
-        >
-          <fa
-            class="text-brand text-2xl"
-            :icon="sectionOneVisible ? faChevronUp : faChevronDown"
-          />
-        </button>
+        <div class="flex flex-col place-items-center justify-center mx-auto">
+          <div class="uppercase text-brand mb-4">Learn more</div>
+          <button
+            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
+            @click="sectionOneVisible = !sectionOneVisible"
+          >
+            <fa
+              class="text-brand text-2xl"
+              :icon="sectionOneVisible ? faChevronUp : faChevronDown"
+            />
+          </button>
+        </div>
       </div>
     </section>
     <section
@@ -166,7 +168,7 @@
     </section>
     <section class="bg-black py-16">
       <div class="container mx-auto">
-        <div class="flex flex-col content-center justify-center">
+        <div class="flex flex-col content-center justify-center px-5 lg:px-0">
           <div class="text-brand text-center mb-4">WHY PARTNER WITH US?</div>
           <div class="text-center text-white text-3xl font-semibold mb-4">
             YOUR STAFF DESERVES GREAT BENEFITS
@@ -178,9 +180,11 @@
             the biggest purchase they will make outside of a home.
           </div>
         </div>
-        <div class="flex max-w-4xl mx-auto mt-36 mb-24 space-x-20">
+        <div
+          class="flex flex-col md:flex-row lg:px-10 xl:px-44 2xl:px-72 mx-auto px-5 md:px-0 md:mx-5 my-10 md:mt-36 md:mb-24 space-y-10 md:space-y-0 md:space-x-5 lg:space-x-20"
+        >
           <div
-            class="px-6 py-20 bg-contain bg-no-repeat"
+            class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
             :style="benefitOneImage"
           >
             <div class="text-lg text-white font-semibold">
@@ -193,7 +197,7 @@
             </div>
           </div>
           <div
-            class="px-6 py-20 bg-contain bg-no-repeat"
+            class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
             :style="benefitTwoImage"
           >
             <div class="text-lg text-white font-semibold">
@@ -206,7 +210,7 @@
             </div>
           </div>
           <div
-            class="px-6 py-20 bg-contain bg-no-repeat"
+            class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
             :style="benefitThreeImage"
           >
             <div class="text-lg text-white font-semibold">
