@@ -98,27 +98,27 @@
         </div>
       </div>
     </section>
-    <section class="bg-black bg-blend-darken">
-      <div
-        class="grid grid-rows-2 sm:grid-rows-2 md:grid-rows-1 md:grid-cols-3 sm:grid-cols-1 sm:gap-4"
-      >
+    <section class="bg-black bg-blend-darken hidden">
+      <div class="flex">
         <div
-          class="sm:col-span-1 md:col-span-2 lg:col-span-1 px-4 sm:px-16 py-16"
+          class="flex flex-1 flex-col px-4 max-w-3xl w-96 bg-norepeat bg-cover"
           :style="sliderBackground"
         >
-          <div class="uppercase text-lg sm:text-xl text-brand mb-5">
-            YOUR PERSONAL CONCIERGE AWAITS
-          </div>
-          <div class="uppercase text-2xl sm:text-3xl font-semibold mb-5">
-            HOW OUR NO-COST SERVICE WORKS
-          </div>
-          <div class="text-lg text-gray-400">
-            The ultimate hands-off buying experience. Get the perfect vehicle,
-            for the perfect price, with
-            <span class="text-brand"> no cost to you.</span>
+          <div class="flex flex-col">
+            <div class="uppercase text-lg sm:text-xl text-brand mb-5">
+              YOUR PERSONAL CONCIERGE AWAITS
+            </div>
+            <div class="uppercase text-2xl sm:text-3xl font-semibold mb-5">
+              HOW OUR NO-COST SERVICE WORKS
+            </div>
+            <div class="text-lg text-gray-400">
+              The ultimate hands-off buying experience. Get the perfect vehicle,
+              for the perfect price, with
+              <span class="text-brand"> no cost to you.</span>
+            </div>
           </div>
         </div>
-        <div class="py-16 lg:col-span-2">
+        <div class="flex py-16 max-w-2xl">
           <Slides />
         </div>
       </div>
@@ -237,10 +237,7 @@
                     </swiper-slide>
                     <div class="swiper-button-prev z-50 hidden xl:block"></div>
                     <div class="swiper-button-next z-50 hidden xl:block"></div>
-                    <div
-                      slot="pagination"
-                      class="swiper-pagination xl:hidden"
-                    ></div>
+                    <div class="swiper-pagination xl:hidden"></div>
                   </swiper>
                 </client-only>
               </template>
