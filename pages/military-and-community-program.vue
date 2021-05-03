@@ -2,7 +2,7 @@
   <div>
     <section class="text-white relative">
       <div
-        class="min-h-screen hero-image bg-center bg-cover flex"
+        class="h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center-top sm:bg-center bg-cover flex bg-norepeat"
         :style="mainHeaderImage"
       >
         <div class="relative container mx-auto p-4 flex items-center z-10">
@@ -14,7 +14,7 @@
                 WE HOLD YOUR SERVICE CLOSE TO OUR HEART
               </div>
               <div
-                class="text-lg font-light leading-normal hidden max-w-md sm:block"
+                class="font-light leading-normal text-xs sm:text-sm md:text-lg max-w-md"
               >
                 With service at the core of our own business, we recognize and
                 celebrate those those that serve our nation and communities.
@@ -58,87 +58,82 @@
       class="bg-white text-black py-16"
     >
       <div class="container mx-auto py-16">
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img src="~/assets/images/icons/clock.png" class="h-16" alt="" />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            SAVE YOUR TIME FOR WHAT MATTERS MOST
-          </div>
-          <div></div>
-          <div class="col-span-5">
-            <div class="mb-4">
-              We understand first hand the time-sacrifice and dedication that is
-              required to having a service career, and how little personal time
-              is often left for you. That is why our Military & Community
-              Program was specifically designed to provide you with expedited
-              personal service that saves you time and eliminates the stress of
-              traditional car buying.
-            </div>
-            <div class="mb-4">
-              We handle finding and getting you the best deal on vehicle you
-              want, taking care of all the paperwork, and having it delivered
-              wherever you want it. That way you can spend your free time doing
-              what you want, and not driving around searching for cars and
-              haggling with dealerships.
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img
+        <Features>
+          <Feature>
+            <template slot="feature-image"
+              ><img
+                src="~/assets/images/icons/clock.png"
+                class="h-14 md:h-16"
+                alt=""
+            /></template>
+            <template slot="feature-title">
+              SAVE YOUR TIME FOR WHAT MATTERS MOST
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                We understand first hand the time-sacrifice and dedication that
+                is required to having a service career, and how little personal
+                time is often left for you. That is why our Military & Community
+                Program was specifically designed to provide you with expedited
+                personal service that saves you time and eliminates the stress
+                of traditional car buying.
+              </div>
+              <div class="mb-4">
+                We handle finding and getting you the best deal on vehicle you
+                want, taking care of all the paperwork, and having it delivered
+                wherever you want it. That way you can spend your free time
+                doing what you want, and not driving around searching for cars
+                and haggling with dealerships.
+              </div>
+            </template>
+          </Feature>
+          <hr class="my-16" />
+          <Feature>
+            <template slot="feature-image"
+              ><img
                 src="~/assets/images/icons/visa-alternate.png"
-                class="h-16"
+                class="h-14 md:h-16"
                 alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            A THANK YOU FOR YOUR SERVICE
-          </div>
-          <div></div>
-          <div class="col-span-5">
-            <div class="mb-4">
-              As an extra thank you for your service we provide you with a
-              <span class="text-yellow-500">$200 Visa gift card</span> when you
-              allow us to help you purchase your perfect car.
-            </div>
-            <div class="mb-4">
-              To qualify please select your line of service when filling out
-              your vehicle request submission or tell your Executive Concierge.
-              You will be required to provide some sort of proof of occupation.
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img
+            /></template>
+            <template slot="feature-title">
+              A THANK YOU FOR YOUR SERVICE
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                As an extra thank you for your service we provide you with a
+                <span class="text-yellow-500">$200 Visa gift card</span> when
+                you allow us to help you purchase your perfect car.
+              </div>
+              <div class="mb-4">
+                To qualify please select your line of service when filling out
+                your vehicle request submission or tell your Executive
+                Concierge. You will be required to provide some sort of proof of
+                occupation.
+              </div>
+            </template>
+          </Feature>
+          <hr class="my-16" />
+          <Feature>
+            <template slot="feature-image"
+              ><img
                 src="~/assets/images/icons/thumbs-up.png"
-                class="h-16"
+                class="h-14 md:h-16"
                 alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            REASONS TO PARTNER WITH US
-          </div>
-          <div></div>
-          <div class="col-span-5">
-            <div class="mb-4">
-              Through a partnership with EAB your clients will gain access to
-              our cost-free auto concierge service and when we earn, you earn.
-              Additionally depending on your line of work, you could become our
-              preferred partner for service or parts within your industry
-              segment.
-            </div>
-          </div>
-        </div>
+            /></template>
+            <template slot="feature-title">
+              REASONS TO PARTNER WITH US
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                Through a partnership with EAB your clients will gain access to
+                our cost-free auto concierge service and when we earn, you earn.
+                Additionally depending on your line of work, you could become
+                our preferred partner for service or parts within your industry
+                segment.
+              </div>
+            </template>
+          </Feature>
+        </Features>
       </div>
     </section>
     <section class="bg-brand-gray-alternate text-white py-16">
@@ -156,10 +151,15 @@ import bgMainHeader from 'assets/images/military_program_header.jpeg'
 import secondSectionBgImage from 'assets/images/military-and-community-program/second-section-bg-image.jpeg'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
+import Feature from '~/components/common/Feature'
+import Features from '~/components/common/Features'
+
 export default {
   transitions: 'fade',
   components: {
     CallToAction,
+    Feature,
+    Features,
   },
   loading: true,
   data() {

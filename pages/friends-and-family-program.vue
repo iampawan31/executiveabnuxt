@@ -2,44 +2,34 @@
   <div>
     <section class="text-white relative">
       <div
-        class="min-h-screen hero-image bg-center bg-cover flex bg-norepeat"
+        class="h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center bg-cover flex bg-norepeat"
         :style="mainHeaderImage"
       >
-        <div
-          class="sm:relative container sm:mx-48 sm:p-4 flex items-center z-10"
-        >
-          <div>
-            <div class="content float-left py-4 px-5 my-5">
-              <div
-                class="heading mb-3 tracking-wide uppercase underline max-w-lg font-bold text-2xl md:text-4xl"
-              >
-                SHARE YOUR EXCITEMENT WITH YOUR FRIENDS & FAMILY!
+        <div class="flex items-center z-10 lg:mx-16 xl:mx-32">
+          <div class="py-4 px-5 my-5">
+            <div
+              class="mb-4 tracking-wide uppercase underline max-w-lg font-bold text-xl md:text-4xl"
+            >
+              SHARE YOUR EXCITEMENT WITH YOUR FRIENDS & FAMILY!
+            </div>
+            <div
+              class="mb-4 text-sm md:text-lg font-light leading-normal max-w-md"
+            >
+              Spread the word so we can help more people experience the EAB
+              difference while finding their perfect vehicle!
+            </div>
+            <div class="flex space-x-2 sm:space-x-8 text-white">
+              <div class="flex flex-col space-y-2 flex-1 sm:flex-initial">
+                <fa class="text-5xl md:text-6xl" :icon="faBullhorn" />
+                <h1 class="text-md md:text-xl font-semibold">SHARE</h1>
               </div>
-              <div class="text-lg font-light leading-normal max-w-md block">
-                Spread the word so we can help more people experience the EAB
-                difference while finding their perfect vehicle!
+              <div class="flex flex-col space-y-2 flex-1 sm:flex-initial">
+                <fa class="text-5xl md:text-6xl" :icon="faCommentAlt" />
+                <h1 class="text-md md:text-xl font-semibold">EDUCATE</h1>
               </div>
-              <div
-                class="flex sm:grid sm:grid-cols-5 text-white mt-4 gap-4 w-max-xl"
-              >
-                <div class="text-center">
-                  <fa class="text-6xl mb-4" :icon="faBullhorn" />
-                  <h1 class="text-xl font-semibold">SHARE</h1>
-                </div>
-                <div class="pt-10">
-                  <hr class="border-gray-400 border-t-2" />
-                </div>
-                <div class="text-center">
-                  <fa class="text-6xl mb-4" :icon="faCommentAlt" />
-                  <h1 class="text-xl font-semibold">EDUCATE</h1>
-                </div>
-                <div class="pt-10">
-                  <hr class="border-gray-400 border-t-2" />
-                </div>
-                <div class="text-center">
-                  <fa class="text-6xl mb-4" :icon="faMoneyBill" />
-                  <h1 class="text-xl font-semibold">EARN</h1>
-                </div>
+              <div class="flex flex-col space-y-2 flex-1 sm:flex-initial">
+                <fa class="text-5xl md:text-6xl" :icon="faMoneyBill" />
+                <h1 class="text-md md:text-xl font-semibold">EARN</h1>
               </div>
             </div>
           </div>

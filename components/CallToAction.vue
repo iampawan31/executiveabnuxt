@@ -3,12 +3,12 @@
     <div class="flex content-center space-x-7">
       <div class="flex flex-col flex-1" :style="callToActionBorder">
         <div
-          class="text-brand text-xs sm:text-lg md:text-xl lg:text-2xl sm:ml-10 md:ml-10 my-4 uppercase"
+          class="text-brand text-xs sm:text-lg md:text-xl lg:text-xl xl:text-2xl sm:ml-10 md:ml-10 my-4 uppercase"
         >
           {{ title }}
         </div>
         <div
-          class="text-xl sm:text-4xl lg:text-5xl uppercase text sm:ml-10 md:ml-10"
+          class="text-xl sm:text-4xl lg:text-4xl xl:text-5xl uppercase text sm:ml-10 md:ml-10"
         >
           {{ subtitle }}
         </div>
