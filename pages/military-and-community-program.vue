@@ -26,7 +26,7 @@
     </section>
     <section class="bg-black pt-16" :style="secondSectionBgImage">
       <div
-        class="flex flex-col place-items-center justify-center mx-auto max-w-4xl"
+        class="flex flex-col sm:place-items-center sm:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
       >
         <div class="text-brand uppercase text-lg mb-3 pt-10">
           A SALUTE TO SERVICE

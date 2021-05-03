@@ -2,7 +2,7 @@
   <div>
     <section class="text-white relative">
       <div
-        class="min-h-screen lg:min-h-full lg:py-48 hero-image bg-center bg-cover flex"
+        class="h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center-top sm:bg-center bg-cover flex bg-norepeat"
         :style="mainHeaderImage"
       >
         <div class="relative container mx-auto p-4 flex items-center z-10">
@@ -26,7 +26,7 @@
     </section>
     <section class="bg-black pt-16" :style="secondSectionBgImage">
       <div
-        class="flex flex-col place-items-center justify-center mx-auto max-w-4xl"
+        class="flex flex-col sm:place-items-center sm:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
       >
         <div class="text-brand uppercase text-lg mb-3 pt-10">
           EAB SERVICE AS A BENEFIT
@@ -58,122 +58,110 @@
       class="bg-white text-black py-16"
     >
       <div class="container mx-auto py-16">
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img
+        <Features>
+          <Feature>
+            <template slot="feature-image"
+              ><img
                 src="~/assets/images/icons/building.png"
-                class="h-16"
+                class="h-14 md:h-16"
                 alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            HOW IT WORKS FOR YOUR ORGANIZATION
-          </div>
-          <div></div>
-          <div class="col-span-5">
-            <div class="mb-4">
-              Getting set-up with us is simple. We setup a personalized link for
-              your staff to utilize if they are interested in our service.
-              Depending on the size of your organization we may assign a
-              dedicated Executive Concierge or a team to spefically handle your
-              account.
-            </div>
-            <div class="mb-4">
-              We then work with your HR department to provide any collateral or
-              materials your organization deems neccessary. If you currently
-              work with a company that handles a benefit portal for you, we will
-              work with them to get your material implemented.
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img src="~/assets/images/icons/mobile.png" class="h-16" alt="" />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            HOW IT WORKS FOR YOUR STAFF
-          </div>
-          <div></div>
-          <div class="col-span-5">
-            <div class="mb-4">
-              Your staff simply utilizes the link we have provided for your
-              organization to learn more about our service, or if they are ready
-              to make a purchase submit a vehicle request. That’s it! We take
-              over from there.
-            </div>
-            <div class="mb-4">
-              We help your staff find the perfect vehicle they are searching
-              for, get them the best vehicle for the best price, handle all of
-              their neccessary paperwork, and have it delivered wherever they
-              want - all without any cost to them!
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img
+            /></template>
+            <template slot="feature-title">
+              HOW IT WORKS FOR YOUR ORGANIZATION
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                Getting set-up with us is simple. We setup a personalized link
+                for your staff to utilize if they are interested in our service.
+                Depending on the size of your organization we may assign a
+                dedicated Executive Concierge or a team to spefically handle
+                your account.
+              </div>
+              <div class="mb-4">
+                We then work with your HR department to provide any collateral
+                or materials your organization deems neccessary. If you
+                currently work with a company that handles a benefit portal for
+                you, we will work with them to get your material implemented.
+              </div>
+            </template>
+          </Feature>
+          <hr class="my-16" />
+          <Feature>
+            <template slot="feature-image"
+              ><img
+                src="~/assets/images/icons/mobile.png"
+                class="h-14 md:h-16"
+                alt=""
+            /></template>
+            <template slot="feature-title">
+              HOW IT WORKS FOR YOUR STAFF
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                Your staff simply utilizes the link we have provided for your
+                organization to learn more about our service, or if they are
+                ready to make a purchase submit a vehicle request. That’s it! We
+                take over from there.
+              </div>
+              <div class="mb-4">
+                We help your staff find the perfect vehicle they are searching
+                for, get them the best vehicle for the best price, handle all of
+                their neccessary paperwork, and have it delivered wherever they
+                want - all without any cost to them!
+              </div>
+            </template>
+          </Feature>
+          <hr class="my-16" />
+          <Feature>
+            <template slot="feature-image"
+              ><img
                 src="~/assets/images/icons/save-money.png"
-                class="h-16"
+                class="h-14 md:h-16"
                 alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            YOU EARN WHEN WE EARN
-          </div>
-          <div></div>
-          <div class="col-span-5">
-            <div class="mb-4">
-              On top of setting up and giving access to our service to your
-              staff free of cost, we also make sure that your organization
-              financially benefits from our service. Anytime a member of your
-              staff purchases a vehicle through our service, you will recieve a
-              pay-out from us.
-              <span class="text-brand mx-1">
-                That’s right, we are a free benefit for your organization that
-                actually pays you!
-              </span>
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div class="grid grid-cols-10 my-10 gap-4">
-          <div class="col-span-1">
-            <div class="parent-div">
-              <img
+            /></template>
+            <template slot="feature-title"> YOU EARN WHEN WE EARN </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                On top of setting up and giving access to our service to your
+                staff free of cost, we also make sure that your organization
+                financially benefits from our service. Anytime a member of your
+                staff purchases a vehicle through our service, you will recieve
+                a pay-out from us.
+                <span class="text-brand mx-1">
+                  That’s right, we are a free benefit for your organization that
+                  actually pays you!
+                </span>
+              </div>
+            </template>
+          </Feature>
+          <hr class="my-16" />
+          <Feature>
+            <template slot="feature-image"
+              ><img
                 src="~/assets/images/icons/graduation-cap.png"
-                class="h-16"
+                class="h-14 md:h-16"
                 alt=""
-              />
-            </div>
-          </div>
-          <div class="col-span-3 text-3xl font-semibold">
-            VEHICLE PURCHASING EDUCATION
-          </div>
-          <div></div>
-          <div class="col-span-5">
-            <div class="mb-4">
-              One of the passions that drives our business is a love for
-              educating and helping people not only getting the best deal
-              possible on a vehicle, but also making sure they are making sound
-              decisions and understand the process.
-            </div>
-            <div class="mb-4">
-              If you need additional resources or would like our help in
-              providing vehicle purchasing education for your staff we are
-              available. Whether that means attending a staff event, hosting a
-              zoom call, or just answering questions your staff has - we can
-              handle it.
-            </div>
-          </div>
-        </div>
+            /></template>
+            <template slot="feature-title">
+              VEHICLE PURCHASING EDUCATION
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                One of the passions that drives our business is a love for
+                educating and helping people not only getting the best deal
+                possible on a vehicle, but also making sure they are making
+                sound decisions and understand the process.
+              </div>
+              <div class="mb-4">
+                If you need additional resources or would like our help in
+                providing vehicle purchasing education for your staff we are
+                available. Whether that means attending a staff event, hosting a
+                zoom call, or just answering questions your staff has - we can
+                handle it.
+              </div>
+            </template>
+          </Feature>
+        </Features>
       </div>
     </section>
     <section class="bg-black py-16">
@@ -250,10 +238,15 @@ import benefitTwoImage from 'assets/images/employee-benefits-program/increased-p
 import benefitThreeImage from 'assets/images/employee-benefits-program/attract-great-talent.jpeg'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
+import Feature from '~/components/common/Feature'
+import Features from '~/components/common/Features'
+
 export default {
   transitions: 'fade',
   components: {
     CallToAction,
+    Feature,
+    Features,
   },
   data() {
     return {
