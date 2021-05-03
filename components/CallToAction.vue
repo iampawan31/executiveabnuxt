@@ -15,12 +15,13 @@
           {{ subtitle }}
         </div>
         <div class="text-right mt-4 xl:mt-auto">
-          <button
-            class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-1 md:py-2 px-4 md:px-8 rounded uppercase text-white mb-0"
+          <a
+            href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+            class="bg-gradient-to-r inline-block mt-2 no-underline from-yellow-700 to-yellow-500 py-1 md:py-2 px-4 md:px-8 rounded uppercase text-white mb-0"
           >
             {{ buttonText }}
             <fa class="ml-2 text-white" :icon="faChevronRight" />
-          </button>
+          </a>
         </div>
       </div>
       <div v-if="hasLogo" class="flex lg:items-center">

@@ -60,12 +60,12 @@
         How it works
       </NuxtLink>
 
-      <NuxtLink
-        to="/request-vehicle"
-        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2"
+      <a
+        href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+        class="block mt-1 text-white uppercase no-underline hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2"
       >
         Request vehicle
-      </NuxtLink>
+      </a>
 
       <NuxtLink
         to="/contact-us"

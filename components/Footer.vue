@@ -11,11 +11,18 @@
             <div class="font-bold mb-2">MAIN NAVIGATION</div>
             <div v-for="(link, index) in mainNavigation" :key="index">
               <NuxtLink
+                v-if="!link.externalLink"
                 :to="link.path"
                 class="text-sm mb-2 hover:text-brand transition"
               >
                 {{ link.name }}
               </NuxtLink>
+              <a
+                v-else
+                :href="link.path"
+                class="text-sm mb-2 hover:text-brand transition"
+                >{{ link.name }}</a
+              >
             </div>
           </div>
           <div class="flex flex-col w-72">
