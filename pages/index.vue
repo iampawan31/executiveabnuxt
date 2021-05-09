@@ -98,13 +98,15 @@
         </div>
       </div>
     </section>
-    <section class="bg-black bg-blend-darken hidden">
+    <section class="bg-black bg-blend-darken">
       <div class="flex">
         <div
-          class="flex flex-1 flex-col px-4 max-w-3xl w-96 bg-norepeat bg-cover"
+          class="flex max-w-lg bg-norepeat bg-cover"
           :style="sliderBackground"
         >
-          <div class="flex flex-col">
+          <div
+            class="flex max-w-full flex-col px-14 content-center justify-center"
+          >
             <div class="uppercase text-lg sm:text-xl text-brand mb-5">
               YOUR PERSONAL CONCIERGE AWAITS
             </div>
@@ -118,7 +120,7 @@
             </div>
           </div>
         </div>
-        <div class="flex py-16 max-w-2xl">
+        <div class="flex max-w-4xl py-10 z-50">
           <Slides />
         </div>
       </div>
@@ -133,23 +135,27 @@
           >
             <div class="container mx-auto">
               <div class="shadow-sm rounded-sm transition-opacity">
-                <div class="flex flex-col lg:flex-row xl:max-w-6xl xl:mx-auto">
+                <div
+                  class="flex flex-col h-72 lg:flex-row xl:max-w-6xl xl:mx-auto"
+                >
                   <div
-                    class="flex max-w-full lg:max-w-xs lg:w-60 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-10 px-5 lg:p-5"
+                    class="flex max-w-full lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-10 px-5 lg:p-5"
                     :style="{
                       backgroundImage: `url(${homepageTab.imageURL})`,
                     }"
                   >
                     <h1
-                      class="uppercase text-xl sm:text-3xl text-white font-semibold mb-5"
+                      class="uppercase text-xl sm:text-2xl text-white font-semibold mb-5"
                     >
                       {{ homepageTab.title }}
                     </h1>
-                    <p class="text-brand text-xs sm:text-lg">
+                    <p class="text-brand text-xs sm:text-sm">
                       {{ homepageTab.description }}
                     </p>
                   </div>
-                  <div class="flex flex-1 bg-white text-gray-500">
+                  <div
+                    class="flex flex-1 bg-white text-gray-500 flex-wrap content-center px-10"
+                  >
                     <div class="flex flex-col lg:flex-row 2xl:flex-row p-5">
                       <div class="flex flex-1">
                         <ul class="tab-section">
@@ -201,7 +207,7 @@
           <div class="col-span-2">
             <InstagramFeed
               :token="accessToken"
-              fields="media_url,media_type,caption"
+              fields="media_url,media_type,caption,permalink"
               :mediatypes="['IMAGE']"
               :count="10"
             >
@@ -215,29 +221,22 @@
                 <client-only>
                   <swiper
                     ref="carousel"
-                    class="swiper max-w-xs sm:max-w-4xl"
+                    class="swiper max-w-xs sm:max-w-4xl h-60 min-h-full"
                     :options="swiperOptions"
                   >
                     <swiper-slide
                       v-for="(feed, index) in props.feeds"
                       :key="index"
-                      class="flex"
+                      class="w-full h-auto"
                     >
                       <div
-                        class="flex flex-col bg-white text-black rounded-md shadow-md"
-                      >
-                        <div class="rounded justify-center flex">
-                          <img
-                            :src="feed.media_url"
-                            class="rounded-md"
-                            :text="feed.caption"
-                          />
-                        </div>
-                      </div>
+                        class="bg-cover bg-center shadow-md w-full min-h-full"
+                        :style="{
+                          backgroundImage: `url('${feed.media_url}')`,
+                        }"
+                      ></div>
                     </swiper-slide>
-                    <div class="swiper-button-prev z-50 hidden xl:block"></div>
-                    <div class="swiper-button-next z-50 hidden xl:block"></div>
-                    <div class="swiper-pagination xl:hidden"></div>
+                    <div class="swiper-scrollbar"></div>
                   </swiper>
                 </client-only>
               </template>
@@ -338,13 +337,13 @@ export default {
     return {
       videoPlaying: true,
       sectionVideoPlaying: false,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
       swiperOptions: {
         loop: false,
         effect: 'slide',
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+        },
         spaceBetween: 30,
         breakpoints: {
           1024: {
@@ -361,9 +360,6 @@ export default {
             spaceBetween: 20,
           },
           320: {
-            pagination: {
-              el: '.swiper-pagination',
-            },
             slidesPerView: 1,
             navigation: false,
             spaceBetween: 10,

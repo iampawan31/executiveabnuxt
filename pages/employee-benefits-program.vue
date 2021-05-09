@@ -2,7 +2,7 @@
   <div>
     <section class="text-white relative">
       <div
-        class="h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center-top sm:bg-center bg-cover flex bg-norepeat"
+        class="sm:max-h-96 sm:py-60 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center-top sm:bg-center bg-cover flex bg-norepeat"
         :style="mainHeaderImage"
       >
         <div class="relative container mx-auto p-4 flex items-center z-10">

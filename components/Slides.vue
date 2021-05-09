@@ -1,31 +1,26 @@
 <template>
   <client-only>
-    <swiper
-      ref="carousel"
-      class="swiper max-w-xs sm:max-w-4xl lg:max-w-full"
-      :options="swiperOptions"
-    >
+    <swiper ref="carousel" class="swiper" :options="swiperOptions">
       <swiper-slide
         v-for="(slide, index) in firstSlider"
         :key="index"
         class="flex"
       >
         <div
-          class="flex flex-col text-black py-10 bg-white rounded-lg shadow-lg"
+          class="flex flex-col text-black pt-10 bg-white rounded-lg shadow-lg"
         >
-          <div class="flex mx-auto content-center w-40">
+          <div class="flex mx-auto content-center px-4">
             <img :src="slide.image" :alt="slide.title" />
           </div>
           <div
-            class="bg-green-500 py-2 font-semibold justify-center flex text-center"
+            :class="slide.gradient"
+            class="py-2 font-semibold text-white justify-center flex text-center"
           >
             {{ slide.title }}
           </div>
-          <div class="flex text-md p-5">{{ slide.description }}</div>
+          <div class="flex text-sm p-5">{{ slide.description }}</div>
         </div>
       </swiper-slide>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </swiper>
   </client-only>
 </template>
@@ -40,15 +35,15 @@ export default {
       swiperOptions: {
         loop: false,
         effect: 'slide',
-        spaceBetween: 30,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+        spaceBetween: 50,
+        pagination: {
+          el: '.swiper-pagination',
+          dynamicBullets: true,
         },
         breakpoints: {
           1024: {
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 30,
           },
           768: {
             slidesPerView: 1,
@@ -68,14 +63,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  color: orange;
-}
-
-/* .swiper-container .swiper-slide {
-  height: 400px;
-} */
-</style>

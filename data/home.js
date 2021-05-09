@@ -1,25 +1,29 @@
 export const firstSlider = [
   {
     title: 'Request Your Vehicle',
-    image: require('assets/images/slider/request_your_vehicle.png'),
+    image: require('assets/images/home/first-slide-one.png'),
+    gradient: 'bg-gradient-to-r from-blue-600 to-blue-400',
     description:
       'Never settle for what dealers have in stock. We locate the exact vehicle you want directly through the manufacturers.',
   },
   {
     title: 'Select & Approve',
-    image: require('assets/images/slider/select_and_approve.png'),
+    image: require('assets/images/home/first-slide-two.png'),
+    gradient: 'bg-gradient-to-r from-blue-400 to-green-400',
     description:
       'We research and send you the best vehicles that fit your criteria for you to choose from.',
   },
   {
     title: 'Digital Paperwork',
-    image: require('assets/images/slider/digital_paperwork.png'),
+    image: require('assets/images/home/first-slide-three.png'),
+    gradient: 'bg-gradient-to-r from-green-400 to-green-300',
     description:
       'All required documents are prepared and securely sent to you for e-signature.',
   },
   {
     title: 'Vehicle Delivery',
-    image: require('assets/images/slider/vehicle_delivery.png'),
+    image: require('assets/images/home/first-slide-four.png'),
+    gradient: 'bg-gradient-to-r from-green-600 to-green-400',
     description:
       'Your car is fully prepped, sanitized and delivered to you. If you don’t like the vehicle when you recieve it we offer your money back - gauranteed.',
   },
@@ -29,7 +33,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'NEW',
     title: 'NEW VEHICLES',
-    imageURL: require('assets/images/section_background.jpeg'),
+    imageURL: require('assets/images/home/new-vehicles.jpeg'),
     description:
       'We have exclusive manufactorer relationships to get you the best deal.',
     listOne: [
@@ -50,7 +54,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'PRE-OWNED',
     title: 'PRE-OWNED VEHICLES',
-    imageURL: require('assets/images/section_background.jpeg'),
+    imageURL: require('assets/images/home/pre-owned.jpeg'),
     description:
       'Get certified pre-owned quality vehicles without the added cost.',
     listOne: [
@@ -71,7 +75,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'CUSTOM BUILDS',
     title: 'CUSTOMIZED VEHICLES',
-    imageURL: require('assets/images/section_background.jpeg'),
+    imageURL: require('assets/images/home/custom-build.jpeg'),
     description: 'Solutions for those planning to modify their vehicle.',
     listOne: [
       'Include after-market upgrades into the price of your vehicle instead	of paying out of pocket',
@@ -89,7 +93,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'POWERSPORTS',
     title: 'POWERSPORTS',
-    imageURL: require('assets/images/section_background.jpeg'),
+    imageURL: require('assets/images/home/powersports.jpeg'),
     description:
       'Our same service and savings are available for motorycles, ATVs, snow-mobiles, PWCs, and more!',
     listOne: [
@@ -108,7 +112,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'SALUTE TO SERVICE',
     title: 'THANK YOU FOR YOUR SERVICE',
-    imageURL: require('assets/images/section_background.jpeg'),
+    imageURL: require('assets/images/home/salute-to-service.jpeg'),
     description:
       'Special programs for those that serve our nation and communities.',
     listOne: [
@@ -127,7 +131,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'MAINTENANCE / UPGRADES',
     title: 'MAINTENANCE / UPGRADES',
-    imageURL: require('assets/images/section_background.jpeg'),
+    imageURL: require('assets/images/home/maintenance.jpeg'),
     description:
       'Savings on required vehicle maintenance and parts / upgrades.',
     listOne: [
@@ -146,7 +150,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'SELL YOUR VEHICLE',
     title: 'SELL YOUR VEHICLE',
-    imageURL: require('assets/images/section_background.jpeg'),
+    imageURL: require('assets/images/home/sell-your-vehicle.jpeg'),
     description:
       'Gain the most value for your old vehicle through our consignment selling model.',
     listOne: [
@@ -165,7 +169,7 @@ export const homepageTabSection = [
   {
     tabTitle: 'COMMERCIAL / FLEET',
     title: 'COMMERCIAL / FLEET',
-    imageURL: require('assets/images/section_background.jpeg'),
+    imageURL: require('assets/images/home/commercial.jpeg'),
     description:
       'Whether your organization needs commercial vehicles, or a fleet of cars / trucks - we can help.',
     listOne: [
