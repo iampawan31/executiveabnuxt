@@ -23,7 +23,9 @@
       <div class="container mx-auto 2xl:px-32">
         <div class="flex">
           <div class="">
-            <div class="uppercase text-2xl font-semibold">
+            <div
+              class="uppercase text-2xl font-semibold text-center md:text-left"
+            >
               SEND US A MESSAGE
             </div>
             <div class="text-gray-600 max-w-sm">

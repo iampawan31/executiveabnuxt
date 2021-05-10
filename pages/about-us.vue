@@ -11,11 +11,13 @@
           <div class="bg-black sm:bg-transparent bg-opacity-20 rounded">
             <div class="content float-left py-4 px-5 my-5">
               <div
-                class="heading mb-3 tracking-wide uppercase underline font-bold text-4xl"
+                class="heading mb-3 tracking-wide uppercase underline font-bold text-2xl md:text-4xl"
               >
                 Your perfect car is out there
               </div>
-              <div class="text-lg font-light leading-normal max-w-lg block">
+              <div
+                class="text-md md:text-lg font-light leading-normal max-w-lg block"
+              >
                 and we are here to find it for you. Our personalized service was
                 created to help people never settle for less than their perfect
                 car.
@@ -188,7 +190,7 @@
               <div
                 v-for="(brand, index) in popularBrands"
                 :key="index"
-                class="min-w-max-h-16 mx-2 my-2"
+                class="min-w-max mx-2 my-2"
               >
                 <img :src="brand" class="w-16 h-16" alt="" />
               </div>
@@ -206,7 +208,7 @@
       </div>
     </section>
     <section class="bg-white text-black text-lg py-10">
-      <div class="container mx-auto px-4 lg:px-36">
+      <div class="container mx-auto px-4 lg:px-36 xl:px-48">
         <div class="mb-6 uppercase text-brand">
           WE LOVE CARS, BUT DISLIKE THE TRADITIONAL BUYING PROCESS
         </div>

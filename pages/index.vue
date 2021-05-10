@@ -101,11 +101,11 @@
     <section class="bg-black bg-blend-darken">
       <div class="flex flex-col lg:flex-row">
         <div
-          class="flex max-w-lg bg-norepeat bg-cover"
+          class="flex max-w-lg sm:max-w-4xl sm:py-10 bg-norepeat bg-cover"
           :style="sliderBackground"
         >
           <div
-            class="flex max-w-full flex-col px-4 py-4 xl:py-0 xl:px-14 content-center justify-center"
+            class="flex max-w-full sm:max-w-xl sm:mx-auto flex-col px-4 py-4 xl:py-0 xl:px-14 content-center justify-center"
           >
             <div class="uppercase text-lg sm:text-xl text-brand mb-5">
               YOUR PERSONAL CONCIERGE AWAITS
@@ -120,7 +120,7 @@
             </div>
           </div>
         </div>
-        <div class="flex max-w-4xl px-16 xl:px-0 py-10 z-50">
+        <div class="flex max-w-4xl px-16 sm:px-10 xl:px-0 py-10 z-50">
           <Slides />
         </div>
       </div>
