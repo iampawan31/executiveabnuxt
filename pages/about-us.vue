@@ -142,11 +142,11 @@
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
           <div class="mx-auto container px-4 sm:px-8 2xl:px-16">
-            <div class="flex flex-wrap xl:flex-nowrap xl:space-x-5">
+            <div class="flex overflow-x-auto md:flex-wrap xl:space-x-5">
               <div
                 v-for="(brand, index) in luxuryBrands"
                 :key="index"
-                class="mx-2 my-2 xl:my-auto"
+                class="min-w-max mx-2 my-2"
               >
                 <img :src="brand" class="w-16 h-16" alt="" />
               </div>
@@ -163,11 +163,11 @@
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
           <div class="mx-auto container px-4 sm:px-8 2xl:px-16">
-            <div class="flex flex-wrap lg:flex-nowrap lg:space-x-5">
+            <div class="flex overflow-x-auto md:flex-wrap xl:space-x-5">
               <div
                 v-for="(brand, index) in domesticBrands"
                 :key="index"
-                class="mx-2 my-2 lg:my-auto"
+                class="min-w-max mx-2 my-2"
               >
                 <img :src="brand" class="w-16 h-16" alt="" />
               </div>
@@ -184,11 +184,11 @@
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
           <div class="mx-auto container px-4 sm:px-8 2xl:px-16">
-            <div class="flex flex-wrap lg:flex-nowrap lg:space-x-5">
+            <div class="flex overflow-x-auto md:flex-wrap xl:space-x-5">
               <div
                 v-for="(brand, index) in popularBrands"
                 :key="index"
-                class="mx-2 my-2 lg:my-auto"
+                class="min-w-max-h-16 mx-2 my-2"
               >
                 <img :src="brand" class="w-16 h-16" alt="" />
               </div>
