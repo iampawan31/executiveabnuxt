@@ -2,7 +2,7 @@
   <div>
     <section class="text-white relative">
       <div
-        class="h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center bg-cover flex"
+        class="sm:max-h-96 sm:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center bg-cover flex"
         :style="mainHeaderImage"
       >
         <div
@@ -25,8 +25,11 @@
         </div>
       </div>
     </section>
-    <section class="py-16 bg-center" :style="firstSectionBackgroundImage1">
-      <div class="container mx-auto px-4 lg:px-20">
+    <section
+      class="py-16 bg-center bg-norepeat"
+      :style="firstSectionBackgroundImage1"
+    >
+      <div class="container mx-auto px-4 2xl:px-20">
         <div class="flex flex-col lg:flex-row lg:space-x-6 xl:space-x-12">
           <div class="flex lg:max-w-sm flex-col px-4 sm:px-0">
             <div class="flex text-brand mb-5">OUR PROMISE TO YOU</div>
@@ -48,9 +51,21 @@
               <div class="sm:mx-auto items-center flex flex-grow">
                 <div>
                   <div
-                    class="text-4xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-bold mb-3"
+                    class="flex text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-50 to-gray-300 text-4xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
                   >
-                    11,239+
+                    <client-only>
+                      <number
+                        ref="number2"
+                        :from="0"
+                        :to="11239"
+                        :format="theCommaFormat"
+                        :duration="3"
+                        :delay="0"
+                        easing="Power1.easeOut"
+                        @start="showFirstTab = true"
+                      />
+                    </client-only>
+                    <div v-show="showFirstTab">+</div>
                   </div>
                   <div
                     class="text-brand tracking-tighter text-lg sm:text-sm lg:text-sm xl:text-md 2xl:text-lg font-bold"
@@ -62,9 +77,22 @@
               <div class="sm:mx-auto items-center flex flex-grow">
                 <div>
                   <div
-                    class="text-4xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-bold mb-3"
+                    class="flex text-4xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-50 to-gray-300 lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
                   >
-                    $42.6 MIL+
+                    <div v-show="showSecondTab">$</div>
+                    <client-only>
+                      <number
+                        ref="number1"
+                        :from="0"
+                        :to="4.26"
+                        :format="theFormat"
+                        :duration="3"
+                        :delay="0"
+                        easing="Power1.easeOut"
+                        @start="showSecondTab = true"
+                      />
+                    </client-only>
+                    <div v-show="showSecondTab">MIL+</div>
                   </div>
                   <div
                     class="text-brand tracking-tighter text-lg sm:text-sm lg:text-sm xl:text-md 2xl:text-lg font-bold"
@@ -76,9 +104,21 @@
               <div class="sm:mx-auto items-center flex flex-grow">
                 <div>
                   <div
-                    class="text-4xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-bold mb-3"
+                    class="flex text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-50 to-gray-300 text-4xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
                   >
-                    $3750
+                    <div v-show="showThirdTab">$</div>
+                    <client-only>
+                      <number
+                        ref="number2"
+                        :from="0"
+                        :to="3750"
+                        :format="theCommaFormat"
+                        :duration="3"
+                        :delay="0"
+                        easing="Power1.easeOut"
+                        @start="showThirdTab = true"
+                      />
+                    </client-only>
                   </div>
                   <div
                     class="text-brand tracking-tighter text-lg sm:text-sm lg:text-sm xl:text-md 2xl:text-lg font-bold"
@@ -242,6 +282,8 @@ import {
   faChevronDown,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
+// import VueJsCounter from 'vue-js-counter'
+
 import bgMainHeader from 'assets/images/about_us_header.jpeg'
 import firstSectionBg from 'assets/images/about-us/second_section_bg.png'
 import secondSectionBg from 'assets/images/about-us/third_section_bg.jpeg'
@@ -255,6 +297,9 @@ export default {
   data() {
     return {
       luxuryBrands,
+      showFirstTab: false,
+      showSecondTab: false,
+      showThirdTab: false,
       domesticBrands,
       popularBrands,
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
@@ -275,6 +320,24 @@ export default {
     },
     faChevronRight() {
       return faChevronRight
+    },
+  },
+  methods: {
+    theFormat(number) {
+      return number.toFixed(2)
+    },
+    theWholeFormat(number) {
+      return number.toFixed(0)
+    },
+    theCommaFormat(number) {
+      if (number > 10000) {
+        return number
+          .toFixed(0)
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+      } else {
+        return number.toFixed(0)
+      }
     },
   },
 }

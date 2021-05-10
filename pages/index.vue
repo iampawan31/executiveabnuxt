@@ -99,13 +99,13 @@
       </div>
     </section>
     <section class="bg-black bg-blend-darken">
-      <div class="flex">
+      <div class="flex flex-col lg:flex-row">
         <div
           class="flex max-w-lg bg-norepeat bg-cover"
           :style="sliderBackground"
         >
           <div
-            class="flex max-w-full flex-col px-14 content-center justify-center"
+            class="flex max-w-full flex-col px-4 py-4 xl:py-0 xl:px-14 content-center justify-center"
           >
             <div class="uppercase text-lg sm:text-xl text-brand mb-5">
               YOUR PERSONAL CONCIERGE AWAITS
@@ -120,7 +120,7 @@
             </div>
           </div>
         </div>
-        <div class="flex max-w-4xl py-10 z-50">
+        <div class="flex max-w-4xl px-16 xl:px-0 py-10 z-50">
           <Slides />
         </div>
       </div>
@@ -136,7 +136,7 @@
             <div class="container mx-auto">
               <div class="shadow-sm rounded-sm transition-opacity">
                 <div
-                  class="flex flex-col h-72 lg:flex-row xl:max-w-6xl xl:mx-auto"
+                  class="flex flex-col xl:h-72 lg:flex-row xl:max-w-6xl xl:mx-auto"
                 >
                   <div
                     class="flex max-w-full lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-10 px-5 lg:p-5"
@@ -154,7 +154,7 @@
                     </p>
                   </div>
                   <div
-                    class="flex flex-1 bg-white text-gray-500 flex-wrap content-center px-10"
+                    class="flex flex-1 bg-white text-gray-500 flex-wrap content-center xl:px-10"
                   >
                     <div class="flex flex-col lg:flex-row 2xl:flex-row p-5">
                       <div class="flex flex-1">

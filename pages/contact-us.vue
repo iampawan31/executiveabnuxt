@@ -124,10 +124,27 @@
             </div>
             <div class="flex content-end align-bottom justify-items-end">
               <div class="flex content-end flex-row w-full justify-end mt-16">
-                <fa class="text-gray-400 mx-4 text-4xl" :icon="faInstagram" />
-                <fa class="text-gray-400 mx-4 text-4xl" :icon="faFacebook" />
-                <fa class="text-gray-400 mx-4 text-4xl" :icon="faTwitter" />
-                <fa class="text-gray-400 mx-4 text-4xl" :icon="faLinkedin" />
+                <a
+                  href="https://www.instagram.com/executiveautob/"
+                  target="_blank"
+                >
+                  <fa class="text-gray-400 mx-4 text-4xl" :icon="faInstagram"
+                /></a>
+                <a
+                  href="https://www.facebook.com/executiveautob/"
+                  target="_blank"
+                >
+                  <fa class="text-gray-400 mx-4 text-4xl" :icon="faFacebook" />
+                </a>
+                <a href="https://twitter.com/executiveab" target="_blank">
+                  <fa class="text-gray-400 mx-4 text-4xl" :icon="faTwitter" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/executiveautob/"
+                  target="_blank"
+                >
+                  <fa class="text-gray-400 mx-4 text-4xl" :icon="faLinkedin" />
+                </a>
               </div>
             </div>
           </div>

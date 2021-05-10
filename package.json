@@ -17,7 +17,9 @@
     "nuxt-webfontloader": "^1.1.0",
     "overlayscrollbars-vue": "^0.2.2",
     "swiper": "^5.4.5",
-    "vue-awesome-swiper": "^4.1.1"
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-js-counter": "^1.0.3",
+    "vue-number-animation": "^1.0.5"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
