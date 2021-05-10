@@ -4,9 +4,16 @@
   >
     <div class="container mx-auto">
       <div class="text-center">
-        <div class="text-white text-sm sm:text-lg">
+        <div class="text-white text-sm sm:text-lg hidden sm:block">
           <fa class="mr-2" :icon="faExclamationCircle" />
           COVID-19: SAFETY IS OUR TOP PRIORITY.
+          <a href="/" class="ml-2 uppercase underline text-brand">
+            READ MORE <fa class="ml-1" :icon="faChevronRight" />
+          </a>
+        </div>
+        <div class="text-white text-sm sm:text-lg sm:hidden">
+          <fa class="mr-2" :icon="faExclamationCircle" />
+          COVID-19 SAFETY .
           <a href="/" class="ml-2 uppercase underline text-brand">
             READ MORE <fa class="ml-1" :icon="faChevronRight" />
           </a>

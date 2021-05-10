@@ -11,7 +11,7 @@
         >
           PUT THE SALESPERSON IN YOUR REARVIEW
         </div>
-        <div class="text-center text-gray-300 text-md mb-5">
+        <div class="text-left sm:text-center text-gray-300 text-md mb-5">
           We find the vehicle your looking for and save you time <br />
           and money. All you need to do is sit back & buckle-up.
         </div>
