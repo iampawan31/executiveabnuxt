@@ -4,7 +4,7 @@
       class="relative flex items-center h-screen 2xl:max-h-96 2xl:py-96 overflow-hidden"
     >
       <section
-        class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 md:px-4 container mx-auto"
+        class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 md:px-4 2xl:px-4 container mx-auto"
       >
         <div
           class="sm:text-right text-center text-4xl font-bold uppercase mb-5"
