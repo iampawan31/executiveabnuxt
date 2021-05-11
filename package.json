@@ -12,6 +12,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "nuxt-webfontloader": "^1.1.0",

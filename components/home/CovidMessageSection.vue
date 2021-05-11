@@ -13,7 +13,7 @@
         </div>
         <div class="text-white text-sm sm:text-lg sm:hidden">
           <fa class="mr-2" :icon="faExclamationCircle" />
-          COVID-19 SAFETY .
+          COVID-19 SAFETY:
           <a href="/" class="ml-2 uppercase underline text-brand">
             READ MORE <fa class="ml-1" :icon="faChevronRight" />
           </a>
