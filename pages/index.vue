@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="relative flex items-center h-screen 2xl:max-h-96 2xl:py-96 overflow-hidden"
+      class="relative flex items-center h-96 py-72 2xl:max-h-96 2xl:py-96 overflow-hidden"
     >
       <section
         class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 md:px-4 2xl:px-4 container mx-auto"
@@ -397,6 +397,11 @@ export default {
     faChevronRight() {
       return faChevronRight
     },
+  },
+  mounted() {
+    this.videoPlaying = true
+    const videoBg = this.$refs.backgroundVideo
+    videoBg.play()
   },
   methods: {
     toggleVideoPlayback() {
