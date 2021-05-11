@@ -1,30 +1,33 @@
 <template>
   <div>
     <div
-      class="relative flex items-center h-96 py-72 2xl:max-h-96 2xl:py-96 overflow-hidden"
+      class="relative flex items-center h-96 py-72 xl:py-96 2xl:max-h-96 2xl:py-96 overflow-hidden"
     >
       <section
         class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 md:px-4 2xl:px-4 container mx-auto"
       >
         <div
-          class="sm:text-right text-center text-4xl font-bold uppercase mb-5"
+          class="sm:text-right text-left text-2xl md:text-4xl font-bold uppercase mb-5 px-2 md:px-0"
         >
           PUT THE SALESPERSON IN YOUR REARVIEW
         </div>
-        <div class="text-left sm:text-center text-gray-300 text-md mb-5">
-          We find the vehicle your looking for and save you time <br />
+        <div
+          class="text-left sm:text-center text-gray-300 text-md mb-5 px-2 md:px-0"
+        >
+          We find the vehicle your looking for and save you time
+          <br class="hidden md:block" />
           and money. All you need to do is sit back & buckle-up.
         </div>
-        <div class="mx-6 md:mx-0 flex">
+        <div class="mx-2 md:mx-0 flex flex-shrink">
           <button
-            class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-2 px-4 w-full rounded text-white mt-4 mb-10"
+            class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-2 px-4 md:w-full rounded text-white mt-4 mb-10"
           >
             GET STARTED
             <fa class="ml-1" :icon="faChevronRight" />
           </button>
         </div>
       </section>
-      <div class="absolute bottom-16 left-16 z-50">
+      <div class="absolute bottom-4 left-4 md:bottom-16 md:left-16 z-50">
         <button
           class="text-white rounded-full focus:outline-none"
           @click="toggleVideoPlayback"
@@ -38,11 +41,13 @@
         :autoPlay="videoPlaying ? true : false"
         loop
         muted
-        preload="metadata"
-        poster="~assets/images/home-banner-poster-image.jpg"
+        :poster="require('~/assets/images/home-banner-poster-image.jpeg')"
         class="absolute z-10 w-auto min-w-full min-h-full max-w-6xl md:max-w-none -left-96 lg:max-w-none lg:left-0"
       >
-        <source src="~assets/videos/homepage_main_video.mp4" type="video/mp4" />
+        <source
+          src="~/assets/videos/homepage_main_video.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
     </div>

@@ -48,28 +48,81 @@
     >
       <NuxtLink
         to="/about-us"
-        class="block text-white hover:border-white transition border-transparent border-b-2 uppercase lg:px-3 md:px-1 py-2 text-sm font-medium"
+        class="block text-white hover:border-white transition border-transparent border-b-2 lg:px-3 md:px-1 py-2 text-sm font-medium"
       >
         About us
       </NuxtLink>
 
-      <NuxtLink
-        to="/how-it-works"
-        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition lg:px-3 md:px-1 py-2 text-sm font-medium md:mt-0 md:ml-2"
-      >
-        How it works
-      </NuxtLink>
-
-      <a
-        href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
-        class="block mt-1 text-white uppercase no-underline hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2"
-      >
-        Request vehicle
-      </a>
+      <div class="group">
+        <NuxtLink
+          to="/how-it-works"
+          class="block mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 md:px-1 py-2 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
+        >
+          How it works
+        </NuxtLink>
+        <ul
+          class="group-hover:block md:hidden md:absolute md:text-gray-700 pt-1 z-50 top-12"
+        >
+          <li class="">
+            <NuxtLink
+              class="rounded-t bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              to="/friends-and-family-program"
+              >Friends and family program</NuxtLink
+            >
+          </li>
+          <li class="">
+            <NuxtLink
+              class="bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition py-2 text-sm px-4 block whitespace-no-wrap"
+              to="/employee-benefits-program"
+              >Employee benefits program</NuxtLink
+            >
+          </li>
+          <li class="">
+            <NuxtLink
+              class="rounded-b bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              to="/military-and-community-program"
+              >Military and community program</NuxtLink
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <a
+          href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+          class="block mt-1 text-white no-underline hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
+        >
+          Request vehicle
+        </a>
+        <ul
+          class="group-hover:block md:hidden md:absolute md:text-gray-700 pt-1 z-50 top-12"
+        >
+          <li class="">
+            <a
+              class="rounded-t bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              href="#"
+              >Request Powersports</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition py-2 text-sm px-4 block whitespace-no-wrap"
+              href="#"
+              >Request Commercial/Fleet</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="rounded-b bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              href="#"
+              >Request Maintenance/Parts</a
+            >
+          </li>
+        </ul>
+      </div>
 
       <NuxtLink
         to="/contact-us"
-        class="block mt-1 text-white uppercase hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2"
+        class="block mt-1 text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
       >
         Contact us
       </NuxtLink>

@@ -43,6 +43,7 @@ module.exports = {
     extend: {
       borderWidth: ['hover', 'focus'],
       margin: ['hover', 'focus'],
+      display: ['group-hover'],
     },
   },
   plugins: [
