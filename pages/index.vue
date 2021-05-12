@@ -142,29 +142,29 @@
             <div class="container mx-auto">
               <div class="shadow-sm rounded-sm transition-opacity">
                 <div
-                  class="flex flex-col xl:h-72 lg:flex-row xl:max-w-6xl xl:mx-auto"
+                  class="flex flex-col xl:h-60 lg:flex-row xl:max-w-6xl xl:mx-auto"
                 >
                   <div
-                    class="flex max-w-full lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-10 px-5 lg:p-5"
+                    class="flex max-w-full lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-10 px-5 lg:p-5 rounded-tr-md lg:rounded-tr-none rounded-tl-md lg:rounded-bl-md"
                     :style="{
                       backgroundImage: `url(${homepageTab.imageURL})`,
                     }"
                   >
                     <h1
-                      class="uppercase text-xl sm:text-2xl text-white font-semibold mb-5"
+                      class="uppercase text-xl sm:text-2xl xl:text-3xl text-white font-semibold mb-5"
                     >
                       {{ homepageTab.title }}
                     </h1>
-                    <p class="text-brand text-xs sm:text-sm">
+                    <p class="text-brand text-xs sm:text-sm xl:text-base">
                       {{ homepageTab.description }}
                     </p>
                   </div>
                   <div
-                    class="flex flex-1 bg-white text-gray-500 flex-wrap content-center xl:px-10"
+                    class="flex flex-1 bg-white text-gray-500 flex-wrap content-center rounded-br-md rounded-bl-md lg:rounded-bl-none lg:rounded-tr-md xl:px-10"
                   >
                     <div class="flex flex-col lg:flex-row 2xl:flex-row p-5">
                       <div class="flex flex-1">
-                        <ul class="tab-section">
+                        <ul class="tab-section list-outside">
                           <li
                             v-for="(
                               singleList, indexOne
@@ -177,7 +177,7 @@
                         </ul>
                       </div>
                       <div class="flex flex-1 flex-col">
-                        <ul class="tab-section">
+                        <ul class="tab-section list-outside">
                           <li
                             v-for="(
                               singleList, indexTwo

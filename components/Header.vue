@@ -2,7 +2,7 @@
   <header
     :class="
       isHomeRoute
-        ? 'bg-transparent absolute w-full top-0 z-50 2xl:container 2xl:mx-auto'
+        ? `${isMenuOpenOnHomeRoute} absolute w-full top-0 z-50 2xl:container 2xl:mx-auto`
         : 'bg-black relative'
     "
     class="md:flex md:justify-between md:items-center sm:py-3 sm:px-4"
@@ -140,6 +140,11 @@ export default {
   computed: {
     isHomeRoute() {
       return this.$route.path === '/'
+    },
+    isMenuOpenOnHomeRoute() {
+      return this.isHomeRoute && this.isOpen
+        ? 'bg-black bg-opacity-100'
+        : 'bg-transparent bg-opacity-100'
     },
   },
   watch: {
