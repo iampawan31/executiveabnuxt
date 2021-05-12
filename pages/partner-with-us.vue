@@ -86,7 +86,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-white text-black">
+    <section class="bg-white text-black py-16 lg:pt-4">
       <Features>
         <Feature>
           <template slot="feature-image"

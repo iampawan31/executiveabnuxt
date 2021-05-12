@@ -14,7 +14,7 @@
                 LEARN HOW WE WORK FOR YOU
               </div>
               <div
-                class="text-lg font-light leading-normal hidden max-w-md sm:block filter drop-shadow-max"
+                class="text-lg font-light leading-normal max-w-md filter drop-shadow-max"
               >
                 Our process was designed to make buying the exact vehicle you
                 want as enjoyable as actually driving it!

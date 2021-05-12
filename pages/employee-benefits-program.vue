@@ -59,7 +59,7 @@
       :class="sectionOneVisible ? 'block' : 'hidden'"
       class="bg-white text-black py-16"
     >
-      <div class="container mx-auto py-16">
+      <div class="container mx-auto pt-10 pb-0 lg:py-10">
         <Features>
           <Feature>
             <template slot="feature-image"
@@ -181,46 +181,57 @@
           </div>
         </div>
         <div
-          class="flex flex-col md:flex-row lg:px-10 xl:px-44 2xl:px-72 mx-auto px-5 md:px-0 md:mx-5 my-10 md:mt-36 md:mb-24 space-y-10 md:space-y-0 md:space-x-5 lg:space-x-16"
+          class="flex lg:px-10 xl:px-44 2xl:px-72 mx-auto px-16 sm:px-16 md:px-20 md:mx-5 my-10 md:mt-36 md:mb-24"
         >
-          <div
-            class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
-            :style="benefitOneImage"
-          >
-            <div class="text-lg text-white font-semibold">
-              Increase employee retention
-            </div>
-            <div class="text-gray-300 text-sm">
-              One of the significant contributing factors of voluntary employee
-              turn-over has been attributed to lack of benefits with their
-              current employer.
-            </div>
-          </div>
-          <div
-            class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
-            :style="benefitTwoImage"
-          >
-            <div class="text-lg text-white font-semibold">
-              Increase productivity & engagement
-            </div>
-            <div class="text-gray-300 text-sm">
-              Studies have shown that organizations that offer enchanced
-              benefits to their staff have higher overall employee satisfaction
-              ratings.
-            </div>
-          </div>
-          <div
-            class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
-            :style="benefitThreeImage"
-          >
-            <div class="text-lg text-white font-semibold">
-              Attract great talent
-            </div>
-            <div class="text-gray-300 text-sm">
-              By offering amazing and unique benefits organizations can
-              establish a competitive edge in recruiting over their competition.
-            </div>
-          </div>
+          <client-only>
+            <swiper ref="carousel" class="swiper" :options="swiperOptions">
+              <swiper-slide key="slide-1" class="flex">
+                <div
+                  class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
+                  :style="benefitOneImage"
+                >
+                  <div class="text-lg text-white font-semibold">
+                    Increase employee retention
+                  </div>
+                  <div class="text-gray-300 text-sm">
+                    One of the significant contributing factors of voluntary
+                    employee turn-over has been attributed to lack of benefits
+                    with their current employer.
+                  </div>
+                </div>
+              </swiper-slide>
+              <swiper-slide key="slide-2" class="flex">
+                <div
+                  class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
+                  :style="benefitTwoImage"
+                >
+                  <div class="text-lg text-white font-semibold">
+                    Increase productivity & engagement
+                  </div>
+                  <div class="text-gray-300 text-sm">
+                    Studies have shown that organizations that offer enchanced
+                    benefits to their staff have higher overall employee
+                    satisfaction ratings.
+                  </div>
+                </div>
+              </swiper-slide>
+              <swiper-slide key="slide-1" class="flex">
+                <div
+                  class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
+                  :style="benefitThreeImage"
+                >
+                  <div class="text-lg text-white font-semibold">
+                    Attract great talent
+                  </div>
+                  <div class="text-gray-300 text-sm">
+                    By offering amazing and unique benefits organizations can
+                    establish a competitive edge in recruiting over their
+                    competition.
+                  </div>
+                </div>
+              </swiper-slide>
+            </swiper>
+          </client-only>
         </div>
       </div>
     </section>
@@ -260,6 +271,25 @@ export default {
       benefitTwoImage: { backgroundImage: `url(${benefitTwoImage})` },
       benefitThreeImage: { backgroundImage: `url(${benefitThreeImage})` },
       sectionOneVisible: false,
+      swiperOptions: {
+        loop: false,
+        effect: 'slide',
+        spaceBetween: 50,
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          320: {
+            slidesPerView: 1,
+          },
+        },
+      },
     }
   },
   head: {

@@ -53,7 +53,7 @@
           </button>
         </div>
       </div>
-      <div class="container mx-auto mt-10 sm:mt-0 sm:py-16">
+      <div class="container mx-auto mt-16 sm:mt-0 sm:py-16">
         <Features>
           <Feature space-value="2xl:space-x-64">
             <template slot="feature-image"

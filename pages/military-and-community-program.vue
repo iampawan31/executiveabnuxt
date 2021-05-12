@@ -59,7 +59,7 @@
       :class="sectionOneVisible ? 'block' : 'hidden'"
       class="bg-white text-black py-16"
     >
-      <div class="container mx-auto py-16">
+      <div class="container mx-auto py-10 pb-0 lg:py-10">
         <Features>
           <Feature>
             <template slot="feature-image"

@@ -8,7 +8,7 @@
     >
       <slot name="feature-image"></slot>
       <div
-        class="flex sm:max-w-md lg:max-w-2xl xl:max-w-xs sm:text-2xl text-lg font-bold"
+        class="flex sm:max-w-md lg:max-w-2xl xl:max-w-xs sm:text-2xl text-lg font-bold flex-wrap content-center lg:content-start"
       >
         <slot name="feature-title"></slot>
       </div>

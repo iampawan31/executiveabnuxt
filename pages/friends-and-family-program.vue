@@ -2,18 +2,18 @@
   <div>
     <section class="text-white relative">
       <div
-        class="sm:max-h-96 sm:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center-top sm:bg-center bg-cover flex bg-norepeat"
+        class="sm:max-h-96 sm:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-right-top sm:bg-center bg-cover flex bg-norepeat"
         :style="mainHeaderImage"
       >
         <div class="flex items-center z-10 lg:mx-16 xl:mx-32">
           <div class="py-4 px-5 my-5">
             <div
-              class="mb-4 tracking-wide uppercase underline max-w-lg font-bold text-xl md:text-4xl"
+              class="mb-4 tracking-wide uppercase underline max-w-lg font-bold text-xl md:text-4xl filter drop-shadow-max"
             >
               SHARE YOUR EXCITEMENT WITH YOUR FRIENDS & FAMILY!
             </div>
             <div
-              class="mb-4 text-sm md:text-lg font-light leading-normal max-w-md"
+              class="mb-4 text-sm md:text-lg font-light leading-normal max-w-md filter drop-shadow-max"
             >
               Spread the word so we can help more people experience the EAB
               difference while finding their perfect vehicle!
@@ -40,7 +40,7 @@
       <div
         class="flex flex-col sm:place-items-center sm:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
       >
-        <div class="text-brand uppercase text-lg mb-3 pt-10">
+        <div class="text-brand uppercase text-lg mb-3 sm:pt-10">
           LOVE OUR SERVICE?
         </div>
         <div class="text-white text-3xl font-semibold uppercase mb-5">
@@ -72,7 +72,7 @@
       :class="sectionOneVisible ? 'block' : 'hidden'"
       class="bg-white text-black"
     >
-      <div class="container mx-auto pt-16 sm:pt-0">
+      <div class="container mx-auto pt-16 pb-6 lg:py-10">
         <Features>
           <Feature title-space-value="lg:space-x-32">
             <template slot="feature-image"
