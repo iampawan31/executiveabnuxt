@@ -8,20 +8,18 @@
         <div
           class="relative container mx-auto p-4 2xl:mx-20 flex items-center z-10"
         >
-          <div class="bg-black sm:bg-transparent bg-opacity-20 rounded">
-            <div class="content float-left py-4 px-5 my-5">
-              <div
-                class="heading mb-3 tracking-wide uppercase underline font-bold text-2xl md:text-4xl"
-              >
-                Your perfect car is out there
-              </div>
-              <div
-                class="text-md md:text-lg font-light leading-normal max-w-lg block"
-              >
-                and we are here to find it for you. Our personalized service was
-                created to help people never settle for less than their perfect
-                car.
-              </div>
+          <div class="content float-left py-4 px-5 my-5">
+            <div
+              class="heading mb-3 tracking-wide uppercase underline font-bold text-2xl md:text-4xl filter drop-shadow-max"
+            >
+              Your perfect car is out there
+            </div>
+            <div
+              class="text-md md:text-lg font-light leading-normal max-w-lg block filter drop-shadow-max"
+            >
+              and we are here to find it for you. Our personalized service was
+              created to help people never settle for less than their perfect
+              car.
             </div>
           </div>
         </div>
@@ -32,7 +30,9 @@
       :style="firstSectionBackgroundImage1"
     >
       <div class="container mx-auto px-4 2xl:px-20">
-        <div class="flex flex-col lg:flex-row lg:space-x-6 xl:space-x-12">
+        <div
+          class="flex flex-col space-y-6 lg:flex-row lg:space-x-6 xl:space-x-12"
+        >
           <div class="flex lg:max-w-sm flex-col px-4 sm:px-0">
             <div class="flex text-brand mb-5">OUR PROMISE TO YOU</div>
             <div class="flex text-xl lg:text-2xl mb-5 font-semibold">

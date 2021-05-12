@@ -2,7 +2,7 @@
   <div>
     <section class="text-white relative">
       <div
-        class="sm:max-h-96 sm:py-60 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center-top sm:bg-center bg-cover flex bg-norepeat"
+        class="sm:max-h-96 sm:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center-top sm:bg-center bg-cover flex bg-norepeat"
         :style="mainHeaderImage"
       >
         <div class="relative container mx-auto p-4 flex items-center z-10">
@@ -181,7 +181,7 @@
           </div>
         </div>
         <div
-          class="flex flex-col md:flex-row lg:px-10 xl:px-44 2xl:px-72 mx-auto px-5 md:px-0 md:mx-5 my-10 md:mt-36 md:mb-24 space-y-10 md:space-y-0 md:space-x-5 lg:space-x-20"
+          class="flex flex-col md:flex-row lg:px-10 xl:px-44 2xl:px-72 mx-auto px-5 md:px-0 md:mx-5 my-10 md:mt-36 md:mb-24 space-y-10 md:space-y-0 md:space-x-5 lg:space-x-16"
         >
           <div
             class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"

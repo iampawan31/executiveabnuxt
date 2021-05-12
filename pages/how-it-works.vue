@@ -9,12 +9,12 @@
           <div>
             <div class="content float-left py-4 px-5 my-5">
               <div
-                class="heading mb-3 tracking-wide uppercase underline max-w-xl font-bold text-2xl md:text-4xl"
+                class="heading mb-3 tracking-wide uppercase underline max-w-xl font-bold text-2xl md:text-4xl filter drop-shadow-max"
               >
                 LEARN HOW WE WORK FOR YOU
               </div>
               <div
-                class="text-lg font-light leading-normal hidden max-w-md sm:block"
+                class="text-lg font-light leading-normal hidden max-w-md sm:block filter drop-shadow-max"
               >
                 Our process was designed to make buying the exact vehicle you
                 want as enjoyable as actually driving it!

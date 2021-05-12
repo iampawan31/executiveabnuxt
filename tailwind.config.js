@@ -34,6 +34,9 @@ module.exports = {
           'gray-alternate': '#353535',
         },
       },
+      dropShadow: {
+        max: '0 5px 15px rgba(0, 0, 0, 1)',
+      },
       fontFamily: {
         brandSignature: ['Montserrat'],
       },

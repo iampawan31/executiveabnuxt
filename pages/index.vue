@@ -7,12 +7,12 @@
         class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 md:px-4 2xl:px-4 container mx-auto"
       >
         <div
-          class="sm:text-right text-left text-2xl md:text-4xl font-bold uppercase mb-5 px-2 md:px-0"
+          class="sm:text-right text-left text-2xl md:text-4xl font-bold uppercase mb-5 px-2 md:px-0 filter drop-shadow-max"
         >
           PUT THE SALESPERSON IN YOUR REARVIEW
         </div>
         <div
-          class="text-left sm:text-center text-gray-300 text-md mb-5 px-2 md:px-0"
+          class="text-left sm:text-center text-gray-300 text-md mb-5 px-2 md:px-0 filter drop-shadow-max"
         >
           We find the vehicle your looking for and save you time
           <br class="hidden md:block" />
@@ -61,10 +61,14 @@
             class="p-14 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage1"
           >
-            <h1 class="uppercase font-semibold text-white text-xl sm:text-2xl">
+            <h1
+              class="uppercase font-semibold text-white text-xl sm:text-2xl filter drop-shadow-max"
+            >
               Ready to experience car buying on auto-pilot?
             </h1>
-            <p class="mt-4 text-brand text-lg sm:text-xl md:text-lg">
+            <p
+              class="mt-4 text-brand text-lg sm:text-xl md:text-lg filter drop-shadow-max"
+            >
               Tell us what your looking for and let us get started. Our service
               works for all brands and models. Nationwide delivery available.
             </p>
@@ -79,10 +83,14 @@
             class="p-14 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage2"
           >
-            <h1 class="uppercase font-semibold text-white text-xl sm:text-2xl">
+            <h1
+              class="uppercase font-semibold text-white text-xl sm:text-2xl filter drop-shadow-max"
+            >
               Now anyone can buy the way executives do?
             </h1>
-            <p class="mt-4 text-brand text-lg sm:text-xl md:text-lg">
+            <p
+              class="mt-4 text-brand text-lg sm:text-xl md:text-lg filter drop-shadow-max"
+            >
               Those purchasing high end vehicles have utilized our type of
               service for years. Now, we’re making that level of service a
               reality for all buyers.
