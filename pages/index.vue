@@ -248,7 +248,15 @@
                         :style="{
                           backgroundImage: `url('${feed.media_url}')`,
                         }"
-                      ></div>
+                      >
+                        <a
+                          class="absolute bottom-1 right-1"
+                          :href="feed.permalink"
+                          target="_blank"
+                        >
+                          <fa class="text-white text-3xl" :icon="faInstagram" />
+                        </a>
+                      </div>
                     </swiper-slide>
                     <div class="swiper-scrollbar"></div>
                   </swiper>
@@ -325,6 +333,7 @@ import {
   faPlayCircle,
   faPauseCircle,
 } from '@fortawesome/free-regular-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import bgImage1 from 'assets/images/homepage_first_section_image_1.jpeg'
 import bgImage2 from 'assets/images/homepage_first_section_image_2.jpeg'
 import homepageSliderBackground from 'assets/images/homepage_slider_background.jpeg'
@@ -409,6 +418,9 @@ export default {
     },
     faChevronRight() {
       return faChevronRight
+    },
+    faInstagram() {
+      return faInstagram
     },
   },
   mounted() {
