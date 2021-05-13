@@ -217,8 +217,8 @@
     </section>
     <section class="bg-black py-16">
       <div class="container mx-auto">
-        <div class="grid sm:grid-cols-3 gap-4">
-          <div class="col-span-2">
+        <div class="flex flex-col sm:flex-row space-x-8 relative">
+          <div class="flex mx-auto">
             <InstagramFeed
               :token="accessToken"
               fields="media_url,media_type,caption,permalink"
@@ -235,7 +235,7 @@
                 <client-only>
                   <swiper
                     ref="carousel"
-                    class="swiper max-w-xs sm:max-w-4xl h-60 min-h-full"
+                    class="swiper relative max-w-xs sm:max-w-4xl h-60 min-h-full"
                     :options="swiperOptions"
                   >
                     <swiper-slide
@@ -258,7 +258,7 @@
                         </a>
                       </div>
                     </swiper-slide>
-                    <div class="swiper-scrollbar"></div>
+                    <div slot="scrollbar" class="swiper-scrollbar"></div>
                   </swiper>
                 </client-only>
               </template>
@@ -268,7 +268,7 @@
               </template>
             </InstagramFeed>
           </div>
-          <div class="col-span-1 px-4">
+          <div class="flex flex-col">
             <div class="uppercase text-xl text-brand mb-5">
               #EXECUTIVE EXPERIENCE
             </div>
@@ -366,6 +366,8 @@ export default {
         scrollbar: {
           el: '.swiper-scrollbar',
           draggable: true,
+          hide: false,
+          dragClass: 'swiper-scrollbar-drag-custom',
         },
         spaceBetween: 30,
         breakpoints: {
@@ -467,5 +469,30 @@ ul.tab-section li:before {
 .swiper-button-prev::after,
 .swiper-button-next::after {
   color: white;
+}
+
+.swiper-container {
+  padding-bottom: 20px;
+}
+
+.swiper-container-horizontal > .swiper-scrollbar {
+  height: 8px;
+}
+
+.swiper-scrollbar {
+  border-radius: 0;
+  background: gray;
+}
+</style>
+
+<style>
+.swiper-scrollbar-drag-custom {
+  background: white !important;
+  border-radius: 0 !important;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 </style>

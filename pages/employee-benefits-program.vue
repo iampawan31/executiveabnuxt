@@ -230,6 +230,7 @@
                   </div>
                 </div>
               </swiper-slide>
+              <div slot="pagination" class="swiper-pagination"></div>
             </swiper>
           </client-only>
         </div>
@@ -275,6 +276,10 @@ export default {
         loop: false,
         effect: 'slide',
         spaceBetween: 50,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: 'true',
+        },
         breakpoints: {
           1024: {
             slidesPerView: 3,
