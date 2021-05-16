@@ -65,8 +65,13 @@
       </div>
     </section>
     <section
-      :class="sectionOneVisible ? 'block' : 'hidden'"
-      class="bg-white text-black py-16 transition"
+      hidden
+      :class="
+        sectionOneVisible
+          ? 'translate-x-100 translate-y-100'
+          : 'translate-x-0 translate-y-0'
+      "
+      class="bg-white text-black py-16 transition transform"
     >
       <Features>
         <Feature>

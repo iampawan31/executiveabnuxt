@@ -59,8 +59,16 @@
           class="block mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 md:px-1 py-2 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
         >
           How it works
+          <button class="md:hidden focus:outline-none">
+            <fa
+              class="ml-1"
+              :icon="howItWorksOpen ? faChevronUp : faChevronDown"
+              @click="howItWorksOpen = !howItWorksOpen"
+            />
+          </button>
         </NuxtLink>
         <ul
+          :class="howItWorksOpen ? 'block' : 'hidden'"
           class="group-hover:block md:hidden md:absolute md:text-gray-700 pt-1 z-50 top-12"
         >
           <li class="">
@@ -87,13 +95,25 @@
         </ul>
       </div>
       <div class="group">
-        <a
-          href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+        <div
           class="block mt-1 text-white no-underline hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
         >
-          Request vehicle
-        </a>
+          <a
+            href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+            class="text-white no-underline"
+          >
+            Request vehicle
+          </a>
+          <button class="md:hidden inline-block focus:outline-none">
+            <fa
+              class="ml-1"
+              :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
+              @click.stop="requestVehicleOpen = !requestVehicleOpen"
+            />
+          </button>
+        </div>
         <ul
+          :class="requestVehicleOpen ? 'block' : 'hidden'"
           class="group-hover:block md:hidden md:absolute md:text-gray-700 pt-1 z-50 top-12"
         >
           <li class="">
@@ -131,10 +151,13 @@
 </template>
 
 <script>
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 export default {
   data() {
     return {
       isOpen: false,
+      howItWorksOpen: false,
+      requestVehicleOpen: false,
     }
   },
   computed: {
@@ -145,6 +168,12 @@ export default {
       return this.isHomeRoute && this.isOpen
         ? 'bg-black bg-opacity-100'
         : 'bg-transparent bg-opacity-100'
+    },
+    faChevronDown() {
+      return faChevronDown
+    },
+    faChevronUp() {
+      return faChevronUp
     },
   },
   watch: {
