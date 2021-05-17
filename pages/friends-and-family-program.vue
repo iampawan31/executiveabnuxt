@@ -19,16 +19,34 @@
               difference while finding their perfect vehicle!
             </div>
             <div class="flex space-x-2 sm:space-x-8 text-white">
-              <div class="flex flex-col space-y-2 flex-1 sm:flex-initial">
-                <fa class="text-5xl md:text-6xl" :icon="faBullhorn" />
+              <div
+                class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
+              >
+                <img
+                  class="h-16 w-16"
+                  src="~assets/images/icons/megaphone.png"
+                  alt="Share"
+                />
                 <h1 class="text-md md:text-xl font-semibold">SHARE</h1>
               </div>
-              <div class="flex flex-col space-y-2 flex-1 sm:flex-initial">
-                <fa class="text-5xl md:text-6xl" :icon="faCommentAlt" />
+              <div
+                class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
+              >
+                <img
+                  class="h-16 w-16"
+                  src="~assets/images/icons/message.png"
+                  alt="Educate"
+                />
                 <h1 class="text-md md:text-xl font-semibold">EDUCATE</h1>
               </div>
-              <div class="flex flex-col space-y-2 flex-1 sm:flex-initial">
-                <fa class="text-5xl md:text-6xl" :icon="faMoneyBill" />
+              <div
+                class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
+              >
+                <img
+                  class="h-16 w-16"
+                  src="~assets/images/icons/paper-bill.png"
+                  alt="Earn"
+                />
                 <h1 class="text-md md:text-xl font-semibold">EARN</h1>
               </div>
             </div>
