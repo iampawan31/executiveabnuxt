@@ -87,7 +87,7 @@
               </div>
             </template>
           </Feature>
-          <hr class="my-16" />
+          <hr class="my-16 border-gray-400" />
           <Feature>
             <template slot="feature-image"
               ><img
@@ -113,7 +113,7 @@
               </div>
             </template>
           </Feature>
-          <hr class="my-16" />
+          <hr class="my-16 border-gray-400" />
           <Feature>
             <template slot="feature-image"
               ><img
@@ -136,7 +136,7 @@
               </div>
             </template>
           </Feature>
-          <hr class="my-16" />
+          <hr class="my-16 border-gray-400" />
           <Feature>
             <template slot="feature-image"
               ><img

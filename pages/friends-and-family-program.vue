@@ -106,7 +106,7 @@
               </div>
             </template>
           </Feature>
-          <hr class="my-16" />
+          <hr class="my-16 border-gray-400" />
           <Feature title-space-value="lg:space-x-32">
             <template slot="feature-image"
               ><img
@@ -133,7 +133,7 @@
               </div>
             </template>
           </Feature>
-          <hr class="my-16" />
+          <hr class="my-16 border-gray-400" />
           <Feature title-space-value="lg:space-x-32">
             <template slot="feature-image"
               ><img

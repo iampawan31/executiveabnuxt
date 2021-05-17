@@ -40,6 +40,9 @@ module.exports = {
       fontFamily: {
         brandSignature: ['Montserrat'],
       },
+      transitionProperty: {
+        height: 'height',
+      },
     },
   },
   variants: {

@@ -66,12 +66,8 @@
     </section>
     <section
       hidden
-      :class="
-        sectionOneVisible
-          ? 'translate-x-100 translate-y-100'
-          : 'translate-x-0 translate-y-0'
-      "
-      class="bg-white text-black py-16 transition transform"
+      :class="sectionOneVisible ? 'block' : 'hidden'"
+      class="bg-white text-black py-16 transition"
     >
       <Features>
         <Feature>
@@ -101,7 +97,7 @@
             </div>
           </template>
         </Feature>
-        <hr class="my-16" />
+        <hr class="my-16 border-gray-400" />
         <Feature>
           <template slot="feature-image"
             ><img
@@ -128,7 +124,7 @@
             </div>
           </template>
         </Feature>
-        <hr class="my-16" />
+        <hr class="my-16 border-gray-400" />
         <Feature>
           <template slot="feature-image"
             ><img
@@ -219,7 +215,7 @@
             </div>
           </template>
         </Feature>
-        <hr class="my-16" />
+        <hr class="my-16 border-gray-400" />
         <Feature>
           <template slot="feature-image"
             ><img
@@ -252,7 +248,7 @@
             </div>
           </template>
         </Feature>
-        <hr class="my-16" />
+        <hr class="my-16 border-gray-400" />
         <Feature>
           <template slot="feature-image"
             ><img
@@ -302,9 +298,43 @@
               any vehicle that does not meet our inspection standards.
             </div>
           </div>
-          <div class="flex">
-            <img src="~/assets/images/how_it_works_section_three.jpeg" alt="" />
+          <div class="flex hidden">
+            <img
+              src="~/assets/images/how_it_works_section_three.jpeg"
+              alt="car inspection"
+            />
           </div>
+        </div>
+      </div>
+      <div class="relative md:hidden">
+        <img
+          src="~/assets/images/how-it-works-inspection-mobile.png"
+          alt="car inspection"
+        />
+        <div class="absolute bottom-1/2 left-1/2 z-50">
+          <button
+            class="hover:animate-bounce focus:animate-none focus:outline-none active:animate-none active:outline-none rounded-full"
+            @click="inspectionListOpen = !inspectionListOpen"
+          >
+            <fa class="text-brand text-4xl" :icon="faInfoCircle" />
+          </button>
+        </div>
+      </div>
+      <div
+        :class="inspectionListOpen ? 'h-full my-8' : 'h-0 my-0'"
+        class="transition w-full bg-cover bg-opacity-90 bg-no-repeat"
+        :style="howItWorksInspectionBgImage"
+      >
+        <div :class="inspectionListOpen ? 'block' : 'hidden'" class="px-4 py-4">
+          <ul class="tab-section list-outside grid grid-cols-2 gap-2">
+            <li
+              v-for="(inspection, index) in inspectionList"
+              :key="index"
+              class="text-sm"
+            >
+              {{ inspection }}
+            </li>
+          </ul>
         </div>
       </div>
       <div
@@ -343,7 +373,12 @@
 <script>
 import bgMainHeader from 'assets/images/how_it_works_header.jpeg'
 import bgSectionHeader from 'assets/images/how_it_works_section_one.jpeg'
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import bgHowItWorksInspectionImage from 'assets/images/how-it-works-popup.jpeg'
+import {
+  faChevronDown,
+  faChevronUp,
+  faInfoCircle,
+} from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
 import Feature from '~/components/common/Feature'
 import Features from '~/components/common/Features'
@@ -358,8 +393,26 @@ export default {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
       sectionHeaderImage: { backgroundImage: `url(${bgSectionHeader})` },
+      howItWorksInspectionBgImage: {
+        backgroundImage: `url(${bgHowItWorksInspectionImage})`,
+      },
       sectionOneVisible: false,
       sectionTwoVisible: false,
+      inspectionListOpen: false,
+      inspectionList: [
+        'VIN Verification',
+        'Underhood/Fluids',
+        'Unibody (Frame)',
+        'Brakes/ Wheels/ Tires',
+        'Front Interior',
+        'Under Vehicle',
+        'Rear Interio',
+        'Replacement Items',
+        'Front Exterior',
+        'Road Test',
+        'Rear Exterior',
+        'Documentation/ Keys/ Manuals',
+      ],
     }
   },
   head: {
@@ -372,6 +425,23 @@ export default {
     faChevronDown() {
       return faChevronDown
     },
+    faInfoCircle() {
+      return faInfoCircle
+    },
   },
 }
 </script>
+
+<style scoped>
+ul.tab-section {
+  list-style: none;
+  list-style-position: outside;
+}
+
+ul.tab-section li:before {
+  content: '✓';
+  color: lightgreen;
+  font-size: 1.1em;
+  margin-right: 0.6em;
+}
+</style>

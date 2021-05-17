@@ -440,15 +440,6 @@ export default {
       }
       this.videoPlaying = !this.videoPlaying
     },
-    toggleSectionVideoPlayback() {
-      // const videoBg = this.$refs.sectionBackgroundVideo
-      // if (this.sectionVideoPlaying) {
-      //   videoBg.pause()
-      // } else {
-      //   videoBg.play()
-      // }
-      // this.sectionVideoPlaying = !this.sectionVideoPlaying
-    },
   },
 }
 </script>

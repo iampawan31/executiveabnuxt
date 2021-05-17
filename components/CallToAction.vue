@@ -12,7 +12,7 @@
         :style="callToActionBorder"
       >
         <div
-          class="text-brand text-xs sm:text-md lg:text-lg xl:text-xl sm:ml-10 md:ml-10 my-4 uppercase"
+          class="text-brand text-xs sm:text-md lg:text-lg xl:text-xl sm:ml-10 md:ml-10 mt-4 mb-1 uppercase"
         >
           {{ title }}
         </div>
