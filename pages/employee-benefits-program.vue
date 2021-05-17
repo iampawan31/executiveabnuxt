@@ -13,9 +13,7 @@
               >
                 OFFER OUR SERVICES AS AN AMAZING BENEFIT FOR YOUR STAFF
               </div>
-              <div
-                class="text-lg font-light leading-normal hidden max-w-md sm:block"
-              >
+              <div class="text-lg font-light leading-normal max-w-md">
                 It costs nothing for your organization to partner with us, and
                 provides your staff with a one-of-a-kind benefit.
               </div>
