@@ -54,40 +54,41 @@
       </NuxtLink>
 
       <div class="group">
-        <NuxtLink
-          to="/how-it-works"
-          class="block mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 md:px-1 py-2 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
-        >
-          How it works
-          <button class="md:hidden focus:outline-none">
+        <div>
+          <NuxtLink
+            to="/how-it-works"
+            class="mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 md:px-1 py-2 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
+          >
+            How it works
+          </NuxtLink>
+          <button class="md:hidden focus:outline-none ml-2">
             <fa
-              class="ml-1"
               :icon="howItWorksOpen ? faChevronUp : faChevronDown"
               @click="howItWorksOpen = !howItWorksOpen"
             />
           </button>
-        </NuxtLink>
+        </div>
         <ul
           :class="howItWorksOpen ? 'block' : 'hidden'"
           class="group-hover:block md:hidden md:absolute md:text-gray-700 pt-1 z-50 top-12"
         >
           <li class="">
             <NuxtLink
-              class="rounded-t bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-t bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/friends-and-family-program"
               >Friends and family program</NuxtLink
             >
           </li>
           <li class="">
             <NuxtLink
-              class="bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition py-2 text-sm px-4 block whitespace-no-wrap"
+              class="bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition py-2 text-sm px-4 block whitespace-no-wrap"
               to="/employee-benefits-program"
               >Employee benefits program</NuxtLink
             >
           </li>
           <li class="">
             <NuxtLink
-              class="rounded-b bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-b bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/military-and-community-program"
               >Military and community program</NuxtLink
             >
@@ -104,9 +105,8 @@
           >
             Request vehicle
           </a>
-          <button class="md:hidden inline-block focus:outline-none">
+          <button class="md:hidden inline-block focus:outline-none ml-2">
             <fa
-              class="ml-1"
               :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
               @click.stop="requestVehicleOpen = !requestVehicleOpen"
             />
@@ -118,21 +118,21 @@
         >
           <li class="">
             <a
-              class="rounded-t bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-t bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               href="#"
               >Request Powersports</a
             >
           </li>
           <li class="">
             <a
-              class="bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition py-2 text-sm px-4 block whitespace-no-wrap"
+              class="bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition py-2 text-sm px-4 block whitespace-no-wrap"
               href="#"
               >Request Commercial/Fleet</a
             >
           </li>
           <li class="">
             <a
-              class="rounded-b bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-b bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               href="#"
               >Request Maintenance/Parts</a
             >

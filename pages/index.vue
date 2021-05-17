@@ -112,7 +112,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-black bg-blend-darken">
+    <section class="bg-black bg-blend-darken hidden">
       <div class="flex flex-col lg:flex-row">
         <div
           class="flex max-w-lg sm:max-w-4xl sm:py-10 bg-norepeat bg-cover"
