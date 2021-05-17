@@ -73,21 +73,21 @@
         >
           <li class="">
             <NuxtLink
-              class="rounded-t bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-t bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/friends-and-family-program"
               >Friends and family program</NuxtLink
             >
           </li>
           <li class="">
             <NuxtLink
-              class="bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition py-2 text-sm px-4 block whitespace-no-wrap"
+              class="bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition py-2 text-sm px-4 block whitespace-no-wrap"
               to="/employee-benefits-program"
               >Employee benefits program</NuxtLink
             >
           </li>
           <li class="">
             <NuxtLink
-              class="rounded-b bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-b bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/military-and-community-program"
               >Military and community program</NuxtLink
             >
@@ -118,21 +118,21 @@
         >
           <li class="">
             <a
-              class="rounded-t bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-t bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
               href="#"
               >Request Powersports</a
             >
           </li>
           <li class="">
             <a
-              class="bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition py-2 text-sm px-4 block whitespace-no-wrap"
+              class="bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition py-2 text-sm px-4 block whitespace-no-wrap"
               href="#"
               >Request Commercial/Fleet</a
             >
           </li>
           <li class="">
             <a
-              class="rounded-b bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-b bg-gray-200 bg-opacity-20 md:bg-opacity-100 md:bg-gray-200 hover:bg-black hover:bg-opacity-30 hover:text-white transition text-sm py-2 px-4 block whitespace-no-wrap"
               href="#"
               >Request Maintenance/Parts</a
             >

@@ -406,7 +406,7 @@ export default {
         'Brakes/ Wheels/ Tires',
         'Front Interior',
         'Under Vehicle',
-        'Rear Interio',
+        'Rear Interior',
         'Replacement Items',
         'Front Exterior',
         'Road Test',
