@@ -7,14 +7,14 @@
       >
         <div class="relative container mx-auto p-4 flex items-center z-10">
           <div>
-            <div class="content float-left py-4 px-5 my-5">
+            <div class="content float-left py-4 lg:px-5 my-5">
               <div
-                class="heading mb-3 tracking-wide uppercase underline max-w-xl font-bold text-2xl md:text-4xl filter drop-shadow-max"
+                class="heading mb-3 tracking-wide uppercase underline max-w-xl font-bold text-4xl md:text-4xl filter drop-shadow-max"
               >
                 LEARN HOW WE WORK FOR YOU
               </div>
               <div
-                class="text-lg font-light leading-normal max-w-md filter drop-shadow-max"
+                class="md:text-lg font-light leading-normal max-w-md filter drop-shadow-max"
               >
                 Our process was designed to make buying the exact vehicle you
                 want as enjoyable as actually driving it!
@@ -36,17 +36,18 @@
             class="flex flex-1 flex-col content-center flex-wrap justify-center mx-auto"
           >
             <div class="text-brand uppercase text-lg mb-3">
-              EAB SERVICE AS A BENEFIT
+              NEVER COMPROMISE AGAIN
             </div>
             <div class="text-white text-3xl font-semibold uppercase mb-5">
-              EXCLUSIVE AUTO PURCHASING PROGRAM
+              FINDING YOUR PERFECT VEHICLE
             </div>
             <div class="text-gray-300 pb-16 max-w-xl">
-              We partner with your organization for free so you may offer an
-              auto-purchasing program as part of your benefits package. By doing
-              so you give your staff access to utilize our unique cost-free
-              vehicle purchasing service, allowing them to find their perfect
-              car while saving time and money. It is a win-win!
+              Unlike traditional dealerships and car-buying websites, we do not
+              stock any inventory. Because of this we have no bias or agenda to
+              sell you a vehicle that does not fit the exact packages, options,
+              or interior / exterior colors of the vehicle you are wanting to
+              purchase. By utilizing our exclusive manufacturor relationships we
+              are able to help find the car that fits your requirements.
             </div>
           </div>
         </div>
@@ -276,12 +277,12 @@
         <div class="flex flex-col justify-center">
           <div class="flex flex-col mx-auto">
             <div class="text-brand md:text-center uppercase text-lg mb-3">
-              EAB SERVICE AS A BENEFIT
+              CPO QUALITY VEHICLES WITHOUT THE PRICE
             </div>
             <div
               class="text-white md:text-center text-3xl font-semibold uppercase mb-5"
             >
-              EXCLUSIVE AUTO PURCHASING PROGRAM
+              EAB 360° SMART INSPECTION PROCESS
             </div>
             <div class="text-gray-300 pb-16 max-w-4xl">
               Before we ever send you a pre-owned vehicle to consider purchasing
@@ -311,21 +312,12 @@
           src="~/assets/images/how-it-works-inspection-mobile.png"
           alt="car inspection"
         />
-        <div class="absolute bottom-1/2 left-1/2 z-50">
-          <button
-            class="hover:animate-bounce focus:animate-none focus:outline-none active:animate-none active:outline-none rounded-full"
-            @click="inspectionListOpen = !inspectionListOpen"
-          >
-            <fa class="text-brand text-4xl" :icon="faInfoCircle" />
-          </button>
-        </div>
       </div>
       <div
-        :class="inspectionListOpen ? 'h-full my-8' : 'h-0 my-0'"
-        class="transition w-full bg-cover bg-opacity-90 bg-no-repeat"
+        class="transition w-full h-full bg-cover bg-opacity-90 bg-no-repeat"
         :style="howItWorksInspectionBgImage"
       >
-        <div :class="inspectionListOpen ? 'block' : 'hidden'" class="px-4 py-4">
+        <div class="px-4 py-4">
           <ul class="tab-section list-outside grid grid-cols-2 gap-2">
             <li
               v-for="(inspection, index) in inspectionList"
@@ -398,12 +390,10 @@ export default {
       },
       sectionOneVisible: false,
       sectionTwoVisible: false,
-      inspectionListOpen: false,
       inspectionList: [
         'VIN Verification',
         'Underhood/Fluids',
         'Unibody (Frame)',
-        'Brakes/ Wheels/ Tires',
         'Front Interior',
         'Under Vehicle',
         'Rear Interior',
@@ -411,6 +401,7 @@ export default {
         'Front Exterior',
         'Road Test',
         'Rear Exterior',
+        'Brakes/ Wheels/ Tires',
         'Documentation/ Keys/ Manuals',
       ],
     }

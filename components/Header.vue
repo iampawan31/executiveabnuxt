@@ -5,13 +5,13 @@
         ? `${isMenuOpenOnHomeRoute} absolute w-full top-0 z-50 2xl:container 2xl:mx-auto`
         : 'bg-black relative'
     "
-    class="md:flex md:justify-between md:items-center sm:py-3 sm:px-4"
+    class="lg:flex lg:justify-between lg:items-center sm:py-3 sm:px-4"
   >
     <div class="flex justify-between items-center py-3 px-4 sm:p-0">
       <NuxtLink to="/">
         <img class="h-6" src="~/assets/logo_white.png" alt="Executive AB" />
       </NuxtLink>
-      <div class="md:hidden flex content-center sm:flex-none">
+      <div class="lg:hidden flex content-center sm:flex-none">
         <button
           type="button"
           :class="isHomeRoute ? 'text-white' : 'text-gray-300'"
@@ -44,24 +44,23 @@
     </div>
     <div
       :class="isOpen ? 'block' : 'hidden'"
-      class="px-4 pb-4 bt-2 md:flex sm:p-0"
+      class="px-4 pb-4 bt-2 lg:flex sm:p-0"
     >
       <NuxtLink
         to="/about-us"
-        class="block text-white hover:border-white transition border-transparent border-b-2 lg:px-3 md:px-1 py-2 text-sm font-medium"
+        class="block text-white hover:border-white transition border-transparent border-b-2 lg:px-3 py-2 text-sm font-medium"
       >
         About us
       </NuxtLink>
 
       <div class="group">
-        <div>
-          <NuxtLink
-            to="/how-it-works"
-            class="mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 md:px-1 py-2 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
-          >
+        <div
+          class="mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
+        >
+          <NuxtLink to="/how-it-works" class="text-white">
             How it works
           </NuxtLink>
-          <button class="md:hidden focus:outline-none ml-2">
+          <button class="lg:hidden focus:outline-none ml-2">
             <fa
               :icon="howItWorksOpen ? faChevronUp : faChevronDown"
               @click="howItWorksOpen = !howItWorksOpen"
@@ -70,25 +69,25 @@
         </div>
         <ul
           :class="howItWorksOpen ? 'block' : 'hidden'"
-          class="group-hover:block md:hidden md:absolute md:text-gray-700 pt-1 z-50 top-12"
+          class="group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
         >
           <li class="">
             <NuxtLink
-              class="rounded-t bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-t bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/friends-and-family-program"
               >Friends and family program</NuxtLink
             >
           </li>
           <li class="">
             <NuxtLink
-              class="bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition py-2 text-sm px-4 block whitespace-no-wrap"
+              class="bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition py-2 text-sm px-4 block whitespace-no-wrap"
               to="/employee-benefits-program"
               >Employee benefits program</NuxtLink
             >
           </li>
           <li class="">
             <NuxtLink
-              class="rounded-b bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-b bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/military-and-community-program"
               >Military and community program</NuxtLink
             >
@@ -97,7 +96,7 @@
       </div>
       <div class="group">
         <div
-          class="block mt-1 text-white no-underline hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
+          class="block mt-1 text-white no-underline hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
         >
           <a
             href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
@@ -105,7 +104,7 @@
           >
             Request vehicle
           </a>
-          <button class="md:hidden inline-block focus:outline-none ml-2">
+          <button class="lg:hidden inline-block focus:outline-none ml-2">
             <fa
               :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
               @click.stop="requestVehicleOpen = !requestVehicleOpen"
@@ -114,25 +113,25 @@
         </div>
         <ul
           :class="requestVehicleOpen ? 'block' : 'hidden'"
-          class="group-hover:block md:hidden md:absolute md:text-gray-700 pt-1 z-50 top-12"
+          class="group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
         >
           <li class="">
             <a
-              class="rounded-t bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-t bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               href="#"
               >Request Powersports</a
             >
           </li>
           <li class="">
             <a
-              class="bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition py-2 text-sm px-4 block whitespace-no-wrap"
+              class="bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition py-2 text-sm px-4 block whitespace-no-wrap"
               href="#"
               >Request Commercial/Fleet</a
             >
           </li>
           <li class="">
             <a
-              class="rounded-b bg-gray-800 md:text-white md:bg-black md:hover:text-gray-400 md:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-b bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               href="#"
               >Request Maintenance/Parts</a
             >
@@ -142,7 +141,7 @@
 
       <NuxtLink
         to="/contact-us"
-        class="block mt-1 text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 md:px-1 text-sm font-medium md:mt-0 md:ml-2 xl:ml-4"
+        class="block mt-1 text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
       >
         Contact us
       </NuxtLink>

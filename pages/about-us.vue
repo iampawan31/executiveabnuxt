@@ -8,14 +8,14 @@
         <div
           class="relative container mx-auto p-4 2xl:mx-20 flex items-center z-10"
         >
-          <div class="content float-left py-4 px-5 my-5">
+          <div class="content float-left py-4 lg:px-5 my-5">
             <div
-              class="heading mb-3 tracking-wide uppercase underline font-bold text-2xl md:text-4xl filter drop-shadow-max"
+              class="heading mb-3 tracking-wide uppercase underline font-bold text-4xl md:text-4xl filter drop-shadow-max"
             >
               Your perfect car is out there
             </div>
             <div
-              class="text-md md:text-lg font-light leading-normal max-w-lg block filter drop-shadow-max"
+              class="md:text-lg font-light leading-normal max-w-lg block filter drop-shadow-max"
             >
               and we are here to find it for you. Our personalized service was
               created to help people never settle for less than their perfect
@@ -144,7 +144,9 @@
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
           <div class="mx-auto container px-4 sm:px-8 2xl:px-16">
-            <div class="flex overflow-x-auto md:flex-wrap xl:space-x-5">
+            <div
+              class="flex overflow-x-auto no-scrollbar md:flex-wrap xl:space-x-5"
+            >
               <div
                 v-for="(brand, index) in luxuryBrands"
                 :key="index"
@@ -165,7 +167,9 @@
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
           <div class="mx-auto container px-4 sm:px-8 2xl:px-16">
-            <div class="flex overflow-x-auto md:flex-wrap xl:space-x-5">
+            <div
+              class="flex overflow-x-auto no-scrollbar md:flex-wrap xl:space-x-5"
+            >
               <div
                 v-for="(brand, index) in domesticBrands"
                 :key="index"
@@ -186,7 +190,9 @@
         </div>
         <div class="bg-brand-gray-medium-dark py-4 mt-4">
           <div class="mx-auto container px-4 sm:px-8 2xl:px-16">
-            <div class="flex overflow-x-auto md:flex-wrap xl:space-x-5">
+            <div
+              class="flex overflow-x-auto no-scrollbar md:flex-wrap xl:space-x-5"
+            >
               <div
                 v-for="(brand, index) in popularBrands"
                 :key="index"

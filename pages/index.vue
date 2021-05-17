@@ -58,7 +58,7 @@
           class="grid sm:grid-cols-1 md:grid-cols-2 gap-5 lg:gap-20 2xl:gap-10 2xl:mx-10"
         >
           <div
-            class="p-14 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
+            class="py-14 px-4 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage1"
           >
             <h1
@@ -80,7 +80,7 @@
             </button>
           </div>
           <div
-            class="p-14 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
+            class="py-14 px-4 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
             :style="firstSectionBackgroundImage2"
           >
             <h1
