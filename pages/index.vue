@@ -112,7 +112,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-black bg-blend-darken">
+    <section class="bg-black bg-blend-darken hidden">
       <div class="flex flex-col lg:flex-row">
         <div
           class="flex max-w-lg sm:max-w-4xl sm:py-10 bg-norepeat bg-cover"
@@ -217,8 +217,10 @@
     </section>
     <section class="bg-black py-16">
       <div class="container mx-auto">
-        <div class="flex flex-col sm:flex-row space-x-8 relative">
-          <div class="flex mx-auto">
+        <div
+          class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 relative lg:pl-4 xl:pl-0"
+        >
+          <div class="flex mx-auto md:mx-0 lg:mx-auto">
             <InstagramFeed
               :token="accessToken"
               fields="media_url,media_type,caption,permalink"
@@ -235,7 +237,7 @@
                 <client-only>
                   <swiper
                     ref="carousel"
-                    class="swiper relative max-w-xs sm:max-w-4xl h-60 min-h-full"
+                    class="swiper relative max-w-sm sm:max-w-screen-sm md:max-w-screen-md lg:max-w-2xl xl:max-w-4xl h-96 sm:h-60 md:h-72 lg:h-48 xl:h-60 min-h-full"
                     :options="swiperOptions"
                   >
                     <swiper-slide
@@ -268,7 +270,7 @@
               </template>
             </InstagramFeed>
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col px-4 lg:px-0">
             <div class="uppercase text-xl text-brand mb-5">
               #EXECUTIVE EXPERIENCE
             </div>
@@ -373,14 +375,14 @@ export default {
         breakpoints: {
           1024: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
           768: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 30,
           },
           640: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             navigation: false,
             spaceBetween: 20,
           },
@@ -439,6 +441,15 @@ export default {
         videoBg.play()
       }
       this.videoPlaying = !this.videoPlaying
+    },
+    toggleSectionVideoPlayback() {
+      // const videoBg = this.$refs.sectionBackgroundVideo
+      // if (this.sectionVideoPlaying) {
+      //   videoBg.pause()
+      // } else {
+      //   videoBg.play()
+      // }
+      // this.sectionVideoPlaying = !this.sectionVideoPlaying
     },
   },
 }

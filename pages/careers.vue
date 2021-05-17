@@ -1,6 +1,9 @@
 <template>
   <div>
-    <section :style="mainHeaderImage" class="py-16 sm:py-20 md:py-20 lg:py-24">
+    <section
+      :style="mainHeaderImage"
+      class="py-16 sm:py-20 md:py-20 lg:py-24 bg-center"
+    >
       <div class="container mx-auto">
         <div
           class="flex flex-col lg:content-center xl:justify-center lg:space-x-8 lg:flex-row mx-4"
