@@ -190,7 +190,7 @@
                   class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
                   :style="benefitOneImage"
                 >
-                  <div class="text-lg text-white font-semibold">
+                  <div class="text-lg text-white font-semibold mb-4">
                     Increase employee retention
                   </div>
                   <div class="text-gray-300 text-sm">
@@ -205,7 +205,7 @@
                   class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
                   :style="benefitTwoImage"
                 >
-                  <div class="text-lg text-white font-semibold">
+                  <div class="text-lg text-white font-semibold mb-4">
                     Increase productivity & engagement
                   </div>
                   <div class="text-gray-300 text-sm">
@@ -220,7 +220,7 @@
                   class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
                   :style="benefitThreeImage"
                 >
-                  <div class="text-lg text-white font-semibold">
+                  <div class="text-lg text-white font-semibold mb-4">
                     Attract great talent
                   </div>
                   <div class="text-gray-300 text-sm">
@@ -283,6 +283,7 @@ export default {
         breakpoints: {
           1024: {
             slidesPerView: 3,
+            pagination: false,
           },
           768: {
             slidesPerView: 2,
