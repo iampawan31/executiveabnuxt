@@ -5,7 +5,7 @@
         class="sm:max-h-96 sm:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-right-top sm:bg-center bg-cover flex bg-norepeat"
         :style="mainHeaderImage"
       >
-        <div class="flex items-center z-10 lg:mx-16 xl:mx-32">
+        <div class="flex lg:items-center z-10 lg:mx-16 xl:mx-32">
           <div class="py-4 px-5 my-5">
             <div
               class="mb-4 tracking-wide uppercase underline max-w-lg font-bold text-xl md:text-4xl filter drop-shadow-max"
