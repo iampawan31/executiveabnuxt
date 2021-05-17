@@ -298,7 +298,7 @@
               any vehicle that does not meet our inspection standards.
             </div>
           </div>
-          <div class="flex hidden">
+          <div class="flex hidden lg:block">
             <img
               src="~/assets/images/how_it_works_section_three.jpeg"
               alt="car inspection"
@@ -306,7 +306,7 @@
           </div>
         </div>
       </div>
-      <div class="relative md:hidden">
+      <div class="relative lg:hidden">
         <img
           src="~/assets/images/how-it-works-inspection-mobile.png"
           alt="car inspection"
