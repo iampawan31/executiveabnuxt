@@ -297,7 +297,7 @@ export default {
     }
   },
   head: {
-    title: 'Executive - Employee Benefits Program',
+    title: 'Employee Benefits Program - Executive',
   },
   computed: {
     faChevronUp() {

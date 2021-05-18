@@ -6,7 +6,7 @@
         :style="mainHeaderImage"
       >
         <div class="flex lg:items-center z-10 lg:mx-16 xl:mx-32">
-          <div class="py-4 px-5 my-5">
+          <div class="py-4 px-4 sm:px-5 my-5">
             <div
               class="mb-4 tracking-wide uppercase underline max-w-lg font-bold text-xl md:text-4xl filter drop-shadow-max"
             >
@@ -23,7 +23,7 @@
                 class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
               >
                 <img
-                  class="h-16 w-16"
+                  class="h-10 w-10 sm:h-16 sm:w-16"
                   src="~assets/images/icons/megaphone.png"
                   alt="Share"
                 />
@@ -33,7 +33,7 @@
                 class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
               >
                 <img
-                  class="h-16 w-16"
+                  class="h-10 w-10 sm:h-16 sm:w-16"
                   src="~assets/images/icons/message.png"
                   alt="Educate"
                 />
@@ -43,7 +43,7 @@
                 class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
               >
                 <img
-                  class="h-16 w-16"
+                  class="h-10 w-10 sm:h-16 sm:w-16"
                   src="~assets/images/icons/paper-bill.png"
                   alt="Earn"
                 />
@@ -219,7 +219,7 @@ export default {
     }
   },
   head: {
-    title: 'Executive - Friends And Family Program',
+    title: 'Friends And Family Program - Executive',
   },
   computed: {
     faBullhorn() {

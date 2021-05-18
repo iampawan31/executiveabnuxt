@@ -12,7 +12,7 @@
             class="flex lg:flex-1 xl:flex-none xl:justify-center lg:justify-end items-center"
           >
             <div
-              class="bg-black bg-opacity-10 mb-5 inline-block uppercase text-white px-5 py-3 text-5xl font-bold"
+              class="bg-black bg-opacity-10 mb-5 inline-block uppercase text-white px-5 py-3 md:text-3xl xl:text-5xl text-2xl font-bold"
             >
               <span>// CAREERS</span>
             </div>
@@ -164,7 +164,7 @@ export default {
     }
   },
   head: {
-    title: 'Executive - Careers',
+    title: 'Careers - Executive',
   },
   computed: {
     faChevronRight() {

@@ -23,9 +23,7 @@
       <div class="container mx-auto 2xl:px-32">
         <div class="flex">
           <div class="">
-            <div
-              class="uppercase text-2xl font-semibold text-center md:text-left"
-            >
+            <div class="uppercase text-2xl font-semibold text-left mb-4">
               SEND US A MESSAGE
             </div>
             <div class="text-gray-600 max-w-sm">
@@ -157,7 +155,7 @@
       <div class="container mx-auto py-10 sm:py-16 2xl:px-32">
         <div class="grid grid-cols-2 my-10">
           <div class="lg:col-span-1 col-span-2">
-            <div class="font-semibold text-3xl uppercase mb-4">
+            <div class="font-semibold text-2xl md:text-3xl uppercase mb-4">
               NEED ADDITIONAL INFORMATION?
             </div>
             <div class="text-gray-500">
@@ -169,12 +167,13 @@
               most requested information and common questions.
             </div>
             <div class="inline-grid grid-cols-2 lg:gap-16 gap-4 sm:gap-24 mt-5">
-              <button
+              <NuxtLink
+                to="how-it-works"
                 class="bg-gradient-to-r from-yellow-700 to-yellow-500 inline-block shadow-lg py-2 px-4 sm:px-8 rounded uppercase w-auto text-white mb-0.5"
               >
                 How Page
                 <fa class="ml-2 text-white" :icon="faChevronRight" />
-              </button>
+              </NuxtLink>
               <button
                 class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-4 sm:px-8 rounded uppercase text-white mb-0.5"
               >

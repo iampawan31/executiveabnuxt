@@ -407,7 +407,7 @@ export default {
     }
   },
   head: {
-    title: 'Executive - How It Works',
+    title: 'How It Works - Executive',
   },
   computed: {
     faChevronUp() {

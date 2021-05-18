@@ -320,7 +320,7 @@ export default {
     }
   },
   head: {
-    title: 'Executive - About Us',
+    title: 'About Us - Executive',
   },
   computed: {
     faChevronDown() {

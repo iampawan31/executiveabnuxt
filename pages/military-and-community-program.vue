@@ -172,7 +172,7 @@ export default {
     }
   },
   head: {
-    title: 'Executive - Military And Community Program',
+    title: 'Military And Community Program - Executive',
   },
   computed: {
     faChevronUp() {

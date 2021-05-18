@@ -170,7 +170,7 @@ export default {
     }
   },
   head: {
-    title: 'Executive - Partner With Us',
+    title: 'Partner With Us - Executive',
   },
   computed: {
     faChevronRight() {

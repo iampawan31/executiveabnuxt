@@ -402,7 +402,7 @@ export default {
     }
   },
   head: {
-    title: 'Executive - Home',
+    title: 'Home - Executive',
   },
   computed: {
     faInfoCircle() {
