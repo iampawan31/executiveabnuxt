@@ -112,9 +112,9 @@
         </div>
       </div>
     </section>
-    <section class="bg-black bg-blend-darken hidden">
+    <section class="bg-black bg-blend-darken">
       <div class="flex flex-col lg:flex-row">
-        <div
+        <!-- <div
           class="flex max-w-lg sm:max-w-4xl sm:py-10 bg-norepeat bg-cover"
           :style="sliderBackground"
         >
@@ -133,8 +133,8 @@
               <span class="text-brand"> no cost to you.</span>
             </div>
           </div>
-        </div>
-        <div class="flex max-w-4xl px-16 sm:px-10 xl:px-0 py-10 z-50">
+        </div> -->
+        <div class="flex px-16 sm:px-10 xl:px-0 py-10 z-50">
           <Slides />
         </div>
       </div>
