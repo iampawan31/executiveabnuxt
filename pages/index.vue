@@ -116,7 +116,7 @@
       <div class="flex flex-col lg:flex-row relative">
         <div
           :class="!initialSlide ? 'w-full' : null"
-          class="flex max-w-lg sm:max-w-4xl h-full sm:py-10 bg-no-repeat bg-contain absolute"
+          class="flex max-w-lg sm:max-w-4xl h-full sm:py-10 bg-no-repeat bg-contain sm:absolute"
           :style="sliderBackground"
         >
           <div
@@ -136,14 +136,14 @@
             </div>
           </div>
         </div>
-        <div class="flex w-screen py-10">
+        <div class="flex max-w-xs px-4 sm:px-0 sm:w-screen py-10">
           <div class="relative">
             <div
               v-show="!initialSlide"
               class="swiper-button-prev bg-brand"
             ></div>
             <Slides />
-            <div class="swiper-button-next bg-brand"></div>
+            <div class="hidden sm:block swiper-button-next bg-brand"></div>
           </div>
         </div>
       </div>
@@ -400,7 +400,7 @@ export default {
           320: {
             slidesPerView: 1,
             navigation: false,
-            spaceBetween: 10,
+            spaceBetween: 30,
           },
         },
       },

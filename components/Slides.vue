@@ -27,6 +27,7 @@
           <div class="flex text-sm px-10 py-5">{{ slide.description }}</div>
         </div>
       </swiper-slide>
+      <div slot="pagination" class="swiper-pagination"></div>
     </swiper>
   </client-only>
 </template>
@@ -44,17 +45,13 @@ export default {
         loop: false,
         effect: 'slide',
         spaceBetween: 50,
-        centeredSlides: true,
-        pagination: {
-          el: '.swiper-pagination',
-          dynamicBullets: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
         breakpoints: {
           1024: {
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            centeredSlides: true,
             slidesPerView: 4,
             spaceBetween: 60,
           },
@@ -63,12 +60,17 @@ export default {
             spaceBetween: 20,
           },
           640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
           },
           320: {
             slidesPerView: 1,
             spaceBetween: 10,
+            centeredSlides: false,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: 'true',
+            },
           },
         },
       },
