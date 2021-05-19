@@ -113,13 +113,14 @@
       </div>
     </section>
     <section class="bg-black bg-blend-darken">
-      <div class="flex flex-col lg:flex-row">
-        <!-- <div
-          class="flex max-w-lg sm:max-w-4xl sm:py-10 bg-norepeat bg-cover"
+      <div class="flex flex-col lg:flex-row relative">
+        <div
+          class="flex max-w-lg sm:max-w-4xl h-full sm:py-10 bg-no-repeat bg-contain absolute"
           :style="sliderBackground"
         >
           <div
-            class="flex max-w-full sm:max-w-xl sm:mx-auto flex-col px-4 py-4 xl:py-0 xl:px-14 content-center justify-center"
+            :class="!initialSlide ? 'hidden' : null"
+            class="flex max-w-full sm:max-w-xl sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
           >
             <div class="uppercase text-lg sm:text-xl text-brand mb-5">
               YOUR PERSONAL CONCIERGE AWAITS
@@ -133,9 +134,16 @@
               <span class="text-brand"> no cost to you.</span>
             </div>
           </div>
-        </div> -->
-        <div class="flex px-16 sm:px-10 xl:px-0 py-10 z-50">
-          <Slides />
+        </div>
+        <div class="flex w-screen py-10">
+          <div class="relative">
+            <div
+              v-show="!initialSlide"
+              class="swiper-button-prev bg-brand"
+            ></div>
+            <Slides />
+            <div class="swiper-button-next bg-brand"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -237,7 +245,7 @@
                 <client-only>
                   <swiper
                     ref="carousel"
-                    class="swiper relative max-w-sm sm:max-w-screen-sm md:max-w-screen-md lg:max-w-2xl xl:max-w-4xl h-96 sm:h-60 md:h-72 lg:h-48 xl:h-60 min-h-full"
+                    class="swiper ig-swiper relative max-w-sm sm:max-w-screen-sm md:max-w-screen-md lg:max-w-2xl xl:max-w-4xl h-96 sm:h-60 md:h-72 lg:h-48 xl:h-60 min-h-full"
                     :options="swiperOptions"
                   >
                     <swiper-slide
@@ -253,6 +261,7 @@
                       >
                         <a
                           class="absolute bottom-1 right-1"
+                          rel="noreferrer"
                           :href="feed.permalink"
                           target="_blank"
                         >
@@ -325,6 +334,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import {
   faChevronRight,
   faChevronLeft,
@@ -405,6 +415,9 @@ export default {
     title: 'Home - Executive',
   },
   computed: {
+    ...mapGetters({
+      initialSlide: 'initialSlide',
+    }),
     faInfoCircle() {
       return faInfoCircle
     },
@@ -471,9 +484,17 @@ ul.tab-section li:before {
 .swiper-button-prev::after,
 .swiper-button-next::after {
   color: white;
+  font-size: 32px;
 }
 
-.swiper-container {
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.swiper-container.ig-swiper {
   padding-bottom: 20px;
 }
 
