@@ -60,8 +60,9 @@ export default {
             spaceBetween: 20,
           },
           640: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 20,
+            centeredSlides: true,
           },
           320: {
             slidesPerView: 1,

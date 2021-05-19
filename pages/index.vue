@@ -116,12 +116,12 @@
       <div class="flex flex-col lg:flex-row relative">
         <div
           :class="!initialSlide ? 'w-full' : null"
-          class="flex max-w-lg sm:max-w-4xl h-full sm:py-10 bg-no-repeat bg-contain sm:absolute"
+          class="flex max-w-lg md:max-w-4xl h-full sm:py-10 bg-no-repeat bg-contain sm:absolute"
           :style="sliderBackground"
         >
           <div
             :class="!initialSlide ? 'hidden' : null"
-            class="flex max-w-full transition sm:max-w-xl sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
+            class="flex max-w-full transition sm:max-w-xs md:max-w-xl sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
           >
             <div class="uppercase text-lg sm:text-xl text-brand mb-5">
               YOUR PERSONAL CONCIERGE AWAITS
