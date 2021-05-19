@@ -63,6 +63,10 @@ export default {
             slidesPerView: 3,
             spaceBetween: 20,
             centeredSlides: true,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
           },
           320: {
             slidesPerView: 1,

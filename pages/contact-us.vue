@@ -7,7 +7,7 @@
         >
           <div class="flex items-center mb-4 sm:mb-0">
             <div
-              class="bg-black bg-opacity-10 inline-block uppercase text-white px-5 py-3 md:text-5xl text-3xl font-bold"
+              class="bg-black bg-opacity-10 inline-block uppercase text-white px-5 py-3 md:text-5xl text-2xl font-bold"
             >
               <span>// CONTACT US</span>
             </div>
