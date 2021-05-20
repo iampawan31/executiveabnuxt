@@ -22,7 +22,7 @@
         <div
           class="flex flex-col space-y-6 lg:flex-row lg:space-x-6 xl:space-x-12"
         >
-          <div class="flex lg:max-w-sm flex-col px-4 sm:px-0">
+          <div class="flex lg:max-w-sm flex-col lg:px-4 sm:px-0">
             <div class="flex text-brand mb-5">OUR PROMISE TO YOU</div>
             <div class="flex text-xl lg:text-2xl mb-5 font-semibold">
               EXECUTIVE SERVICE WITH PROVEN RESULTS
@@ -35,7 +35,7 @@
               will not miss the sales person.
             </div>
           </div>
-          <div class="flex justify-between flex-1 space-x-2 px-4 sm:px-0">
+          <div class="flex justify-between flex-1 space-x-2 lg:px-4 sm:px-0">
             <div
               class="flex-col sm:flex-row content-center flex-grow space-y-4 sm:space-y-0 sm:space-x-5 flex mt-5"
             >

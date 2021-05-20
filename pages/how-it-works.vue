@@ -18,9 +18,7 @@
       </HeroSection>
     </section>
     <section class="bg-black transition">
-      <div
-        class="container mx-auto px-6 md:px-4 lg:pt-10 lg:px-10 xl:px-0 xl:py-0"
-      >
+      <div class="container mx-auto px-4 lg:pt-10 lg:px-10 xl:px-0 xl:py-0">
         <div class="flex flex-col lg:flex-row">
           <div class="flex-1 max-w-2xl">
             <img src="~/assets/images/how_it_works_section_one.jpeg" alt="" />
@@ -146,7 +144,7 @@
       </Features>
     </section>
     <section class="bg-black py-10">
-      <div class="container mx-auto px-6 md:px-4 lg:px-10 xl:px-0">
+      <div class="container mx-auto px-4 lg:px-10 xl:px-0">
         <div class="flex flex-col lg:flex-row">
           <div
             class="flex flex-1 flex-col content-center flex-wrap justify-center mx-auto"
@@ -266,7 +264,7 @@
       </Features>
     </section>
     <section class="bg-black py-16">
-      <div class="container mx-auto px-6 md:px-4">
+      <div class="container mx-auto px-4">
         <div class="flex flex-col justify-center">
           <div class="flex flex-col mx-auto">
             <div class="text-brand md:text-center uppercase text-lg mb-3">
