@@ -1,25 +1,12 @@
 <template>
   <div>
-    <section :style="mainHeaderImage" class="py-16 sm:py-24 xl:px-24 2xl:px-16">
-      <div class="container mx-auto px-4 sm:px-0">
-        <div
-          class="flex flex-col sm:flex-row justify-center content-center sm:space-x-6 max-w-5xl"
-        >
-          <div class="flex items-center mb-4 sm:mb-0">
-            <div
-              class="bg-black bg-opacity-10 inline-block uppercase text-white px-5 py-3 md:text-3xl xl:text-5xl text-2xl font-bold"
-            >
-              <span>// PARTNER WITH US</span>
-            </div>
-          </div>
-          <div class="flex items-center max-w-xs sm:w-72 md:was-w-xs">
-            Join the EAB team and join us on our mission to help transform the
-            way consumers purchase vehicles.
-          </div>
-          <div></div>
-        </div>
-      </div>
-    </section>
+    <HeroSectionAlternate :main-header-image="mainHeaderImage">
+      <template slot="title">// PARTNER WITH US</template>
+      <template slot="subtitle"
+        >Join the EAB team and join us on our mission to help transform the way
+        consumers purchase vehicles.</template
+      >
+    </HeroSectionAlternate>
     <section class="bg-white text-black py-12 px-5 2xl:px-0">
       <div class="container mx-auto xl:px-32">
         <div class="flex flex-col md:flex-row space-y-10 lg:space-y-0 md:mt-10">
@@ -161,9 +148,11 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import bgMainHeader from 'assets/images/partner_with_us_header.jpeg'
 import Feature from '~/components/common/Feature'
 import Features from '~/components/common/Features'
+import HeroSectionAlternate from '~/components/common/HeroSectionAlternate'
+
 export default {
   transitions: 'fade',
-  components: { Feature, Features },
+  components: { Feature, Features, HeroSectionAlternate },
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },

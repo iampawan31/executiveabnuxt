@@ -2,7 +2,7 @@
   <client-only>
     <swiper
       ref="carousel"
-      class="swiper max-w-xs sm:w-screen 2xl:max-w-screen-2xl h-96"
+      class="swiper w-screen h-96"
       :options="swiperOptions"
       @ready="onSwiperRedied"
       @slide-change-transition-start="onSwiperSlideChangeTransitionStart"

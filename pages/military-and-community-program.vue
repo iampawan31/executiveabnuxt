@@ -1,28 +1,21 @@
 <template>
   <div>
     <section class="text-white relative">
-      <div
-        class="sm:max-h-96 sm:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center-top sm:bg-center bg-cover flex bg-norepeat"
-        :style="mainHeaderImage"
-      >
-        <div class="relative container mx-auto p-4 flex items-center z-10">
-          <div>
-            <div class="content float-left py-4 px-5 my-5">
-              <div
-                class="heading mb-3 tracking-wide uppercase underline max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
-              >
-                WE HOLD YOUR SERVICE CLOSE TO OUR HEART
-              </div>
-              <div
-                class="font-light leading-normal text-xs sm:text-sm md:text-lg max-w-md filter drop-shadow-max"
-              >
-                With service at the core of our own business, we recognize and
-                celebrate those those that serve our nation and communities.
-              </div>
-            </div>
+      <HeroSection :main-header-image="mainHeaderImage">
+        <div class="content float-left py-4 px-5 my-5">
+          <div
+            class="heading mb-3 tracking-wide uppercase underline max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
+          >
+            WE HOLD YOUR SERVICE CLOSE TO OUR HEART
+          </div>
+          <div
+            class="font-light leading-normal text-lg max-w-md filter drop-shadow-max"
+          >
+            With service at the core of our own business, we recognize and
+            celebrate those those that serve our nation and communities.
           </div>
         </div>
-      </div>
+      </HeroSection>
     </section>
     <section class="bg-black pt-16" :style="secondSectionBgImage">
       <div
@@ -155,6 +148,7 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
 import Feature from '~/components/common/Feature'
 import Features from '~/components/common/Features'
+import HeroSection from '~/components/common/HeroSection'
 
 export default {
   transitions: 'fade',
@@ -162,6 +156,7 @@ export default {
     CallToAction,
     Feature,
     Features,
+    HeroSection,
   },
   loading: true,
   data() {

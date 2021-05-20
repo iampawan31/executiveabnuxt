@@ -1,29 +1,21 @@
 <template>
   <div>
     <section class="text-white relative">
-      <div
-        class="sm:max-h-96 sm:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center bg-cover flex"
-        :style="mainHeaderImage"
-      >
-        <div
-          class="relative container mx-auto p-4 2xl:mx-20 flex items-center z-10"
-        >
-          <div class="content float-left py-4 lg:px-5 my-5">
-            <div
-              class="heading mb-3 tracking-wide uppercase underline font-bold text-4xl md:text-4xl filter drop-shadow-max"
-            >
-              Your perfect car is out there
-            </div>
-            <div
-              class="md:text-lg font-light leading-normal max-w-lg block filter drop-shadow-max"
-            >
-              and we are here to find it for you. Our personalized service was
-              created to help people never settle for less than their perfect
-              car.
-            </div>
+      <HeroSection :main-header-image="mainHeaderImage">
+        <div class="content float-left py-4 lg:px-5 my-5">
+          <div
+            class="heading mb-3 tracking-wide uppercase underline font-bold text-2xl md:text-4xl filter drop-shadow-max"
+          >
+            Your perfect car is out there
+          </div>
+          <div
+            class="text-lg font-light leading-normal max-w-lg block filter drop-shadow-max"
+          >
+            and we are here to find it for you. Our personalized service was
+            created to help people never settle for less than their perfect car.
           </div>
         </div>
-      </div>
+      </HeroSection>
     </section>
     <section class="py-16">
       <div class="container mx-auto px-4 2xl:px-20">
@@ -287,17 +279,19 @@ import {
   faChevronDown,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
-// import VueJsCounter from 'vue-js-counter'
 
 import bgMainHeader from 'assets/images/about_us_header.jpeg'
 import firstSectionBg from 'assets/images/about-us/second_section_bg.png'
 import secondSectionBg from 'assets/images/about-us/third_section_bg.jpeg'
 import { luxuryBrands, domesticBrands, popularBrands } from '../data/aboutUs'
 import CallToAction from '~/components/CallToAction'
+import HeroSection from '~/components/common/HeroSection'
+
 export default {
   transitions: 'fade',
   components: {
     CallToAction,
+    HeroSection,
   },
   data() {
     return {

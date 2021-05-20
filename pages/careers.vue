@@ -1,32 +1,12 @@
 <template>
   <div>
-    <section
-      :style="mainHeaderImage"
-      class="py-16 sm:py-20 md:py-20 lg:py-24 bg-center"
-    >
-      <div class="container mx-auto">
-        <div
-          class="flex flex-col lg:content-center xl:justify-center lg:space-x-8 lg:flex-row mx-4"
-        >
-          <div
-            class="flex lg:flex-1 xl:flex-none xl:justify-center lg:justify-end items-center"
-          >
-            <div
-              class="bg-black bg-opacity-10 mb-5 inline-block uppercase text-white px-5 py-3 md:text-3xl xl:text-5xl text-2xl font-bold"
-            >
-              <span>// CAREERS</span>
-            </div>
-          </div>
-          <div
-            class="flex items-center xl:flex-1 xl:justify-start content-center lg:max-w-md"
-          >
-            Join the EAB team and join us on our mission to help transform the
-            way consumers purchase vehicles.
-          </div>
-          <div></div>
-        </div>
-      </div>
-    </section>
+    <HeroSectionAlternate :main-header-image="mainHeaderImage">
+      <template slot="title">// CAREERS</template>
+      <template slot="subtitle"
+        >Join the EAB team and join us on our mission to help transform the way
+        consumers purchase vehicles.</template
+      >
+    </HeroSectionAlternate>
     <section
       class="bg-white text-black py-16 sm:py-24"
       :style="bgSecondSection"
@@ -151,11 +131,14 @@ import bgMainHeader from 'assets/images/careers_header.jpeg'
 import bgSecondSection from 'assets/images/careers_bg.jpeg'
 import Feature from '~/components/common/Feature'
 import Features from '~/components/common/Features'
+import HeroSectionAlternate from '~/components/common/HeroSectionAlternate'
+
 export default {
   transitions: 'fade',
   components: {
     Feature,
     Features,
+    HeroSectionAlternate,
   },
   data() {
     return {

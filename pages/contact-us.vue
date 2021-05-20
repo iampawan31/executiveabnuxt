@@ -1,24 +1,12 @@
 <template>
   <div>
-    <section :style="mainHeaderImage" class="py-16 sm:py-24">
-      <div class="container mx-auto px-4 sm:px-0">
-        <div
-          class="flex flex-col sm:flex-row justify-center content-center sm:space-x-6 max-w-5xl"
-        >
-          <div class="flex items-center mb-4 sm:mb-0">
-            <div
-              class="bg-black bg-opacity-10 inline-block uppercase text-white px-5 py-3 md:text-5xl text-2xl font-bold"
-            >
-              <span>// CONTACT US</span>
-            </div>
-          </div>
-          <div class="flex items-center max-w-xs">
-            We’d love to hear from you. Send us a message, chat, e-mail, call or
-            connect with us on social media.
-          </div>
-        </div>
-      </div>
-    </section>
+    <HeroSectionAlternate :main-header-image="mainHeaderImage">
+      <template slot="title">// CONTACT US</template>
+      <template slot="subtitle"
+        >We’d love to hear from you. Send us a message, chat, e-mail, call or
+        connect with us on social media.</template
+      >
+    </HeroSectionAlternate>
     <section class="bg-white text-black py-12 sm:py-24 px-5 2xl:px-0">
       <div class="container mx-auto 2xl:px-32">
         <div class="flex">
@@ -202,8 +190,13 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
 import bgMainHeader from 'assets/images/contact_us_header.jpeg'
+import HeroSectionAlternate from '~/components/common/HeroSectionAlternate'
+
 export default {
   transitions: 'fade',
+  components: {
+    HeroSectionAlternate,
+  },
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },

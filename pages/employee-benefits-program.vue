@@ -1,26 +1,19 @@
 <template>
   <div>
     <section class="text-white relative">
-      <div
-        class="sm:max-h-96 sm:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-center-top sm:bg-center bg-cover flex bg-norepeat"
-        :style="mainHeaderImage"
-      >
-        <div class="relative container mx-auto p-4 flex items-center z-10">
-          <div>
-            <div class="content float-left py-4 px-5 my-5">
-              <div
-                class="heading mb-3 tracking-wide uppercase underline max-w-xl font-bold text-2xl md:text-4xl"
-              >
-                OFFER OUR SERVICES AS AN AMAZING BENEFIT FOR YOUR STAFF
-              </div>
-              <div class="text-lg font-light leading-normal max-w-md">
-                It costs nothing for your organization to partner with us, and
-                provides your staff with a one-of-a-kind benefit.
-              </div>
-            </div>
+      <HeroSection :main-header-image="mainHeaderImage">
+        <div class="content float-left py-4 px-5 my-5">
+          <div
+            class="heading mb-3 tracking-wide uppercase underline max-w-xl font-bold text-2xl md:text-4xl"
+          >
+            OFFER OUR SERVICES AS AN AMAZING BENEFIT FOR YOUR STAFF
+          </div>
+          <div class="text-lg font-light leading-normal max-w-md">
+            It costs nothing for your organization to partner with us, and
+            provides your staff with a one-of-a-kind benefit.
           </div>
         </div>
-      </div>
+      </HeroSection>
     </section>
     <section class="bg-black pt-16" :style="secondSectionBgImage">
       <div
@@ -185,8 +178,7 @@
             <swiper ref="carousel" class="swiper" :options="swiperOptions">
               <swiper-slide key="slide-1" class="flex">
                 <div
-                  class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
-                  :style="benefitOneImage"
+                  class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300 transition benefitOneImage"
                 >
                   <div class="text-lg text-white font-semibold mb-4">
                     Increase employee retention
@@ -200,8 +192,7 @@
               </swiper-slide>
               <swiper-slide key="slide-2" class="flex">
                 <div
-                  class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
-                  :style="benefitTwoImage"
+                  class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300 transition benefitTwoImage"
                 >
                   <div class="text-lg text-white font-semibold mb-4">
                     Increase productivity & engagement
@@ -213,10 +204,9 @@
                   </div>
                 </div>
               </swiper-slide>
-              <swiper-slide key="slide-1" class="flex">
+              <swiper-slide key="slide-3" class="flex">
                 <div
-                  class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300"
-                  :style="benefitThreeImage"
+                  class="flex flex-col px-6 py-20 bg-cover bg-no-repeat border-2 rounded border-gray-300 transition benefitThreeImage"
                 >
                   <div class="text-lg text-white font-semibold mb-4">
                     Attract great talent
@@ -247,13 +237,11 @@
 <script>
 import bgMainHeader from 'assets/images/employee_benefits_header.jpeg'
 import secondSectionBgImage from 'assets/images/employee-benefits-program/second-section-bg-image.jpeg'
-import benefitOneImage from 'assets/images/employee-benefits-program/increase-employee-retention.jpeg'
-import benefitTwoImage from 'assets/images/employee-benefits-program/increased-productivity-and-engagement.jpeg'
-import benefitThreeImage from 'assets/images/employee-benefits-program/attract-great-talent.jpeg'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import CallToAction from '~/components/CallToAction'
 import Feature from '~/components/common/Feature'
 import Features from '~/components/common/Features'
+import HeroSection from '~/components/common/HeroSection'
 
 export default {
   transitions: 'fade',
@@ -261,14 +249,12 @@ export default {
     CallToAction,
     Feature,
     Features,
+    HeroSection,
   },
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
       secondSectionBgImage: { backgroundImage: `url(${secondSectionBgImage})` },
-      benefitOneImage: { backgroundImage: `url(${benefitOneImage})` },
-      benefitTwoImage: { backgroundImage: `url(${benefitTwoImage})` },
-      benefitThreeImage: { backgroundImage: `url(${benefitThreeImage})` },
       sectionOneVisible: false,
       swiperOptions: {
         loop: false,
@@ -309,3 +295,35 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.benefitOneImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('assets/images/employee-benefits-program/increase-employee-retention.jpeg');
+}
+
+.benefitOneImage:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('assets/images/employee-benefits-program/increase-employee-retention.jpeg');
+}
+
+.benefitTwoImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('assets/images/employee-benefits-program/increased-productivity-and-engagement.jpeg');
+}
+
+.benefitTwoImage:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('assets/images/employee-benefits-program/increased-productivity-and-engagement.jpeg');
+}
+
+.benefitThreeImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('assets/images/employee-benefits-program/attract-great-talent.jpeg');
+}
+
+.benefitThreeImage:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('assets/images/employee-benefits-program/attract-great-talent.jpeg');
+}
+</style>

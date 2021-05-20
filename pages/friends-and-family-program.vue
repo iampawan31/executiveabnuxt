@@ -1,58 +1,53 @@
 <template>
   <div>
     <section class="text-white relative">
-      <div
-        class="sm:max-h-96 sm:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-right-top sm:bg-center bg-cover flex bg-norepeat"
-        :style="mainHeaderImage"
-      >
-        <div class="flex lg:items-center z-10 lg:mx-16 xl:mx-32">
-          <div class="py-4 px-4 sm:px-5 my-5">
+      <HeroSection :main-header-image="mainHeaderImage">
+        <div class="py-4 px-4 sm:px-5 my-5">
+          <div
+            class="heading mb-3 tracking-wide uppercase underline max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
+          >
+            SHARE YOUR EXCITEMENT WITH YOUR FRIENDS & FAMILY!
+          </div>
+          <div
+            class="mb-4 font-light leading-normal max-w-md filter drop-shadow-max"
+          >
+            Spread the word so we can help more people experience the EAB
+            difference while finding their perfect vehicle!
+          </div>
+          <div class="flex space-x-2 sm:space-x-8 text-white">
             <div
-              class="mb-4 tracking-wide uppercase underline max-w-lg font-bold text-xl md:text-4xl filter drop-shadow-max"
+              class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
             >
-              SHARE YOUR EXCITEMENT WITH YOUR FRIENDS & FAMILY!
+              <img
+                class="h-10 w-10 sm:h-16 sm:w-16"
+                src="~assets/images/icons/megaphone.png"
+                alt="Share"
+              />
+              <h1 class="text-md md:text-xl font-semibold">SHARE</h1>
             </div>
             <div
-              class="mb-4 text-sm md:text-lg font-light leading-normal max-w-md filter drop-shadow-max"
+              class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
             >
-              Spread the word so we can help more people experience the EAB
-              difference while finding their perfect vehicle!
+              <img
+                class="h-10 w-10 sm:h-16 sm:w-16"
+                src="~assets/images/icons/message.png"
+                alt="Educate"
+              />
+              <h1 class="text-md md:text-xl font-semibold">EDUCATE</h1>
             </div>
-            <div class="flex space-x-2 sm:space-x-8 text-white">
-              <div
-                class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
-              >
-                <img
-                  class="h-10 w-10 sm:h-16 sm:w-16"
-                  src="~assets/images/icons/megaphone.png"
-                  alt="Share"
-                />
-                <h1 class="text-md md:text-xl font-semibold">SHARE</h1>
-              </div>
-              <div
-                class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
-              >
-                <img
-                  class="h-10 w-10 sm:h-16 sm:w-16"
-                  src="~assets/images/icons/message.png"
-                  alt="Educate"
-                />
-                <h1 class="text-md md:text-xl font-semibold">EDUCATE</h1>
-              </div>
-              <div
-                class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
-              >
-                <img
-                  class="h-10 w-10 sm:h-16 sm:w-16"
-                  src="~assets/images/icons/paper-bill.png"
-                  alt="Earn"
-                />
-                <h1 class="text-md md:text-xl font-semibold">EARN</h1>
-              </div>
+            <div
+              class="flex flex-col space-y-2 flex-1 sm:flex-initial justify-center items-center"
+            >
+              <img
+                class="h-10 w-10 sm:h-16 sm:w-16"
+                src="~assets/images/icons/paper-bill.png"
+                alt="Earn"
+              />
+              <h1 class="text-md md:text-xl font-semibold">EARN</h1>
             </div>
           </div>
         </div>
-      </div>
+      </HeroSection>
     </section>
     <section class="bg-black pt-16" :style="secondSectionBgImage">
       <div
@@ -203,6 +198,7 @@ import {
 import CallToAction from '~/components/CallToAction'
 import Feature from '~/components/common/Feature'
 import Features from '~/components/common/Features'
+import HeroSection from '~/components/common/HeroSection'
 
 export default {
   transitions: 'fade',
@@ -210,6 +206,7 @@ export default {
     CallToAction,
     Feature,
     Features,
+    HeroSection,
   },
   data() {
     return {

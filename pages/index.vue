@@ -136,7 +136,7 @@
             </div>
           </div>
         </div>
-        <div class="flex max-w-xs mx-auto sm:px-0 sm:w-screen py-10">
+        <div class="flex max-w-prose mx-auto sm:px-0 sm:w-screen py-10">
           <div class="relative">
             <div
               v-show="!initialSlide"
@@ -487,7 +487,7 @@ ul.tab-section li:before {
 .swiper-button-prev::after,
 .swiper-button-next::after {
   color: #eaa068;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .swiper-button-next,
