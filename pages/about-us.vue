@@ -25,10 +25,7 @@
         </div>
       </div>
     </section>
-    <section
-      class="py-16 bg-center bg-norepeat"
-      :style="firstSectionBackgroundImage1"
-    >
+    <section class="py-16">
       <div class="container mx-auto px-4 2xl:px-20">
         <div
           class="flex flex-col space-y-6 lg:flex-row lg:space-x-6 xl:space-x-12"
@@ -51,7 +48,7 @@
               class="flex-col sm:flex-row content-center flex-grow space-y-4 sm:space-y-0 sm:space-x-5 flex mt-5"
             >
               <div class="sm:mx-auto items-center flex flex-grow">
-                <div>
+                <div class="filter drop-shadow-max-white">
                   <div
                     class="flex text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-50 to-gray-300 text-4xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
                   >
@@ -77,7 +74,7 @@
                 </div>
               </div>
               <div class="sm:mx-auto items-center flex flex-grow">
-                <div>
+                <div class="filter drop-shadow-max-white">
                   <div
                     class="flex text-4xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-50 to-gray-300 lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
                   >
@@ -104,7 +101,7 @@
                 </div>
               </div>
               <div class="sm:mx-auto items-center flex flex-grow">
-                <div>
+                <div class="filter drop-shadow-max-white">
                   <div
                     class="flex text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-50 to-gray-300 text-4xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
                   >

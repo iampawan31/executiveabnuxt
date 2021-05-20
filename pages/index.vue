@@ -136,14 +136,16 @@
             </div>
           </div>
         </div>
-        <div class="flex max-w-xs px-4 sm:px-0 sm:w-screen py-10">
+        <div class="flex max-w-xs mx-auto sm:px-0 sm:w-screen py-10">
           <div class="relative">
             <div
               v-show="!initialSlide"
-              class="swiper-button-prev bg-brand"
+              class="swiper-button-prev bg-brand-gray-dark"
             ></div>
             <Slides />
-            <div class="hidden sm:block swiper-button-next bg-brand"></div>
+            <div
+              class="hidden sm:block swiper-button-next bg-brand-gray-dark"
+            ></div>
           </div>
         </div>
       </div>
@@ -246,7 +248,7 @@
                 <client-only>
                   <swiper
                     ref="carousel"
-                    class="swiper ig-swiper relative max-w-sm sm:max-w-screen-sm md:max-w-screen-md lg:max-w-2xl xl:max-w-4xl h-96 sm:h-60 md:h-72 lg:h-48 xl:h-60 min-h-full"
+                    class="swiper ig-swiper relative max-w-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-2xl xl:max-w-4xl h-96 sm:h-60 md:h-72 lg:h-48 xl:h-60 min-h-full"
                     :options="swiperOptions"
                   >
                     <swiper-slide
@@ -484,7 +486,7 @@ ul.tab-section li:before {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  color: white;
+  color: #eaa068;
   font-size: 32px;
 }
 

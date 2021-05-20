@@ -36,6 +36,7 @@ module.exports = {
       },
       dropShadow: {
         max: '0 5px 15px rgba(0, 0, 0, 1)',
+        'max-white': '0 5px 15px rgba(255, 255,255, 0.5)',
       },
       fontFamily: {
         brandSignature: ['Montserrat'],
