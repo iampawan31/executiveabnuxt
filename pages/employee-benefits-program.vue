@@ -1,21 +1,26 @@
 <template>
   <div>
     <section class="text-white relative">
-      <HeroSection :main-header-image="mainHeaderImage">
-        <div class="content float-left py-4 px-5 my-5">
+      <HeroSection
+        :main-header-image="mainHeaderImage"
+        main-header-image-classes="bg-center"
+      >
+        <div class="content float-left py-4 lg:px-5 my-5">
           <div
-            class="heading mb-3 tracking-wide uppercase underline max-w-xl font-bold text-2xl md:text-4xl"
+            class="heading mb-3 tracking-wide uppercase underline max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >
             OFFER OUR SERVICES AS AN AMAZING BENEFIT FOR YOUR STAFF
           </div>
-          <div class="text-lg font-light leading-normal max-w-md">
+          <div
+            class="text-lg font-light leading-normal max-w-md filter drop-shadow-max"
+          >
             It costs nothing for your organization to partner with us, and
             provides your staff with a one-of-a-kind benefit.
           </div>
         </div>
       </HeroSection>
     </section>
-    <section class="bg-black pt-16" :style="secondSectionBgImage">
+    <section class="bg-black lg:pt-16" :style="secondSectionBgImage">
       <div
         class="flex flex-col sm:place-items-center sm:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
       >

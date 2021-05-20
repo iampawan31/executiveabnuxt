@@ -1,8 +1,11 @@
 <template>
   <div>
     <section class="text-white relative">
-      <HeroSection :main-header-image="mainHeaderImage">
-        <div class="py-4 px-4 sm:px-5 my-5">
+      <HeroSection
+        :main-header-image="mainHeaderImage"
+        main-header-image-classes="bg-center"
+      >
+        <div class="float-left py-4 lg:px-5 my-5">
           <div
             class="heading mb-3 tracking-wide uppercase underline max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >

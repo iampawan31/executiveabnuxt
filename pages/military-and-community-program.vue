@@ -2,7 +2,7 @@
   <div>
     <section class="text-white relative">
       <HeroSection :main-header-image="mainHeaderImage">
-        <div class="content float-left py-4 px-5 my-5">
+        <div class="content float-left py-4 lg:px-5 my-5">
           <div
             class="heading mb-3 tracking-wide uppercase underline max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >
@@ -17,7 +17,7 @@
         </div>
       </HeroSection>
     </section>
-    <section class="bg-black pt-16" :style="secondSectionBgImage">
+    <section class="bg-black lg:pt-16" :style="secondSectionBgImage">
       <div
         class="flex flex-col sm:place-items-center sm:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
       >
