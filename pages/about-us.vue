@@ -9,7 +9,7 @@
             Your perfect car is out there
           </div>
           <div
-            class="text-lg font-light leading-normal max-w-lg block filter drop-shadow-max"
+            class="font-light leading-normal max-w-lg block filter drop-shadow-max"
           >
             and we are here to find it for you. Our personalized service was
             created to help people never settle for less than their perfect car.

@@ -9,7 +9,7 @@
             WE HOLD YOUR SERVICE CLOSE TO OUR HEART
           </div>
           <div
-            class="font-light leading-normal text-lg max-w-md filter drop-shadow-max"
+            class="font-light leading-normal max-w-md filter drop-shadow-max"
           >
             With service at the core of our own business, we recognize and
             celebrate those those that serve our nation and communities.
