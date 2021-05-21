@@ -113,20 +113,30 @@
       </div>
     </section>
     <section class="bg-black bg-blend-darken">
-      <div class="flex flex-col lg:flex-row relative">
+      <div class="flex flex-col md:flex-row relative">
         <div
-          :class="!initialSlide ? 'w-full' : null"
-          class="flex max-w-lg md:max-w-4xl h-full sm:py-10 bg-no-repeat bg-contain sm:absolute"
+          :class="
+            !initialSlide && breakpoint !== '320' && breakpoint !== '640'
+              ? 'w-full'
+              : null
+          "
+          class="flex max-w-lg sm:max-w-full md:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl h-full sm:py-10 bg-no-repeat bg-contain sm:bg-cover md:absolute"
           :style="sliderBackground"
         >
           <div
-            :class="!initialSlide ? 'hidden' : null"
-            class="flex max-w-full transition sm:max-w-xs md:max-w-xl sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
+            :class="
+              !initialSlide && breakpoint !== '320' && breakpoint !== '640'
+                ? 'hidden'
+                : null
+            "
+            class="flex max-w-full transition sm:max-w-max md:max-w-xs lg:max-w-xl xl:max-w-lg 2xl:max-w-xl md:pr-20 lg:pr-0 sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
           >
             <div class="uppercase text-lg sm:text-xl text-brand mb-5">
               YOUR PERSONAL CONCIERGE AWAITS
             </div>
-            <div class="uppercase text-2xl sm:text-3xl font-semibold mb-5">
+            <div
+              class="uppercase text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-semibold mb-5"
+            >
               HOW OUR NO-COST SERVICE WORKS
             </div>
             <div class="text-lg text-gray-400">
@@ -136,15 +146,18 @@
             </div>
           </div>
         </div>
-        <div class="flex max-w-prose mx-auto sm:px-0 sm:w-screen py-10">
+        <div class="flex mx-auto sm:px-0 py-10">
           <div class="relative">
             <div
-              v-show="!initialSlide"
+              v-show="
+                !initialSlide && breakpoint !== '320' && breakpoint !== '640'
+              "
               class="swiper-button-prev bg-brand-gray-dark"
             ></div>
             <Slides />
             <div
-              class="hidden sm:block swiper-button-next bg-brand-gray-dark"
+              v-show="breakpoint !== '320' && breakpoint !== '640'"
+              class="swiper-button-next bg-brand-gray-dark"
             ></div>
           </div>
         </div>
@@ -420,6 +433,7 @@ export default {
   computed: {
     ...mapGetters({
       initialSlide: 'initialSlide',
+      breakpoint: 'breakpoint',
     }),
     faInfoCircle() {
       return faInfoCircle
