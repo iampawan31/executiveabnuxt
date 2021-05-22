@@ -25,7 +25,7 @@ export const firstSlider = [
     image: require('assets/images/home/first-slide-four.png'),
     gradient: 'bg-gradient-to-r from-green-600 to-green-400',
     description:
-      'Your car is fully prepped, sanitized and delivered to you. If you don’t like the vehicle when you recieve it we offer your money back - gauranteed.',
+      'Your car is fully prepped, sanitized and delivered to you. If you don’t like the vehicle when you receive it we offer your money back - guaranteed.',
   },
 ]
 
@@ -35,11 +35,11 @@ export const homepageTabSection = [
     title: 'NEW VEHICLES',
     imageURL: require('assets/images/home/new-vehicles.jpeg'),
     description:
-      'We have exclusive manufactorer relationships to get you the best deal.',
+      'We have exclusive manufacturer relationships to get you the best deal.',
     listOne: [
       'Included Nationwide delivery',
-      'Pay invoice or slighty above',
-      'Receive same manufactorer incentives / programs including special interest rates',
+      'Pay invoice or slightly above',
+      'Receive same manufacturer incentives / programs including special interest rates',
     ],
     listTwo: [
       'Haggle-free pricing to buy or lease',
@@ -95,7 +95,7 @@ export const homepageTabSection = [
     title: 'POWERSPORTS',
     imageURL: require('assets/images/home/powersports.jpeg'),
     description:
-      'Our same service and savings are available for motorycles, ATVs, snow-mobiles, PWCs, and more!',
+      'Our same service and savings are available for motorcycles, ATVs, snow-mobiles, PWCs, and more!',
     listOne: [
       'Included Nationwide delivery',
       'Access to new and pre-owned vehicles with wholesale pricing',
@@ -120,8 +120,8 @@ export const homepageTabSection = [
       '$200 Visa gift card with	vehicle purchase for all military, police, medical, and first responders',
     ],
     listTwo: [
-      'Special accomodations for vehicle shipping when deployed, or deploying',
-      'Special discount on maintenace, parts, and repairs',
+      'Special accommodations for vehicle shipping when deployed, or deploying',
+      'Special discount on maintenance, parts, and repairs',
     ],
     link: {
       name: 'More information',

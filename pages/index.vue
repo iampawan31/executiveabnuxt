@@ -129,7 +129,7 @@
                 ? 'hidden'
                 : null
             "
-            class="flex max-w-full transition sm:max-w-max md:max-w-xs lg:max-w-xl xl:max-w-lg 2xl:max-w-xl md:pr-20 lg:pr-0 sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
+            class="flex max-w-full transition sm:max-w-max md:max-w-xs lg:max-w-xl xl:max-w-2xl xl:pr-40 2xl:max-w-xl md:pr-20 lg:pr-0 sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
           >
             <div class="uppercase text-lg sm:text-xl text-brand mb-5">
               YOUR PERSONAL CONCIERGE AWAITS
