@@ -7,11 +7,13 @@
         connect with us on social media.</template
       >
     </HeroSectionAlternate>
-    <section class="bg-white text-black py-12 sm:py-24 px-5 2xl:px-0">
+    <section class="bg-white text-black py-12 sm:pt-24 px-4 2xl:px-0">
       <div class="container mx-auto 2xl:px-32">
         <div class="flex">
           <div class="">
-            <div class="uppercase text-2xl font-semibold text-left mb-4">
+            <div
+              class="uppercase text-2xl md:text-3xl font-semibold text-left mb-4"
+            >
               SEND US A MESSAGE
             </div>
             <div class="text-gray-600 max-w-sm">
@@ -139,9 +141,9 @@
         </div>
       </div>
     </section>
-    <section class="bg-white text-black px-5 2xl:px-0">
-      <div class="container mx-auto py-10 sm:py-16 2xl:px-32">
-        <div class="grid grid-cols-2 my-10">
+    <section class="bg-white text-black px-4 2xl:px-0">
+      <div class="container mx-auto py-10 sm:pb-16 2xl:px-32">
+        <div class="grid grid-cols-2 sm:my-10">
           <div class="lg:col-span-1 col-span-2">
             <div class="font-semibold text-2xl md:text-3xl uppercase mb-4">
               NEED ADDITIONAL INFORMATION?

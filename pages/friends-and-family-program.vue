@@ -7,7 +7,7 @@
       >
         <div class="float-left py-4 lg:px-5 my-5">
           <div
-            class="heading mb-3 tracking-wide uppercase underline max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
+            class="heading mb-3 tracking-wide uppercase underline max-w-sm sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >
             SHARE YOUR EXCITEMENT WITH YOUR FRIENDS & FAMILY!
           </div>
@@ -52,7 +52,7 @@
         </div>
       </HeroSection>
     </section>
-    <section class="bg-black pt-16" :style="secondSectionBgImage">
+    <section class="bg-black pt-10 lg:pt-16" :style="secondSectionBgImage">
       <div
         class="flex flex-col sm:place-items-center sm:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
       >
@@ -62,7 +62,7 @@
         <div class="text-white text-3xl font-semibold uppercase mb-5">
           EARN REWARDS FOR SHARING YOUR EXPERIENCE
         </div>
-        <div class="text-gray-300 pb-24">
+        <div class="text-gray-300 pb-5 lg:pb-24">
           Our Friends & Family Program allows you to earn rewards for telling
           your friends and family about our service. If they submit a request
           and purchase a vehicle they just need to enter your Friends & Family

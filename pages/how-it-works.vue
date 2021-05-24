@@ -1,7 +1,10 @@
 <template>
   <div>
     <section class="text-white relative">
-      <HeroSection :main-header-image="mainHeaderImage">
+      <HeroSection
+        :main-header-image="mainHeaderImage"
+        main-header-image-classes="bg-right sm:bg-center"
+      >
         <div class="content float-left py-4 lg:px-5 my-5">
           <div
             class="heading mb-3 tracking-wide uppercase underline max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
@@ -19,12 +22,14 @@
     </section>
     <section class="bg-black transition">
       <div class="container mx-auto px-4 lg:pt-10 lg:px-10 xl:px-0 xl:py-0">
-        <div class="flex flex-col lg:flex-row">
-          <div class="flex-1 max-w-2xl">
+        <div
+          class="flex flex-col space-y-8 lg:space-y-0 md:flex-row items-center"
+        >
+          <div class="flex-1 lg:max-w-2xl">
             <img src="~/assets/images/how_it_works_section_one.jpeg" alt="" />
           </div>
           <div
-            class="flex flex-1 flex-col content-center flex-wrap justify-center mx-auto"
+            class="flex flex-1 flex-col md:content-center md:flex-wrap md:justify-center md:mx-auto"
           >
             <div class="text-brand uppercase text-lg mb-3">
               NEVER COMPROMISE AGAIN
@@ -32,7 +37,7 @@
             <div class="text-white text-3xl font-semibold uppercase mb-5">
               FINDING YOUR PERFECT VEHICLE
             </div>
-            <div class="text-gray-300 pb-16 max-w-xl">
+            <div class="text-gray-300 pb-5 lg:pb-16 max-w-xl">
               Unlike traditional dealerships and car-buying websites, we do not
               stock any inventory. Because of this we have no bias or agenda to
               sell you a vehicle that does not fit the exact packages, options,
@@ -143,15 +148,17 @@
       </section>
     </transition>
     <section class="bg-black py-10">
-      <div class="container mx-auto px-4 lg:px-10 xl:px-0">
-        <div class="flex flex-col lg:flex-row">
+      <div class="container mx-auto px-4 lg:px-10 xl:px-0 pt-10">
+        <div class="flex flex-col md:flex-row items-center">
           <div
             class="flex flex-1 flex-col content-center flex-wrap justify-center mx-auto"
           >
             <div class="text-brand uppercase text-lg mb-3">
               PURCHASING MADE EASY
             </div>
-            <div class="text-white text-3xl font-semibold uppercase mb-5">
+            <div
+              class="text-white text-3xl font-semibold uppercase mb-5 md:max-w-xl"
+            >
               PAY FOR YOUR VEHICLE THE WAY YOU WANT
             </div>
             <div class="text-gray-300 pb-16 max-w-xl">
@@ -162,11 +169,13 @@
               is yours.
             </div>
           </div>
-          <div class="flex-1 max-w-2xl">
+          <div class="flex-1 lg:max-w-2xl">
             <img src="~/assets/images/how_it_works_section_two.jpeg" alt="" />
           </div>
         </div>
-        <div class="flex flex-col place-items-center justify-center mx-auto">
+        <div
+          class="flex flex-col mt-5 place-items-center justify-center mx-auto"
+        >
           <div class="uppercase text-brand pb-4">Learn more</div>
           <button
             class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark z-50"
@@ -311,7 +320,7 @@
         class="transition w-full h-full bg-cover bg-opacity-90 lg:hidden bg-no-repeat"
         :style="howItWorksInspectionBgImage"
       >
-        <div class="px-4 py-8 mb-8">
+        <div class="px-4 sm:px-0 md:px-4 py-8 mb-8 sm:container sm:mx-auto">
           <ul class="tab-section list-outside grid grid-cols-2 gap-2">
             <li
               v-for="(inspection, index) in inspectionList"
@@ -424,6 +433,11 @@ export default {
 ul.tab-section {
   list-style: none;
   list-style-position: outside;
+}
+
+ul.tab-section li {
+  padding-left: 25px;
+  text-indent: -25px;
 }
 
 ul.tab-section li:before {

@@ -12,7 +12,7 @@
           PUT THE SALESPERSON IN YOUR REARVIEW
         </div>
         <div
-          class="text-left sm:text-center text-gray-300 text-md mb-5 px-2 md:px-0 filter drop-shadow-max"
+          class="text-left sm:text-right sm:max-w-lg text-gray-300 text-md mb-5 px-2 md:px-0 filter drop-shadow-max"
         >
           We find the vehicle your looking for and save you time
           <br class="hidden md:block" />
@@ -53,9 +53,9 @@
     </div>
     <CovidMessageSection />
     <section class="bg-brand-gray-dark py-16">
-      <div class="mx-auto container">
+      <div class="mx-auto container md:px-4 lg:px-0">
         <div
-          class="grid sm:grid-cols-1 md:grid-cols-2 gap-5 lg:gap-20 2xl:gap-10 2xl:mx-10"
+          class="grid sm:grid-cols-1 md:grid-cols-2 md:gap-4 gap-14 lg:gap-20 2xl:gap-10 2xl:mx-10"
         >
           <div
             class="py-14 px-4 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
@@ -67,7 +67,7 @@
               Ready to experience car buying on auto-pilot?
             </h1>
             <p
-              class="mt-4 text-brand text-lg sm:text-xl md:text-lg filter drop-shadow-max"
+              class="mt-4 text-brand sm:text-xl md:text-lg filter drop-shadow-max"
             >
               Tell us what your looking for and let us get started. Our service
               works for all brands and models. Nationwide delivery available.
@@ -89,7 +89,7 @@
               Now anyone can buy the way executives do?
             </h1>
             <p
-              class="mt-4 text-brand text-lg sm:text-xl md:text-lg filter drop-shadow-max"
+              class="mt-4 text-brand sm:text-xl md:text-lg filter drop-shadow-max"
             >
               Those purchasing high end vehicles have utilized our type of
               service for years. Now, we’re making that level of service a
@@ -116,44 +116,48 @@
       <div class="flex flex-col md:flex-row relative">
         <div
           :class="
-            !initialSlide && breakpoint !== '320' && breakpoint !== '640'
+            (!initialSlide && breakpoint !== '320') ||
+            (!initialSlide && breakpoint !== '640')
               ? 'w-full'
               : null
           "
           class="flex max-w-lg sm:max-w-full md:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl h-full sm:py-10 bg-no-repeat bg-contain sm:bg-cover md:absolute"
           :style="sliderBackground"
         >
-          <div
-            :class="
-              !initialSlide && breakpoint !== '320' && breakpoint !== '640'
-                ? 'hidden'
-                : null
-            "
-            class="flex max-w-full transition sm:max-w-max md:max-w-xs lg:max-w-xl xl:max-w-2xl xl:pr-40 2xl:max-w-xl md:pr-20 lg:pr-0 sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
-          >
-            <div class="uppercase text-lg sm:text-xl text-brand mb-5">
-              YOUR PERSONAL CONCIERGE AWAITS
-            </div>
+          <transition name="fade">
             <div
-              class="uppercase text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-semibold mb-5"
+              v-show="
+                (initialSlide && breakpoint !== '320') ||
+                (initialSlide && breakpoint !== '640')
+              "
+              class="flex max-w-full transition sm:container md:max-w-xs lg:max-w-xl xl:max-w-2xl xl:pr-40 2xl:max-w-xl md:pr-20 lg:pr-0 sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
             >
-              HOW OUR NO-COST SERVICE WORKS
+              <div class="uppercase text-lg sm:text-xl text-brand mb-5">
+                YOUR PERSONAL CONCIERGE AWAITS
+              </div>
+              <div
+                class="uppercase text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-semibold mb-5"
+              >
+                HOW OUR NO-COST SERVICE WORKS
+              </div>
+              <div class="sm:text-lg text-gray-400">
+                The ultimate hands-off buying experience. Get the perfect
+                vehicle, for the perfect price, with
+                <span class="text-brand"> no cost to you.</span>
+              </div>
             </div>
-            <div class="text-lg text-gray-400">
-              The ultimate hands-off buying experience. Get the perfect vehicle,
-              for the perfect price, with
-              <span class="text-brand"> no cost to you.</span>
-            </div>
-          </div>
+          </transition>
         </div>
         <div class="flex mx-auto sm:px-0 py-10">
           <div class="relative">
-            <div
-              v-show="
-                !initialSlide && breakpoint !== '320' && breakpoint !== '640'
-              "
-              class="swiper-button-prev bg-brand-gray-dark"
-            ></div>
+            <transition name="fade">
+              <div
+                v-show="
+                  !initialSlide && breakpoint !== '320' && breakpoint !== '640'
+                "
+                class="swiper-button-prev bg-brand-gray-dark"
+              ></div>
+            </transition>
             <Slides />
             <div
               v-show="breakpoint !== '320' && breakpoint !== '640'"
@@ -175,16 +179,16 @@
               <div class="container mx-auto">
                 <div class="shadow-sm rounded-sm transition-opacity">
                   <div
-                    class="flex flex-col xl:h-60 lg:flex-row xl:max-w-6xl xl:mx-auto"
+                    class="flex flex-col h-full lg:flex-row xl:max-w-6xl xl:mx-auto"
                   >
                     <div
-                      class="flex max-w-full lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-10 px-5 lg:p-5 rounded-tr-md lg:rounded-tr-none rounded-tl-md lg:rounded-bl-md"
+                      class="flex max-w-full h-36 sm:h-32 lg:h-auto lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-7 lg:py-10 px-5 lg:p-5 rounded-tr-md lg:rounded-tr-none rounded-tl-md lg:rounded-bl-md"
                       :style="{
                         backgroundImage: `url(${homepageTab.imageURL})`,
                       }"
                     >
                       <h1
-                        class="uppercase text-xl sm:text-2xl xl:text-3xl text-white font-semibold mb-5"
+                        class="uppercase text-xl sm:text-2xl xl:text-3xl text-white font-semibold mb-1 lg:mb-5"
                       >
                         {{ homepageTab.title }}
                       </h1>
@@ -196,9 +200,9 @@
                       class="flex flex-1 bg-white text-gray-500 flex-wrap content-center rounded-br-md rounded-bl-md lg:rounded-bl-none lg:rounded-tr-md xl:px-10"
                     >
                       <div
-                        class="flex flex-col lg:flex-row lg:gap-5 2xl:flex-row p-5"
+                        class="flex flex-col h-96 sm:h-72 lg:h-60 lg:flex-row lg:gap-5 2xl:flex-row p-5"
                       >
-                        <div class="flex flex-1">
+                        <div class="flex lg:flex-1">
                           <ul class="tab-section list-outside">
                             <li
                               v-for="(
@@ -211,7 +215,7 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="flex flex-1 flex-col">
+                        <div class="flex lg:flex-1 flex-col">
                           <ul class="tab-section list-outside">
                             <li
                               v-for="(
@@ -306,7 +310,7 @@
             <div class="uppercase text-2xl sm:text-3xl font-semibold mb-5">
               IT’S NOT A SECRET ANYMORE
             </div>
-            <div class="text-lg text-gray-400">
+            <div class="sm:text-lg text-gray-400">
               The best kept secret in the auto industry is no longer a secret.
               Browse and explore recent purchases using our service.
             </div>
@@ -315,7 +319,7 @@
       </div>
     </section>
     <section class="bg-white text-black py-16">
-      <div class="flex flex-col items-center justify-center">
+      <div class="container mx-auto flex flex-col items-center justify-center">
         <div class="flex mb-10">
           <fa class="ml-2 text-3xl text-brand" :icon="faStar" />
           <fa class="ml-2 text-3xl text-brand" :icon="faStar" />
@@ -324,7 +328,7 @@
           <fa class="ml-2 text-3xl text-brand" :icon="faStar" />
         </div>
         <h1
-          class="text-2xl text-center px-4 sm:text-3xl uppercase font-semibold sm:tracking-widest mb-5 sm:mb-10"
+          class="text-2xl sm:text-center px-4 sm:text-3xl uppercase font-semibold sm:tracking-widest mb-5 sm:mb-10"
         >
           “If I only knew about this sooner...”
         </h1>
@@ -484,8 +488,8 @@ export default {
       this.toggleVideoPlayback()
     },
     closeSectionVideo() {
-      this.sectionVideoPlaying = false
       this.toggleVideoPlayback()
+      this.sectionVideoPlaying = false
     },
   },
 }
@@ -495,6 +499,11 @@ export default {
 ul.tab-section {
   list-style: none;
   list-style-position: outside;
+}
+
+ul.tab-section li {
+  padding-left: 25px;
+  text-indent: -25px;
 }
 
 ul.tab-section li:before {

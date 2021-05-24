@@ -1,10 +1,13 @@
 <template>
   <div>
     <section class="text-white relative">
-      <HeroSection :main-header-image="mainHeaderImage">
+      <HeroSection
+        :main-header-image="mainHeaderImage"
+        main-header-image-classes="bg-right sm:bg-center"
+      >
         <div class="content float-left py-4 lg:px-5 my-5">
           <div
-            class="heading mb-3 tracking-wide uppercase underline font-bold text-2xl md:text-4xl filter drop-shadow-max"
+            class="heading mb-3 tracking-wide uppercase underline max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >
             Your perfect car is out there
           </div>
@@ -23,8 +26,8 @@
           class="flex flex-col space-y-6 lg:flex-row lg:space-x-6 xl:space-x-12"
         >
           <div class="flex lg:max-w-sm flex-col lg:px-4 sm:px-0">
-            <div class="flex text-brand mb-5">OUR PROMISE TO YOU</div>
-            <div class="flex text-xl lg:text-2xl mb-5 font-semibold">
+            <div class="flex text-lg text-brand mb-5">OUR PROMISE TO YOU</div>
+            <div class="flex text-3xl mb-5 font-semibold">
               EXECUTIVE SERVICE WITH PROVEN RESULTS
             </div>
             <div class="flex font-light text-gray-300">

@@ -22,7 +22,7 @@
     </section>
     <section class="bg-black lg:pt-16" :style="secondSectionBgImage">
       <div
-        class="flex flex-col sm:place-items-center sm:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
+        class="flex flex-col md:place-items-center md:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 md:max-w-3xl lg:max-w-4xl"
       >
         <div class="text-brand uppercase text-lg mb-3 pt-10">
           EAB SERVICE AS A BENEFIT
@@ -30,7 +30,7 @@
         <div class="text-white text-3xl font-semibold uppercase mb-5">
           EXCLUSIVE AUTO PURCHASING PROGRAM
         </div>
-        <div class="text-gray-300 pb-28">
+        <div class="text-gray-300 pb-10 lg:pb-28">
           We partner with your organization for free so you may offer an
           auto-purchasing program as part of your benefits package. By doing so
           you give your staff access to utilize our unique cost-free vehicle
@@ -164,9 +164,13 @@
     </transition>
     <section class="bg-black py-16">
       <div class="container mx-auto">
-        <div class="flex flex-col content-center justify-center px-5 lg:px-0">
-          <div class="text-brand text-center mb-4">WHY PARTNER WITH US?</div>
-          <div class="text-center text-white text-3xl font-semibold mb-4">
+        <div
+          class="flex flex-col md:place-items-center md:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 md:max-w-3xl lg:max-w-4xl"
+        >
+          <div class="text-brand text-lg lg:text-center mb-4">
+            WHY PARTNER WITH US?
+          </div>
+          <div class="lg:text-center text-white text-3xl font-semibold mb-4">
             YOUR STAFF DESERVES GREAT BENEFITS
           </div>
           <div class="text-gray-300 max-w-4xl mx-auto">
@@ -177,7 +181,7 @@
           </div>
         </div>
         <div
-          class="flex lg:px-10 xl:px-44 2xl:px-72 mx-auto px-16 sm:px-16 md:px-20 md:mx-5 my-10 md:mt-36 md:mb-24"
+          class="flex lg:px-10 xl:px-44 2xl:px-72 mx-auto px-10 sm:px-16 md:px-20 md:mx-5 my-10 md:mt-36 md:mb-24"
         >
           <client-only>
             <swiper ref="carousel" class="swiper" :options="swiperOptions">

@@ -1,7 +1,10 @@
 <template>
   <div>
     <section class="text-white relative">
-      <HeroSection :main-header-image="mainHeaderImage">
+      <HeroSection
+        :main-header-image="mainHeaderImage"
+        main-header-image-classes="bg-right sm:bg-center"
+      >
         <div class="content float-left py-4 lg:px-5 my-5">
           <div
             class="heading mb-3 tracking-wide uppercase underline max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
@@ -19,7 +22,7 @@
     </section>
     <section class="bg-black lg:pt-16" :style="secondSectionBgImage">
       <div
-        class="flex flex-col sm:place-items-center sm:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
+        class="flex flex-col md:place-items-center md:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
       >
         <div class="text-brand uppercase text-lg mb-3 pt-10">
           A SALUTE TO SERVICE
@@ -27,7 +30,7 @@
         <div class="text-white text-3xl font-semibold uppercase mb-5">
           OUR COMMITMENT TO SERVING THOSE THAT SERVE
         </div>
-        <div class="text-gray-300 pb-24">
+        <div class="text-gray-300 pb-5 lg:pb-24">
           Our Military & Community Program was designed to give back something
           extra to those that selflessly serve our country. Whether you are a
           military member, a veteran, a law enforcement officer, or work in our

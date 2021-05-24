@@ -10,7 +10,9 @@
     <section class="bg-white text-black py-12 px-5 2xl:px-0">
       <div class="container mx-auto xl:px-32">
         <div class="flex flex-col md:flex-row space-y-10 lg:space-y-0 md:mt-10">
-          <div class="flex flex-1 flex-col space-y-10 lg:space-y-0 mt-10 pr-4">
+          <div
+            class="flex flex-1 flex-col space-y-10 lg:space-y-0 sm:mt-10 pr-4"
+          >
             <div class="uppercase text-2xl sm:text-3xl">
               EAB PARTNERSHIP PROGRAM
             </div>
