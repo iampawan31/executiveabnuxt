@@ -98,7 +98,7 @@
             <div class="mt-3">
               <button
                 class="text-white rounded-full focus:outline-none"
-                @click="toggleSectionVideoPlayback"
+                @click="openSectionVideo"
               >
                 <fa
                   v-if="sectionVideoPlaying"
@@ -171,70 +171,74 @@
             :key="index"
             :title="homepageTab.tabTitle"
           >
-            <div class="container mx-auto">
-              <div class="shadow-sm rounded-sm transition-opacity">
-                <div
-                  class="flex flex-col xl:h-60 lg:flex-row xl:max-w-6xl xl:mx-auto"
-                >
+            <transition name="fade">
+              <div class="container mx-auto">
+                <div class="shadow-sm rounded-sm transition-opacity">
                   <div
-                    class="flex max-w-full lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-10 px-5 lg:p-5 rounded-tr-md lg:rounded-tr-none rounded-tl-md lg:rounded-bl-md"
-                    :style="{
-                      backgroundImage: `url(${homepageTab.imageURL})`,
-                    }"
+                    class="flex flex-col xl:h-60 lg:flex-row xl:max-w-6xl xl:mx-auto"
                   >
-                    <h1
-                      class="uppercase text-xl sm:text-2xl xl:text-3xl text-white font-semibold mb-5"
+                    <div
+                      class="flex max-w-full lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-10 px-5 lg:p-5 rounded-tr-md lg:rounded-tr-none rounded-tl-md lg:rounded-bl-md"
+                      :style="{
+                        backgroundImage: `url(${homepageTab.imageURL})`,
+                      }"
                     >
-                      {{ homepageTab.title }}
-                    </h1>
-                    <p class="text-brand text-xs sm:text-sm xl:text-base">
-                      {{ homepageTab.description }}
-                    </p>
-                  </div>
-                  <div
-                    class="flex flex-1 bg-white text-gray-500 flex-wrap content-center rounded-br-md rounded-bl-md lg:rounded-bl-none lg:rounded-tr-md xl:px-10"
-                  >
-                    <div class="flex flex-col lg:flex-row 2xl:flex-row p-5">
-                      <div class="flex flex-1">
-                        <ul class="tab-section list-outside">
-                          <li
-                            v-for="(
-                              singleList, indexOne
-                            ) in homepageTab.listOne"
-                            :key="indexOne"
-                            class="mb-4 text-sm"
-                          >
-                            {{ singleList }}
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="flex flex-1 flex-col">
-                        <ul class="tab-section list-outside">
-                          <li
-                            v-for="(
-                              singleList, indexTwo
-                            ) in homepageTab.listTwo"
-                            :key="indexTwo"
-                            class="mb-4 text-sm"
-                          >
-                            {{ singleList }}
-                          </li>
-                        </ul>
-                        <div class="ml-6">
-                          <a
-                            :href="homepageTab.link.path"
-                            class="text-brand underline"
-                          >
-                            {{ homepageTab.link.name }}
-                            <fa class="ml-1" :icon="faChevronRight" />
-                          </a>
+                      <h1
+                        class="uppercase text-xl sm:text-2xl xl:text-3xl text-white font-semibold mb-5"
+                      >
+                        {{ homepageTab.title }}
+                      </h1>
+                      <p class="text-brand text-xs sm:text-sm xl:text-base">
+                        {{ homepageTab.description }}
+                      </p>
+                    </div>
+                    <div
+                      class="flex flex-1 bg-white text-gray-500 flex-wrap content-center rounded-br-md rounded-bl-md lg:rounded-bl-none lg:rounded-tr-md xl:px-10"
+                    >
+                      <div
+                        class="flex flex-col lg:flex-row lg:gap-5 2xl:flex-row p-5"
+                      >
+                        <div class="flex flex-1">
+                          <ul class="tab-section list-outside">
+                            <li
+                              v-for="(
+                                singleList, indexOne
+                              ) in homepageTab.listOne"
+                              :key="indexOne"
+                              class="mb-4 text-sm"
+                            >
+                              {{ singleList }}
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="flex flex-1 flex-col">
+                          <ul class="tab-section list-outside">
+                            <li
+                              v-for="(
+                                singleList, indexTwo
+                              ) in homepageTab.listTwo"
+                              :key="indexTwo"
+                              class="mb-4 text-sm"
+                            >
+                              {{ singleList }}
+                            </li>
+                          </ul>
+                          <div class="ml-6">
+                            <a
+                              :href="homepageTab.link.path"
+                              class="text-brand underline"
+                            >
+                              {{ homepageTab.link.name }}
+                              <fa class="ml-1" :icon="faChevronRight" />
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </transition>
           </tab>
         </tabs>
       </div>
@@ -346,6 +350,7 @@
         :has-logo="true"
       />
     </section>
+    <VideoModal :showing="sectionVideoPlaying" @close="closeSectionVideo" />
   </div>
 </template>
 
@@ -372,6 +377,7 @@ import Tab from '~/components/common/Tab'
 import CallToAction from '~/components/CallToAction'
 import InstagramFeed from '~/components/InstagramFeed'
 import CovidMessageSection from '~/components/home/CovidMessageSection'
+import VideoModal from '~/components/common/VideoModal'
 
 export default {
   name: 'Home',
@@ -383,6 +389,7 @@ export default {
     CallToAction,
     InstagramFeed,
     CovidMessageSection,
+    VideoModal,
   },
   data() {
     return {
@@ -472,14 +479,13 @@ export default {
       }
       this.videoPlaying = !this.videoPlaying
     },
-    toggleSectionVideoPlayback() {
-      // const videoBg = this.$refs.sectionBackgroundVideo
-      // if (this.sectionVideoPlaying) {
-      //   videoBg.pause()
-      // } else {
-      //   videoBg.play()
-      // }
-      // this.sectionVideoPlaying = !this.sectionVideoPlaying
+    openSectionVideo() {
+      this.sectionVideoPlaying = true
+      this.toggleVideoPlayback()
+    },
+    closeSectionVideo() {
+      this.toggleVideoPlayback()
+      this.sectionVideoPlaying = false
     },
   },
 }

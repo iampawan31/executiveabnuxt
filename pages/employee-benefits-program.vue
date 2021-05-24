@@ -40,7 +40,7 @@
         <div class="flex flex-col place-items-center justify-center mx-auto">
           <div class="uppercase text-brand mb-4">Learn more</div>
           <button
-            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
+            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark z-50"
             @click="sectionOneVisible = !sectionOneVisible"
           >
             <fa
@@ -51,117 +51,117 @@
         </div>
       </div>
     </section>
-    <section
-      :class="sectionOneVisible ? 'block' : 'hidden'"
-      class="bg-white text-black py-16"
-    >
-      <div class="container mx-auto pt-10 pb-0 lg:py-10">
-        <Features>
-          <Feature>
-            <template slot="feature-image"
-              ><img
-                src="~/assets/images/icons/building.png"
-                class="h-14 md:h-16"
-                alt=""
-            /></template>
-            <template slot="feature-title">
-              HOW IT WORKS FOR YOUR ORGANIZATION
-            </template>
-            <template slot="feature-description">
-              <div class="mb-4">
-                Getting set-up with us is simple. We setup a personalized link
-                for your staff to utilize if they are interested in our service.
-                Depending on the size of your organization we may assign a
-                dedicated Executive Concierge or a team to spefically handle
-                your account.
-              </div>
-              <div class="mb-4">
-                We then work with your HR department to provide any collateral
-                or materials your organization deems neccessary. If you
-                currently work with a company that handles a benefit portal for
-                you, we will work with them to get your material implemented.
-              </div>
-            </template>
-          </Feature>
-          <hr class="my-16 border-gray-400" />
-          <Feature>
-            <template slot="feature-image"
-              ><img
-                src="~/assets/images/icons/mobile.png"
-                class="h-14 md:h-16"
-                alt=""
-            /></template>
-            <template slot="feature-title">
-              HOW IT WORKS FOR YOUR STAFF
-            </template>
-            <template slot="feature-description">
-              <div class="mb-4">
-                Your staff simply utilizes the link we have provided for your
-                organization to learn more about our service, or if they are
-                ready to make a purchase submit a vehicle request. That’s it! We
-                take over from there.
-              </div>
-              <div class="mb-4">
-                We help your staff find the perfect vehicle they are searching
-                for, get them the best vehicle for the best price, handle all of
-                their neccessary paperwork, and have it delivered wherever they
-                want - all without any cost to them!
-              </div>
-            </template>
-          </Feature>
-          <hr class="my-16 border-gray-400" />
-          <Feature>
-            <template slot="feature-image"
-              ><img
-                src="~/assets/images/icons/save-money.png"
-                class="h-14 md:h-16"
-                alt=""
-            /></template>
-            <template slot="feature-title"> YOU EARN WHEN WE EARN </template>
-            <template slot="feature-description">
-              <div class="mb-4">
-                On top of setting up and giving access to our service to your
-                staff free of cost, we also make sure that your organization
-                financially benefits from our service. Anytime a member of your
-                staff purchases a vehicle through our service, you will recieve
-                a pay-out from us.
-                <span class="text-brand mx-1">
-                  That’s right, we are a free benefit for your organization that
-                  actually pays you!
-                </span>
-              </div>
-            </template>
-          </Feature>
-          <hr class="my-16 border-gray-400" />
-          <Feature>
-            <template slot="feature-image"
-              ><img
-                src="~/assets/images/icons/graduation-cap.png"
-                class="h-14 md:h-16"
-                alt=""
-            /></template>
-            <template slot="feature-title">
-              VEHICLE PURCHASING EDUCATION
-            </template>
-            <template slot="feature-description">
-              <div class="mb-4">
-                One of the passions that drives our business is a love for
-                educating and helping people not only getting the best deal
-                possible on a vehicle, but also making sure they are making
-                sound decisions and understand the process.
-              </div>
-              <div class="mb-4">
-                If you need additional resources or would like our help in
-                providing vehicle purchasing education for your staff we are
-                available. Whether that means attending a staff event, hosting a
-                zoom call, or just answering questions your staff has - we can
-                handle it.
-              </div>
-            </template>
-          </Feature>
-        </Features>
-      </div>
-    </section>
+    <transition name="fade">
+      <section v-if="sectionOneVisible" class="bg-white text-black py-16">
+        <div class="container mx-auto pt-10 pb-0 lg:py-10">
+          <Features>
+            <Feature>
+              <template slot="feature-image"
+                ><img
+                  src="~/assets/images/icons/building.png"
+                  class="h-14 md:h-16"
+                  alt=""
+              /></template>
+              <template slot="feature-title">
+                HOW IT WORKS FOR YOUR ORGANIZATION
+              </template>
+              <template slot="feature-description">
+                <div class="mb-4">
+                  Getting set-up with us is simple. We setup a personalized link
+                  for your staff to utilize if they are interested in our
+                  service. Depending on the size of your organization we may
+                  assign a dedicated Executive Concierge or a team to spefically
+                  handle your account.
+                </div>
+                <div class="mb-4">
+                  We then work with your HR department to provide any collateral
+                  or materials your organization deems neccessary. If you
+                  currently work with a company that handles a benefit portal
+                  for you, we will work with them to get your material
+                  implemented.
+                </div>
+              </template>
+            </Feature>
+            <hr class="my-16 border-gray-400" />
+            <Feature>
+              <template slot="feature-image"
+                ><img
+                  src="~/assets/images/icons/mobile.png"
+                  class="h-14 md:h-16"
+                  alt=""
+              /></template>
+              <template slot="feature-title">
+                HOW IT WORKS FOR YOUR STAFF
+              </template>
+              <template slot="feature-description">
+                <div class="mb-4">
+                  Your staff simply utilizes the link we have provided for your
+                  organization to learn more about our service, or if they are
+                  ready to make a purchase submit a vehicle request. That’s it!
+                  We take over from there.
+                </div>
+                <div class="mb-4">
+                  We help your staff find the perfect vehicle they are searching
+                  for, get them the best vehicle for the best price, handle all
+                  of their neccessary paperwork, and have it delivered wherever
+                  they want - all without any cost to them!
+                </div>
+              </template>
+            </Feature>
+            <hr class="my-16 border-gray-400" />
+            <Feature>
+              <template slot="feature-image"
+                ><img
+                  src="~/assets/images/icons/save-money.png"
+                  class="h-14 md:h-16"
+                  alt=""
+              /></template>
+              <template slot="feature-title"> YOU EARN WHEN WE EARN </template>
+              <template slot="feature-description">
+                <div class="mb-4">
+                  On top of setting up and giving access to our service to your
+                  staff free of cost, we also make sure that your organization
+                  financially benefits from our service. Anytime a member of
+                  your staff purchases a vehicle through our service, you will
+                  recieve a pay-out from us.
+                  <span class="text-brand mx-1">
+                    That’s right, we are a free benefit for your organization
+                    that actually pays you!
+                  </span>
+                </div>
+              </template>
+            </Feature>
+            <hr class="my-16 border-gray-400" />
+            <Feature>
+              <template slot="feature-image"
+                ><img
+                  src="~/assets/images/icons/graduation-cap.png"
+                  class="h-14 md:h-16"
+                  alt=""
+              /></template>
+              <template slot="feature-title">
+                VEHICLE PURCHASING EDUCATION
+              </template>
+              <template slot="feature-description">
+                <div class="mb-4">
+                  One of the passions that drives our business is a love for
+                  educating and helping people not only getting the best deal
+                  possible on a vehicle, but also making sure they are making
+                  sound decisions and understand the process.
+                </div>
+                <div class="mb-4">
+                  If you need additional resources or would like our help in
+                  providing vehicle purchasing education for your staff we are
+                  available. Whether that means attending a staff event, hosting
+                  a zoom call, or just answering questions your staff has - we
+                  can handle it.
+                </div>
+              </template>
+            </Feature>
+          </Features>
+        </div>
+      </section>
+    </transition>
     <section class="bg-black py-16">
       <div class="container mx-auto">
         <div class="flex flex-col content-center justify-center px-5 lg:px-0">

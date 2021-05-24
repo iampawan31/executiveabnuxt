@@ -45,7 +45,7 @@
         <div class="flex flex-col place-items-center justify-center mx-auto">
           <div class="uppercase text-brand pb-4">Learn more</div>
           <button
-            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
+            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark z-50"
             @click="sectionOneVisible = !sectionOneVisible"
           >
             <fa
@@ -56,93 +56,92 @@
         </div>
       </div>
     </section>
-    <section
-      hidden
-      :class="sectionOneVisible ? 'block' : 'hidden'"
-      class="bg-white text-black py-16 transition"
-    >
-      <Features>
-        <Feature>
-          <template slot="feature-image"
-            ><img
-              src="~/assets/images/icons/binoculars.png"
-              class="h-14 md:h-16"
-              alt=""
-          /></template>
-          <template slot="feature-title">
-            ACCESS TO MILLIONS OF VEHICLES
-          </template>
-          <template slot="feature-description">
-            <div class="mb-4">
-              Our database and account access with the manfucatorers allows us
-              to view real time inventory of millions of vehicles available for
-              direct purchase nationwide. The listings we have access to
-              includes vehicles you will not see listed online through popular
-              sites such as Autotrader, or on dealership websites.
-            </div>
-            <div class="mb-4">
-              When we locate a vehicle that meets both your specifications and
-              our condition standards we send you the vehicle spec sheet which
-              includes pictures of the vehicle, all included equipment and
-              packages, and everything else you need to decide if it’s the
-              perfect car for you.
-            </div>
-          </template>
-        </Feature>
-        <hr class="my-16 border-gray-400" />
-        <Feature>
-          <template slot="feature-image"
-            ><img
-              src="~/assets/images/icons/dollar-sign.png"
-              class="h-14 md:h-16"
-              alt=""
-          /></template>
-          <template slot="feature-title">
-            HOW OUR SERVICE IS COST FREE
-          </template>
-          <template slot="feature-description">
-            <div class="mb-4">
-              Since we do not have a traditional buy-sell business model, as
-              found in franchise dealerships and online dealerships, this means
-              we don’t have any of the high costs of doing business that come
-              with them. This allows us to be able to provide our service for
-              free.
-            </div>
-            <div class="mb-4">
-              When you buy a vehicle from us we are not marking up the vehicle
-              at all, but rather giving you the manfucatorer direct pricing. The
-              manufacturer in turn pays us for helping to facilitate the
-              transaction.
-            </div>
-          </template>
-        </Feature>
-        <hr class="my-16 border-gray-400" />
-        <Feature>
-          <template slot="feature-image"
-            ><img
-              src="~/assets/images/icons/trophy.png"
-              class="h-14 md:h-16"
-              alt=""
-          /></template>
-          <template slot="feature-title">
-            HOW WE GET YOU THE BEST PRICE
-          </template>
-          <template slot="feature-description">
-            <div class="mb-4">
-              Since we are not in the business of flipping cars for profit, but
-              rather helping people find the vehicle they want, the pricing we
-              get from the manfucatorer is the price that you get.
-            </div>
-            <div class="mb-4">
-              This haggle-free pricing beats the dealerships and buying programs
-              like Truecar because instead of you negotiating your way down from
-              MSRP to hopefully land near invoice, we are already getting
-              invoice pricing (or in some cases slightly above) for you.
-            </div>
-          </template>
-        </Feature>
-      </Features>
-    </section>
+    <transition name="fade">
+      <section v-if="sectionOneVisible" class="bg-white text-black py-16">
+        <Features>
+          <Feature>
+            <template slot="feature-image"
+              ><img
+                src="~/assets/images/icons/binoculars.png"
+                class="h-14 md:h-16"
+                alt=""
+            /></template>
+            <template slot="feature-title">
+              ACCESS TO MILLIONS OF VEHICLES
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                Our database and account access with the manfucatorers allows us
+                to view real time inventory of millions of vehicles available
+                for direct purchase nationwide. The listings we have access to
+                includes vehicles you will not see listed online through popular
+                sites such as Autotrader, or on dealership websites.
+              </div>
+              <div class="mb-4">
+                When we locate a vehicle that meets both your specifications and
+                our condition standards we send you the vehicle spec sheet which
+                includes pictures of the vehicle, all included equipment and
+                packages, and everything else you need to decide if it’s the
+                perfect car for you.
+              </div>
+            </template>
+          </Feature>
+          <hr class="my-16 border-gray-400" />
+          <Feature>
+            <template slot="feature-image"
+              ><img
+                src="~/assets/images/icons/dollar-sign.png"
+                class="h-14 md:h-16"
+                alt=""
+            /></template>
+            <template slot="feature-title">
+              HOW OUR SERVICE IS COST FREE
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                Since we do not have a traditional buy-sell business model, as
+                found in franchise dealerships and online dealerships, this
+                means we don’t have any of the high costs of doing business that
+                come with them. This allows us to be able to provide our service
+                for free.
+              </div>
+              <div class="mb-4">
+                When you buy a vehicle from us we are not marking up the vehicle
+                at all, but rather giving you the manfucatorer direct pricing.
+                The manufacturer in turn pays us for helping to facilitate the
+                transaction.
+              </div>
+            </template>
+          </Feature>
+          <hr class="my-16 border-gray-400" />
+          <Feature>
+            <template slot="feature-image"
+              ><img
+                src="~/assets/images/icons/trophy.png"
+                class="h-14 md:h-16"
+                alt=""
+            /></template>
+            <template slot="feature-title">
+              HOW WE GET YOU THE BEST PRICE
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                Since we are not in the business of flipping cars for profit,
+                but rather helping people find the vehicle they want, the
+                pricing we get from the manfucatorer is the price that you get.
+              </div>
+              <div class="mb-4">
+                This haggle-free pricing beats the dealerships and buying
+                programs like Truecar because instead of you negotiating your
+                way down from MSRP to hopefully land near invoice, we are
+                already getting invoice pricing (or in some cases slightly
+                above) for you.
+              </div>
+            </template>
+          </Feature>
+        </Features>
+      </section>
+    </transition>
     <section class="bg-black py-10">
       <div class="container mx-auto px-4 lg:px-10 xl:px-0">
         <div class="flex flex-col lg:flex-row">
@@ -170,7 +169,7 @@
         <div class="flex flex-col place-items-center justify-center mx-auto">
           <div class="uppercase text-brand pb-4">Learn more</div>
           <button
-            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
+            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark z-50"
             @click="sectionTwoVisible = !sectionTwoVisible"
           >
             <fa
@@ -181,88 +180,92 @@
         </div>
       </div>
     </section>
-    <section
-      :class="sectionTwoVisible ? 'block' : 'hidden'"
-      class="bg-white text-black py-16"
-    >
-      <Features>
-        <Feature>
-          <template slot="feature-image"
-            ><img
-              src="~/assets/images/icons/contract-sign.png"
-              class="h-14 md:h-16"
-              alt=""
-          /></template>
-          <template slot="feature-title"> LET US HANDLE THE DETAILS </template>
-          <template slot="feature-description">
-            <div class="mb-4">
-              We take care of all the necessary paperwork to help your purchase
-              finalize as soon as possible. This includes all DMV paperwork such
-              as title, transfer of ownership, and vehicle registration.
-            </div>
-            <div class="mb-4">
-              If you are interested in any after purchase products such as
-              extended warranties we are able to help facilitate these
-              transactions directly with manufacturors or trusted vendors.
-            </div>
-          </template>
-        </Feature>
-        <hr class="my-16 border-gray-400" />
-        <Feature>
-          <template slot="feature-image"
-            ><img
-              src="~/assets/images/icons/cash-contract.png"
-              class="h-14 md:h-16"
-              alt=""
-          /></template>
-          <template slot="feature-title"> PAY WITH CASH OR FINANCE </template>
-          <template slot="feature-description">
-            <div class="mb-4">
-              Choose from paying with cash via bank account transfer, or use any
-              lender of your choice to complete the sale. If you would like to
-              use the manufacturer to finance your purchase we are able to
-              arrange financing directly with them (if qualified) so that you
-              may take advantage of all the special financing terms being
-              offered by the manufacturers (Example: 0% APR - 60 months).
-            </div>
-            <div class="mb-4">
-              We do not, and never will, offer in house financing options as we
-              do not want to conduct business in the way of a dealership. Since
-              dealerships ussually have “preferred lenders” they work with,
-              there is an incentive for them to push clients towards certain
-              lenders or loan types which will earn them more incentive pay.
-            </div>
-            <div class="mb-4">
-              If you need help finding a trusted lender we will gladly point you
-              in the right direction of lenders our past clients have worked
-              with that offer competitive rates, however we do not have any
-              affiliation with them.
-            </div>
-          </template>
-        </Feature>
-        <hr class="my-16 border-gray-400" />
-        <Feature>
-          <template slot="feature-image"
-            ><img
-              src="~/assets/images/icons/trade-in.png"
-              class="h-14 md:h-16"
-              alt=""
-          /></template>
-          <template slot="feature-title"> HAVE A TRADE-IN? </template>
-          <template slot="feature-description">
-            <div class="mb-4">
-              If you have a vehicle you are looking to trade-in during your
-              purchase we will assist in accomodating your trade-in. For certain
-              scenarios, we also have the ability to sell your car for you via
-              consignment to help you earn top dollar for your vehicle. In the
-              highly unlikely scenario where we are unable to help with a
-              trade-in, we will make sure all of the best available options are
-              presented to you.
-            </div>
-          </template>
-        </Feature>
-      </Features>
-    </section>
+    <transition name="fade">
+      <section v-if="sectionTwoVisible" class="bg-white text-black py-16">
+        <Features>
+          <Feature>
+            <template slot="feature-image"
+              ><img
+                src="~/assets/images/icons/contract-sign.png"
+                class="h-14 md:h-16"
+                alt=""
+            /></template>
+            <template slot="feature-title">
+              LET US HANDLE THE DETAILS
+            </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                We take care of all the necessary paperwork to help your
+                purchase finalize as soon as possible. This includes all DMV
+                paperwork such as title, transfer of ownership, and vehicle
+                registration.
+              </div>
+              <div class="mb-4">
+                If you are interested in any after purchase products such as
+                extended warranties we are able to help facilitate these
+                transactions directly with manufacturors or trusted vendors.
+              </div>
+            </template>
+          </Feature>
+          <hr class="my-16 border-gray-400" />
+          <Feature>
+            <template slot="feature-image"
+              ><img
+                src="~/assets/images/icons/cash-contract.png"
+                class="h-14 md:h-16"
+                alt=""
+            /></template>
+            <template slot="feature-title"> PAY WITH CASH OR FINANCE </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                Choose from paying with cash via bank account transfer, or use
+                any lender of your choice to complete the sale. If you would
+                like to use the manufacturer to finance your purchase we are
+                able to arrange financing directly with them (if qualified) so
+                that you may take advantage of all the special financing terms
+                being offered by the manufacturers (Example: 0% APR - 60
+                months).
+              </div>
+              <div class="mb-4">
+                We do not, and never will, offer in house financing options as
+                we do not want to conduct business in the way of a dealership.
+                Since dealerships ussually have “preferred lenders” they work
+                with, there is an incentive for them to push clients towards
+                certain lenders or loan types which will earn them more
+                incentive pay.
+              </div>
+              <div class="mb-4">
+                If you need help finding a trusted lender we will gladly point
+                you in the right direction of lenders our past clients have
+                worked with that offer competitive rates, however we do not have
+                any affiliation with them.
+              </div>
+            </template>
+          </Feature>
+          <hr class="my-16 border-gray-400" />
+          <Feature>
+            <template slot="feature-image"
+              ><img
+                src="~/assets/images/icons/trade-in.png"
+                class="h-14 md:h-16"
+                alt=""
+            /></template>
+            <template slot="feature-title"> HAVE A TRADE-IN? </template>
+            <template slot="feature-description">
+              <div class="mb-4">
+                If you have a vehicle you are looking to trade-in during your
+                purchase we will assist in accomodating your trade-in. For
+                certain scenarios, we also have the ability to sell your car for
+                you via consignment to help you earn top dollar for your
+                vehicle. In the highly unlikely scenario where we are unable to
+                help with a trade-in, we will make sure all of the best
+                available options are presented to you.
+              </div>
+            </template>
+          </Feature>
+        </Features>
+      </section>
+    </transition>
     <section class="bg-black py-16">
       <div class="container mx-auto px-4">
         <div class="flex flex-col justify-center">

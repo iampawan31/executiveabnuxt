@@ -37,7 +37,7 @@
         <div class="flex flex-col place-items-center justify-center mx-auto">
           <div class="uppercase text-brand mb-4">Learn more</div>
           <button
-            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark"
+            class="rounded-full h-12 w-12 flex items-center focus:outline-none justify-center -mb-5 bg-brand-gray-dark z-50"
             @click="sectionOneVisible = !sectionOneVisible"
           >
             <fa
@@ -48,89 +48,88 @@
         </div>
       </div>
     </section>
-    <section
-      :class="sectionOneVisible ? 'block' : 'hidden'"
-      class="bg-white text-black py-16"
-    >
-      <div class="container mx-auto py-10 pb-0 lg:py-10">
-        <Features>
-          <Feature>
-            <template slot="feature-image"
-              ><img
-                src="~/assets/images/icons/clock.png"
-                class="h-14 md:h-16"
-                alt=""
-            /></template>
-            <template slot="feature-title">
-              SAVE YOUR TIME FOR WHAT MATTERS MOST
-            </template>
-            <template slot="feature-description">
-              <div class="mb-4">
-                We understand first hand the time-sacrifice and dedication that
-                is required to having a service career, and how little personal
-                time is often left for you. That is why our Military & Community
-                Program was specifically designed to provide you with expedited
-                personal service that saves you time and eliminates the stress
-                of traditional car buying.
-              </div>
-              <div class="mb-4">
-                We handle finding and getting you the best deal on vehicle you
-                want, taking care of all the paperwork, and having it delivered
-                wherever you want it. That way you can spend your free time
-                doing what you want, and not driving around searching for cars
-                and haggling with dealerships.
-              </div>
-            </template>
-          </Feature>
-          <hr class="my-16 border-gray-400" />
-          <Feature>
-            <template slot="feature-image"
-              ><img
-                src="~/assets/images/icons/visa-alternate.png"
-                class="h-14 md:h-16"
-                alt=""
-            /></template>
-            <template slot="feature-title">
-              A THANK YOU FOR YOUR SERVICE
-            </template>
-            <template slot="feature-description">
-              <div class="mb-4">
-                As an extra thank you for your service we provide you with a
-                <span class="text-yellow-500">$200 Visa gift card</span> when
-                you allow us to help you purchase your perfect car.
-              </div>
-              <div class="mb-4">
-                To qualify please select your line of service when filling out
-                your vehicle request submission or tell your Executive
-                Concierge. You will be required to provide some sort of proof of
-                occupation.
-              </div>
-            </template>
-          </Feature>
-          <hr class="my-16 border-gray-400" />
-          <Feature>
-            <template slot="feature-image"
-              ><img
-                src="~/assets/images/icons/thumbs-up.png"
-                class="h-14 md:h-16"
-                alt=""
-            /></template>
-            <template slot="feature-title">
-              REASONS TO PARTNER WITH US
-            </template>
-            <template slot="feature-description">
-              <div class="mb-4">
-                Through a partnership with EAB your clients will gain access to
-                our cost-free auto concierge service and when we earn, you earn.
-                Additionally depending on your line of work, you could become
-                our preferred partner for service or parts within your industry
-                segment.
-              </div>
-            </template>
-          </Feature>
-        </Features>
-      </div>
-    </section>
+    <transition name="fade">
+      <section v-if="sectionOneVisible" class="bg-white text-black py-16">
+        <div class="container mx-auto py-10 pb-0 lg:py-10">
+          <Features>
+            <Feature>
+              <template slot="feature-image"
+                ><img
+                  src="~/assets/images/icons/clock.png"
+                  class="h-14 md:h-16"
+                  alt=""
+              /></template>
+              <template slot="feature-title">
+                SAVE YOUR TIME FOR WHAT MATTERS MOST
+              </template>
+              <template slot="feature-description">
+                <div class="mb-4">
+                  We understand first hand the time-sacrifice and dedication
+                  that is required to having a service career, and how little
+                  personal time is often left for you. That is why our Military
+                  & Community Program was specifically designed to provide you
+                  with expedited personal service that saves you time and
+                  eliminates the stress of traditional car buying.
+                </div>
+                <div class="mb-4">
+                  We handle finding and getting you the best deal on vehicle you
+                  want, taking care of all the paperwork, and having it
+                  delivered wherever you want it. That way you can spend your
+                  free time doing what you want, and not driving around
+                  searching for cars and haggling with dealerships.
+                </div>
+              </template>
+            </Feature>
+            <hr class="my-16 border-gray-400" />
+            <Feature>
+              <template slot="feature-image"
+                ><img
+                  src="~/assets/images/icons/visa-alternate.png"
+                  class="h-14 md:h-16"
+                  alt=""
+              /></template>
+              <template slot="feature-title">
+                A THANK YOU FOR YOUR SERVICE
+              </template>
+              <template slot="feature-description">
+                <div class="mb-4">
+                  As an extra thank you for your service we provide you with a
+                  <span class="text-yellow-500">$200 Visa gift card</span> when
+                  you allow us to help you purchase your perfect car.
+                </div>
+                <div class="mb-4">
+                  To qualify please select your line of service when filling out
+                  your vehicle request submission or tell your Executive
+                  Concierge. You will be required to provide some sort of proof
+                  of occupation.
+                </div>
+              </template>
+            </Feature>
+            <hr class="my-16 border-gray-400" />
+            <Feature>
+              <template slot="feature-image"
+                ><img
+                  src="~/assets/images/icons/thumbs-up.png"
+                  class="h-14 md:h-16"
+                  alt=""
+              /></template>
+              <template slot="feature-title">
+                REASONS TO PARTNER WITH US
+              </template>
+              <template slot="feature-description">
+                <div class="mb-4">
+                  Through a partnership with EAB your clients will gain access
+                  to our cost-free auto concierge service and when we earn, you
+                  earn. Additionally depending on your line of work, you could
+                  become our preferred partner for service or parts within your
+                  industry segment.
+                </div>
+              </template>
+            </Feature>
+          </Features>
+        </div>
+      </section>
+    </transition>
     <section class="bg-brand-gray-alternate text-white py-16">
       <CallToAction
         title="Ready to get started?"
