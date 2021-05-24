@@ -2,7 +2,7 @@
   <transition name="fade">
     <div
       v-if="showing"
-      class="fixed inset-0 w-full h-screen flex items-center justify-center bg-black bg-opacity-30 z-50"
+      class="fixed inset-0 w-full h-screen flex items-center justify-center bg-black bg-opacity-60 z-50"
     >
       <div class="w-full relative max-w-4xl shadow-lg rounded-lg p-2">
         <button
@@ -12,7 +12,7 @@
         >
           X
         </button>
-        <video :autoPlay="showing ? true : false" controls>
+        <video :autoPlay="showing" controls>
           <source src="~/assets/videos/section_video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

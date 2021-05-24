@@ -484,8 +484,8 @@ export default {
       this.toggleVideoPlayback()
     },
     closeSectionVideo() {
-      this.toggleVideoPlayback()
       this.sectionVideoPlaying = false
+      this.toggleVideoPlayback()
     },
   },
 }

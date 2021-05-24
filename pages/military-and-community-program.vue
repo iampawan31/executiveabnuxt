@@ -49,7 +49,7 @@
       </div>
     </section>
     <transition name="fade">
-      <section v-if="sectionOneVisible" class="bg-white text-black py-16">
+      <section v-show="sectionOneVisible" class="bg-white text-black py-16">
         <div class="container mx-auto py-10 pb-0 lg:py-10">
           <Features>
             <Feature>

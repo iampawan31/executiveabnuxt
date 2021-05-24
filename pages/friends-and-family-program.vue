@@ -85,7 +85,7 @@
       </div>
     </section>
     <transition name="fade">
-      <section v-if="sectionOneVisible" class="bg-white text-black">
+      <section v-show="sectionOneVisible" class="bg-white text-black">
         <div class="container mx-auto pt-16 pb-6 lg:py-10">
           <Features>
             <Feature title-space-value="lg:space-x-32">

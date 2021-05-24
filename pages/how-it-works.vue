@@ -57,7 +57,7 @@
       </div>
     </section>
     <transition name="fade">
-      <section v-if="sectionOneVisible" class="bg-white text-black py-16">
+      <section v-show="sectionOneVisible" class="bg-white text-black py-16">
         <Features>
           <Feature>
             <template slot="feature-image"
@@ -181,7 +181,7 @@
       </div>
     </section>
     <transition name="fade">
-      <section v-if="sectionTwoVisible" class="bg-white text-black py-16">
+      <section v-show="sectionTwoVisible" class="bg-white text-black py-16">
         <Features>
           <Feature>
             <template slot="feature-image"
