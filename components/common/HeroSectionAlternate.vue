@@ -24,7 +24,7 @@ export default {
   name: 'HeroSectionAlternate',
   props: {
     mainHeaderImage: {
-      type: String,
+      type: Object,
       default: null,
     },
   },

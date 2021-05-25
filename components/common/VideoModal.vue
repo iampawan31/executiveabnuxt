@@ -12,7 +12,7 @@
         >
           X
         </button>
-        <video :autoPlay="showing" controls>
+        <video autoplay playsinline controls>
           <source src="~/assets/videos/section_video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -28,6 +28,9 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  mounted() {
+    // this.$refs.modalVideo.play()
   },
   methods: {
     close() {

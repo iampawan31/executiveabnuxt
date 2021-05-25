@@ -38,7 +38,8 @@
       </div>
       <video
         ref="backgroundVideo"
-        :autoPlay="videoPlaying ? true : false"
+        autoplay
+        playsinline
         loop
         muted
         :poster="require('~/assets/images/home-banner-poster-image.jpeg')"
@@ -126,10 +127,7 @@
         >
           <transition name="fade">
             <div
-              v-show="
-                (initialSlide && breakpoint !== '320') ||
-                (initialSlide && breakpoint !== '640')
-              "
+              v-show="initialSlide || screenWidth < 768"
               class="flex max-w-full transition sm:container md:max-w-xs lg:max-w-xl xl:max-w-2xl xl:pr-40 2xl:max-w-xl md:pr-20 lg:pr-0 sm:mx-auto flex-col p-4 xl:py-0 xl:px-20 content-center justify-center"
             >
               <div class="uppercase text-lg sm:text-xl text-brand mb-5">
@@ -152,15 +150,13 @@
           <div class="relative">
             <transition name="fade">
               <div
-                v-show="
-                  !initialSlide && breakpoint !== '320' && breakpoint !== '640'
-                "
+                v-show="!initialSlide && screenWidth > 768"
                 class="swiper-button-prev bg-brand-gray-dark"
               ></div>
             </transition>
             <Slides />
             <div
-              v-show="breakpoint !== '320' && breakpoint !== '640'"
+              v-show="screenWidth > 768"
               class="swiper-button-next bg-brand-gray-dark"
             ></div>
           </div>
@@ -467,11 +463,19 @@ export default {
     faInstagram() {
       return faInstagram
     },
+    screenWidth() {
+      if (process.client) {
+        return screen.width
+      } else {
+        return 0
+      }
+    },
   },
   mounted() {
     this.videoPlaying = true
     const videoBg = this.$refs.backgroundVideo
     videoBg.play()
+    videoBg.muted = true
   },
   methods: {
     toggleVideoPlayback() {
