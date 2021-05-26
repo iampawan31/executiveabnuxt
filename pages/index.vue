@@ -41,6 +41,7 @@
         autoplay
         playsinline
         loop
+        preload="metadata"
         muted
         :poster="require('~/assets/images/home-banner-poster-image.jpeg')"
         class="absolute z-10 w-auto min-w-full min-h-full max-w-6xl md:max-w-none -left-96 lg:max-w-none lg:left-0"

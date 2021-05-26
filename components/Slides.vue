@@ -16,7 +16,11 @@
           class="flex flex-col text-black pt-10 bg-white rounded-lg shadow-lg"
         >
           <div class="flex mx-auto content-center px-4">
-            <img class="w-48 lg:w-40" :src="slide.image" :alt="slide.title" />
+            <img
+              class="w-48 h-36 lg:h-32 lg:w-40"
+              :src="slide.image"
+              :alt="slide.title"
+            />
           </div>
           <div
             :class="slide.gradient"
