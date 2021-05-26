@@ -1,7 +1,7 @@
 <template>
   <div
     :class="mainHeaderImageClasses"
-    class="sm:max-h-96 sm:py-40 md:py-60 xl:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-cover flex bg-norepeat"
+    class="sm:max-h-96 sm:py-40 md:py-60 xl:py-80 md:h-screen 2xl:max-h-96 2xl:py-96 hero-image bg-cover optimize-bg-image flex bg-norepeat"
     :style="mainHeaderImage"
   >
     <div class="relative container mx-auto p-4 flex items-center z-10">

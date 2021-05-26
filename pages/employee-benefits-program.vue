@@ -20,7 +20,10 @@
         </div>
       </HeroSection>
     </section>
-    <section class="bg-black lg:pt-16" :style="secondSectionBgImage">
+    <section
+      class="bg-black lg:pt-16 optimize-bg-image bg-cover"
+      :style="secondSectionBgImage"
+    >
       <div
         class="flex flex-col md:place-items-center md:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 md:max-w-3xl lg:max-w-4xl"
       >
@@ -312,7 +315,7 @@ export default {
 }
 
 .benefitOneImage:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('assets/images/employee-benefits-program/increase-employee-retention.jpeg');
 }
 
@@ -322,7 +325,7 @@ export default {
 }
 
 .benefitTwoImage:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('assets/images/employee-benefits-program/increased-productivity-and-engagement.jpeg');
 }
 
@@ -332,7 +335,7 @@ export default {
 }
 
 .benefitThreeImage:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('assets/images/employee-benefits-program/attract-great-talent.jpeg');
 }
 </style>

@@ -52,7 +52,10 @@
         </div>
       </HeroSection>
     </section>
-    <section class="bg-black pt-10 lg:pt-16" :style="secondSectionBgImage">
+    <section
+      class="bg-black pt-10 lg:pt-16 optimize-bg-image bg-cover"
+      :style="secondSectionBgImage"
+    >
       <div
         class="flex flex-col sm:place-items-center sm:justify-center sm:mx-auto px-4 sm:px-10 lg:px-0 max-w-4xl"
       >

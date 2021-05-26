@@ -126,7 +126,10 @@
         </div>
       </div>
     </section>
-    <section class="py-16 bg-no-repeat" :style="secondSectionBackgroundImage">
+    <section
+      class="py-16 bg-no-repeat optimize-bg-image bg-cover"
+      :style="secondSectionBackgroundImage"
+    >
       <div class="mb-6">
         <div
           class="mx-auto container px-4 sm:px-8 2xl:px-16 text-sm sm:text-lg"

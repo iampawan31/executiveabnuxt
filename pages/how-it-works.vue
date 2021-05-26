@@ -317,7 +317,7 @@
         />
       </div>
       <div
-        class="transition w-full h-full bg-cover bg-opacity-90 lg:hidden bg-no-repeat"
+        class="transition w-full h-full bg-cover optimize-bg-image bg-opacity-90 lg:hidden bg-no-repeat"
         :style="howItWorksInspectionBgImage"
       >
         <div class="px-4 sm:px-0 md:px-4 py-8 mb-8 sm:container sm:mx-auto">

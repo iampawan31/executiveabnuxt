@@ -20,7 +20,7 @@
       <div class="shadow-sm transition-opacity">
         <div class="md:grid-cols-2 grid">
           <div
-            class="flex flex-wrap flex-column content-center bg-fixed p-5"
+            class="flex flex-wrap flex-column content-center bg-fixed p-5 optimize-bg-image"
             :style="{
               backgroundImage: `url(${
                 homepageTab ? homepageTab.imageURL : null

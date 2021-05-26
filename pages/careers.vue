@@ -8,7 +8,7 @@
       >
     </HeroSectionAlternate>
     <section
-      class="bg-white text-black py-10 sm:py-24"
+      class="bg-white text-black py-10 sm:py-24 optimize-bg-image bg-cover"
       :style="bgSecondSection"
     >
       <div class="container mx-auto">

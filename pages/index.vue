@@ -59,7 +59,7 @@
           class="grid sm:grid-cols-1 md:grid-cols-2 md:gap-4 gap-14 lg:gap-20 2xl:gap-10 2xl:mx-10"
         >
           <div
-            class="py-14 px-4 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
+            class="py-14 px-4 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover optimize-bg-image bg-center"
             :style="firstSectionBackgroundImage1"
           >
             <h1
@@ -81,7 +81,7 @@
             </button>
           </div>
           <div
-            class="py-14 px-4 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover bg-center"
+            class="py-14 px-4 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover optimize-bg-image bg-center"
             :style="firstSectionBackgroundImage2"
           >
             <h1
@@ -116,13 +116,7 @@
     <section class="bg-black bg-blend-darken">
       <div class="flex flex-col md:flex-row relative">
         <div
-          :class="
-            (!initialSlide && breakpoint !== '320') ||
-            (!initialSlide && breakpoint !== '640')
-              ? 'w-full'
-              : null
-          "
-          class="flex max-w-lg sm:max-w-full md:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl h-full sm:py-10 bg-no-repeat bg-contain sm:bg-cover md:absolute"
+          class="flex w-full max-w-lg sm:max-w-full md:max-w-xs xl:max-w-xl 2xl:max-w-xl h-full sm:py-10 bg-no-repeat bg-contain optimize-bg-image sm:bg-cover md:absolute"
           :style="sliderBackground"
         >
           <transition name="fade">
@@ -146,7 +140,7 @@
             </div>
           </transition>
         </div>
-        <div class="flex mx-auto sm:px-0 py-10">
+        <div class="flex mx-auto md::mx-0 sm:px-0 py-10">
           <div class="relative">
             <transition name="fade">
               <div
@@ -178,7 +172,7 @@
                     class="flex flex-col h-full lg:flex-row xl:max-w-6xl xl:mx-auto"
                   >
                     <div
-                      class="flex max-w-full h-36 sm:h-32 lg:h-auto lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover py-7 lg:py-10 px-5 lg:p-5 rounded-tr-md lg:rounded-tr-none rounded-tl-md lg:rounded-bl-md"
+                      class="flex max-w-full h-36 sm:h-32 lg:h-60 lg:max-w-sm lg:w-80 2xl:max-w-sm flex-wrap flex-column content-center bg-cover optimize-bg-image py-7 lg:py-10 px-5 lg:p-5 rounded-tr-md lg:rounded-tr-none rounded-tl-md lg:rounded-bl-md"
                       :style="{
                         backgroundImage: `url(${homepageTab.imageURL})`,
                       }"
@@ -196,7 +190,7 @@
                       class="flex flex-1 bg-white text-gray-500 flex-wrap content-center rounded-br-md rounded-bl-md lg:rounded-bl-none lg:rounded-tr-md xl:px-10"
                     >
                       <div
-                        class="flex flex-col h-96 sm:h-72 lg:h-60 lg:flex-row lg:gap-5 2xl:flex-row p-5"
+                        class="flex flex-col h-96 sm:h-72 lg:h-60 lg:flex-row lg:gap-5 2xl:flex-row p-5 flex-wrap content-center"
                       >
                         <div class="flex lg:flex-1">
                           <ul class="tab-section list-outside">
@@ -274,7 +268,7 @@
                       class="w-full h-auto"
                     >
                       <div
-                        class="bg-cover bg-center shadow-md w-full min-h-full"
+                        class="bg-cover bg-center optimize-bg-image shadow-md w-full min-h-full"
                         :style="{
                           backgroundImage: `url('${feed.media_url}')`,
                         }"
@@ -393,6 +387,7 @@ export default {
   },
   data() {
     return {
+      screenWidth: 0,
       videoPlaying: true,
       sectionVideoPlaying: false,
       swiperOptions: {
@@ -463,21 +458,22 @@ export default {
     faInstagram() {
       return faInstagram
     },
-    screenWidth() {
-      if (process.client) {
-        return screen.width
-      } else {
-        return 0
-      }
-    },
   },
   mounted() {
+    this.screenWidth = screen.width
+    window.addEventListener('resize', this.onResize)
     this.videoPlaying = true
     const videoBg = this.$refs.backgroundVideo
     videoBg.play()
     videoBg.muted = true
   },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
+  },
   methods: {
+    onResize() {
+      this.screenWidth = window.innerWidth
+    },
     toggleVideoPlayback() {
       const videoBg = this.$refs.backgroundVideo
       if (this.videoPlaying) {

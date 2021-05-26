@@ -2,7 +2,7 @@
   <client-only>
     <swiper
       ref="carousel"
-      class="max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-screen-xl 2xl:max-w-screen-2xl 2xl:pr-20 h-96 md:h-96 lg:h-96 xl:h-96 min-h-full"
+      class="w-screen max-w-xs md:max-w-none xl:max-w-screen-2xl h-96 md:h-96 lg:h-96 xl:h-96 min-h-full"
       :options="swiperOptions"
       @ready="onSwiperRedied"
       @slide-change-transition-start="onSwiperSlideChangeTransitionStart"
@@ -53,7 +53,7 @@ export default {
             },
             centeredSlides: true,
             slidesPerView: 4,
-            spaceBetween: 60,
+            spaceBetween: 80,
           },
           1280: {
             navigation: {
@@ -62,7 +62,7 @@ export default {
             },
             centeredSlides: true,
             slidesPerView: 4,
-            spaceBetween: 50,
+            spaceBetween: 60,
           },
           1024: {
             navigation: {

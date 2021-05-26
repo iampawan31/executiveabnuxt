@@ -12,7 +12,7 @@
         >
           X
         </button>
-        <video autoplay playsinline controls>
+        <video autoplay playsinline controls preload="metadata">
           <source src="~/assets/videos/section_video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

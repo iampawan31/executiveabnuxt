@@ -1,5 +1,8 @@
 <template>
-  <section :style="mainHeaderImage" class="py-16 sm:py-24">
+  <section
+    :style="mainHeaderImage"
+    class="py-16 sm:py-24 optimize-bg-image bg-cover"
+  >
     <div class="container mx-auto px-4 sm:px-0 md:px-4 xl:px-0">
       <div
         class="flex flex-col sm:flex-row px-4 sm:px-0 lg:px-0 xl:justify-center content-center sm:space-x-6 max-w-5xl"
