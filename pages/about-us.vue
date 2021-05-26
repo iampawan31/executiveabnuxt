@@ -45,7 +45,7 @@
               <div class="sm:mx-auto items-center flex flex-grow">
                 <div class="filter drop-shadow-max-white">
                   <div
-                    class="flex text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-50 to-gray-300 text-4xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
+                    class="flex text-gray-200 text-4xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
                   >
                     <client-only>
                       <number
@@ -71,7 +71,7 @@
               <div class="sm:mx-auto items-center flex flex-grow">
                 <div class="filter drop-shadow-max-white">
                   <div
-                    class="flex text-4xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-50 to-gray-300 lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
+                    class="flex text-4xl sm:text-3xl text-gray-200 lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
                   >
                     <div v-show="showSecondTab">$</div>
                     <client-only>
@@ -98,7 +98,7 @@
               <div class="sm:mx-auto items-center flex flex-grow">
                 <div class="filter drop-shadow-max-white">
                   <div
-                    class="flex text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-50 to-gray-300 text-4xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
+                    class="flex text-gray-200 text-4xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold mb-3"
                   >
                     <div v-show="showThirdTab">$</div>
                     <client-only>

@@ -19,7 +19,7 @@ export default {
   name: 'HeroSection',
   props: {
     mainHeaderImage: {
-      type: String,
+      type: Object,
       default: null,
     },
     mainHeaderImageClasses: {
