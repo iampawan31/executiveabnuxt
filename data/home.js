@@ -8,7 +8,7 @@ export const firstSlider = [
   },
   {
     title: 'Select & Approve',
-    image: require('assets/images/home/first-slide-two.png'),
+    image: require('assets/images/home/first-slide-two.jpg'),
     gradient: 'bg-gradient-to-r from-blue-400 to-green-400',
     description:
       'We research and send you the best vehicles that fit your criteria for you to choose from.',
