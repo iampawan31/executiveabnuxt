@@ -464,9 +464,6 @@ export default {
     this.screenWidth = screen.width
     window.addEventListener('resize', this.onResize)
     this.videoPlaying = true
-    const videoBg = this.$refs.backgroundVideo
-    videoBg.play()
-    videoBg.muted = true
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)
