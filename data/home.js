@@ -2,28 +2,30 @@ export const firstSlider = [
   {
     title: 'Request Your Vehicle',
     image: require('assets/images/home/first-slide-one.png'),
-    gradient: 'bg-gradient-to-r from-blue-600 to-blue-400',
+    gradient: 'bg-gradient-to-r from-brand-blue-dark to-brand-blue-light',
     description:
       'Never settle for what dealers have in stock. We locate the exact vehicle you want directly through the manufacturers.',
   },
   {
     title: 'Select & Approve',
     image: require('assets/images/home/first-slide-two.jpg'),
-    gradient: 'bg-gradient-to-r from-blue-400 to-green-400',
+    gradient:
+      'bg-gradient-to-r from-brand-turquoise-dark to-brand-turquoise-light',
     description:
       'We research and send you the best vehicles that fit your criteria for you to choose from.',
   },
   {
     title: 'Digital Paperwork',
     image: require('assets/images/home/first-slide-three.png'),
-    gradient: 'bg-gradient-to-r from-green-400 to-green-300',
+    gradient: 'bg-gradient-to-r from-brand-green-dark to-brand-green-light',
     description:
       'All required documents are prepared and securely sent to you for e-signature.',
   },
   {
     title: 'Vehicle Delivery',
     image: require('assets/images/home/first-slide-four.png'),
-    gradient: 'bg-gradient-to-r from-green-600 to-green-400',
+    gradient:
+      'bg-gradient-to-r from-brand-military-green-dark to-brand-military-green-light',
     description:
       'Your car is fully prepped, sanitized and delivered to you. If you don’t like the vehicle when you receive it we offer your money back - guaranteed.',
   },
