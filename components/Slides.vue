@@ -6,6 +6,8 @@
       :options="swiperOptions"
       @ready="onSwiperRedied"
       @slide-change-transition-start="onSwiperSlideChangeTransitionStart"
+      @slide-next-transition-end="(swiper) => sliderNextClicked(swiper)"
+      @slide-prev-transition-end="(swiper) => sliderPrevClicked(swiper)"
     >
       <swiper-slide
         v-for="(slide, index) in firstSlider"
@@ -65,8 +67,8 @@ export default {
               prevEl: '.swiper-button-prev',
             },
             centeredSlides: true,
-            slidesPerView: 4,
-            spaceBetween: 60,
+            slidesPerView: 5,
+            spaceBetween: 30,
           },
           1024: {
             navigation: {
@@ -113,6 +115,12 @@ export default {
       updateInitialSlide: 'updateInitialSlide',
       updateBreakpoint: 'updateBreakpoint',
     }),
+    sliderNextClicked(swiper) {
+      // this.swiperRef.slideTo(this.swiperRef.slides.length - 1)
+    },
+    sliderPrevClicked(swiper) {
+      // this.swiperRef.slideTo(0)
+    },
     onSwiperRedied(swiper) {
       this.updateInitialSlide(swiper.activeIndex === 0)
       this.updateBreakpoint(swiper.currentBreakpoint)
