@@ -81,33 +81,61 @@
             </button>
           </div>
           <div
-            class="py-14 px-4 md:p-8 lg:p-14 2xl:py-20 shadow bg-local bg-cover optimize-bg-image bg-center"
-            :style="firstSectionBackgroundImage2"
+            class="shadow bg-local bg-cover optimize-bg-image bg-center"
+            :class="
+              sectionVideoPlaying
+                ? 'bg-black p-0'
+                : 'py-14 px-4 md:p-8 lg:p-14 2xl:py-20'
+            "
+            :style="!sectionVideoPlaying ? firstSectionBackgroundImage2 : null"
           >
-            <h1
-              class="uppercase font-semibold text-white text-xl sm:text-2xl filter drop-shadow-max"
-            >
-              Now anyone can buy the way executives do?
-            </h1>
-            <p
-              class="mt-4 text-brand sm:text-xl md:text-lg filter drop-shadow-max"
-            >
-              Those purchasing high end vehicles have utilized our type of
-              service for years. Now, we’re making that level of service a
-              reality for all buyers.
-            </p>
-            <div class="mt-3">
-              <button
-                class="text-white rounded-full focus:outline-none"
-                @click="openSectionVideo"
+            <div v-show="!sectionVideoPlaying">
+              <h1
+                class="uppercase font-semibold text-white text-xl sm:text-2xl filter drop-shadow-max"
               >
-                <fa
-                  v-if="sectionVideoPlaying"
-                  class="text-5xl"
-                  :icon="faPauseCircle"
+                Now anyone can buy the way executives do?
+              </h1>
+              <p
+                class="mt-4 text-brand sm:text-xl md:text-lg filter drop-shadow-max"
+              >
+                Those purchasing high end vehicles have utilized our type of
+                service for years. Now, we’re making that level of service a
+                reality for all buyers.
+              </p>
+              <div class="mt-3">
+                <button
+                  class="text-white rounded-full focus:outline-none"
+                  @click="openSectionVideo"
+                >
+                  <fa
+                    v-if="sectionVideoPlaying"
+                    class="text-5xl"
+                    :icon="faPauseCircle"
+                  />
+                  <fa v-else class="text-5xl" :icon="faPlayCircle" />
+                </button>
+              </div>
+            </div>
+            <div
+              v-show="sectionVideoPlaying"
+              class="h-full w-full overflow-hidden"
+            >
+              <video
+                ref="sectionVideoRef"
+                class="object-cover inline-block h-full w-full"
+                width="100%"
+                height="100%"
+                playsinline
+                controls
+                preload="metadata"
+                @pause="onSectionVideoPause"
+              >
+                <source
+                  src="~/assets/videos/section_video.mp4"
+                  type="video/mp4"
                 />
-                <fa v-else class="text-5xl" :icon="faPlayCircle" />
-              </button>
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
@@ -344,7 +372,7 @@
         :has-logo="true"
       />
     </section>
-    <VideoModal :showing="sectionVideoPlaying" @close="closeSectionVideo" />
+    <!-- <VideoModal :showing="sectionVideoPlaying" @close="closeSectionVideo" /> -->
   </div>
 </template>
 
@@ -371,7 +399,7 @@ import Tab from '~/components/common/Tab'
 import CallToAction from '~/components/CallToAction'
 import InstagramFeed from '~/components/InstagramFeed'
 import CovidMessageSection from '~/components/home/CovidMessageSection'
-import VideoModal from '~/components/common/VideoModal'
+// import VideoModal from '~/components/common/VideoModal'
 
 export default {
   name: 'Home',
@@ -383,7 +411,7 @@ export default {
     CallToAction,
     InstagramFeed,
     CovidMessageSection,
-    VideoModal,
+    // VideoModal,
   },
   data() {
     return {
@@ -481,10 +509,12 @@ export default {
       this.videoPlaying = !this.videoPlaying
     },
     openSectionVideo() {
+      this.$refs.sectionVideoRef.play()
       this.sectionVideoPlaying = true
       this.toggleVideoPlayback()
     },
-    closeSectionVideo() {
+    onSectionVideoPause() {
+      this.$refs.sectionVideoRef.pause()
       this.toggleVideoPlayback()
       this.sectionVideoPlaying = false
     },
