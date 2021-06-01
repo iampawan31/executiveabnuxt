@@ -49,6 +49,10 @@
           src="~/assets/videos/homepage_main_video.hevc.mp4"
           type="video/mp4"
         />
+        <source
+          src="~/assets/videos/homepage_main_video.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -491,6 +495,8 @@ export default {
     this.screenWidth = screen.width
     window.addEventListener('resize', this.onResize)
     this.videoPlaying = true
+    const videoBg = this.$refs.backgroundVideo
+    videoBg.play()
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)
