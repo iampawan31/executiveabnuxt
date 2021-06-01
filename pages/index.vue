@@ -46,7 +46,7 @@
         class="absolute z-10 w-auto min-w-full min-h-full max-w-6xl md:max-w-none -left-96 lg:max-w-none lg:left-0"
       >
         <source
-          src="~/assets/videos/homepage_main_video.mp4"
+          src="~/assets/videos/homepage_main_video.hevc.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
