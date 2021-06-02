@@ -69,7 +69,7 @@
         </div>
         <ul
           :class="howItWorksOpen ? 'block' : 'hidden'"
-          class="group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
+          class="lg:group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
         >
           <li class="">
             <NuxtLink
@@ -113,7 +113,7 @@
         </div>
         <ul
           :class="requestVehicleOpen ? 'block' : 'hidden'"
-          class="group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
+          class="lg:group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
         >
           <li class="">
             <a
