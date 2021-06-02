@@ -4,7 +4,7 @@
       class="relative flex items-center h-96 py-72 xl:py-96 2xl:max-h-96 2xl:py-96 overflow-hidden"
     >
       <section
-        class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 md:px-4 2xl:px-4 container mx-auto"
+        class="w-full grid sm:place-items-end text-white z-30 px-2 sm:px-0 md:px-4 2xl:px-10 container mx-auto"
       >
         <div
           class="sm:text-right text-left text-2xl md:text-4xl font-bold uppercase mb-5 px-2 md:px-0 filter drop-shadow-max"
@@ -46,8 +46,8 @@
         class="absolute z-10 w-auto min-w-full min-h-full max-w-6xl md:max-w-none -left-96 lg:max-w-none lg:left-0"
       >
         <source
-          src="~/assets/videos/homepage_main_video.hevc.mp4"
-          type="video/mp4"
+          src="~/assets/videos/homepage_main_video.webm"
+          type="video/webm"
         />
         <source
           src="~/assets/videos/homepage_main_video.mp4"
@@ -368,7 +368,7 @@
         <div>La Habra, California</div>
       </div>
     </section>
-    <section class="bg-brand-gray-alternate text-white py-16">
+    <section class="bg-brand-gray text-white py-16">
       <CallToAction
         title="YOUR SATISFACTION MEANS EVERYTHING TO US"
         subtitle="EXPERIENCE THE EAB DIFFERENCE"

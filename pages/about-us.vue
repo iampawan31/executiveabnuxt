@@ -210,19 +210,19 @@
     </section>
     <section class="bg-white text-black text-lg py-10">
       <div class="container mx-auto px-4 lg:px-36 xl:px-48">
-        <div class="mb-6 uppercase text-brand">
+        <div class="mb-3 uppercase text-brand">
           WE LOVE CARS, BUT DISLIKE THE TRADITIONAL BUYING PROCESS
         </div>
-        <div class="mb-6 uppercase text-3xl font-normal tracking-wide">
+        <div class="mb-5 uppercase text-3xl font-normal tracking-wide">
           OUR PASSION WAS BORN OUT OF EXPERIENCE
         </div>
-        <div class="mb-6">
+        <div class="mb-4">
           In July 2006 our founding partner had decided on and located the next
           car he wanted to purchase. As a car enthusiast, purchasing cars was
           not new to him. He had owned over 30 different vehicles of all
           different makes and models throughout his life.
         </div>
-        <div class="mb-6">
+        <div class="mb-4">
           When he headed out to his local dealership to make the purchase he was
           well prepared. He had already done his homework on every single detail
           & feature he wanted on his vehicle. He had spent weeks comparing
@@ -230,7 +230,7 @@
           had the vehicle specifically how he wanted it - and he had finally
           found it.
         </div>
-        <div class="mb-6">
+        <div class="mb-4">
           He was prepared to go 12-rounds with the sales person and manager to
           make sure he got the vehicle, and got a good deal on it as well. After
           negotiating with the dealer for hours, they could not come to an
@@ -238,7 +238,7 @@
           push him towards purchasing another vehicle that was lacking some of
           the key features he wanted, but he refused to settle.
         </div>
-        <div class="mb-6">
+        <div class="mb-4">
           Later that week he located another vehicle that matched his wants 200
           miles away in another city, and was able to make a deal. On his way
           driving back, his joy of finally purchasing the vehicle he wanted was
@@ -248,13 +248,13 @@
           on concierge services in hotels when traveling for work - the idea
           came to him.
         </div>
-        <div class="mb-6">
+        <div class="mb-4">
           He was determined to create a business model that would allow people
           to utilize a no cost concierge-like service that facilitates vehicle
           sales directly with auto manufacturors and eliminates the hassles that
           go along with traditional car buying.
         </div>
-        <div class="mb-6">
+        <div class="mb-4">
           Out of that experience Executive Auto Broker was born, and 15 years
           later we are still here. We continue our mission of helping people
           from all walks of life experience a way of car buying that lets them
