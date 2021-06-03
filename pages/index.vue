@@ -458,7 +458,7 @@ export default {
       sliderBackground: { backgroundImage: `url(${homepageSliderBackground})` },
       homepageTabSection,
       accessToken:
-        'IGQVJYbHNXMWVzdXdIWHU3R2RiRG4zWlZAnQS1TVmE2VUVwT1FiUFhZAV0xoaVB4UnVkajMxaElHWkRmRy1IdDIyRE40VHZAwX25CbDFEN3hLQ0NVdTNkZAVBUTl9RblFIN2Q4d3VsMUtWYjQzOHJxWFlNSgZDZD',
+        'IGQVJXTUo5d1ZANQWVYZAXp6YldZAaENVdFlMdW9tRnNYb3pNQ2NGMHo4a2xQZAkQ5U2phZA2VUSG9tMU9rRVF6U1Qydktybl96TWN3U0RtWWhaOHhwWkRjLU1CNmo1RmJaaVYzbWlualR3SmlucTBfenNRZAQZDZD',
     }
   },
   head: {
