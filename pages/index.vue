@@ -126,9 +126,8 @@
             >
               <video
                 ref="sectionVideoRef"
-                class="object-cover inline-block h-full w-full"
+                class="object-cover inline-block h-auto"
                 width="100%"
-                height="100%"
                 playsinline
                 controls
                 preload="metadata"
@@ -178,13 +177,17 @@
               <div
                 v-show="!initialSlide && screenWidth > 768"
                 class="swiper-button-prev bg-brand-gray-dark"
-              ></div>
+              >
+                <fa class="text-brand text-2xl" :icon="faChevronLeft" />
+              </div>
             </transition>
             <Slides />
             <div
               v-show="screenWidth > 768"
               class="swiper-button-next bg-brand-gray-dark"
-            ></div>
+            >
+              <fa class="text-brand text-2xl" :icon="faChevronRight" />
+            </div>
           </div>
         </div>
       </div>
@@ -350,7 +353,7 @@
           <fa class="ml-2 text-3xl text-brand" :icon="faStar" />
         </div>
         <h1
-          class="text-2xl sm:text-center px-4 sm:text-3xl uppercase font-semibold sm:tracking-widest mb-5 sm:mb-10"
+          class="text-2xl sm:text-center px-4 sm:text-3xl uppercase font-bold sm:tracking-widest mb-5 sm:mb-10"
         >
           “If I only knew about this sooner...”
         </h1>
@@ -548,8 +551,7 @@ ul.tab-section li:before {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  color: #eaa068;
-  font-size: 24px;
+  display: none;
 }
 
 .swiper-button-next,
