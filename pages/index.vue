@@ -85,7 +85,7 @@
             </div>
           </div>
           <div
-            class="shadow bg-local bg-cover optimize-bg-image bg-center"
+            class="shadow bg-local bg-cover optimize-bg-image bg-center h-96"
             :class="
               sectionVideoPlaying
                 ? 'bg-black p-0'
