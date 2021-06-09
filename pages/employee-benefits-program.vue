@@ -70,16 +70,16 @@
               </template>
               <template slot="feature-description">
                 <div class="mb-4">
-                  Getting set-up with us is simple. We setup a personalized link
-                  for your staff to utilize if they are interested in our
+                  Getting set up with us is simple. We set up a personalized
+                  link for your staff to utilize if they are interested in our
                   service. Depending on the size of your organization we may
-                  assign a dedicated Executive Concierge or a team to spefically
-                  handle your account.
+                  assign a dedicated Executive Concierge or a team to
+                  specifically handle your account.
                 </div>
                 <div class="mb-4">
                   We then work with your HR department to provide any collateral
-                  or materials your organization deems neccessary. If you
-                  currently work with a company that handles a benefit portal
+                  or materials your organization deems necessary. If you
+                  currently work with a company that handles a benefits portal
                   for you, we will work with them to get your material
                   implemented.
                 </div>
@@ -106,7 +106,7 @@
                 <div class="mb-4">
                   We help your staff find the perfect vehicle they are searching
                   for, get them the best vehicle for the best price, handle all
-                  of their neccessary paperwork, and have it delivered wherever
+                  of their necessary paperwork, and have it delivered wherever
                   they want - all without any cost to them!
                 </div>
               </template>
@@ -147,16 +147,16 @@
               </template>
               <template slot="feature-description">
                 <div class="mb-4">
-                  One of the passions that drives our business is a love for
+                  One of the passions that drive our business is a love for
                   educating and helping people not only getting the best deal
-                  possible on a vehicle, but also making sure they are making
+                  possible on a vehicle but also making sure they are making
                   sound decisions and understand the process.
                 </div>
                 <div class="mb-4">
                   If you need additional resources or would like our help in
                   providing vehicle purchasing education for your staff we are
                   available. Whether that means attending a staff event, hosting
-                  a zoom call, or just answering questions your staff has - we
+                  a zoom call, or just answering questions your staff as - we
                   can handle it.
                 </div>
               </template>

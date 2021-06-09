@@ -15,7 +15,7 @@
             class="font-light leading-normal max-w-md filter drop-shadow-max"
           >
             With service at the core of our own business, we recognize and
-            celebrate those those that serve our nation and communities.
+            celebrate those who serve our nation and communities.
           </div>
         </div>
       </HeroSection>
@@ -70,16 +70,16 @@
               </template>
               <template slot="feature-description">
                 <div class="mb-4">
-                  We understand first hand the time-sacrifice and dedication
-                  that is required to having a service career, and how little
+                  We understand firsthand the time sacrifice and dedication that
+                  is required to having a service career, and how little
                   personal time is often left for you. That is why our Military
                   & Community Program was specifically designed to provide you
                   with expedited personal service that saves you time and
                   eliminates the stress of traditional car buying.
                 </div>
                 <div class="mb-4">
-                  We handle finding and getting you the best deal on vehicle you
-                  want, taking care of all the paperwork, and having it
+                  We handle finding and getting you the best deal on the vehicle
+                  you want, taking care of all the paperwork, and having it
                   delivered wherever you want it. That way you can spend your
                   free time doing what you want, and not driving around
                   searching for cars and haggling with dealerships.
@@ -100,8 +100,11 @@
               <template slot="feature-description">
                 <div class="mb-4">
                   As an extra thank you for your service we provide you with a
-                  <span class="text-yellow-500">$200 Visa gift card</span> when
-                  you allow us to help you purchase your perfect car.
+                  <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-500"
+                    >$200 Visa gift card</span
+                  >
+                  when you allow us to help you purchase your perfect car.
                 </div>
                 <div class="mb-4">
                   To qualify please select your line of service when filling out
@@ -120,15 +123,25 @@
                   alt=""
               /></template>
               <template slot="feature-title">
-                REASONS TO PARTNER WITH US
+                WE ACCOMMODATE YOUR SPECIAL ARRANGEMENTS
               </template>
               <template slot="feature-description">
                 <div class="mb-4">
-                  Through a partnership with EAB your clients will gain access
-                  to our cost-free auto concierge service and when we earn, you
-                  earn. Additionally depending on your line of work, you could
-                  become our preferred partner for service or parts within your
-                  industry segment.
+                  Are you active military and deploying soon or need the vehicle
+                  sent to an overseas service station? No problem. We can
+                  arrange international shipment, as well as help with taking
+                  care of your old vehicle.
+                </div>
+                <div class="mb-4">
+                  Additionally, in certain scenarios, if you do not have time to
+                  take care of required maintenance and repairs we can help
+                  facilitate concierge servicing at reduced labor rates.
+                </div>
+                <div class="mb-4">
+                  For anything else you need help with, do not hesitate to ask.
+                  We have been able to provide assistance in unique
+                  circumstances and we are here to make sure your buying and
+                  ownership experience is unparalleled.
                 </div>
               </template>
             </Feature>
@@ -172,7 +185,7 @@ export default {
     }
   },
   head: {
-    title: 'Military And Community Program - Executive',
+    title: 'Military & Community Program - Executive',
   },
   computed: {
     faChevronUp() {

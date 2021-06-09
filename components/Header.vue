@@ -46,13 +46,32 @@
       :class="isOpen ? 'block' : 'hidden'"
       class="px-4 pb-4 bt-2 lg:flex sm:p-0"
     >
-      <NuxtLink
-        to="/about-us"
-        class="block text-white hover:border-white transition border-transparent border-b-2 lg:px-3 py-2 text-sm font-medium"
-      >
-        About us
-      </NuxtLink>
-
+      <div class="group">
+        <NuxtLink
+          to="/about-us"
+          class="block text-white hover:border-white transition border-transparent border-b-2 lg:px-3 py-2 text-sm font-medium"
+        >
+          About us
+          <button class="lg:hidden inline-block focus:outline-none ml-2">
+            <fa
+              :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
+              @click.stop="requestVehicleOpen = !requestVehicleOpen"
+            />
+          </button>
+        </NuxtLink>
+        <ul
+          :class="requestVehicleOpen ? 'block' : 'hidden'"
+          class="lg:group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
+        >
+          <li class="">
+            <NuxtLink
+              class="rounded xl:pr-8 bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
+              to="/faqs"
+              >FAQs</NuxtLink
+            >
+          </li>
+        </ul>
+      </div>
       <div class="group">
         <div
           class="mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
@@ -75,7 +94,7 @@
             <NuxtLink
               class="rounded-t bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/friends-and-family-program"
-              >Friends and family program</NuxtLink
+              >Friends & family program</NuxtLink
             >
           </li>
           <li class="">
@@ -89,56 +108,27 @@
             <NuxtLink
               class="rounded-b bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/military-and-community-program"
-              >Military and community program</NuxtLink
+              >Military & community program</NuxtLink
             >
           </li>
         </ul>
       </div>
-      <div class="group">
-        <div
-          class="block mt-1 text-white no-underline hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
+      <div
+        class="block mt-1 text-white no-underline hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
+      >
+        <a
+          href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+          class="text-white no-underline"
         >
-          <a
-            href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
-            class="text-white no-underline"
-          >
-            Request vehicle
-          </a>
-          <button class="lg:hidden inline-block focus:outline-none ml-2">
-            <fa
-              :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
-              @click.stop="requestVehicleOpen = !requestVehicleOpen"
-            />
-          </button>
-        </div>
-        <ul
-          :class="requestVehicleOpen ? 'block' : 'hidden'"
-          class="lg:group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
-        >
-          <li class="">
-            <a
-              class="rounded-t bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
-              href="#"
-              >Request Powersports</a
-            >
-          </li>
-          <li class="">
-            <a
-              class="bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition py-2 text-sm px-4 block whitespace-no-wrap"
-              href="#"
-              >Request Commercial/Fleet</a
-            >
-          </li>
-          <li class="">
-            <a
-              class="rounded-b bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
-              href="#"
-              >Request Maintenance/Parts</a
-            >
-          </li>
-        </ul>
+          Request vehicle
+        </a>
+        <button class="lg:hidden inline-block focus:outline-none ml-2">
+          <fa
+            :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
+            @click.stop="requestVehicleOpen = !requestVehicleOpen"
+          />
+        </button>
       </div>
-
       <NuxtLink
         to="/contact-us"
         class="block mt-1 text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"

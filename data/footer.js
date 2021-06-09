@@ -49,9 +49,9 @@ export const additionalLinks = [
     path: '/faqs',
   },
   {
-    name: 'Disclaimer',
+    name: 'Disclaimer/ Privacy Policy',
     externalLink: false,
-    path: '/disclaimer',
+    path: '/privacy-policy',
   },
   {
     name: 'Terms and conditions',

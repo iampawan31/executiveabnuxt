@@ -7,16 +7,16 @@
         <div class="text-white text-sm sm:text-lg hidden sm:block">
           <fa class="mr-2" :icon="faExclamationCircle" />
           COVID-19: SAFETY IS OUR TOP PRIORITY.
-          <a href="/" class="ml-2 uppercase underline text-brand">
-            READ MORE <fa class="ml-1" :icon="faChevronRight" />
-          </a>
+          <NuxtLink class="ml-2 uppercase underline text-brand" to="/faqs">
+            READ MORE <fa class="ml-1" :icon="faChevronRight"
+          /></NuxtLink>
         </div>
         <div class="text-white text-sm sm:text-lg sm:hidden">
           <fa class="mr-2" :icon="faExclamationCircle" />
           COVID-19 SAFETY:
-          <a href="/" class="ml-2 uppercase underline text-brand">
-            READ MORE <fa class="ml-1" :icon="faChevronRight" />
-          </a>
+          <NuxtLink class="ml-2 uppercase underline text-brand" to="/faqs">
+            READ MORE <fa class="ml-1" :icon="faChevronRight"
+          /></NuxtLink>
         </div>
       </div>
     </div>

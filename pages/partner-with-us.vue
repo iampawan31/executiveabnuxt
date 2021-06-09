@@ -13,7 +13,7 @@
           <div
             class="flex flex-1 flex-col space-y-10 lg:space-y-0 sm:mt-10 pr-4"
           >
-            <div class="uppercase text-2xl sm:text-3xl">
+            <div class="uppercase font-semibold text-2xl sm:text-3xl">
               EAB PARTNERSHIP PROGRAM
             </div>
             <div class="text-gray-400">
@@ -23,7 +23,7 @@
             </div>
             <div class="mt-5 text-gray-400">
               Please reach out to us with any questions or if you are interested
-              in persuing a partnership with our organization.
+              in pursuing a partnership with our organization.
             </div>
           </div>
           <div
@@ -90,11 +90,11 @@
           <template slot="feature-description">
             <div class="mb-4">
               We are open to partnering with organizations of all types that
-              provide services, products or technology to clients in the
-              automative industry.
+              provide services, products, or technology to clients in the
+              automotive industry.
             </div>
             <div class="mb-4">
-              From collission and repair shops to performance shops and mobile
+              From collision and repair shops to performance shops and mobile
               detailers, a partnership with EAB and your business could be a
               great fit for both of our organizations.
             </div>
@@ -113,8 +113,8 @@
           </template>
           <template slot="feature-description">
             <div class="mb-4">
-              Typically we partner with organizations through a refferal fee or
-              refferal exchange program. To be approved as a refferal partner we
+              Typically we partner with organizations through a referral fee or
+              referral exchange program. To be approved as a referral partner we
               will need to confirm your organization has a history of providing
               quality service or products, and are an industry leader in client
               satisfaction in your respective industry and geographical area.
@@ -132,9 +132,9 @@
           <template slot="feature-title"> REASONS TO PARTNER WITH US </template>
           <template slot="feature-description">
             <div class="mb-4">
-              Through a partnership with EAB your clients will gain access to
+              Through a partnership with EAB, your clients will gain access to
               our cost-free auto concierge service and when we earn, you earn.
-              Additionally depending on your line of work, you could become our
+              Additionally, depending on your line of work, you could become our
               preferred partner for service or parts within your industry
               segment.
             </div>

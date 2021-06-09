@@ -31,11 +31,11 @@
               EXECUTIVE SERVICE WITH PROVEN RESULTS
             </div>
             <div class="flex font-light text-gray-300">
-              We aim to make sure you enjoy an exceptional car buying
-              experience. By removing the dealership and sales people from the
-              equation we are able to ensure our clients recieve the highest
-              level of service with great savings to match. We gaurantee you
-              will not miss the sales person.
+              We aim to make sure you enjoy an exceptional car-buying
+              experience. By removing the dealership & salespeople from the
+              equation we are able to ensure our clients receive the highest
+              level of service with great savings to match. We guarantee you
+              will not miss the salesperson.
             </div>
           </div>
           <div class="flex justify-between flex-1 space-x-2 lg:px-4 sm:px-0">
@@ -223,39 +223,39 @@
           different makes and models throughout his life.
         </div>
         <div class="mb-4">
-          When he headed out to his local dealership to make the purchase he was
+          When he drove out to his local dealership to make the purchase he was
           well prepared. He had already done his homework on every single detail
-          & feature he wanted on his vehicle. He had spent weeks comparing
+          and feature he wanted on his vehicle. He had spent weeks comparing
           pricing within his entire area, searching diligently for what dealer
-          had the vehicle specifically how he wanted it - and he had finally
+          had the vehicle specifically how he wanted it, and he had finally
           found it.
         </div>
         <div class="mb-4">
-          He was prepared to go 12-rounds with the sales person and manager to
-          make sure he got the vehicle, and got a good deal on it as well. After
-          negotiating with the dealer for hours, they could not come to an
-          agreement on the vehicle he wanted. The dealership then attempted to
-          push him towards purchasing another vehicle that was lacking some of
-          the key features he wanted, but he refused to settle.
+          He was prepared to go 12-rounds with the salesperson and manager to
+          make sure he got the vehicle he wanted and got a good deal on it as
+          well. After negotiating with the dealer for hours, they could not come
+          to an agreement on the vehicle he wanted. The dealership then
+          attempted to push him towards purchasing another vehicle that was
+          lacking some of the key features he wanted, but he refused to settle.
         </div>
         <div class="mb-4">
           Later that week he located another vehicle that matched his wants 200
-          miles away in another city, and was able to make a deal. On his way
-          driving back, his joy of finally purchasing the vehicle he wanted was
-          dampened by his exhaustion of the entire process. He drove and thought
-          to himself how he could avoid ever going through the struggles of
-          traditional auto buying again. After remembering how he often relied
-          on concierge services in hotels when traveling for work - the idea
-          came to him.
+          miles away in another city and was able to successfully make a deal.
+          On his way driving back home, his joy of finally purchasing the
+          vehicle he wanted was dampened by his exhaustion of the entire
+          process. He drove and thought to himself how he could avoid ever going
+          through the struggles of traditional auto buying again. After
+          remembering how he often relied on concierge services in hotels while
+          traveling for work; the idea came to him.
         </div>
         <div class="mb-4">
           He was determined to create a business model that would allow people
-          to utilize a no cost concierge-like service that facilitates vehicle
-          sales directly with auto manufacturors and eliminates the hassles that
+          to utilize a no-cost concierge-like service that facilitates vehicle
+          sales directly with auto manufacturers and eliminates the hassles that
           go along with traditional car buying.
         </div>
         <div class="mb-4">
-          Out of that experience Executive Auto Broker was born, and 15 years
+          Out of that experience, Executive Auto Broker was born, and 15 years
           later we are still here. We continue our mission of helping people
           from all walks of life experience a way of car buying that lets them
           find their perfect car in a stress-free way.
@@ -275,6 +275,7 @@
         title="THINK OF ANYTHING ELSE WE CAN HELP YOU WITH?"
         subtitle="GET IN TOUCH WITH US"
         button-text="Contact us"
+        button-link="/contact-us"
       />
     </section>
   </div>

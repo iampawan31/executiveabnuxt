@@ -114,12 +114,13 @@
                   please fill out the below form so we can get you signed up.
                 </div>
                 <div class="mb-4">
-                  <button
-                    class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
+                  <NuxtLink
+                    to="/contact-us"
+                    class="bg-gradient-to-r no-underline from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 rounded uppercase text-white mb-0.5"
                   >
                     Sign Up
                     <fa class="ml-2 text-white" :icon="faChevronRight" />
-                  </button>
+                  </NuxtLink>
                 </div>
               </template>
             </Feature>
@@ -224,7 +225,7 @@ export default {
     }
   },
   head: {
-    title: 'Friends And Family Program - Executive',
+    title: 'Friends & Family Program - Executive',
   },
   computed: {
     faBullhorn() {

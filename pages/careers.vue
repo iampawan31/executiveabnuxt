@@ -3,8 +3,8 @@
     <HeroSectionAlternate :main-header-image="mainHeaderImage">
       <template slot="title">// CAREERS</template>
       <template slot="subtitle"
-        >Join the EAB team and join us on our mission to help transform the way
-        consumers purchase vehicles.</template
+        >Join the EAB team on our mission to help transform the way consumers
+        purchase vehicles.</template
       >
     </HeroSectionAlternate>
     <section
@@ -28,12 +28,13 @@
             If you are interested in helping us build this future, we are
             interested in you. We look forward to receiving your application!
           </div>
-          <button
+          <NuxtLink
+            to="contact-us"
             class="shadow-lg py-2 px-8 bg-gradient-to-r from-yellow-700 to-yellow-500 rounded uppercase text-white mb-0.5"
           >
             Application
             <fa class="ml-2 text-white" :icon="faChevronRight" />
-          </button>
+          </NuxtLink>
         </div>
       </div>
       <div class="container mx-auto mt-16 sm:mt-0 sm:py-16">
@@ -50,7 +51,7 @@
             </template>
             <template slot="feature-description">
               <div class="mb-4">
-                As an Executive Concierge you will be responsible for servicing
+                As an Executive Concierge, you will be responsible for servicing
                 clients with their vehicle requests. You will serve as the main
                 point of contact for clients while you guide them through our
                 streamlined auto-buying process.
@@ -65,7 +66,7 @@
               <div class="mb-4">
                 Utilizing your personal and professional networks, you will be a
                 champion for the EAB brand - creating awareness of the benefits
-                of our cost-free service, while building yourself a base
+                of our cost-free service while building yourself a base
                 clientele to work with.
               </div>
             </template>
@@ -83,12 +84,12 @@
               <div class="mb-4">
                 Applicants considering becoming an Executive Concierge should
                 have a love & passion for helping people paired with strong
-                time-management and networking / communication skills. We do not
+                time-management and networking/communication skills. We do not
                 require degrees, sales backgrounds, or experience in the auto
                 industry.
               </div>
               <div class="mb-4">
-                Our ideal applicants are saavy self-starters that will enjoy the
+                Our ideal applicants are savvy self-starters that will enjoy the
                 freedom of being able to manage and grow their own clientele.
                 All applicants must be able to pass a standard background check.
               </div>
@@ -107,9 +108,9 @@
             </template>
             <template slot="feature-description">
               <div class="mb-4">
-                As an Executive Concierge you will have the freedom to work
+                As an Executive Concierge, you will have the freedom to work
                 remotely and create your own schedule. All you need is a laptop,
-                smartphone or tablet and as much time as you are able to invest
+                smartphone, or tablet and as much time as you are able to invest
                 into your own success.
               </div>
               <div class="mb-4">

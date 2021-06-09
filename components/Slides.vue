@@ -30,7 +30,9 @@
           >
             {{ slide.title }}
           </div>
-          <div class="flex text-sm px-10 py-5">{{ slide.description }}</div>
+          <div class="flex text-sm px-10 xl:px-6 py-5">
+            {{ slide.description }}
+          </div>
         </div>
       </swiper-slide>
       <div slot="pagination" class="swiper-pagination z-50"></div>

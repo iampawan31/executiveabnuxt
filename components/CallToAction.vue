@@ -23,7 +23,7 @@
         </div>
         <div class="text-right xl:-mt-6">
           <a
-            href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+            :href="buttonLink"
             class="bg-gradient-to-r inline-block no-underline from-yellow-700 to-yellow-500 py-1 md:py-2 px-4 rounded uppercase text-white mb-0"
           >
             {{ buttonText }}
@@ -54,6 +54,11 @@ export default {
     buttonText: {
       type: String,
       default: 'dark',
+    },
+    buttonLink: {
+      type: String,
+      default:
+        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
     },
     hasLogo: {
       type: Boolean,

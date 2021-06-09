@@ -4,7 +4,7 @@ export const firstSlider = [
     image: require('assets/images/home/first-slide-one.png'),
     gradient: 'bg-gradient-to-r from-brand-blue-dark to-brand-blue-light',
     description:
-      'Never settle for what dealers have in stock. We locate the exact vehicle you want directly through the manufacturers.',
+      'Never settle for what dealers or websites have in stock. We locate the exact vehicle you want directly through the manufacturers, greatly expanding your selection of vehicles',
   },
   {
     title: 'Select & Approve',
@@ -12,22 +12,22 @@ export const firstSlider = [
     gradient:
       'bg-gradient-to-r from-brand-turquoise-dark to-brand-turquoise-light',
     description:
-      'We research and send you the best vehicles that fit your criteria for you to choose from.',
+      'We research & find the best vehicles that match your criteria & send them directly to your mobile phone. Simply choose which one you love most.',
   },
   {
-    title: 'Digital Paperwork',
+    title: 'Contactless Purchasing',
     image: require('assets/images/home/first-slide-three.png'),
     gradient: 'bg-gradient-to-r from-brand-green-dark to-brand-green-light',
     description:
-      'All required documents are prepared and securely sent to you for e-signature.',
+      'All required documents are prepared & securely sent to you for e-signature. Your vehicle is fully prepped, sanitized & delivered directly to you.',
   },
   {
-    title: 'Vehicle Delivery',
+    title: 'Perfection Guaranteed',
     image: require('assets/images/home/first-slide-four.png'),
     gradient:
       'bg-gradient-to-r from-brand-military-green-dark to-brand-military-green-light',
     description:
-      'Your car is fully prepped, sanitized and delivered to you. If you don’t like the vehicle when you receive it we offer your money back - guaranteed.',
+      "We offer a 5 day / 100-mile return policy so you can make sure your vehicle is the perfect one for you. If it's not, you may return it - no questions asked.",
   },
 ]
 
@@ -37,7 +37,7 @@ export const homepageTabSection = [
     title: 'NEW VEHICLES',
     imageURL: require('assets/images/home/new-vehicles.jpeg'),
     description:
-      'We have exclusive manufacturer relationships to get you the best deal.',
+      'Our exclusive manufacturer relationships secure you the best deal.',
     listOne: [
       'Included Nationwide delivery',
       'Pay invoice or slightly above',
@@ -50,19 +50,19 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start Request',
-      path: '/',
+      path:
+        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
     },
   },
   {
     tabTitle: 'PRE-OWNED',
     title: 'PRE-OWNED VEHICLES',
     imageURL: require('assets/images/home/pre-owned.jpeg'),
-    description:
-      'Get certified pre-owned quality vehicles without the added cost.',
+    description: 'Never settle for less than the highest quality vehicle.',
     listOne: [
-      'Included Nationwide delivery',
+      'Certified Pre-Owned (CPO) quality without the price',
       'Pay below Kelly Blue Book value',
-      'All vehicles go through the same 100+ point inspection process of CPO',
+      'All vehicles are accident-free, & have passed rigorous inspections and reconditioning',
     ],
     listTwo: [
       'Haggle-free pricing',
@@ -71,7 +71,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start Request',
-      path: '/',
+      path:
+        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
     },
   },
   {
@@ -89,7 +90,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start Request',
-      path: '/',
+      path:
+        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
     },
   },
   {
@@ -108,7 +110,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start Request',
-      path: '/',
+      path:
+        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
     },
   },
   {
@@ -127,26 +130,26 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'More information',
-      path: '/',
+      path:
+        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
     },
   },
   {
-    tabTitle: 'MAINTENANCE / UPGRADES',
-    title: 'MAINTENANCE / UPGRADES',
+    tabTitle: 'SERVICE / PARTS',
+    title: 'SERVICE / PARTS',
     imageURL: require('assets/images/home/maintenance.jpeg'),
-    description:
-      'Savings on required vehicle maintenance and parts / upgrades.',
+    description: 'Savings on vehicle service, repairs, parts, & upgrades.',
     listOne: [
       'Discounts on yearly and mileage milestone service packages',
-      'Discounts on all maintenance items including oil changes, brakes, tires, and mobile detailing',
+      'Discounts on all repairs & maintenance items including: oil changes, brakes, tires, & detailing',
     ],
     listTwo: [
       'Discounts on all vehicle parts including both OEM & after-market vehicle upgrades from all top brands',
       'Complimentary Concierge Service available in CA, FL, TX',
     ],
     link: {
-      name: 'Start request',
-      path: '/',
+      name: 'Contact us',
+      path: '/contact-us',
     },
   },
   {
@@ -165,7 +168,7 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Contact us',
-      path: '/',
+      path: '/contact-us',
     },
   },
   {
@@ -184,7 +187,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start request',
-      path: '/',
+      path:
+        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
     },
   },
 ]

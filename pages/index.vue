@@ -19,12 +19,11 @@
           and money. All you need to do is sit back & buckle-up.
         </div>
         <div class="mx-2 md:mx-0 flex flex-shrink">
-          <button
-            class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-2 px-4 md:w-full rounded text-white mt-4 mb-10"
-          >
-            GET STARTED
-            <fa class="ml-1" :icon="faChevronRight" />
-          </button>
+          <a
+            href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+            class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-2 px-4 md:w-full rounded text-white mt-4 mb-10 no-underline"
+            >GET STARTED <fa class="ml-1" :icon="faChevronRight"
+          /></a>
         </div>
       </section>
       <div class="absolute bottom-4 left-4 md:bottom-16 md:left-16 z-50">
@@ -74,15 +73,16 @@
             <p
               class="mt-4 text-brand sm:text-xl md:text-lg filter drop-shadow-max"
             >
-              Tell us what your looking for and let us get started. Our service
-              works for all brands and models. Nationwide delivery available.
+              Our service works for both new & pre-owned vehicles of all makes
+              and models. Delivery available nationwide.
             </p>
-            <button
-              class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-8 rounded text-white mt-4 mb-10"
-            >
-              Launch
-              <fa class="ml-1" :icon="faChevronRight" />
-            </button>
+            <div class="mt-4">
+              <a
+                href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+                class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-8 rounded text-white mt-4 mb-10 no-underline"
+                >Launch <fa class="ml-1" :icon="faChevronRight"
+              /></a>
+            </div>
           </div>
           <div
             class="shadow bg-local bg-cover optimize-bg-image bg-center"
@@ -97,12 +97,12 @@
               <h1
                 class="uppercase font-semibold text-white text-xl sm:text-2xl filter drop-shadow-max"
               >
-                Now anyone can buy the way executives do?
+                Now anyone can buy the way executives do
               </h1>
               <p
                 class="mt-4 text-brand sm:text-xl md:text-lg filter drop-shadow-max"
               >
-                Those purchasing high end vehicles have utilized our type of
+                Those purchasing high-end vehicles have utilized our type of
                 service for years. Now, we’re making that level of service a
                 reality for all buyers.
               </p>
@@ -120,14 +120,12 @@
                 </button>
               </div>
             </div>
-            <div
-              v-show="sectionVideoPlaying"
-              class="h-full w-full overflow-hidden"
-            >
+            <div v-show="sectionVideoPlaying" class="h-full w-full shadow">
               <video
                 ref="sectionVideoRef"
-                class="object-cover inline-block h-auto"
+                class="object-cover inline-block h-full w-full"
                 width="100%"
+                height="100%"
                 playsinline
                 controls
                 preload="metadata"

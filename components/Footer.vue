@@ -78,7 +78,12 @@
                   alt=""
                 />
               </div>
-              <div class="text-xs">info@executiveab.com</div>
+              <a
+                href="mailto:info@executiveab.com"
+                class="no-underline text-xs"
+              >
+                info@executiveab.com
+              </a>
             </div>
           </div>
         </div>
