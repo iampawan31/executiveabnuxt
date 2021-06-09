@@ -377,7 +377,6 @@
         :has-logo="true"
       />
     </section>
-    <!-- <VideoModal :showing="sectionVideoPlaying" @close="closeSectionVideo" /> -->
   </div>
 </template>
 

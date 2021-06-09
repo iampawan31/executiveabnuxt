@@ -14,11 +14,13 @@
             {{ faq.title }}
           </div>
           <Accordion :items="faq.faqs" class="shadow-md">
-            <template v-slot:title="{ item }">
+            <template #title="{ item }">
               <div class="font-semibold">{{ item.title }}</div>
             </template>
             <template #content="{ item }">
+              <!-- eslint-disable vue/no-v-html -->
               <div v-html="item.content"></div>
+              <!--eslint-enable-->
             </template>
           </Accordion>
         </div>

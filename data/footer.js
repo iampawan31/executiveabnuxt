@@ -44,7 +44,7 @@ export const mainNavigationLinks = [
 
 export const additionalLinks = [
   {
-    name: 'FAQ',
+    name: 'FAQs',
     externalLink: false,
     path: '/faqs',
   },

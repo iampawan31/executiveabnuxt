@@ -365,6 +365,7 @@
         subtitle="VISIT OUR FAQs PAGE"
         button-text="FAQS"
         button-link="/faqs"
+        :external-link="false"
       />
     </section>
   </div>

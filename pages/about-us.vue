@@ -276,6 +276,7 @@
         subtitle="GET IN TOUCH WITH US"
         button-text="Contact us"
         button-link="/contact-us"
+        :external-link="false"
       />
     </section>
   </div>
