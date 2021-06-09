@@ -120,7 +120,7 @@
                 </button>
               </div>
             </div>
-            <div v-show="sectionVideoPlaying" class="h-full w-full shadow">
+            <div v-show="sectionVideoPlaying" class="h-96 w-full shadow">
               <video
                 ref="sectionVideoRef"
                 class="object-cover inline-block h-full w-full"
