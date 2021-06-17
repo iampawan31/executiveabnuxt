@@ -7,7 +7,7 @@
       >
         <div class="content float-left py-4 lg:px-5 my-5">
           <div
-            class="heading mb-3 tracking-wide uppercase underline max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
+            class="heading mb-3 tracking-wide uppercase max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >
             Your perfect car is out there
           </div>
@@ -217,48 +217,43 @@
           OUR PASSION WAS BORN OUT OF EXPERIENCE
         </div>
         <div class="mb-4">
-          In July 2006 our founding partner had decided on and located the next
-          car he wanted to purchase. As a car enthusiast, purchasing cars was
-          not new to him. He had owned over 30 different vehicles of all
-          different makes and models throughout his life.
+          In July 2006, our founding partner decided to purchase a new vehicle.
+          As a car enthusiast the vehicle purchasing process was not new to him
+          as he had purchased 50+ vehicles in his life so far.
         </div>
         <div class="mb-4">
-          When he drove out to his local dealership to make the purchase he was
-          well prepared. He had already done his homework on every single detail
-          and feature he wanted on his vehicle. He had spent weeks comparing
-          pricing within his entire area, searching diligently for what dealer
-          had the vehicle specifically how he wanted it, and he had finally
-          found it.
+          When he went to the local dealership to make the purchase, he was well
+          prepared. He did his homework and knew every single detail and feature
+          he wanted. He compared pricing, searched diligently, and found the
+          dealer with the exact vehicle in stock.
         </div>
         <div class="mb-4">
-          He was prepared to go 12-rounds with the salesperson and manager to
-          make sure he got the vehicle he wanted and got a good deal on it as
-          well. After negotiating with the dealer for hours, they could not come
-          to an agreement on the vehicle he wanted. The dealership then
-          attempted to push him towards purchasing another vehicle that was
-          lacking some of the key features he wanted, but he refused to settle.
+          After negotiating with the dealer for hours, they simply could not
+          come to an agreement. The dealership then attempted to push him
+          towards the purchase of a different vehicle that lacked some of the
+          key features he wanted. He refused to settle.
         </div>
         <div class="mb-4">
-          Later that week he located another vehicle that matched his wants 200
-          miles away in another city and was able to successfully make a deal.
-          On his way driving back home, his joy of finally purchasing the
-          vehicle he wanted was dampened by his exhaustion of the entire
-          process. He drove and thought to himself how he could avoid ever going
-          through the struggles of traditional auto buying again. After
-          remembering how he often relied on concierge services in hotels while
-          traveling for work; the idea came to him.
+          Later that week, he located another vehicle nearly 200 miles away and
+          successfully made a deal. The joy of driving home with his new vehicle
+          was dampened by exhaustion from the entire car-buying process. He knew
+          he had to find a way to avoid going through the hassle that
+          traditional car-buying created. It was then he reflected on hotel
+          concierge services and the attention and advantages provided to their
+          guests.
         </div>
         <div class="mb-4">
-          He was determined to create a business model that would allow people
-          to utilize a no-cost concierge-like service that facilitates vehicle
-          sales directly with auto manufacturers and eliminates the hassles that
-          go along with traditional car buying.
+          With this thought in mind, he was determined to create a business
+          model that would allow people to utilize a no-cost concierge-like
+          service that facilitated vehicle sales directly with auto
+          manufacturers and eliminated the hassles that went along with
+          traditional car buying.
         </div>
         <div class="mb-4">
-          Out of that experience, Executive Auto Broker was born, and 15 years
-          later we are still here. We continue our mission of helping people
-          from all walks of life experience a way of car buying that lets them
-          find their perfect car in a stress-free way.
+          Out of that experience, ExecutiveAB was born, and 15 years later we're
+          still here. We continue our mission to help people experience a new
+          way of car buying that lets them find their perfect car in a
+          stress-free way.
         </div>
         <div
           class="mt-12 mb-6 font-brandSignature max-w-sm text-brand text-4xl sm:text-5xl"

@@ -7,7 +7,7 @@
       >
         <div class="float-left py-4 lg:px-5 my-5">
           <div
-            class="heading mb-3 tracking-wide uppercase underline max-w-sm sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
+            class="heading mb-3 tracking-wide uppercase max-w-sm sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >
             SHARE YOUR EXCITEMENT WITH YOUR FRIENDS & FAMILY!
           </div>
@@ -171,11 +171,15 @@
                   If you answered yes to all of these questions you may be a
                   good fit for joining the ExecutiveAB team as an Executive
                   Concierge.
-                  <NuxtLink to="/careers" class="ml-1 text-brand underline">
-                    {{ 'Visit our careers page ' }}
+                </div>
+                <div class="mb-4">
+                  <NuxtLink to="/careers" class="text-brand underline">
+                    Visit our careers page
                   </NuxtLink>
-                  for more information. We are always looking for people like
-                  you.
+                  <span>
+                    for more information. We are always looking for people like
+                    you.
+                  </span>
                 </div>
               </template>
             </Feature>

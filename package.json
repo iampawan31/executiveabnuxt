@@ -12,7 +12,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@becorps/vue-accordion": "^1.0.1",
+    "@dzangolab/vue-accordion": "^1.1.0",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
@@ -20,6 +20,7 @@
     "overlayscrollbars-vue": "^0.2.2",
     "swiper": "^5.4.5",
     "vue-awesome-swiper": "^4.1.1",
+    "vue-faq-accordion": "^1.6.2",
     "vue-js-counter": "^1.0.3",
     "vue-number-animation": "^1.0.5"
   },

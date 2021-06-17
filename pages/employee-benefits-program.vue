@@ -7,7 +7,7 @@
       >
         <div class="content float-left py-4 lg:px-5 my-5">
           <div
-            class="heading mb-3 tracking-wide uppercase underline max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
+            class="heading mb-3 tracking-wide uppercase max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >
             OFFER OUR SERVICES AS AN AMAZING BENEFIT FOR YOUR STAFF
           </div>
@@ -127,7 +127,7 @@
                   financially benefits from our service. Anytime a member of
                   your staff purchases a vehicle through our service, you will
                   recieve a pay-out from us.
-                  <span class="text-brand mx-1">
+                  <span class="text-brand">
                     That’s right, we are a free benefit for your organization
                     that actually pays you!
                   </span>
@@ -236,7 +236,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-brand-grayAlternate text-white py-16">
+    <section class="bg-brand-gray text-white py-16">
       <CallToAction
         title="Ready to get started?"
         subtitle="START YOUR VEHICLE REQUEST"
@@ -314,18 +314,8 @@ export default {
     url('assets/images/employee-benefits-program/increase-employee-retention.jpeg');
 }
 
-.benefitOneImage:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('assets/images/employee-benefits-program/increase-employee-retention.jpeg');
-}
-
 .benefitTwoImage {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('assets/images/employee-benefits-program/increased-productivity-and-engagement.jpeg');
-}
-
-.benefitTwoImage:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('assets/images/employee-benefits-program/increased-productivity-and-engagement.jpeg');
 }
 
@@ -334,8 +324,20 @@ export default {
     url('assets/images/employee-benefits-program/attract-great-talent.jpeg');
 }
 
-.benefitThreeImage:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('assets/images/employee-benefits-program/attract-great-talent.jpeg');
+@media screen and (min-width: 1024px) {
+  .benefitOneImage:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('assets/images/employee-benefits-program/increase-employee-retention.jpeg');
+  }
+
+  .benefitTwoImage:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('assets/images/employee-benefits-program/increased-productivity-and-engagement.jpeg');
+  }
+
+  .benefitThreeImage:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('assets/images/employee-benefits-program/attract-great-talent.jpeg');
+  }
 }
 </style>

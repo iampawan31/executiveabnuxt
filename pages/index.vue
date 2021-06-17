@@ -12,11 +12,10 @@
           PUT THE SALESPERSON IN YOUR REARVIEW
         </div>
         <div
-          class="text-left sm:text-right sm:max-w-lg text-gray-300 text-md mb-5 px-2 md:px-0 filter drop-shadow-max"
+          class="text-left float-right sm:max-w-lg text-gray-300 text-md mb-5 px-2 md:px-0 filter drop-shadow-max"
         >
-          We find the vehicle your looking for and save you time
-          <br class="hidden md:block" />
-          and money. All you need to do is sit back & buckle-up.
+          We find the vehicle you're looking for while saving you time & money.
+          All you need to do is sit back + buckle up.
         </div>
         <div class="mx-2 md:mx-0 flex flex-shrink">
           <a
@@ -68,7 +67,7 @@
             <h1
               class="uppercase font-semibold text-white text-xl sm:text-2xl filter drop-shadow-max"
             >
-              Ready to experience car buying on auto-pilot?
+              EXPERIENCE CAR BUYING ON AUTO-PILOT
             </h1>
             <p
               class="mt-4 text-brand sm:text-xl md:text-lg filter drop-shadow-max"
@@ -85,7 +84,7 @@
             </div>
           </div>
           <div
-            class="shadow bg-local bg-cover optimize-bg-image bg-center h-96"
+            class="shadow bg-local bg-cover optimize-bg-image bg-center lg:h-96"
             :class="
               sectionVideoPlaying
                 ? 'bg-black p-0'
@@ -106,7 +105,7 @@
                 service for years. Now, we’re making that level of service a
                 reality for all buyers.
               </p>
-              <div class="mt-3">
+              <div class="mt-2">
                 <button
                   class="text-white rounded-full focus:outline-none"
                   @click="openSectionVideo"
@@ -252,12 +251,22 @@
                           </ul>
                           <div class="ml-6">
                             <a
+                              v-if="homepageTab.link.isExternalLink"
                               :href="homepageTab.link.path"
                               class="text-brand underline"
+                              target="_blank"
                             >
                               {{ homepageTab.link.name }}
                               <fa class="ml-1" :icon="faChevronRight" />
                             </a>
+                            <NuxtLink
+                              v-else
+                              class="text-brand underline"
+                              :to="homepageTab.link.path"
+                            >
+                              {{ homepageTab.link.name
+                              }}<fa class="ml-1" :icon="faChevronRight"
+                            /></NuxtLink>
                           </div>
                         </div>
                       </div>
@@ -292,7 +301,7 @@
                 <client-only>
                   <swiper
                     ref="carousel"
-                    class="swiper ig-swiper relative max-w-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-2xl xl:max-w-4xl h-96 sm:h-60 md:h-72 lg:h-48 xl:h-60 min-h-full"
+                    class="swiper ig-swiper relative max-w-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-2xl xl:max-w-4xl h-72 sm:h-48 md:h-72 lg:h-48 xl:h-60 min-h-full"
                     :options="swiperOptions"
                   >
                     <swiper-slide

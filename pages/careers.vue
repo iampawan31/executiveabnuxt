@@ -24,17 +24,19 @@
             dealership models no longer exist, and consumers are in full control
             of the vehicle purchasing process.
           </div>
-          <div class="text-gray-500">
+          <div class="text-gray-500 mb-2">
             If you are interested in helping us build this future, we are
             interested in you. We look forward to receiving your application!
           </div>
-          <NuxtLink
-            to="contact-us"
-            class="shadow-lg py-2 px-8 bg-gradient-to-r from-yellow-700 to-yellow-500 rounded uppercase text-white mb-0.5"
-          >
-            Application
-            <fa class="ml-2 text-white" :icon="faChevronRight" />
-          </NuxtLink>
+          <div>
+            <NuxtLink
+              to="contact-us"
+              class="shadow-lg py-2 px-8 bg-gradient-to-r from-yellow-700 to-yellow-500 rounded uppercase text-white mb-0.5"
+            >
+              Application
+              <fa class="ml-2 text-white" :icon="faChevronRight" />
+            </NuxtLink>
+          </div>
         </div>
       </div>
       <div class="container mx-auto mt-16 sm:mt-0 sm:py-16">

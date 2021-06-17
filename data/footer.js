@@ -10,7 +10,7 @@ export const mainNavigationLinks = [
     path: '/how-it-works',
   },
   {
-    name: 'Friends and family program',
+    name: 'Friends & family program',
     externalLink: false,
     path: '/friends-and-family-program',
   },
@@ -20,7 +20,7 @@ export const mainNavigationLinks = [
     path: '/employee-benefits-program',
   },
   {
-    name: 'Military and community program',
+    name: 'Military & community program',
     externalLink: false,
     path: '/military-and-community-program',
   },
@@ -33,7 +33,7 @@ export const mainNavigationLinks = [
   {
     name: 'Request maintenance / parts',
     externalLink: false,
-    path: '/request-maintenance-parts',
+    path: '#',
   },
   {
     name: 'Contact us',
@@ -54,14 +54,14 @@ export const additionalLinks = [
     path: '/privacy-policy',
   },
   {
-    name: 'Terms and conditions',
+    name: 'Terms & conditions',
     externalLink: false,
     path: '/terms-and-conditions',
   },
   {
     name: 'Blog',
     externalLink: false,
-    path: '/blog',
+    path: '#',
   },
   {
     name: 'Careers',

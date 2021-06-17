@@ -7,7 +7,7 @@
       >
         <div class="content float-left py-4 lg:px-5 my-5">
           <div
-            class="heading mb-3 tracking-wide uppercase underline max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
+            class="heading mb-3 tracking-wide uppercase max-w-xs sm:max-w-lg lg:max-w-lg xl:max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >
             LEARN HOW WE WORK FOR YOU
           </div>

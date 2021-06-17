@@ -3,7 +3,7 @@
     <HeroSectionAlternate :main-header-image="mainHeaderImage">
       <template slot="title">// FAQs</template>
       <template slot="subtitle"
-        >Learn more about the detsils of how our service works through
+        >Learn more about the details of how our service works through
         frequently asked questions</template
       >
     </HeroSectionAlternate>
@@ -13,7 +13,7 @@
           <div class="text-2xl xl:text-3xl mb-4 font-semibold">
             {{ faq.title }}
           </div>
-          <Accordion :items="faq.faqs" class="shadow-md">
+          <Accordion :items="faq.faqs" class="shadow-md" default-index="0">
             <template #title="{ item }">
               <div class="font-semibold">{{ item.title }}</div>
             </template>
@@ -30,12 +30,12 @@
 </template>
 
 <script>
-import Accordion from '@becorps/vue-accordion'
+import Accordion from '@dzangolab/vue-accordion'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import bgMainHeader from 'assets/images/faqs_header.jpeg'
 import { faqs } from '../data/faqs'
 import HeroSectionAlternate from '~/components/common/HeroSectionAlternate'
-import '@becorps/vue-accordion/dist/accordion.css' // import stylesheet
+import '@dzangolab/vue-accordion/dist/accordion.css'
 
 export default {
   transitions: 'fade',

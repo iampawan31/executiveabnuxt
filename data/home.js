@@ -1,10 +1,13 @@
+const VEHICLE_REQUEST_LINK =
+  'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM'
+
 export const firstSlider = [
   {
     title: 'Request Your Vehicle',
     image: require('assets/images/home/first-slide-one.png'),
     gradient: 'bg-gradient-to-r from-brand-blue-dark to-brand-blue-light',
     description:
-      'Never settle for what dealers or websites have in stock. We locate the exact vehicle you want directly through the manufacturers, greatly expanding your selection of vehicles',
+      'Never settle for what dealers or websites have in stock. We locate the exact vehicle you want directly through the manufacturers.',
   },
   {
     title: 'Select & Approve',
@@ -50,8 +53,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start Request',
-      path:
-        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
+      path: VEHICLE_REQUEST_LINK,
+      isExternalLink: true,
     },
   },
   {
@@ -71,8 +74,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start Request',
-      path:
-        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
+      path: VEHICLE_REQUEST_LINK,
+      isExternalLink: true,
     },
   },
   {
@@ -90,8 +93,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start Request',
-      path:
-        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
+      path: VEHICLE_REQUEST_LINK,
+      isExternalLink: true,
     },
   },
   {
@@ -110,8 +113,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start Request',
-      path:
-        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
+      path: VEHICLE_REQUEST_LINK,
+      isExternalLink: true,
     },
   },
   {
@@ -130,8 +133,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'More information',
-      path:
-        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
+      path: '/military-and-community-program',
+      isExternalLink: false,
     },
   },
   {
@@ -150,6 +153,7 @@ export const homepageTabSection = [
     link: {
       name: 'Contact us',
       path: '/contact-us',
+      isExternalLink: false,
     },
   },
   {
@@ -169,6 +173,7 @@ export const homepageTabSection = [
     link: {
       name: 'Contact us',
       path: '/contact-us',
+      isExternalLink: false,
     },
   },
   {
@@ -187,8 +192,8 @@ export const homepageTabSection = [
     ],
     link: {
       name: 'Start request',
-      path:
-        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
+      path: VEHICLE_REQUEST_LINK,
+      isExternalLink: true,
     },
   },
 ]

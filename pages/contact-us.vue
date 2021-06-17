@@ -84,7 +84,7 @@
                   />
                 </div>
                 <div class="w-48">
-                  8500 Redwood Creek Ln San Diego, CA 92126 Bloomfield, CT 06002
+                  8500 Redwood Creek Ln San Diego, CA 92126
                 </div>
               </div>
               <div class="flex space-x-8 mb-10">

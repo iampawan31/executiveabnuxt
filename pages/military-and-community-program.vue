@@ -7,7 +7,7 @@
       >
         <div class="content float-left py-4 lg:px-5 my-5">
           <div
-            class="heading mb-3 tracking-wide uppercase underline max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
+            class="heading mb-3 tracking-wide uppercase max-w-lg font-bold text-2xl md:text-4xl filter drop-shadow-max"
           >
             WE HOLD YOUR SERVICE CLOSE TO OUR HEART
           </div>

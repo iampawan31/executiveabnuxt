@@ -3,17 +3,19 @@
     <HeroSectionAlternate :main-header-image="mainHeaderImage">
       <template slot="title">// PARTNER WITH US</template>
       <template slot="subtitle"
-        >Join the EAB team and join us on our mission to help transform the way
-        consumers purchase vehicles.</template
+        >Help us make sure everyone has access to the best client experiences in
+        the automotive industry.</template
       >
     </HeroSectionAlternate>
     <section class="bg-white text-black py-12 px-5 2xl:px-0">
-      <div class="container mx-auto xl:px-32">
-        <div class="flex flex-col md:flex-row space-y-10 lg:space-y-0 md:mt-10">
+      <div class="container mx-auto xl:px-24 2xl:px-32">
+        <div
+          class="flex flex-col md:flex-row space-y-10 lg:space-y-0 lg:space-x-10 2xl:space-x-32 md:mt-10"
+        >
           <div
             class="flex flex-1 flex-col space-y-10 lg:space-y-0 sm:mt-10 pr-4"
           >
-            <div class="uppercase font-semibold text-2xl sm:text-3xl">
+            <div class="uppercase font-semibold text-2xl sm:text-3xl mb-4">
               EAB PARTNERSHIP PROGRAM
             </div>
             <div class="text-gray-400">
@@ -27,7 +29,7 @@
             </div>
           </div>
           <div
-            class="flex flex-1 flex-col bg-white shadow-2xl rounded-lg w-auto h-auto p-12"
+            class="flex flex-col bg-white shadow-2xl rounded-lg w-auto h-auto p-12 lg:p-8"
           >
             <div class="flex flex-col">
               <div

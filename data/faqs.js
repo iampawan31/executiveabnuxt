@@ -6,7 +6,7 @@ export const faqs = [
         title:
           'What is EAB doing for added safety during the COVID-19 pandemic?',
         content:
-          '<p>EAB has evolved our safety standards to ensure that our clients can enjoy vehicle shopping while mitigating the risk of COVID-19 exposure.</p><br/><p>Any vehicle that is purchased through our service has undergone additional mandatory safety precautions before you receive it. These precautions include the sanitization of the entire interior of the vehicle both before and after any inspections/reconditioning work has taken place, and after any person enters the vehicle before you take possession of it.</p><br/><p>Additionally, all EAB personnel and vendors are being held to guidelines above locally mandated ordinance to protect the health of our workforce and all of our current and future clients.<br />We are continually monitoring the evolution of the COVID-19 pandemic and are diligently at work optimizing our processes to ensure that you enjoy an exceptional, and safe vehicle buying experience.</p>',
+          '<p>EAB has evolved our safety standards to ensure that our clients can enjoy vehicle shopping while mitigating the risk of COVID-19 exposure.</p><br/><p>Any vehicle that is purchased through our service has undergone additional mandatory safety precautions before you receive it. These precautions include the sanitization of the entire interior of the vehicle both before and after any inspections/reconditioning work has taken place, and after any person enters the vehicle before you take possession of it.</p><br/><p>Additionally, all EAB personnel and vendors are being held to guidelines above locally mandated ordinance to protect the health of our workforce and all of our current and future clients.</p><br /><p>We are continually monitoring the evolution of the COVID-19 pandemic and are diligently at work optimizing our processes to ensure that you enjoy an exceptional, and safe vehicle buying experience.</p>',
       },
     ],
   },
@@ -64,7 +64,7 @@ export const faqs = [
       {
         title: 'Do I have to go to a dealership to pick up my car?',
         content:
-          'No. EAB will have the vehicle delivered to your location of your choosing free of cost.',
+          '<p>No. EAB will have the vehicle delivered to your location of your choosing free of cost.</p><small><strong>NOTE:</strong> Some areas (specifically very rural areas) may incur transport costs. Inquire with your concierge for details.</small>',
       },
     ],
   },
@@ -95,7 +95,7 @@ export const faqs = [
         title:
           'Does a pre-owned vehicle purchased through EAB have a warranty?',
         content:
-          'Yes, if the vehicle is still within the manufacturer’s warranty period it will remain with the vehicle. However, if the vehicle is already outside of manufacture warranty you will need to purchase an extended warranty.',
+          "Yes, if the vehicle is still within the manufacturer’s warranty period it will remain with the vehicle. However, if the vehicle is already outside of the manufacturer's warranty you will need to purchase an extended warranty.",
       },
       {
         title: 'Can I buy an extended warranty through EAB?',
@@ -106,7 +106,7 @@ export const faqs = [
         title:
           'What’s covered under an extended warranty purchased through EAB?',
         content:
-          'EABs extended warranties are extensions of the manufacturers original warranty, so the same coverage that was available when the car was new will be available through your extended warranty.',
+          "EABs extended warranties are extensions of the manufacturer's original warranty, so the same coverage that was available when the car was new will be available through your extended warranty.",
       },
     ],
   },
