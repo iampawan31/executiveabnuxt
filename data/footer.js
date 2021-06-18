@@ -31,11 +31,6 @@ export const mainNavigationLinks = [
       'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
   },
   {
-    name: 'Request maintenance / parts',
-    externalLink: false,
-    path: '#',
-  },
-  {
     name: 'Contact us',
     externalLink: false,
     path: '/contact-us',

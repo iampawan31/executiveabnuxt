@@ -128,7 +128,6 @@
                 playsinline
                 controls
                 preload="metadata"
-                @pause="onSectionVideoPause"
               >
                 <source
                   src="~/assets/videos/section_video.mp4"
@@ -412,7 +411,6 @@ import Tab from '~/components/common/Tab'
 import CallToAction from '~/components/CallToAction'
 import InstagramFeed from '~/components/InstagramFeed'
 import CovidMessageSection from '~/components/home/CovidMessageSection'
-// import VideoModal from '~/components/common/VideoModal'
 
 export default {
   name: 'Home',
@@ -499,6 +497,9 @@ export default {
     faInstagram() {
       return faInstagram
     },
+    secondVideoRef() {
+      return this.$refs.sectionVideoRef
+    },
   },
   mounted() {
     this.screenWidth = screen.width
@@ -528,11 +529,12 @@ export default {
       this.sectionVideoPlaying = true
       this.toggleVideoPlayback()
     },
-    onSectionVideoPause() {
-      this.$refs.sectionVideoRef.pause()
-      this.toggleVideoPlayback()
-      this.sectionVideoPlaying = false
-    },
+    // onSectionVideoPause(event) {
+    //   event.target.pause()
+    //   // this.$refs.sectionVideoRef.pause()
+    //   this.toggleVideoPlayback()
+    //   this.sectionVideoPlaying = false
+    // },
   },
 }
 </script>

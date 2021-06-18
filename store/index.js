@@ -1,6 +1,8 @@
 export const state = () => ({
   initialSlide: true,
   breakpoint: null,
+  post: [],
+  cagtegory: [],
 })
 
 export const getters = {

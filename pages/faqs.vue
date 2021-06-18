@@ -4,7 +4,7 @@
       <template slot="title">// FAQs</template>
       <template slot="subtitle"
         >Learn more about the details of how our service works through
-        frequently asked questions</template
+        frequently asked questions.</template
       >
     </HeroSectionAlternate>
     <section class="bg-white text-black py-12 px-5 2xl:px-0">
@@ -13,7 +13,7 @@
           <div class="text-2xl xl:text-3xl mb-4 font-semibold">
             {{ faq.title }}
           </div>
-          <Accordion :items="faq.faqs" class="shadow-md" default-index="0">
+          <Accordion :items="faq.faqs" class="shadow-md" :default-index="-1">
             <template #title="{ item }">
               <div class="font-semibold">{{ item.title }}</div>
             </template>

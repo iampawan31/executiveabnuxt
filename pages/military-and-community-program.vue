@@ -149,7 +149,7 @@
         </div>
       </section>
     </transition>
-    <section class="bg-brand-gray-alternate text-white py-16">
+    <section class="bg-brand-gray text-white py-16">
       <CallToAction
         title="Ready to get started?"
         subtitle="START YOUR VEHICLE REQUEST"

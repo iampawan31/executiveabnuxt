@@ -121,12 +121,6 @@
         >
           Request vehicle
         </a>
-        <button class="lg:hidden inline-block focus:outline-none ml-2">
-          <fa
-            :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
-            @click.stop="requestVehicleOpen = !requestVehicleOpen"
-          />
-        </button>
       </div>
       <NuxtLink
         to="/contact-us"

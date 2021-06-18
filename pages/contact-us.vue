@@ -72,7 +72,7 @@
             </div>
           </div>
           <div
-            class="bg-white xl:w-2xl flex flex-col shadow-2xl rounded-lg pt-14 mb-0 pb-4"
+            class="bg-white xl:w-2xl flex flex-col shadow-2xl rounded-lg pt-14 mb-0 pb-4 lg:pb-0"
           >
             <div class="px-4 sm:px-12">
               <div class="flex space-x-8 mb-10">
