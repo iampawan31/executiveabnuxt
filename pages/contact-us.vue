@@ -28,43 +28,66 @@
           <div
             class="bg-white flex flex-col flex-grow max-w-4xl shadow-2xl rounded-lg p-8 sm:p-14"
           >
-            <div class="flex flex-col">
-              <div
-                class="flex flex-grow flex-col sm:flex-row sm:space-x-4 mb-6"
-              >
-                <label class="block flex-grow mb-6 sm:mb-0">
+            <form
+              :ref="formRef"
+              name="contact"
+              netlify-honeypot="bot-field"
+              netlify
+            >
+              <p class="hidden">
+                <label
+                  >Don’t fill this out if you’re human: <input name="bot-field"
+                /></label>
+              </p>
+              <input
+                v-model="form.formName"
+                type="hidden"
+                name="form-name"
+                value="contact"
+              />
+              <div class="flex flex-col">
+                <div
+                  class="flex flex-grow flex-col sm:flex-row sm:space-x-4 mb-6"
+                >
+                  <label class="block flex-grow mb-6 sm:mb-0">
+                    <input
+                      v-model="form.name"
+                      type="text"
+                      class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                      placeholder="Name"
+                    />
+                  </label>
+                  <label class="block flex-grow">
+                    <input
+                      v-model="form.email"
+                      type="email"
+                      class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                      placeholder="E-mail"
+                    />
+                  </label>
+                </div>
+                <label class="block mb-6">
                   <input
+                    v-model="form.subject"
                     type="text"
                     class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
-                    placeholder="Name"
+                    placeholder="Subject"
                   />
                 </label>
-                <label class="block flex-grow">
-                  <input
-                    type="email"
+                <label class="block mb-6">
+                  <textarea
+                    v-model="form.message"
                     class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
-                    placeholder="E-mail"
-                  />
+                    rows="3"
+                    placeholder="Message"
+                  ></textarea>
                 </label>
               </div>
-              <label class="block mb-6">
-                <input
-                  type="text"
-                  class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
-                  placeholder="Subject"
-                />
-              </label>
-              <label class="block mb-6">
-                <textarea
-                  class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
-                  rows="3"
-                  placeholder="Message"
-                ></textarea>
-              </label>
-            </div>
+            </form>
             <div class="flex-grow-0">
               <button
                 class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
+                @click="submitForm"
               >
                 Send
                 <fa class="ml-2 text-white" :icon="faChevronRight" />
@@ -203,6 +226,13 @@ export default {
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
+      formRef: null,
+      form: {
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      },
     }
   },
   head: {
@@ -235,6 +265,20 @@ export default {
     },
     faLinkedin() {
       return faLinkedin
+    },
+  },
+  methods: {
+    submitForm() {
+      const myForm = this.$refs.formRef
+      const formData = new FormData(myForm)
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => console.log('Form successfully submitted'))
+        .catch((error) => alert(error))
     },
   },
 }
