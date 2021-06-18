@@ -29,7 +29,7 @@
             class="bg-white flex flex-col flex-grow max-w-4xl shadow-2xl rounded-lg p-8 sm:p-14"
           >
             <form
-              :ref="formRef"
+              ref="formRef"
               name="contact"
               netlify-honeypot="bot-field"
               netlify
@@ -39,46 +39,41 @@
                   >Don’t fill this out if you’re human: <input name="bot-field"
                 /></label>
               </p>
-              <input
-                v-model="form.formName"
-                type="hidden"
-                name="form-name"
-                value="contact"
-              />
+              <input type="hidden" name="form-name" value="contact" />
               <div class="flex flex-col">
                 <div
                   class="flex flex-grow flex-col sm:flex-row sm:space-x-4 mb-6"
                 >
                   <label class="block flex-grow mb-6 sm:mb-0">
                     <input
-                      v-model="form.name"
                       type="text"
                       class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                      name="name"
                       placeholder="Name"
                     />
                   </label>
                   <label class="block flex-grow">
                     <input
-                      v-model="form.email"
                       type="email"
                       class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                      name="email"
                       placeholder="E-mail"
                     />
                   </label>
                 </div>
                 <label class="block mb-6">
                   <input
-                    v-model="form.subject"
                     type="text"
                     class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                    name="subject"
                     placeholder="Subject"
                   />
                 </label>
                 <label class="block mb-6">
                   <textarea
-                    v-model="form.message"
                     class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
                     rows="3"
+                    name="message"
                     placeholder="Message"
                   ></textarea>
                 </label>
@@ -226,13 +221,6 @@ export default {
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
-      formRef: null,
-      form: {
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      },
     }
   },
   head: {
@@ -270,6 +258,7 @@ export default {
   methods: {
     submitForm() {
       const myForm = this.$refs.formRef
+      console.log(myForm)
       const formData = new FormData(myForm)
 
       fetch('/', {
