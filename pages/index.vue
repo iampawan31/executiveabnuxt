@@ -464,8 +464,7 @@ export default {
       firstSectionBackgroundImage2: { backgroundImage: `url(${bgImage2})` },
       sliderBackground: { backgroundImage: `url(${homepageSliderBackground})` },
       homepageTabSection,
-      accessToken:
-        'IGQVJXTUo5d1ZANQWVYZAXp6YldZAaENVdFlMdW9tRnNYb3pNQ2NGMHo4a2xQZAkQ5U2phZA2VUSG9tMU9rRVF6U1Qydktybl96TWN3U0RtWWhaOHhwWkRjLU1CNmo1RmJaaVYzbWlualR3SmlucTBfenNRZAQZDZD',
+      accessToken: '',
     }
   },
   head: {
@@ -502,6 +501,7 @@ export default {
     },
   },
   mounted() {
+    this.accessToken = process.env.IG_TOKEN
     this.screenWidth = screen.width
     window.addEventListener('resize', this.onResize)
     this.videoPlaying = true
