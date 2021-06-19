@@ -103,7 +103,6 @@
                 class="mt-4"
                 :alert-type="alertType"
                 :message="alertMessage"
-                :title="alertTitle"
               />
             </transition>
           </div>
@@ -247,7 +246,6 @@ export default {
       message: '',
       alertType: null,
       alertMessage: null,
-      alertTitle: '',
       showAlert: false,
     }
   },
@@ -284,10 +282,9 @@ export default {
     },
   },
   methods: {
-    setAlert(type, message, title) {
+    setAlert(type, message) {
       this.alertType = type
       this.alertMessage = message
-      this.alertTitle = title
       this.showAlert = true
     },
     submitForm() {
@@ -300,18 +297,14 @@ export default {
         body: new URLSearchParams(formData).toString(),
       })
         .then(() => {
-          this.setAlert('green', 'Form submitted successfully', 'Success')
+          this.setAlert(true, 'Form submitted successfully')
           this.name = ''
           this.email = ''
           this.subject = ''
           this.message = ''
         })
         .catch(() =>
-          this.setAlert(
-            'red',
-            'Form submission failed. Please try again',
-            'Failed'
-          )
+          this.setAlert(false, 'Form submission failed. Please try again')
         )
     },
   },

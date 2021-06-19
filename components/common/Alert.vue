@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`bg-${alertType}-500`"
+    :class="alertType ? 'bg-green-500' : 'bg-red-500'"
     class="flex items-center text-white text-sm font-bold px-4 py-3"
     role="alert"
   >
@@ -15,34 +15,16 @@
     </svg>
     <p>{{ message }}</p>
   </div>
-  <!-- <div role="alert">
-    <div
-      :class="`bg-${alertType}-500`"
-      class="text-white font-bold rounded-t px-4 py-2"
-    >
-      {{ title }}
-    </div>
-    <div
-      :class="`border-${alertType}-400 text-${alertType}-700 bg-${alertType}-100`"
-      class="border border-t-0 rounded-b px-4 py-3"
-    >
-      <p>{{ message }}</p>
-    </div>
-  </div> -->
 </template>
 
 <script>
 export default {
   props: {
     alertType: {
-      type: String,
-      default: 'green',
+      type: Boolean,
+      default: true,
     },
     message: {
-      type: String,
-      default: 'This is message',
-    },
-    title: {
       type: String,
       default: 'This is message',
     },
