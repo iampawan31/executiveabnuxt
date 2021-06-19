@@ -7,7 +7,7 @@
       <div class="w-full relative max-w-4xl shadow-lg rounded-lg p-2">
         <button
           aria-label="close"
-          class="absolute top-3 right-5 font-semibold bg-black rounded-full h-8 w-8 text-white z-50"
+          class="absolute top-3 right-5 font-semibold bg-black focus:outline-none rounded-full h-8 w-8 text-white z-50"
           @click.prevent="close"
         >
           X

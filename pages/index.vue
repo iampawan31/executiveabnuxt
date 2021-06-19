@@ -75,7 +75,7 @@
               Our service works for both new & pre-owned vehicles of all makes
               and models. Delivery available nationwide.
             </p>
-            <div class="mt-4">
+            <div class="mt-6">
               <a
                 href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
                 class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-8 rounded text-white mt-4 mb-10 no-underline"
@@ -105,7 +105,7 @@
                 service for years. Now, we’re making that level of service a
                 reality for all buyers.
               </p>
-              <div class="mt-2">
+              <div class="mt-4">
                 <button
                   class="text-white rounded-full focus:outline-none"
                   @click="openSectionVideo"
@@ -422,7 +422,6 @@ export default {
     CallToAction,
     InstagramFeed,
     CovidMessageSection,
-    // VideoModal,
   },
   data() {
     return {
@@ -464,7 +463,6 @@ export default {
       firstSectionBackgroundImage2: { backgroundImage: `url(${bgImage2})` },
       sliderBackground: { backgroundImage: `url(${homepageSliderBackground})` },
       homepageTabSection,
-      // accessToken: '',
     }
   },
   head: {
@@ -504,7 +502,6 @@ export default {
     },
   },
   mounted() {
-    this.accessToken = process.env.NUXT_ENV_IG_TOKEN
     this.screenWidth = screen.width
     window.addEventListener('resize', this.onResize)
     this.videoPlaying = true
@@ -532,12 +529,6 @@ export default {
       this.sectionVideoPlaying = true
       this.toggleVideoPlayback()
     },
-    // onSectionVideoPause(event) {
-    //   event.target.pause()
-    //   // this.$refs.sectionVideoRef.pause()
-    //   this.toggleVideoPlayback()
-    //   this.sectionVideoPlaying = false
-    // },
   },
 }
 </script>

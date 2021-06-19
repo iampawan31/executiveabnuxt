@@ -33,6 +33,7 @@
               name="contact"
               netlify-honeypot="bot-field"
               netlify
+              @submit.prevent="submitForm"
             >
               <p class="hidden">
                 <label
@@ -46,6 +47,8 @@
                 >
                   <label class="block flex-grow mb-6 sm:mb-0">
                     <input
+                      v-model="name"
+                      required
                       type="text"
                       class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
                       name="name"
@@ -54,6 +57,8 @@
                   </label>
                   <label class="block flex-grow">
                     <input
+                      v-model="email"
+                      required
                       type="email"
                       class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
                       name="email"
@@ -63,6 +68,8 @@
                 </div>
                 <label class="block mb-6">
                   <input
+                    v-model="subject"
+                    required
                     type="text"
                     class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
                     name="subject"
@@ -71,6 +78,8 @@
                 </label>
                 <label class="block mb-6">
                   <textarea
+                    v-model="message"
+                    required
                     class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
                     rows="3"
                     name="message"
@@ -78,16 +87,25 @@
                   ></textarea>
                 </label>
               </div>
+              <div class="flex-grow-0">
+                <button
+                  type="submit"
+                  class="bg-gradient-to-r from-yellow-700 focus:outline-none to-yellow-500 shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
+                >
+                  Send
+                  <fa class="ml-2 text-white" :icon="faChevronRight" />
+                </button>
+              </div>
             </form>
-            <div class="flex-grow-0">
-              <button
-                class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
-                @click="submitForm"
-              >
-                Send
-                <fa class="ml-2 text-white" :icon="faChevronRight" />
-              </button>
-            </div>
+            <transition name="fade">
+              <Alert
+                v-show="showAlert"
+                class="mt-4"
+                :alert-type="alertType"
+                :message="alertMessage"
+                :title="alertTitle"
+              />
+            </transition>
           </div>
           <div
             class="bg-white xl:w-2xl flex flex-col shadow-2xl rounded-lg pt-14 mb-0 pb-4 lg:pb-0"
@@ -212,15 +230,25 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import bgMainHeader from 'assets/images/contact_us_header.jpeg'
 import HeroSectionAlternate from '~/components/common/HeroSectionAlternate'
+import Alert from '~/components/common/Alert'
 
 export default {
   transitions: 'fade',
   components: {
     HeroSectionAlternate,
+    Alert,
   },
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+      alertType: null,
+      alertMessage: null,
+      alertTitle: '',
+      showAlert: false,
     }
   },
   head: {
@@ -256,9 +284,14 @@ export default {
     },
   },
   methods: {
+    setAlert(type, message, title) {
+      this.alertType = type
+      this.alertMessage = message
+      this.alertTitle = title
+      this.showAlert = true
+    },
     submitForm() {
       const myForm = this.$refs.formRef
-      console.log(myForm)
       const formData = new FormData(myForm)
 
       fetch('/', {
@@ -266,8 +299,21 @@ export default {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
       })
-        .then(() => console.log('Form successfully submitted'))
-        .catch((error) => alert(error))
+        .then(() => {
+          this.setAlert('green', 'Form submitted successfully', 'Success')
+          this.name = ''
+          this.email = ''
+          this.subject = ''
+          this.message = ''
+          console.log('Form submitted successfully')
+        })
+        .catch(() =>
+          this.setAlert(
+            'red',
+            'Form submission failed. Please try again',
+            'Failed'
+          )
+        )
     },
   },
 }

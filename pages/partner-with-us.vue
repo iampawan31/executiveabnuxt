@@ -31,48 +31,85 @@
           <div
             class="flex flex-col bg-white shadow-2xl rounded-lg w-auto h-auto p-12 lg:p-8"
           >
-            <div class="flex flex-col">
-              <div
-                class="flex flex-grow flex-col sm:flex-row sm:space-x-4 mb-6"
-              >
-                <label class="block flex-grow mb-6 sm:mb-0">
+            <form
+              ref="formRef"
+              name="partner-with-us"
+              netlify-honeypot="bot-field"
+              netlify
+              @submit.prevent="submitForm"
+            >
+              <div class="flex flex-col">
+                <p class="hidden">
+                  <label
+                    >Don’t fill this out if you’re human:
+                    <input name="bot-field"
+                  /></label>
+                </p>
+                <input type="hidden" name="form-name" value="contact" />
+                <div
+                  class="flex flex-grow flex-col sm:flex-row sm:space-x-4 mb-6"
+                >
+                  <label class="block flex-grow mb-6 sm:mb-0">
+                    <input
+                      v-model="name"
+                      required
+                      type="text"
+                      class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                      name="name"
+                      placeholder="Name"
+                    />
+                  </label>
+                  <label class="block flex-grow">
+                    <input
+                      v-model="email"
+                      required
+                      type="email"
+                      class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
+                      name="email"
+                      placeholder="E-mail"
+                    />
+                  </label>
+                </div>
+                <label class="block mb-6">
                   <input
+                    v-model="subject"
+                    required
                     type="text"
                     class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
-                    placeholder="Name"
+                    name="subject"
+                    placeholder="Subject"
                   />
                 </label>
-                <label class="block flex-grow">
-                  <input
-                    type="email"
+                <label class="block mb-6">
+                  <textarea
+                    v-model="message"
+                    required
                     class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
-                    placeholder="E-mail"
-                  />
+                    rows="3"
+                    name="message"
+                    placeholder="Message"
+                  ></textarea>
                 </label>
               </div>
-              <label class="block mb-6">
-                <input
-                  type="text"
-                  class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
-                  placeholder="Subject"
-                />
-              </label>
-              <label class="block mb-6">
-                <textarea
-                  class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black"
-                  rows="3"
-                  placeholder="Message"
-                ></textarea>
-              </label>
-            </div>
-            <div class="flex-grow-0">
-              <button
-                class="bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
-              >
-                Send
-                <fa class="ml-2 text-white" :icon="faChevronRight" />
-              </button>
-            </div>
+              <div class="flex-grow-0">
+                <button
+                  type="submit"
+                  class="bg-gradient-to-r from-yellow-700 focus:outline-none to-yellow-500 shadow-lg py-2 px-8 float-right rounded uppercase text-white mt-5"
+                >
+                  Send
+                  <fa class="ml-2 text-white" :icon="faChevronRight" />
+                </button>
+              </div>
+            </form>
+            <transition name="fade">
+              <Alert
+                v-show="showAlert"
+                class="mt-4"
+                :alert-type="alertType"
+                :message="alertMessage"
+                :title="alertTitle"
+              />
+            </transition>
           </div>
         </div>
       </div>
@@ -153,13 +190,22 @@ import bgMainHeader from 'assets/images/partner_with_us_header.jpeg'
 import Feature from '~/components/common/Feature'
 import Features from '~/components/common/Features'
 import HeroSectionAlternate from '~/components/common/HeroSectionAlternate'
+import Alert from '~/components/common/Alert'
 
 export default {
   transitions: 'fade',
-  components: { Feature, Features, HeroSectionAlternate },
+  components: { Feature, Features, HeroSectionAlternate, Alert },
   data() {
     return {
       mainHeaderImage: { backgroundImage: `url(${bgMainHeader})` },
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+      alertType: '',
+      alertMessage: '',
+      alertTitle: '',
+      showAlert: false,
     }
   },
   head: {
@@ -168,6 +214,39 @@ export default {
   computed: {
     faChevronRight() {
       return faChevronRight
+    },
+  },
+  methods: {
+    setAlert(type, message, title) {
+      this.alertType = type
+      this.alertMessage = message
+      this.alertTitle = title
+      this.showAlert = true
+    },
+    submitForm() {
+      const myForm = this.$refs.formRef
+      const formData = new FormData(myForm)
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => {
+          this.setAlert('green', 'Form submitted successfully', 'Success')
+          this.name = ''
+          this.email = ''
+          this.subject = ''
+          this.message = ''
+          console.log('Form submitted successfully')
+        })
+        .catch(() =>
+          this.setAlert(
+            'red',
+            'Form submission failed. Please try again',
+            'Failed'
+          )
+        )
     },
   },
 }
