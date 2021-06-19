@@ -305,7 +305,6 @@ export default {
           this.email = ''
           this.subject = ''
           this.message = ''
-          console.log('Form submitted successfully')
         })
         .catch(() =>
           this.setAlert(
