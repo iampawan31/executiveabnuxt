@@ -241,12 +241,6 @@
                 worked with that offer competitive rates, however, we do not
                 have any affiliation with them.
               </div>
-              <div class="mb-4">
-                If you need help finding a trusted lender we will gladly point
-                you in the right direction of lenders our past clients have
-                worked with that offer competitive rates, however we do not have
-                any affiliation with them.
-              </div>
             </template>
           </Feature>
           <hr class="my-16 border-gray-400" />

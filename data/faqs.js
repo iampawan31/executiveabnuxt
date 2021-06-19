@@ -26,7 +26,7 @@ export const faqs = [
       {
         title: 'How is EAB different than Carvana and Shift?',
         content:
-          '<p>Carvana and Shift function as online dealership and sell you vehicles that they have in stock, operating just like a traditional car dealer but online with vehicle delivery.</p><br/><p>EAB, unlike all dealerships, does not stock inventory. EAB operates by facilitating vehicle sales directly with manufacturers and their entire nationwide inventory. This gives you a buying advantage as you are not limited to selecting from just what is currently in the inventory of dealers and online dealers.</p>',
+          '<p>Carvana and Shift function as online dealerships and sell you vehicles that they have in stock, operating just like a traditional car dealer but online with vehicle delivery.</p><br/><p>EAB, unlike all dealerships, does not stock inventory. EAB operates by facilitating vehicle sales directly with manufacturers and their entire nationwide inventory. This gives you a buying advantage as you are not limited to selecting from just what is currently in the inventory of dealers and online dealers.</p>',
       },
     ],
   },
@@ -64,7 +64,7 @@ export const faqs = [
       {
         title: 'Do I have to go to a dealership to pick up my car?',
         content:
-          '<p>No. EAB will have the vehicle delivered to your location of your choosing free of cost.</p><small><strong>NOTE:</strong> Some areas (specifically very rural areas) may incur transport costs. Inquire with your concierge for details.</small>',
+          '<p>No. EAB will have the vehicle delivered to a location of your choosing free of cost.</p><small><strong>NOTE:</strong> Some areas (specifically very rural areas) may incur transport costs. Inquire with your concierge for details.</small>',
       },
     ],
   },

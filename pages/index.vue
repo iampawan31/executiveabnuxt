@@ -501,7 +501,7 @@ export default {
     },
   },
   mounted() {
-    this.accessToken = process.env.IG_TOKEN
+    this.accessToken = process.env.NUXT_ENV_IG_TOKEN
     this.screenWidth = screen.width
     window.addEventListener('resize', this.onResize)
     this.videoPlaying = true
