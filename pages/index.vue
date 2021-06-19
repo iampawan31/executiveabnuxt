@@ -464,7 +464,7 @@ export default {
       firstSectionBackgroundImage2: { backgroundImage: `url(${bgImage2})` },
       sliderBackground: { backgroundImage: `url(${homepageSliderBackground})` },
       homepageTabSection,
-      accessToken: '',
+      // accessToken: '',
     }
   },
   head: {
@@ -498,6 +498,9 @@ export default {
     },
     secondVideoRef() {
       return this.$refs.sectionVideoRef
+    },
+    accessToken() {
+      return process.env.NUXT_ENV_IG_TOKEN
     },
   },
   mounted() {
