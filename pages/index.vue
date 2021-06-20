@@ -88,7 +88,7 @@
             :class="
               sectionVideoPlaying
                 ? 'bg-black p-0'
-                : 'py-14 px-4 md:p-8 lg:p-14 2xl:py-20'
+                : 'py-9 px-4 md:p-8 lg:p-14 2xl:py-20'
             "
             :style="!sectionVideoPlaying ? firstSectionBackgroundImage2 : null"
           >
@@ -128,6 +128,7 @@
                 playsinline
                 controls
                 preload="metadata"
+                @ended="secondVideoEnded"
               >
                 <source
                   src="~/assets/videos/section_video.mp4"
@@ -527,6 +528,10 @@ export default {
     openSectionVideo() {
       this.$refs.sectionVideoRef.play()
       this.sectionVideoPlaying = true
+      this.toggleVideoPlayback()
+    },
+    secondVideoEnded() {
+      this.sectionVideoPlaying = false
       this.toggleVideoPlayback()
     },
   },
