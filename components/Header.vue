@@ -50,7 +50,7 @@
         <div
           class="mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
         >
-          <NuxtLink to="/about-us" class="text-white"> About us </NuxtLink>
+          <div class="text-white">About EAB</div>
           <button class="lg:hidden focus:outline-none ml-2">
             <fa
               :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
@@ -62,9 +62,17 @@
           :class="requestVehicleOpen ? 'block' : 'hidden'"
           class="lg:group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
         >
+          <li>
+            <NuxtLink
+              to="/about-us"
+              class="rounded-t xl:pr-10 bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
+            >
+              About us
+            </NuxtLink>
+          </li>
           <li class="">
             <NuxtLink
-              class="rounded xl:pr-10 bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="rounded-b xl:pr-10 bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/faqs"
               >FAQs</NuxtLink
             >
@@ -75,9 +83,7 @@
         <div
           class="mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
         >
-          <NuxtLink to="/how-it-works" class="text-white">
-            How it works
-          </NuxtLink>
+          <div>How EAB Works</div>
           <button class="lg:hidden focus:outline-none ml-2">
             <fa
               :icon="howItWorksOpen ? faChevronUp : faChevronDown"
@@ -89,9 +95,17 @@
           :class="howItWorksOpen ? 'block' : 'hidden'"
           class="lg:group-hover:block lg:hidden lg:absolute lg:text-gray-700 pt-1 z-50 top-12"
         >
+          <li>
+            <NuxtLink
+              to="/how-it-works"
+              class="rounded-t bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
+            >
+              How it works
+            </NuxtLink>
+          </li>
           <li class="">
             <NuxtLink
-              class="rounded-t bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
+              class="bg-gray-800 lg:text-white lg:bg-black lg:hover:text-gray-400 lg:bg-opacity-80 transition text-sm py-2 px-4 block whitespace-no-wrap"
               to="/friends-and-family-program"
               >Friends & family program</NuxtLink
             >

@@ -31,7 +31,7 @@ export const faqs = [
     ],
   },
   {
-    title: 'NEW VEHICLE',
+    title: 'NEW VEHICLES',
     faqs: [
       {
         title: 'Can you provide financing on a new car?',
