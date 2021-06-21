@@ -16,6 +16,7 @@
           type="button"
           :class="isHomeRoute ? 'text-white' : 'text-gray-300'"
           class="hover:text-white focus:text-white focus:outline-none"
+          aria-label="Menu Button"
           @click="isOpen = !isOpen"
         >
           <svg
@@ -135,6 +136,7 @@
       >
         <a
           href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+          rel="noreferrer"
           class="text-white no-underline"
         >
           Request vehicle

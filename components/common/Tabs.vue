@@ -9,6 +9,7 @@
       >
         <button
           class="text-md absolute left-2 mt-1 xl:hidden flex focus:outline-none"
+          aria-label="Prev Button"
           @click="prevNav"
         >
           <fa class="text-2xl text-white" :icon="faChevronLeft" />
@@ -24,6 +25,7 @@
         </div>
         <button
           class="absolute right-2 mt-1 xl:hidden flex focus:outline-none"
+          aria-label="Next Button"
           @click="nextNav"
         >
           <fa class="text-white text-2xl" :icon="faChevronRight" />

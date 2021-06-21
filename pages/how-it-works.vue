@@ -285,6 +285,7 @@
               such as CARFAX, AutoCheck, &
               <a
                 href="https://vehiclehistory.bja.ojp.gov/"
+                rel="noreferrer"
                 target="_blank"
                 class=""
                 >NMVTIS</a

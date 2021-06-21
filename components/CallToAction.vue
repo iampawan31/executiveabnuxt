@@ -24,6 +24,7 @@
         <div class="text-right xl:-mt-6">
           <a
             v-if="externalLink"
+            rel="noreferrer"
             :href="buttonLink"
             class="bg-gradient-to-r inline-block no-underline from-yellow-700 to-yellow-500 py-1 md:py-2 px-4 rounded uppercase text-white mb-0"
           >

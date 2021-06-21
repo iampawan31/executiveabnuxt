@@ -20,6 +20,7 @@
               <a
                 v-else
                 :href="link.path"
+                rel="noreferrer"
                 class="text-sm mb-2 hover:text-brand transition"
                 >{{ link.name }}</a
               >
@@ -110,17 +111,30 @@
         <div class="flex flex-1 flex-col">
           <div class="hidden sm:block mb-4">CONNECT ON SOCIAL</div>
           <div class="flex parent-div">
-            <a href="https://www.instagram.com/executiveautob/" target="_blank">
+            <a
+              href="https://www.instagram.com/executiveautob/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <fa class="text-brand mr-4 text-4xl" :icon="faInstagram" />
             </a>
-            <a href="https://www.facebook.com/executiveautob/" target="_blank">
+            <a
+              href="https://www.facebook.com/executiveautob/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <fa class="text-brand mx-4 text-4xl" :icon="faFacebook" />
             </a>
-            <a href="https://twitter.com/executiveab" target="_blank">
+            <a
+              href="https://twitter.com/executiveab"
+              rel="noreferrer"
+              target="_blank"
+            >
               <fa class="text-brand mx-4 text-4xl" :icon="faTwitter" />
             </a>
             <a
               href="https://www.linkedin.com/company/executiveautob/"
+              rel="noreferrer"
               target="_blank"
             >
               <fa class="text-brand mx-4 text-4xl" :icon="faLinkedin" />

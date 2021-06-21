@@ -151,21 +151,28 @@
               <div class="flex content-end flex-row w-full justify-end mt-16">
                 <a
                   href="https://www.instagram.com/executiveautob/"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <fa class="text-gray-400 mx-4 text-4xl" :icon="faInstagram"
                 /></a>
                 <a
                   href="https://www.facebook.com/executiveautob/"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <fa class="text-gray-400 mx-4 text-4xl" :icon="faFacebook" />
                 </a>
-                <a href="https://twitter.com/executiveab" target="_blank">
+                <a
+                  href="https://twitter.com/executiveab"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <fa class="text-gray-400 mx-4 text-4xl" :icon="faTwitter" />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/executiveautob/"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <fa class="text-gray-400 mx-4 text-4xl" :icon="faLinkedin" />

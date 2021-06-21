@@ -355,6 +355,7 @@
           close Your web browser. Learn more about cookies:
           <a
             href="https://www.freeprivacypolicy.com/blog/cookies/"
+            rel="noreferrer"
             target="_blank"
             class="text-brand underline"
             >Cookies: What Do They Do?</a
