@@ -16,7 +16,7 @@
         <div
           v-for="(tab, index) in tabs"
           :key="tab.title"
-          class="mx-2 min-w-max 2xl:mx-5 text-white tracking-wider py-1 m-0 md:text-sm cursor-pointer"
+          class="mx-2 min-w-max 2xl:mx-5 text-white tracking-wider py-1 m-0 md:text-sm cursor-pointer tab"
           :class="index == selectedIndex ? 'border-b-2' : null"
           @click="selectTab(index)"
         >
@@ -63,22 +63,33 @@ export default {
   methods: {
     selectTab(i) {
       this.selectedIndex = i
-
-      // loop over all the tabs
       this.tabs.forEach((tab, index) => {
         tab.isActive = index === i
       })
     },
     nextNav() {
-      // console.log(this.$refs.tabSection, 67)
-      this.$refs.tabsSection.scrollBy({ top: 0, left: 100, behavior: 'smooth' })
+      if (this.selectedIndex < this.tabs.length - 1) {
+        const tabElements = this.$refs.tabsSection.querySelectorAll('.tab')
+        this.$refs.tabsSection.scrollBy({
+          top: 0,
+          left: tabElements[this.selectedIndex + 1].offsetWidth,
+          behavior: 'smooth',
+        })
+        this.selectedIndex++
+      }
+      this.selectTab(this.selectedIndex)
     },
     prevNav() {
-      this.$refs.tabsSection.scrollBy({
-        top: 0,
-        left: -100,
-        behavior: 'smooth',
-      })
+      if (this.selectedIndex > this.tabs.length) {
+        const tabElements = this.$refs.tabsSection.querySelectorAll('.tab')
+        this.$refs.tabsSection.scrollBy({
+          top: 0,
+          left: -tabElements[this.selectedIndex + 1].offsetWidth,
+          behavior: 'smooth',
+        })
+        this.selectedIndex--
+      }
+      this.selectTab(this.selectedIndex)
     },
   },
 }
