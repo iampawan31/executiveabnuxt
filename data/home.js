@@ -1,4 +1,5 @@
-const VEHICLE_REQUEST_LINK = '/request-vehicle'
+const VEHICLE_REQUEST_LINK =
+  'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM'
 
 export const firstSlider = [
   {
@@ -53,7 +54,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start Request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: false,
+      isExternalLink: true,
     },
   },
   {
@@ -74,7 +75,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start Request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: false,
+      isExternalLink: true,
     },
   },
   {
@@ -93,7 +94,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start Request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: false,
+      isExternalLink: true,
     },
   },
   {
@@ -113,7 +114,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start Request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: false,
+      isExternalLink: true,
     },
   },
   {
@@ -192,7 +193,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: false,
+      isExternalLink: true,
     },
   },
 ]

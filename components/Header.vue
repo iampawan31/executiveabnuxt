@@ -112,12 +112,16 @@
           </li>
         </ul>
       </div>
-      <a
-        href="/request-vehicle"
-        class="block mt-1 text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
+      <div
+        class="block mt-1 text-white no-underline hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
       >
-        Request Vehicle
-      </a>
+        <a
+          href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
+          class="text-white no-underline"
+        >
+          Request vehicle
+        </a>
+      </div>
       <NuxtLink
         to="/contact-us"
         class="block mt-1 text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"

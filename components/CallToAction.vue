@@ -65,11 +65,12 @@ export default {
     },
     buttonLink: {
       type: String,
-      default: '/request-vehicle',
+      default:
+        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
     },
     externalLink: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     hasLogo: {
       type: Boolean,
