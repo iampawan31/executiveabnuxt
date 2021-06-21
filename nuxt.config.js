@@ -75,7 +75,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['nuxt-webfontloader'],
+  modules: ['nuxt-webfontloader', '@nuxtjs/robots'],
   webfontloader: {
     google: {
       families: ['Montserrat:400,500,600,700'], // Loads B612 font with weights 400 and 700
