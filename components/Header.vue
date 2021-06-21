@@ -50,13 +50,15 @@
         <div
           class="mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
         >
-          <div class="text-white">About EAB</div>
-          <button class="lg:hidden focus:outline-none ml-2">
-            <fa
-              :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
-              @click.stop="requestVehicleOpen = !requestVehicleOpen"
-            />
-          </button>
+          <div class="text-white">
+            About EAB
+            <button class="lg:hidden focus:outline-none ml-2">
+              <fa
+                :icon="requestVehicleOpen ? faChevronUp : faChevronDown"
+                @click.stop="requestVehicleOpen = !requestVehicleOpen"
+              />
+            </button>
+          </div>
         </div>
         <ul
           :class="requestVehicleOpen ? 'block' : 'hidden'"
@@ -83,13 +85,15 @@
         <div
           class="mt-1 dropdown text-white hover:border-white border-transparent border-b-2 transition lg:px-3 py-2 text-sm font-medium lg:mt-0 lg:ml-2 xl:ml-4"
         >
-          <div>How EAB Works</div>
-          <button class="lg:hidden focus:outline-none ml-2">
-            <fa
-              :icon="howItWorksOpen ? faChevronUp : faChevronDown"
-              @click="howItWorksOpen = !howItWorksOpen"
-            />
-          </button>
+          <div>
+            How EAB Works
+            <button class="lg:hidden focus:outline-none ml-2">
+              <fa
+                :icon="howItWorksOpen ? faChevronUp : faChevronDown"
+                @click="howItWorksOpen = !howItWorksOpen"
+              />
+            </button>
+          </div>
         </div>
         <ul
           :class="howItWorksOpen ? 'block' : 'hidden'"
