@@ -19,6 +19,7 @@
         </div>
         <div class="mx-2 md:mx-0 flex flex-shrink">
           <a
+            class="bg-gradient-to-r from-yellow-700 to-yellow-500 py-2 px-4 md:w-full rounded text-white mt-4 mb-10 no-underline"
             href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
             >GET STARTED <fa class="ml-1" :icon="faChevronRight"
           /></a>
@@ -76,6 +77,7 @@
             </p>
             <div class="mt-6">
               <a
+                class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-8 rounded text-white mt-4 mb-10 no-underline"
                 href="https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM"
                 >Launch <fa class="ml-1" :icon="faChevronRight"
               /></a>
