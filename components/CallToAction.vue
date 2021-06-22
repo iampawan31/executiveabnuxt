@@ -41,7 +41,11 @@
         </div>
       </div>
       <div v-if="hasLogo" class="flex justify-end lg:items-center">
-        <img class="h-16 sm:h-20" src="~/assets/images/bbb-rating.png" alt="" />
+        <img
+          class="h-16 sm:h-20"
+          src="~/assets/images/bbb-rating.png"
+          alt="BBB Rating Logo"
+        />
       </div>
     </div>
   </div>

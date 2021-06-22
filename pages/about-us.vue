@@ -147,7 +147,11 @@
                 :key="index"
                 class="min-w-max mx-2 my-2"
               >
-                <img :src="brand" class="w-16 h-16" alt="" />
+                <img
+                  :src="brand.imageSrc"
+                  class="w-16 h-16"
+                  :alt="brand.name"
+                />
               </div>
             </div>
           </div>
@@ -170,7 +174,11 @@
                 :key="index"
                 class="min-w-max mx-2 my-2"
               >
-                <img :src="brand" class="w-16 h-16" alt="" />
+                <img
+                  :src="brand.imageSrc"
+                  class="w-16 h-16"
+                  :alt="brand.name"
+                />
               </div>
             </div>
           </div>
@@ -193,7 +201,11 @@
                 :key="index"
                 class="min-w-max mx-2 my-2"
               >
-                <img :src="brand" class="w-16 h-16" alt="" />
+                <img
+                  :src="brand.imageSrc"
+                  class="w-16 h-16"
+                  :alt="brand.name"
+                />
               </div>
             </div>
           </div>

@@ -48,7 +48,7 @@
                 <img
                   src="~/assets/images/icons/location.png"
                   class="h-8 w-8"
-                  alt=""
+                  alt="Headquarters"
                 />
               </div>
               <div class="text-xs w-56 sm:w-32">
@@ -63,7 +63,7 @@
                 <img
                   src="~/assets/images/icons/call.png"
                   class="h-8 w-8"
-                  alt=""
+                  alt="Call Us"
                 />
               </div>
               <div class="text-xs">(877) 297-0252</div>
@@ -76,7 +76,7 @@
                 <img
                   src="~/assets/images/icons/mail.png"
                   class="h-8 w-8"
-                  alt=""
+                  alt="Email Us"
                 />
               </div>
               <a
