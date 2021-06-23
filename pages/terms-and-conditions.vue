@@ -322,7 +322,28 @@ export default {
     return {}
   },
   head: {
-    title: 'Terms & Conditions - Executive',
+    title: 'Terms & Conditions - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'EAB | Terms & Conditions',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          "Read our company website's terms & conditions for using our site and service. Contact us for more information.",
+      },
+    ],
   },
 }
 </script>

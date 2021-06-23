@@ -472,7 +472,29 @@ export default {
     }
   },
   head: {
-    title: 'Home - Executive',
+    title: 'Home - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content:
+          'EAB | Buy cars like an executive | Cost-free concierge service | No dealership contact',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Car purchasing service for new / used vehicles. Our cost-free service includes nationwide car delivery. No dealership contact required. Save on average $3750 off MSRP or below KBB.',
+      },
+    ],
   },
   computed: {
     ...mapGetters({

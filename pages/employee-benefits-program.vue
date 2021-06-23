@@ -295,7 +295,28 @@ export default {
     }
   },
   head: {
-    title: 'Employee Benefits Program - Executive',
+    title: 'Employee Benefits Program - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content:
+          'EAB | Free Employee Benefits Program for companies of all sizes',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: `Learn about how to setup our program as an employee benefit in your company. Help your staff save time & money when buying new or used cars & trucks. Stress-free car buying without the dealers. We work with corporate perks and benefit providers.`,
+      },
+    ],
   },
   computed: {
     faChevronUp() {

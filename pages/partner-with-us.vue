@@ -207,7 +207,28 @@ export default {
     }
   },
   head: {
-    title: 'Partner With Us - Executive',
+    title: 'Partner With Us - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'EAB | Partnerships / Vendor Relations',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Help us deliver amazing car buying experiences for new & used cars! We offer discounted services for our clients on vehicle maintenance, repairs, parts and upgrades. Partner with us & join other industry leaders.',
+      },
+    ],
   },
   computed: {
     faChevronRight() {

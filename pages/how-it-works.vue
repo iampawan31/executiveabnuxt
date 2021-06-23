@@ -414,7 +414,28 @@ export default {
     }
   },
   head: {
-    title: 'How It Works - Executive',
+    title: 'How It Works - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'EAB | How our service works for you',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Learn how EAB elevates your car purchasing experience. Buy new vehicles w/ manufacturer incentives & financing. Purchase Certified Pre-Owned Quality used cars w/ no trip to the local dealership.',
+      },
+    ],
   },
   computed: {
     faChevronUp() {

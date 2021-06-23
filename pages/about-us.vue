@@ -326,7 +326,28 @@ export default {
     }
   },
   head: {
-    title: 'About Us - Executive',
+    title: 'About Us - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'EAB | About us',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          '15+ Years helping car buyers save time & money when shopping for their next vehicle. BBB+ Rated Business. Free vehicle delivery w/ 5 day / 100 Mile Return Policy.',
+      },
+    ],
   },
   computed: {
     faChevronDown() {

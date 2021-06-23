@@ -229,7 +229,27 @@ export default {
     }
   },
   head: {
-    title: 'Friends & Family Program - Executive',
+    title: 'Friends & Family Program - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'EAB | Our Friends & Family Program helps everyone save',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: `EAB's Friends & Family program rewards you for sharing your car buying experience. Spread the word and educate your circle about the benefits of EAB's cost-free car purchasing service. You earn while they save time & money on their next used or new car.`,
+      },
+    ],
   },
   computed: {
     faBullhorn() {

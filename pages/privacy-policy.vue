@@ -876,7 +876,28 @@ export default {
     return {}
   },
   head: {
-    title: 'Disclaimer/Privacy Policy - Executive',
+    title: 'Disclaimer/Privacy Policy - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'EAB | Disclaimer / Privacy Policy',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Read our company disclaimer / privacy policy and learn how we are protecting your data. Consumer safety is our top priority.',
+      },
+    ],
   },
 }
 </script>

@@ -150,7 +150,28 @@ export default {
     }
   },
   head: {
-    title: 'Careers - Executive',
+    title: 'Careers - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'EAB | Become an Executive Concierge',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Join our team as we transform the car buying industry and help people enjoy stress-free vehicle shopping. No experience needed. Unlimited earning potential $$. 100% Remote Work on your schedule. Positions available nationwide.',
+      },
+    ],
   },
   computed: {
     faChevronRight() {

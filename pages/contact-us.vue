@@ -257,7 +257,28 @@ export default {
     }
   },
   head: {
-    title: 'Contact Us - Executive',
+    title: 'Contact Us - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'EAB | Contact us',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Need additional support or have questions? Contact us today so we can assist with your new & used car buying. We are here to help you.',
+      },
+    ],
   },
   computed: {
     faChevronDown() {

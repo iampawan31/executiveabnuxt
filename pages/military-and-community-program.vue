@@ -185,7 +185,28 @@ export default {
     }
   },
   head: {
-    title: 'Military & Community Program - Executive',
+    title: 'Military & Community Program - EAB',
+    meta: [
+      {
+        hid: 'title',
+        name: 'title',
+        content: 'EAB | We salute your service',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Auto broker, cars for sale, used cars, car dealership near me, used cars for sale',
+      },
+      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { hid: 'language', name: 'language', content: 'English' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          "Thank you for your service! $200 Visa Gift Card for Military, Police, Medical Professionals & First Responders. Don't stress or worry when it's time to car shop. Save time & money on used & new cars with our free service.",
+      },
+    ],
   },
   computed: {
     faChevronUp() {
