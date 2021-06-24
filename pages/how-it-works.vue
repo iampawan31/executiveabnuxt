@@ -414,7 +414,7 @@ export default {
     }
   },
   head: {
-    title: 'How It Works - EAB',
+    title: 'EAB | How our service works for you',
     meta: [
       {
         hid: 'title',

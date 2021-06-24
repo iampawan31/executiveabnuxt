@@ -150,7 +150,7 @@ export default {
     }
   },
   head: {
-    title: 'Careers - EAB',
+    title: 'EAB | Become an Executive Concierge',
     meta: [
       {
         hid: 'title',

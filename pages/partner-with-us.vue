@@ -207,7 +207,7 @@ export default {
     }
   },
   head: {
-    title: 'Partner With Us - EAB',
+    title: 'EAB | Partnerships / Vendor Relations',
     meta: [
       {
         hid: 'title',

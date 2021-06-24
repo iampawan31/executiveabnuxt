@@ -322,7 +322,7 @@ export default {
     return {}
   },
   head: {
-    title: 'Terms & Conditions - EAB',
+    title: 'EAB | Terms & Conditions',
     meta: [
       {
         hid: 'title',

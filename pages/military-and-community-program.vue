@@ -185,7 +185,7 @@ export default {
     }
   },
   head: {
-    title: 'Military & Community Program - EAB',
+    title: 'EAB | We salute your service',
     meta: [
       {
         hid: 'title',

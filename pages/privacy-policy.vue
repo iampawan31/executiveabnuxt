@@ -876,7 +876,7 @@ export default {
     return {}
   },
   head: {
-    title: 'Disclaimer/Privacy Policy - EAB',
+    title: 'EAB | Disclaimer / Privacy Policy',
     meta: [
       {
         hid: 'title',

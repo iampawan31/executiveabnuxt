@@ -295,7 +295,7 @@ export default {
     }
   },
   head: {
-    title: 'Employee Benefits Program - EAB',
+    title: 'EAB | Free Employee Benefits Program for companies of all sizes',
     meta: [
       {
         hid: 'title',

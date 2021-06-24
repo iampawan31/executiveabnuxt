@@ -472,7 +472,8 @@ export default {
     }
   },
   head: {
-    title: 'Home - EAB',
+    title:
+      'EAB | Buy cars like an executive | Cost-free concierge service | No dealership contact',
     meta: [
       {
         hid: 'title',

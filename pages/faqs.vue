@@ -47,7 +47,7 @@ export default {
     }
   },
   head: {
-    title: 'FAQs - EAB',
+    title: 'EAB | Frequently asked questions',
     meta: [
       {
         hid: 'title',

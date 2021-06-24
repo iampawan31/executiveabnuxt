@@ -326,7 +326,7 @@ export default {
     }
   },
   head: {
-    title: 'About Us - EAB',
+    title: 'EAB | About us',
     meta: [
       {
         hid: 'title',
