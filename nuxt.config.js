@@ -54,6 +54,7 @@ export default {
   plugins: [
     { src: '@/plugins/swiper.js', mode: 'client' },
     { src: '@/plugins/vue-number.js', mode: 'client' },
+    { src: '@/plugins/vue-friendly-iframe.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

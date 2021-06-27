@@ -110,7 +110,7 @@
         </div>
         <div class="flex flex-1 flex-col">
           <div class="hidden sm:block mb-4">CONNECT ON SOCIAL</div>
-          <div class="flex parent-div">
+          <div class="flex parent-div pb-20 sm:pb-0">
             <a
               href="https://www.instagram.com/executiveautob/"
               rel="noreferrer"
@@ -126,7 +126,7 @@
               <fa class="text-brand mx-4 text-4xl" :icon="faFacebook" />
             </a>
             <a
-              href="https://twitter.com/executiveab"
+              href="https://twitter.com/executive_autob"
               rel="noreferrer"
               target="_blank"
             >
@@ -164,7 +164,6 @@ import {
   faMapMarkedAlt,
   faPhoneSquareAlt,
 } from '@fortawesome/free-solid-svg-icons'
-
 import {
   faInstagram,
   faFacebook,

@@ -70,12 +70,11 @@ export default {
     },
     buttonLink: {
       type: String,
-      default:
-        'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
+      default: '/request-vehicle',
     },
     externalLink: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     hasLogo: {
       type: Boolean,

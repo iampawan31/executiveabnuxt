@@ -26,9 +26,8 @@ export const mainNavigationLinks = [
   },
   {
     name: 'Request vehicle',
-    externalLink: true,
-    path:
-      'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM',
+    externalLink: false,
+    path: 'request-vehicle',
   },
   {
     name: 'Contact us',

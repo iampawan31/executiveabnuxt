@@ -164,7 +164,7 @@
                   <fa class="text-gray-400 mx-4 text-4xl" :icon="faFacebook" />
                 </a>
                 <a
-                  href="https://twitter.com/executiveab"
+                  href="https://twitter.com/executive_autob"
                   rel="noreferrer"
                   target="_blank"
                 >

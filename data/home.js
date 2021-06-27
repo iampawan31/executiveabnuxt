@@ -1,5 +1,5 @@
-const VEHICLE_REQUEST_LINK =
-  'https://forms.executiveab.com/ExecutiveAB/form/VehicleRequest1/formperma/ljV2tVecdl87E_wAsOY-BK5MvOaJW1QjLaoQNzYyWEM'
+const VEHICLE_REQUEST_LINK = '/request-vehicle'
+const IS_EXTERNAL_LINK = false
 
 export const firstSlider = [
   {
@@ -54,7 +54,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start Request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: true,
+      isExternalLink: IS_EXTERNAL_LINK,
     },
   },
   {
@@ -75,7 +75,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start Request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: true,
+      isExternalLink: IS_EXTERNAL_LINK,
     },
   },
   {
@@ -94,7 +94,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start Request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: true,
+      isExternalLink: IS_EXTERNAL_LINK,
     },
   },
   {
@@ -114,7 +114,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start Request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: true,
+      isExternalLink: IS_EXTERNAL_LINK,
     },
   },
   {
@@ -134,7 +134,7 @@ export const homepageTabSection = [
     link: {
       name: 'More information',
       path: '/military-and-community-program',
-      isExternalLink: false,
+      isExternalLink: IS_EXTERNAL_LINK,
     },
   },
   {
@@ -153,7 +153,7 @@ export const homepageTabSection = [
     link: {
       name: 'Contact us',
       path: '/contact-us',
-      isExternalLink: false,
+      isExternalLink: IS_EXTERNAL_LINK,
     },
   },
   {
@@ -173,7 +173,7 @@ export const homepageTabSection = [
     link: {
       name: 'Contact us',
       path: '/contact-us',
-      isExternalLink: false,
+      isExternalLink: IS_EXTERNAL_LINK,
     },
   },
   {
@@ -193,7 +193,7 @@ export const homepageTabSection = [
     link: {
       name: 'Start request',
       path: VEHICLE_REQUEST_LINK,
-      isExternalLink: true,
+      isExternalLink: IS_EXTERNAL_LINK,
     },
   },
 ]
