@@ -127,7 +127,7 @@
       </div>
     </section>
     <section
-      class="py-16 bg-no-repeat optimize-bg-image bg-cover"
+      class="py-16 bg-no-repeat optimize-bg-image bg-cover antialiased bg-blend-multiply"
       :style="secondSectionBackgroundImage"
     >
       <div class="mb-6">

@@ -1,7 +1,7 @@
 <template>
   <section
     :style="mainHeaderImage"
-    class="py-16 sm:py-24 optimize-bg-image bg-cover"
+    class="py-16 sm:py-24 optimize-bg-image bg-cover antialiased bg-blend-multiply"
   >
     <div class="container mx-auto px-4 sm:px-0 md:px-4 xl:px-0">
       <div
