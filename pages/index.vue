@@ -71,7 +71,7 @@
               EXPERIENCE CAR BUYING ON AUTO-PILOT
             </h1>
             <p
-              class="mt-4 text-brand sm:text-xl md:text-lg filter drop-shadow-max"
+              class="mt-4 text-grey-300 sm:text-xl md:text-lg filter drop-shadow-max"
             >
               Our service works for both new & pre-owned vehicles of all makes
               and models. Delivery available nationwide.
@@ -100,7 +100,7 @@
                 Now anyone can buy the way executives do
               </h1>
               <p
-                class="mt-4 text-brand sm:text-xl md:text-lg filter drop-shadow-max"
+                class="mt-4 text-grey-300 sm:text-xl md:text-lg filter drop-shadow-max"
               >
                 Those purchasing high-end vehicles have utilized our type of
                 service for years. Now, we’re making that level of service a
@@ -109,20 +109,18 @@
               <div class="mt-4 flex flex-wrap content-center items-center">
                 <div>
                   <button
-                    class="text-brand rounded-full focus:outline-none"
+                    class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-4 text-white mt-4 mb-10 no-underline rounded focus:outline-none"
                     aria-label="Section Video Play Button"
                     @click="openSectionVideo"
                   >
                     <fa
                       v-if="sectionVideoPlaying"
-                      class="text-5xl"
+                      class="mr-1"
                       :icon="faPauseCircle"
                     />
-                    <fa v-else class="text-5xl" :icon="faPlayCircle" />
+                    <fa v-else class="mr-1" :icon="faPlayCircle" />
+                    Watch Video
                   </button>
-                </div>
-                <div class="pl-3 uppercase text-xl text-brand font-medium">
-                  Watch Video
                 </div>
               </div>
             </div>
