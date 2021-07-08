@@ -97,7 +97,7 @@
               <h1
                 class="uppercase font-semibold text-white text-xl sm:text-2xl filter drop-shadow-max"
               >
-                Now anyone can buy the way executives do
+                buy the way executives do
               </h1>
               <p
                 class="mt-4 text-gray-300 sm:text-xl md:text-lg filter drop-shadow-max"
@@ -106,7 +106,7 @@
                 service for years. Now, we’re making that level of service a
                 reality for all buyers.
               </p>
-              <div class="mt-6 flex flex-wrap content-center items-center">
+              <div class="mt-4 flex flex-wrap content-center items-center">
                 <div>
                   <button
                     class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-4 text-white mb-10 no-underline rounded focus:outline-none"
