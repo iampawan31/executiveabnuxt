@@ -68,7 +68,7 @@
             <h1
               class="uppercase font-semibold text-white text-xl sm:text-2xl filter drop-shadow-max"
             >
-              EXPERIENCE CAR BUYING ON AUTO-PILOT
+              CAR BUYING ON AUTO-PILOT
             </h1>
             <p
               class="mt-4 text-gray-300 sm:text-xl md:text-lg filter drop-shadow-max"
