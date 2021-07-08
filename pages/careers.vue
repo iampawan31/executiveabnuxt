@@ -30,7 +30,7 @@
           </div>
           <div>
             <NuxtLink
-              to="contact-us"
+              to="conceirge-application"
               class="shadow-lg py-2 px-8 bg-gradient-to-r from-yellow-700 to-yellow-500 rounded uppercase text-white mb-0.5"
             >
               Application

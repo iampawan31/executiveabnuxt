@@ -106,19 +106,24 @@
                 service for years. Now, we’re making that level of service a
                 reality for all buyers.
               </p>
-              <div class="mt-4">
-                <button
-                  class="text-white rounded-full focus:outline-none"
-                  aria-label="Section Video Play Button"
-                  @click="openSectionVideo"
-                >
-                  <fa
-                    v-if="sectionVideoPlaying"
-                    class="text-5xl"
-                    :icon="faPauseCircle"
-                  />
-                  <fa v-else class="text-5xl" :icon="faPlayCircle" />
-                </button>
+              <div class="mt-4 flex flex-wrap content-center items-center">
+                <div>
+                  <button
+                    class="text-brand rounded-full focus:outline-none"
+                    aria-label="Section Video Play Button"
+                    @click="openSectionVideo"
+                  >
+                    <fa
+                      v-if="sectionVideoPlaying"
+                      class="text-5xl"
+                      :icon="faPauseCircle"
+                    />
+                    <fa v-else class="text-5xl" :icon="faPlayCircle" />
+                  </button>
+                </div>
+                <div class="pl-3 uppercase text-xl text-brand font-medium">
+                  Watch Video
+                </div>
               </div>
             </div>
             <div v-show="sectionVideoPlaying" class="h-96 w-full shadow">
