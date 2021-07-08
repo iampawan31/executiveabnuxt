@@ -71,7 +71,7 @@
               EXPERIENCE CAR BUYING ON AUTO-PILOT
             </h1>
             <p
-              class="mt-4 text-grey-300 sm:text-xl md:text-lg filter drop-shadow-max"
+              class="mt-4 text-gray-300 sm:text-xl md:text-lg filter drop-shadow-max"
             >
               Our service works for both new & pre-owned vehicles of all makes
               and models. Delivery available nationwide.
@@ -100,26 +100,26 @@
                 Now anyone can buy the way executives do
               </h1>
               <p
-                class="mt-4 text-grey-300 sm:text-xl md:text-lg filter drop-shadow-max"
+                class="mt-4 text-gray-300 sm:text-xl md:text-lg filter drop-shadow-max"
               >
                 Those purchasing high-end vehicles have utilized our type of
                 service for years. Now, we’re making that level of service a
                 reality for all buyers.
               </p>
-              <div class="mt-4 flex flex-wrap content-center items-center">
+              <div class="mt-6 flex flex-wrap content-center items-center">
                 <div>
                   <button
-                    class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-4 text-white mt-4 mb-10 no-underline rounded focus:outline-none"
+                    class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-4 text-white mb-10 no-underline rounded focus:outline-none"
                     aria-label="Section Video Play Button"
                     @click="openSectionVideo"
                   >
+                    Watch Video
                     <fa
                       v-if="sectionVideoPlaying"
-                      class="mr-1"
+                      class="ml-1"
                       :icon="faPauseCircle"
                     />
-                    <fa v-else class="mr-1" :icon="faPlayCircle" />
-                    Watch Video
+                    <fa v-else class="ml-1" :icon="faPlayCircle" />
                   </button>
                 </div>
               </div>
