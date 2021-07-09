@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white text-black font-brandSignature 2xl:mx-auto 2xl:container py-16 px-4"
+    class="bg-brand-gray-medium-dark text-white font-brandSignature 2xl:mx-auto 2xl:container py-16 px-4"
   >
     <div class="flex-col items-center justify-center flex">
       <svg
@@ -210,13 +210,13 @@
       </svg>
       <h1
         v-if="error.statusCode === 404"
-        class="font-bold text-black text-2xl lg:text-5xl mt-10"
+        class="font-bold text-white text-2xl lg:text-5xl mt-10"
       >
         {{ error.statusCode }} - PAGE NOT FOUND
       </h1>
       <nuxt-link
         to="/"
-        class="space cursor-pointer flex-col justify-center items-center flex py-2 px-8 mt-10 uppercase shadow-sm text-white bg-brand rounded transform duration-150 ease-in hover:text-white hover:scale-105"
+        class="bg-gradient-to-r from-yellow-700 to-yellow-500 uppercase py-2 px-8 rounded text-white mt-10 mb-10 no-underline"
       >
         Go to Home
       </nuxt-link>
