@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white my-10">
+  <div class="bg-white h-full my-10">
     <div
       v-show="!isIFrameLoaded"
       class="flex h-screen items-center justify-center"
