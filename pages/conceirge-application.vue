@@ -4,7 +4,7 @@
       v-show="!isIFrameLoaded"
       class="flex h-screen items-center justify-center"
     >
-      <fa class="text-3xl text-black" :icon="faCircleNotch" />
+      <fa class="text-8xl text-black" spin :icon="faCircleNotch" />
     </div>
     <client-only v-show="isIFrameLoaded">
       <vue-friendly-iframe
@@ -12,6 +12,7 @@
         class-name="request-vehicle-iframe"
         src="https://forms.zohopublic.com/ExecutiveAB/form/JobApplicationForm1/formperma/lpA7M85_H43V3BuaNJwzruXng4_tPI1qqn9gK9h3p9M"
         frameborder="0"
+        @load="isIFrameLoaded = true"
       ></vue-friendly-iframe>
     </client-only>
   </div>

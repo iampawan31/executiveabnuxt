@@ -4,7 +4,7 @@
       v-show="!isIFrameLoaded"
       class="flex h-screen items-center justify-center"
     >
-      <fa class="text-3xl text-black" :icon="faCircleNotch" />
+      <fa class="text-8xl text-black" spin :icon="faCircleNotch" />
     </div>
     <client-only v-show="isIFrameLoaded">
       <vue-friendly-iframe
