@@ -5,6 +5,7 @@
     <div class="flex-col items-center justify-center flex">
       <svg
         id="bf6b072d-b0c7-410f-9e86-e550d19ff3f5"
+        class="lg:px-96"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
