@@ -9,7 +9,7 @@
         <div
           class="sm:text-right text-left text-2xl md:text-4xl font-bold uppercase mb-5 px-2 md:px-0 filter drop-shadow-max"
         >
-          PUT THE SALESPERSON IN YOUR REARVIEW
+          FACTORY-DIRECT AUTO BUYING SERVICE
         </div>
         <div
           class="text-left float-right sm:max-w-lg text-gray-300 text-md mb-5 px-2 md:px-0 filter drop-shadow-max"
