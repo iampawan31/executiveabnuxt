@@ -53,11 +53,6 @@ export const additionalLinks = [
     path: '/terms-and-conditions',
   },
   {
-    name: 'Blog',
-    externalLink: false,
-    path: '#',
-  },
-  {
     name: 'Careers',
     externalLink: false,
     path: '/careers',
