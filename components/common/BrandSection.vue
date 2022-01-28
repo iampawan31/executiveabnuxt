@@ -17,7 +17,9 @@
           <img :src="brand.imageSrc" class="w-auto h-16" :alt="brand.name" />
         </div>
       </div>
-      <div class="pb-16 max-w-xl">with hundreds more, and growing!</div>
+      <div class="pb-16 max-w-xl md:mx-auto md:text-center">
+        with hundreds more, and growing!
+      </div>
     </div>
   </div>
 </template>

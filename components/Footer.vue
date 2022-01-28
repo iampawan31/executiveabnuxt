@@ -105,7 +105,7 @@
             </NuxtLink>
           </div>
           <div class="flex flex-wrap content-end text-xs">
-            <p>© 2021. All Rights Reserved.</p>
+            <p>© {{ currentYear }}. All Rights Reserved.</p>
           </div>
         </div>
         <div class="flex flex-1 flex-col">
@@ -199,6 +199,9 @@ export default {
     },
     faLinkedin() {
       return faLinkedin
+    },
+    currentYear() {
+      return new Date().getFullYear()
     },
   },
 }
