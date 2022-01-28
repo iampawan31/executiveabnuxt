@@ -165,6 +165,9 @@
         </div>
       </section>
     </transition>
+    <section class="bg-white text-black py-5 md:py-16">
+      <BrandSection />
+    </section>
     <section class="bg-black py-16">
       <div class="container mx-auto">
         <div
@@ -254,6 +257,7 @@ import CallToAction from '~/components/CallToAction'
 import Feature from '~/components/common/Feature'
 import Features from '~/components/common/Features'
 import HeroSection from '~/components/common/HeroSection'
+import BrandSection from '~/components/common/BrandSection'
 
 export default {
   transitions: 'fade',
@@ -262,6 +266,7 @@ export default {
     Feature,
     Features,
     HeroSection,
+    BrandSection,
   },
   data() {
     return {

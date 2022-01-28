@@ -41,6 +41,7 @@ module.exports = {
           'green-light': '#3fccb0',
           'military-green-dark': '#4fb31e',
           'military-green-light': '#1ad950',
+          'off-gray': '#f0f2f5',
         },
       },
       dropShadow: {

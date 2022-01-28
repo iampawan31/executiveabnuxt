@@ -285,7 +285,7 @@
         </tabs>
       </div>
     </section>
-    <section class="bg-black py-16">
+    <section v-if="accessToken" class="bg-black py-16">
       <div class="container mx-auto">
         <div
           class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 relative lg:pl-4 xl:pl-0"
@@ -356,7 +356,10 @@
         </div>
       </div>
     </section>
-    <section class="bg-white text-black py-16">
+    <section class="bg-white text-black py-5 md:py-16">
+      <BrandSection />
+    </section>
+    <section class="bg-brand-off-gray text-black py-16">
       <div class="container mx-auto flex flex-col items-center justify-center">
         <div class="flex mb-10">
           <fa class="ml-2 text-3xl text-brand" :icon="faStar" />
@@ -418,6 +421,7 @@ import Tab from '~/components/common/Tab'
 import CallToAction from '~/components/CallToAction'
 import InstagramFeed from '~/components/InstagramFeed'
 import CovidMessageSection from '~/components/home/CovidMessageSection'
+import BrandSection from '~/components/common/BrandSection'
 
 export default {
   name: 'Home',
@@ -429,6 +433,7 @@ export default {
     CallToAction,
     InstagramFeed,
     CovidMessageSection,
+    BrandSection,
   },
   data() {
     return {
