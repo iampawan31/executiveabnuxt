@@ -7,7 +7,7 @@
         Proudly providing purchasing services for the employees of:
       </div>
       <div
-        class="flex overflow-x-auto no-scrollbar md:flex-wrap xl:space-x-5 my-10"
+        class="flex overflow-x-auto no-scrollbar md:flex-wrap xl:space-x-5 my-10 md:mx-auto md:justify-center"
       >
         <div
           v-for="(brand, index) in sponsorBrands"

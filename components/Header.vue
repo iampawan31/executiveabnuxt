@@ -9,7 +9,7 @@
   >
     <div class="flex justify-between items-center py-3 px-4 sm:p-0">
       <NuxtLink to="/">
-        <img class="h-6" src="~/assets/logo_white.png" alt="Executive AB" />
+        <img class="h-12" src="~/assets/logo_white.png" alt="Executive AB" />
       </NuxtLink>
       <div class="lg:hidden flex content-center sm:flex-none">
         <button

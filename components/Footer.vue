@@ -93,18 +93,18 @@
         class="flex mt-16 w-full flex-col space-y-5 sm:flex-row sm:space-x-12 sm:content-end sm:flex-wrap"
       >
         <div
-          class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:flex-wrap sm:space-x-5 sm:content-end flex-1"
+          class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:flex-wrap sm:space-x-5 sm:content-end flex-1 content-center"
         >
           <div>
             <NuxtLink to="/">
               <img
-                class="h-6"
+                class="h-12"
                 src="~/assets/logo_white.png"
                 alt="Executive AB Logo"
               />
             </NuxtLink>
           </div>
-          <div class="flex flex-wrap content-end text-xs">
+          <div class="flex flex-wrap text-xs content-center">
             <p>© {{ currentYear }}. All Rights Reserved.</p>
           </div>
         </div>
